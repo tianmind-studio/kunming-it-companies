@@ -22,23 +22,15 @@ GitHub 上已有一个老项目 [bigzhubak/KM-IT](https://github.com/bigzhubak/K
 ## 当前内容
 
 - `data/companies.json`: 公司数据源，所有页面和统计都从这里读取。
-- `COMPANIES.md`: GitHub 直接可读、可搜索的公司索引。
+- `COMPANIES.md`: GitHub 直接可读、可搜索的公司索引，由数据源自动生成。
 - `index.html`: 可直接部署到 GitHub Pages 的静态目录页面。
 - `docs/data-schema.md`: 数据字段说明。
 - `.github/ISSUE_TEMPLATE/`: 新增公司、纠错和补充来源的 issue 模板。
 - `scripts/validate-data.mjs`: 本地数据校验脚本。
 
-## 公司索引预览
+## 公司索引
 
-| 公司 | 方向 | 区域 | 来源 |
-| --- | --- | --- | --- |
-| 昆明海天信息技术集团有限公司 | 系统集成 / 工业数字化 | 高新区 | [官网](https://www.ynhitech.com/) |
-| 昆明博程科技有限公司 | 软件开发 / 互联网服务 | 官渡区 | [官网](https://www.yunk.com.cn/) |
-| 昆明昌昱信息科技有限公司 | 云服务 / 产业数字化 | 官渡区 | [官网](https://www.chanetsoft.com/) |
-| 昆明软佳科技有限公司 | 医疗信息化 | 待补 | [官网](https://www.katesoft.com/) |
-| 盛云科技集团 | 数字建造 / 智慧城市 | 待补 | [官网](https://ynshine.com/) |
-| 昆明道实科技有限公司 | 软件开发 / 系统集成 | 五华区 | [官网](https://kmdskj.icu/) |
-| 云南软加科技有限公司 | 软件开发 / AI 应用 | 待补 | [官网](https://www.softplus.dev/) |
+完整索引见 [COMPANIES.md](COMPANIES.md)。为了让 GitHub 搜索更容易命中，所有公司名、方向、标签和公开来源都会同步生成到这个 Markdown 文件里。
 
 ## 本地预览
 
@@ -73,6 +65,7 @@ npm run serve
 也欢迎直接提交 PR，修改 `data/companies.json` 后运行：
 
 ```bash
+npm run generate:companies
 npm run validate
 ```
 
