@@ -13,7 +13,12 @@ function esc(value) {
 
 function sourceLink(company) {
   const url = company.website || company.source_urls?.[0] || "";
-  return url ? `[官网](${url})` : "待补";
+  const label = company.verification === "official_site"
+    ? "官网"
+    : company.verification === "official_profile"
+      ? "官方页"
+      : "公开来源";
+  return url ? `[${label}](${url})` : "待补";
 }
 
 const companies = [...dataset.companies].sort((a, b) => {
