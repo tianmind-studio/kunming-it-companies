@@ -1,0 +1,11 @@
+{
+  "name": "kunming-it-directory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npm run validate",
+    "validate": "node scripts/validate-data.mjs",
+    "serve": "python3 -m http.server 4178 --bind 127.0.0.1"
+  }
+}

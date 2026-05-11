@@ -1,0 +1,26 @@
+name: Update company
+description: 修正已有公司信息
+title: "[Update] 公司名称"
+labels: ["data", "correction"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: 公司名称或记录 ID
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 需要修改的内容
+      placeholder: 官网打不开 / 地址变更 / 分类错误 / 公司已注销 / 需要补充来源
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 支持来源
+      placeholder: |
+        - https://...
+    validations:
+      required: true

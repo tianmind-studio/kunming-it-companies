@@ -1,0 +1,45 @@
+name: Add company
+description: 新增一家昆明 IT / 软件 / 数字化公司
+title: "[Add] 公司名称"
+labels: ["data", "company"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 公司名称
+      placeholder: 例如：昆明某某科技有限公司
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: 官网或主页
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: 主要方向
+      placeholder: 软件开发 / 医疗信息化 / AI / 系统集成
+    validations:
+      required: true
+  - type: input
+    id: district
+    attributes:
+      label: 所在区域
+      placeholder: 五华区 / 官渡区 / 高新区，不确定可留空
+  - type: textarea
+    id: sources
+    attributes:
+      label: 公开来源
+      description: 请至少贴一个来源，官网、招聘页、官方公众号、工商公开页都可以。
+      placeholder: |
+        - https://...
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注
+      description: 请保持事实描述，不提交未经核实的评价。

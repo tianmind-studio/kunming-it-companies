@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>昆明 IT 公司地图 | Kunming IT Directory</title>
+    <meta name="description" content="Source-backed directory of IT, software, internet, and digital service companies in Kunming, Yunnan.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-copy">
+        <p class="kicker">Kunming IT Directory</p>
+        <h1><span>昆明 IT</span><span>公司地图</span></h1>
+        <p class="lede">把分散在官网、招聘页和本地口碑里的昆明技术公司整理成一份可搜索、可贡献、可复核的数据集。</p>
+      </div>
+      <img class="map-visual" src="assets/kunming-network.svg" alt="昆明各城区技术节点示意图">
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="筛选公司">
+        <label class="search-box">
+          <span>搜索</span>
+          <input id="searchInput" type="search" placeholder="公司名、方向、标签..." autocomplete="off">
+        </label>
+        <label>
+          <span>方向</span>
+          <select id="categorySelect">
+            <option value="">全部方向</option>
+          </select>
+        </label>
+        <label>
+          <span>来源</span>
+          <select id="verificationSelect">
+            <option value="">全部来源</option>
+            <option value="official_site">官网</option>
+            <option value="official_profile">官方主页</option>
+            <option value="community_pending">待核验</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="stats" aria-label="数据统计">
+        <div>
+          <strong id="companyCount">0</strong>
+          <span>companies</span>
+        </div>
+        <div>
+          <strong id="categoryCount">0</strong>
+          <span>categories</span>
+        </div>
+        <div>
+          <strong id="sourceDate">-</strong>
+          <span>last update</span>
+        </div>
+      </section>
+
+      <section class="section-title">
+        <h2>公司列表</h2>
+        <p id="resultSummary" aria-live="polite">正在加载数据...</p>
+      </section>
+
+      <section id="companyList" class="company-list" aria-label="公司列表"></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Source-backed facts only. No ranking, no blacklist, no private contact data.</p>
+      <a href="data/companies.json" aria-label="View the open dataset">View open data</a>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
