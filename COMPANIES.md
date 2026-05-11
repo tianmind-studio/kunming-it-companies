@@ -4,6 +4,12 @@
 
 > This file is generated from `data/companies.json`. Update the JSON first, then run `npm run generate:companies`.
 
+## 数据质量
+
+- 官网已核验：24
+- 官方页核验：2
+- 社区待复核：47
+
 ## 昆明 IT 公司
 
 | 公司 | 英文名 / 品牌 | 方向 | 区域 | 标签 | 公开来源 | 核验日期 |

@@ -3,7 +3,8 @@ const els = {
   category: document.querySelector("#categorySelect"),
   verification: document.querySelector("#verificationSelect"),
   companyCount: document.querySelector("#companyCount"),
-  categoryCount: document.querySelector("#categoryCount"),
+  verifiedCount: document.querySelector("#verifiedCount"),
+  pendingCount: document.querySelector("#pendingCount"),
   sourceDate: document.querySelector("#sourceDate"),
   resultSummary: document.querySelector("#resultSummary"),
   list: document.querySelector("#companyList")
@@ -46,10 +47,21 @@ function populateFilters() {
 }
 
 function renderStats() {
-  const categories = new Set(companies.map((company) => company.category));
+  const pending = companies.filter((company) => company.verification === "community_pending").length;
   els.companyCount.textContent = String(companies.length);
-  els.categoryCount.textContent = String(categories.size);
+  els.verifiedCount.textContent = String(companies.length - pending);
+  els.pendingCount.textContent = String(pending);
   els.sourceDate.textContent = meta.updated_at || "-";
+}
+
+function verificationMeta(company) {
+  if (company.verification === "official_site") {
+    return { text: "官网已核验", className: "badge verified" };
+  }
+  if (company.verification === "official_profile") {
+    return { text: "官方页核验", className: "badge profile" };
+  }
+  return { text: "待社区复核", className: "badge pending" };
 }
 
 function render() {
@@ -76,6 +88,7 @@ function render() {
     const title = node("h3", { text: company.name_zh });
     const district = node("span", { className: "district", text: company.district || "区域待补" });
     const top = node("div", { className: "card-top" }, [title, district]);
+    const badge = verificationMeta(company);
 
     const tags = node("div", { className: "tags" });
     for (const tag of company.tags) tags.append(node("span", { className: "tag", text: tag }));
@@ -87,7 +100,10 @@ function render() {
 
     const card = node("article", { className: "company-card" }, [
       top,
-      node("div", { className: "category", text: company.category }),
+      node("div", { className: "meta-row" }, [
+        node("div", { className: "category", text: company.category }),
+        node("span", badge)
+      ]),
       node("p", { className: "summary", text: company.summary_zh }),
       tags,
       footer

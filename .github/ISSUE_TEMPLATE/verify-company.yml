@@ -1,0 +1,38 @@
+name: Verify company
+description: 补充来源，把待核验公司转成已核验记录
+title: "[Verify] 公司名称"
+labels: ["data", "verification"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: 公司名称或记录 ID
+      placeholder: 例如：云南航天信息有限公司
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 可核验来源
+      description: 请提供官网、官方公众号、招聘主页、官方新闻、工商公开页或可信媒体报道。
+      placeholder: |
+        - 官网：https://...
+        - 招聘页：https://...
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: 建议更新的业务描述
+      description: 用中性事实描述，不写主观评价。
+      placeholder: 官网显示该公司主要提供……
+  - type: dropdown
+    id: verification_level
+    attributes:
+      label: 建议核验等级
+      options:
+        - official_site
+        - official_profile
+        - community_pending
+    validations:
+      required: true

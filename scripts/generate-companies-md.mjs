@@ -28,6 +28,10 @@ const companies = [...dataset.companies].sort((a, b) => {
 });
 
 const categories = new Map();
+const pendingCount = companies.filter((company) => company.verification === "community_pending").length;
+const officialSiteCount = companies.filter((company) => company.verification === "official_site").length;
+const officialProfileCount = companies.filter((company) => company.verification === "official_profile").length;
+
 for (const company of companies) {
   if (!categories.has(company.category)) categories.set(company.category, []);
   categories.get(company.category).push(company);
@@ -39,6 +43,12 @@ const lines = [
   `这里是 GitHub 直接可读、可搜索的昆明 IT 公司索引。当前共收录 ${companies.length} 条记录。结构化数据以 [\`data/companies.json\`](data/companies.json) 为准。`,
   "",
   "> This file is generated from `data/companies.json`. Update the JSON first, then run `npm run generate:companies`.",
+  "",
+  "## 数据质量",
+  "",
+  `- 官网已核验：${officialSiteCount}`,
+  `- 官方页核验：${officialProfileCount}`,
+  `- 社区待复核：${pendingCount}`,
   "",
   "## 昆明 IT 公司",
   "",

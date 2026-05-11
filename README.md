@@ -10,6 +10,8 @@ This is a public, source-backed directory of IT, internet, software, digital ser
 
 - [公司索引 / Company Index](COMPANIES.md)
 - [贡献说明 / Contributing](CONTRIBUTING.md)
+- [项目路线图 / Roadmap](ROADMAP.md)
+- [社区传播说明 / Community Playbook](docs/community-playbook.md)
 - [数据源 / Open Data](data/companies.json)
 - [字段说明 / Data Schema](docs/data-schema.md)
 
@@ -27,6 +29,16 @@ GitHub 上已有一个老项目 [bigzhubak/KM-IT](https://github.com/bigzhubak/K
 - `docs/data-schema.md`: 数据字段说明。
 - `.github/ISSUE_TEMPLATE/`: 新增公司、纠错和补充来源的 issue 模板。
 - `scripts/validate-data.mjs`: 本地数据校验脚本。
+
+## 当前状态
+
+项目现在处于种子阶段：已经有一批公司记录和候选记录，但其中部分条目仍然是 `community_pending`。这类记录来自公开名单、老社区清单或公开资料，适合本地贡献者继续补官网、招聘页、官方公众号或可信报道。
+
+页面和数据会区分：
+
+- `official_site`: 官网已核验
+- `official_profile`: 官方页或官方报道已核验
+- `community_pending`: 社区待复核
 
 ## 公司索引
 
@@ -61,6 +73,7 @@ npm run serve
 
 - 新增公司：使用 `Add company` 模板
 - 修改信息：使用 `Update company` 模板
+- 复核待确认公司：使用 `Verify company` 模板
 
 也欢迎直接提交 PR，修改 `data/companies.json` 后运行：
 

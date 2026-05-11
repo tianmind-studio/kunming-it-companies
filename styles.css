@@ -138,7 +138,7 @@ select:focus {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   padding-bottom: 26px;
 }
@@ -238,6 +238,37 @@ select:focus {
   color: var(--white);
   font-size: 13px;
   font-weight: 800;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.badge.verified {
+  background: #e6f4dc;
+  color: #245b2f;
+}
+
+.badge.profile {
+  background: #e1edf3;
+  color: #275a7a;
+}
+
+.badge.pending {
+  background: #fff2cf;
+  color: #7c4a14;
 }
 
 .summary {
