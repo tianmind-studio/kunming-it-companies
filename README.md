@@ -11,7 +11,7 @@ This is a public, source-backed directory of IT, internet, software, digital ser
 - [公司索引 / Company Index](COMPANIES.md)
 - [贡献说明 / Contributing](CONTRIBUTING.md)
 - [项目路线图 / Roadmap](ROADMAP.md)
-- [社区传播说明 / Community Playbook](docs/community-playbook.md)
+- [怎么一起维护这份清单](docs/community-playbook.md)
 - [数据源 / Open Data](data/companies.json)
 - [字段说明 / Data Schema](docs/data-schema.md)
 
