@@ -1,98 +1,147 @@
-# 昆明 IT 公司 / 昆明互联网公司地图
+# Kunming Tech Radar / 昆明技术机会雷达
 
-> Kunming IT Directory: 昆明 IT 公司、昆明互联网公司、软件公司、系统集成、AI、云服务、医疗信息化、行业数字化公司开放清单。
+> 收集昆明及云南范围内的技术公司、招聘机会、技术活动、创业社群和政府数字化项目线索，帮助本地学生、开发者、创业者更容易发现机会。
 
-一个面向求职者、开发者、创业者和外地团队的昆明 IT / 互联网 / 数字化公司开放清单。
+Kunming Tech Radar 是一个公开维护的本地技术机会资料库。它不做排名，不承诺就业，不提供所谓内部资源，只整理公开信息，并尽量标明来源和更新时间。
 
-This is a public, source-backed directory of IT, internet, software, digital service, and tech-enabled companies in Kunming, Yunnan.
+## 适合谁使用
 
-## 快速入口
+- 在昆明或云南找实习、校招、社招机会的学生和开发者
+- 想了解本地 AI、软件、信息化、数字化企业的技术从业者
+- 正在昆明创业、接项目、找合作方的创业者和自由职业者
+- 希望被本地开发者发现的企业负责人、招聘负责人、技术团队
+- 关注云南数字经济、政府数字化项目和产业机会的人
 
-- [公司索引 / Company Index](COMPANIES.md)
-- [贡献说明 / Contributing](CONTRIBUTING.md)
-- [项目路线图 / Roadmap](ROADMAP.md)
-- [数据源 / Open Data](data/companies.json)
-- [字段说明 / Data Schema](docs/data-schema.md)
+## 收录内容
 
-## 为什么做这个
+当前项目会逐步整理五类信息：
 
-GitHub 上已有一个老项目 [bigzhubak/KM-IT](https://github.com/bigzhubak/KM-IT) 收集昆明 IT 公司，但它只有单个 README，数据结构、来源校验、贡献流程和页面浏览体验都比较早期。其他城市有类似 [xian-IT](https://github.com/madawei2699/xian-IT) 的清单，但昆明缺少一个可持续维护、可搜索、可审计的版本。
+| 数据集 | 文件 | 内容 |
+| --- | --- | --- |
+| 公司与机构 | [`data/companies.csv`](data/companies.csv) | IT 公司、AI/软件企业、系统集成商、数字化服务商、技术团队 |
+| 招聘机会 | [`data/jobs.csv`](data/jobs.csv) | 实习、校招、社招、远程/混合办公、本地技术岗位 |
+| 技术活动 | [`data/events.csv`](data/events.csv) | 技术分享、创业活动、黑客松、线下 meetup、校园活动 |
+| 社群与组织 | [`data/communities.csv`](data/communities.csv) | 本地开发者群、创业社群、高校社团、开源组织 |
+| 政府项目线索 | [`data/gov-projects.csv`](data/gov-projects.csv) | 政府采购、数字化建设、智慧城市、产业政策相关公开线索 |
 
-这个项目不做排名、不做黑名单、不做未经核实的评价。首要目标是把“昆明有哪些技术相关公司”整理成可维护的数据。
+仓库里仍保留早期整理的 [`COMPANIES.md`](COMPANIES.md) 和 [`data/companies.json`](data/companies.json)，用于承接已有公司索引。后续会逐步把数据整理到 CSV 结构里。
 
-## 当前内容
+## 数据字段说明
 
-- `data/companies.json`: 公司数据源，所有页面和统计都从这里读取。
-- `COMPANIES.md`: GitHub 直接可读、可搜索的公司索引，由数据源自动生成。
-- `index.html`: 可直接部署到 GitHub Pages 的静态目录页面。
-- `docs/data-schema.md`: 数据字段说明。
-- `.github/ISSUE_TEMPLATE/`: 新增公司、纠错和补充来源的 issue 模板。
-- `scripts/validate-data.mjs`: 本地数据校验脚本。
+### companies.csv
 
-## 当前状态
+| 字段 | 说明 |
+| --- | --- |
+| `id` | 稳定 ID，建议使用英文 slug |
+| `name` | 公司或机构名称 |
+| `city` / `district` | 城市和区县 |
+| `category` | 公司类型，例如 AI、软件开发、系统集成、医疗信息化 |
+| `tags` | 关键词，多个标签用分号分隔 |
+| `website` | 官网或官方主页 |
+| `source_url` | 可核验来源 |
+| `source_type` | 来源类型，例如 official_site、official_profile、public_list |
+| `status` | active、pending、closed、unknown |
+| `last_checked` | 最近核验日期 |
+| `notes` | 简短备注，避免主观评价 |
 
-项目现在处于种子阶段：已经有一批公司记录和候选记录，但其中部分条目仍然是 `community_pending`。这类记录来自公开名单、老社区清单或公开资料，适合本地贡献者继续补官网、招聘页、官方公众号或可信报道。
+### jobs.csv
 
-页面和数据会区分：
+| 字段 | 说明 |
+| --- | --- |
+| `id` | 岗位记录 ID |
+| `company_name` | 公司名称 |
+| `role` | 岗位名称 |
+| `job_type` | internship、campus、full_time、part_time、remote、contract |
+| `city` / `district` | 工作地点 |
+| `salary_range` | 公开薪资范围，没有公开就留空 |
+| `source_url` | 招聘页或公开来源 |
+| `posted_at` | 发布时间 |
+| `last_checked` | 最近核验日期 |
+| `status` | open、closed、unknown |
+| `notes` | 简短备注 |
 
-- `official_site`: 官网已核验
-- `official_profile`: 官方页或官方报道已核验
-- `community_pending`: 社区待复核
+### events.csv
 
-## 公司索引
+| 字段 | 说明 |
+| --- | --- |
+| `id` | 活动记录 ID |
+| `name` | 活动名称 |
+| `event_type` | meetup、workshop、hackathon、conference、campus、startup |
+| `date` | 活动日期 |
+| `city` / `venue` | 城市和场地 |
+| `organizer` | 主办方 |
+| `source_url` | 活动页或公开来源 |
+| `status` | upcoming、past、cancelled、unknown |
+| `notes` | 简短备注 |
 
-完整索引见 [COMPANIES.md](COMPANIES.md)。为了让 GitHub 搜索更容易命中，所有公司名、方向、标签和公开来源都会同步生成到这个 Markdown 文件里。
+### communities.csv
 
-## 本地预览
+| 字段 | 说明 |
+| --- | --- |
+| `id` | 社群记录 ID |
+| `name` | 社群或组织名称 |
+| `community_type` | developer、startup、campus、open_source、industry |
+| `city` | 所在城市或主要覆盖区域 |
+| `contact_method` | 公开联系方式或加入方式 |
+| `source_url` | 公开介绍页或来源 |
+| `status` | active、inactive、unknown |
+| `notes` | 简短备注 |
 
-```bash
-npm run validate
-npm run serve
+### gov-projects.csv
+
+| 字段 | 说明 |
+| --- | --- |
+| `id` | 项目线索 ID |
+| `project_name` | 项目名称 |
+| `buyer` | 采购人或发布单位 |
+| `project_type` | 智慧城市、政务系统、数据平台、行业数字化等 |
+| `city` | 项目所在地 |
+| `budget` | 公开预算，没有公开就留空 |
+| `publish_date` | 发布日期 |
+| `source_url` | 政府采购网、公共资源交易平台或官方公告链接 |
+| `status` | open、awarded、closed、unknown |
+| `notes` | 简短备注 |
+
+## 如何贡献
+
+欢迎补充公司、岗位、活动、社群和政府项目线索。贡献时请尽量提供公开来源，不要只写口头信息。
+
+可以用三种方式参与：
+
+1. 直接提交 Pull Request，修改对应 CSV 文件。
+2. 使用 GitHub Issue 提供线索，维护者会再整理进数据集。
+3. 对已有记录补充官网、招聘页、活动页、官方公告等来源。
+
+贡献前请先看：
+
+- [贡献指南](docs/contribution-guide.md)
+- [昆明 IT 地图说明](docs/kunming-it-map.md)
+- [机会雷达说明](docs/opportunity-radar.md)
+
+## 联系我
+
+如果你是昆明或云南的开发者、学生、创业者、企业负责人，欢迎通过微信联系我：
+
+```text
+YOUR_WECHAT_ID
 ```
 
-打开 `http://127.0.0.1:4178`。
+添加时可以备注：`昆明技术机会雷达`。
 
-## 收录标准
+## 社群说明
 
-优先收录符合任一条件的昆明本地或在昆明有明确团队/分支的公司：
+项目计划围绕这个方向建立一个“昆明技术机会雷达社群”，用于交流本地技术机会、招聘信息、项目线索、活动信息和创业资源。
 
-- 软件开发、互联网产品、SaaS、AI、云计算、数据服务
-- 信息化、系统集成、工业互联网、智慧城市、医疗/农业/文旅等行业数字化
-- 游戏、网络服务、开发者工具、技术服务
+社群初期免费。后续如果信息质量和参与人数足够，可能开放高质量付费内圈、线下活动或整理版资源库。所有后续安排都会保持透明，不会承诺就业、承诺资源或承诺所谓内部机会。
 
-每条公司记录至少需要一个公开来源，例如官网、官方公众号、招聘主页、工商公开页、可信媒体报道等。
+## 免责声明
 
-## GitHub 搜索关键词
-
-昆明 IT 公司、昆明互联网公司、昆明软件公司、昆明科技公司、昆明程序员、昆明开发者、云南 IT 公司、云南互联网公司、Kunming IT companies, Kunming software companies, Yunnan tech companies.
-
-## 贡献方式
-
-最简单的方式是开 issue：
-
-- 新增公司：使用 `Add company` 模板
-- 修改信息：使用 `Update company` 模板
-- 复核待确认公司：使用 `Verify company` 模板
-
-也欢迎直接提交 PR，修改 `data/companies.json` 后运行：
-
-```bash
-npm run generate:companies
-npm run validate
-```
-
-## 信息边界
-
-- 不收录个人手机号、私人微信、未公开邮箱等隐私信息。
-- 不发布未经核实的薪资、裁员、加班、争议评价。
-- 不把“公司还存在”当作永久事实。每条数据都有 `source_checked_at`，欢迎定期复核。
-
-## English Summary
-
-Kunming has many software, system integration, digital transformation, and vertical-industry technology companies, but public discovery is fragmented. This repo turns that local knowledge into a small open dataset plus a searchable static site.
-
-The project is intentionally conservative: source-backed facts first, opinions later only if a future review policy is designed.
+- 本项目只整理公开信息，不保证信息完整、实时或绝对准确。
+- 招聘岗位、活动、项目预算和公司状态都可能变化，请以原始来源为准。
+- 本项目不提供就业担保、资源担保、投资建议或商业背书。
+- 不收录私人手机号、私人微信、未经核实的负面爆料和无法核验的薪资/裁员信息。
+- 如果你发现信息错误、过期或不适合公开展示，可以提交 Issue 或 PR 修正。
 
 ## License
 
-Code is released under the MIT License. Company data contributions are intended for public reuse under CC0-1.0 unless a contributor states otherwise in a PR.
+代码采用 MIT License。数据内容默认用于公开协作和非商业研究参考，后续会根据贡献情况补充更清晰的数据许可说明。

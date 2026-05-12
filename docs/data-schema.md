@@ -1,15 +1,31 @@
 # Data Schema
 
+主要数据源是 `data/*.csv`。早期公司索引仍保留在 `data/companies.json`，用于生成 `COMPANIES.md` 和当前 GitHub Pages 页面。
+
+## CSV datasets
+
+| 文件 | 说明 |
+| --- | --- |
+| `data/companies.csv` | 公司与机构 |
+| `data/jobs.csv` | 招聘机会 |
+| `data/events.csv` | 技术活动 |
+| `data/communities.csv` | 社群与组织 |
+| `data/gov-projects.csv` | 政府数字化项目线索 |
+
+CSV 字段以 README 和 `docs/contribution-guide.md` 为准。空字段表示暂未确认，不要用猜测值填充。
+
+## Legacy JSON
+
 数据源文件：`data/companies.json`
 
-## Top-level
+### Top-level
 
 | Field | Type | Required | Notes |
 | --- | --- | --- | --- |
 | `meta` | object | yes | Dataset metadata |
 | `companies` | array | yes | Company records |
 
-## Company Record
+### Company Record
 
 | Field | Type | Required | Notes |
 | --- | --- | --- | --- |
@@ -28,7 +44,7 @@
 | `verification` | string | yes | `official_site`, `official_profile`, or `community_pending`. |
 | `status` | string | yes | Example: `active-source-found`, `needs-review`, `closed-source-found`. |
 
-## Style Rules
+### Style Rules
 
 - Keep descriptions factual and neutral.
 - Do not copy marketing paragraphs wholesale from company websites.
