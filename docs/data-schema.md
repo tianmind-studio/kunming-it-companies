@@ -1,52 +1,51 @@
 # Data Schema
 
-主要数据源是 `data/*.csv`。早期公司索引仍保留在 `data/companies.json`，用于生成 `COMPANIES.md` 和当前 GitHub Pages 页面。
+公司数据的主数据源是 `data/companies.json`。`COMPANIES.md` 和 `data/companies.csv` 都由脚本从 JSON 生成，避免手工维护多份公司数据。
 
-## CSV datasets
+其他数据集仍保留 CSV：
 
 | 文件 | 说明 |
 | --- | --- |
-| `data/companies.csv` | 公司与机构 |
-| `data/jobs.csv` | 招聘机会 |
-| `data/events.csv` | 技术活动 |
-| `data/communities.csv` | 社群与组织 |
+| `data/companies.json` | 公司主数据源 |
+| `data/companies.csv` | 从 JSON 自动导出的公司 CSV |
+| `data/jobs.csv` | 招聘机会候选数据 |
+| `data/events.csv` | 技术活动候选数据 |
+| `data/communities.csv` | 社群与组织候选数据 |
 | `data/gov-projects.csv` | 政府数字化项目线索 |
 
-CSV 字段以 README 和 `docs/contribution-guide.md` 为准。空字段表示暂未确认，不要用猜测值填充。
-
-## Legacy JSON
-
-数据源文件：`data/companies.json`
-
-### Top-level
+## Company JSON fields
 
 | Field | Type | Required | Notes |
 | --- | --- | --- | --- |
-| `meta` | object | yes | Dataset metadata |
-| `companies` | array | yes | Company records |
+| `id` | string | yes | 稳定 slug，不要随意改名。 |
+| `name` | string | yes | 公司或公开品牌名。 |
+| `english_name` | string | no | 公开英文名，没有则留空。 |
+| `city` | string | yes | 通常为 `昆明`，也可为云南其他城市。 |
+| `district` | string | no | 区县；不能确认时留空。 |
+| `category` | string | yes | 一个主要方向。 |
+| `tags` | array | yes | 2-6 个短标签。 |
+| `website` | string | no | 官网；没有则留空。 |
+| `source_url` | string | yes | 最主要的公开来源。 |
+| `source_type` | string | yes | 见 `docs/data-standard.md`。 |
+| `verification_status` | string | yes | `verified` / `official_page` / `community_pending` / `outdated` / `unknown`。 |
+| `last_checked` | string | yes | `YYYY-MM-DD`。 |
+| `notes` | string | yes | 中性事实说明，不写主观评价。 |
+| `opportunities` | array | yes | `internship` / `hiring` / `outsourcing` / `partnership` / `unknown`。 |
+| `confidence_score` | number | yes | 1-5，见数据标准。 |
+| `suitable_for_students` | boolean | yes | 适合学生阅读。 |
+| `suitable_for_freelancers` | boolean | yes | 适合自由职业者阅读。 |
+| `suitable_for_job_seekers` | boolean | yes | 适合求职者阅读。 |
+| `suitable_for_founders` | boolean | yes | 适合创业者阅读。 |
 
-### Company Record
+为了兼容旧页面和历史数据，JSON 中暂时保留 `name_zh`、`name_en`、`summary_zh`、`source_urls`、`source_checked_at`、`verification` 等旧字段。新代码优先读取上表中的字段。
 
-| Field | Type | Required | Notes |
-| --- | --- | --- | --- |
-| `id` | string | yes | Stable lowercase slug. Do not rename unless necessary. |
-| `name_zh` | string | yes | Chinese company name or public brand name. |
-| `name_en` | string | no | English name if public. Empty string is acceptable. |
-| `city` | string | yes | Usually `昆明`. |
-| `district` | string | no | District or area when source-backed. Leave empty if unclear. |
-| `category` | string | yes | One primary business category. |
-| `tags` | array | yes | 2-6 short tags. |
-| `website` | string | no | Official website when available. |
-| `summary_zh` | string | yes | Neutral source-backed description. No ranking or anonymous claims. |
-| `summary_en` | string | no | Optional English summary. |
-| `source_urls` | array | yes | At least one public source URL. |
-| `source_checked_at` | string | yes | `YYYY-MM-DD`, date when the source was checked. |
-| `verification` | string | yes | `official_site`, `official_profile`, or `community_pending`. |
-| `status` | string | yes | Example: `active-source-found`, `needs-review`, `closed-source-found`. |
+## Commands
 
-### Style Rules
+```bash
+npm run generate:companies
+npm run export:csv
+npm run validate:data
+npm run validate
+```
 
-- Keep descriptions factual and neutral.
-- Do not copy marketing paragraphs wholesale from company websites.
-- Do not add personal contact details unless they are clearly public business contacts and necessary.
-- If a district, team size, product name, or funding claim is not source-backed, leave it out.
+详情见：[`docs/data-standard.md`](data-standard.md)。

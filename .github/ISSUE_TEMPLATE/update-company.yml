@@ -1,26 +1,50 @@
 name: Update company
-description: 修正已有公司信息
-title: "[Update] 公司名称"
+description: 修正或补充已有公司信息
+title: "[Update] 公司名称或记录 ID"
 labels: ["data", "correction"]
 body:
   - type: input
     id: company
     attributes:
       label: 公司名称或记录 ID
+      placeholder: 例如：yunnan-nantian-information
     validations:
       required: true
+  - type: checkboxes
+    id: change_type
+    attributes:
+      label: 你要更新什么？
+      options:
+        - label: 官网 / 官方主页
+        - label: 招聘页
+        - label: 所在区域
+        - label: 主要方向 / 标签
+        - label: 核验状态
+        - label: 备注描述
+        - label: 其他
   - type: textarea
     id: change
     attributes:
       label: 需要修改的内容
-      placeholder: 官网打不开 / 地址变更 / 分类错误 / 公司已注销 / 需要补充来源
+      placeholder: 当前官网打不开；新的官方主页是……；分类应改为……
     validations:
       required: true
   - type: textarea
     id: sources
     attributes:
       label: 支持来源
+      description: 请提供公开链接。不要贴私人聊天记录或私人联系方式。
       placeholder: |
         - https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: 是否为本人所在公司 / 团队？
+      options:
+        - 否，只是公开线索
+        - 是，我是公司/团队成员
+        - 不方便说明
     validations:
       required: true
