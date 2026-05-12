@@ -1,20 +1,8 @@
 import fs from "node:fs";
+import { DATA_FIELDS } from "./companies-lib.mjs";
 
 const datasets = {
-  "data/companies.csv": [
-    "id",
-    "name",
-    "city",
-    "district",
-    "category",
-    "tags",
-    "website",
-    "source_url",
-    "source_type",
-    "status",
-    "last_checked",
-    "notes"
-  ],
+  "data/companies.csv": DATA_FIELDS,
   "data/jobs.csv": [
     "id",
     "company_name",

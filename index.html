@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>昆明技术机会雷达 | Kunming Tech Radar</title>
-    <meta name="description" content="Public radar for technology companies, jobs, events, communities, and digital project leads in Kunming and Yunnan.">
+    <title>Kunming Tech Radar / 昆明技术机会雷达</title>
+    <meta name="description" content="昆明技术机会雷达：面向昆明/云南学生、开发者、自由职业者和创业者的本地技术机会地图。">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -12,16 +12,40 @@
       <div class="header-copy">
         <p class="kicker">Kunming Tech Radar</p>
         <h1><span>昆明技术</span><span>机会雷达</span></h1>
-        <p class="lede">整理昆明及云南范围内的技术公司、招聘机会、活动、社群和政府数字化项目线索。</p>
+        <p class="lede">一个开源的本地技术机会数据库，整理昆明及云南范围内的技术公司、岗位、活动、社群与数字化项目线索。</p>
+        <div class="hero-actions">
+          <a href="COMPANIES.md">公司索引</a>
+          <a href="docs/data-standard.md">数据标准</a>
+          <a href="https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose">提交线索</a>
+        </div>
       </div>
       <img class="map-visual" src="assets/kunming-network.svg" alt="昆明各城区技术节点示意图">
     </header>
 
     <main>
+      <section class="intro-grid" aria-label="项目说明">
+        <article>
+          <strong>给学生</strong>
+          <p>找实习、找项目、理解本地行业，不只从招聘 App 被动刷岗位。</p>
+        </article>
+        <article>
+          <strong>给开发者</strong>
+          <p>找本地技术团队、合作方、行业入口和可复核公司来源。</p>
+        </article>
+        <article>
+          <strong>给自由职业者 / 创业者</strong>
+          <p>从公开信息里发现客户线索、外包机会和产业数字化方向。</p>
+        </article>
+        <article>
+          <strong>给企业 / 机构</strong>
+          <p>补充官网、招聘页、技术博客和公开入口，提高被本地开发者发现的概率。</p>
+        </article>
+      </section>
+
       <section class="toolbar" aria-label="筛选公司">
         <label class="search-box">
           <span>搜索</span>
-          <input id="searchInput" type="search" placeholder="公司名、方向、标签..." autocomplete="off">
+          <input id="searchInput" type="search" placeholder="公司名、方向、标签、备注..." autocomplete="off">
         </label>
         <label>
           <span>方向</span>
@@ -30,12 +54,20 @@
           </select>
         </label>
         <label>
-          <span>来源</span>
+          <span>区域</span>
+          <select id="districtSelect">
+            <option value="">全部区域</option>
+          </select>
+        </label>
+        <label>
+          <span>核验状态</span>
           <select id="verificationSelect">
-            <option value="">全部来源</option>
-            <option value="official_site">官网</option>
-            <option value="official_profile">官方主页</option>
-            <option value="community_pending">待核验</option>
+            <option value="">全部状态</option>
+            <option value="verified">官网已核验</option>
+            <option value="official_page">官方页核验</option>
+            <option value="community_pending">社区待复核</option>
+            <option value="outdated">疑似过期</option>
+            <option value="unknown">状态未知</option>
           </select>
         </label>
       </section>
@@ -47,7 +79,7 @@
         </div>
         <div>
           <strong id="verifiedCount">0</strong>
-          <span>verified</span>
+          <span>verified site</span>
         </div>
         <div>
           <strong id="pendingCount">0</strong>
@@ -60,7 +92,10 @@
       </section>
 
       <section class="section-title">
-        <h2>公司列表</h2>
+        <div>
+          <h2>公司卡片</h2>
+          <p>只展示公开来源支持的信息；适合人群是检索提示，不是招聘或合作承诺。</p>
+        </div>
         <p id="resultSummary" aria-live="polite">正在加载数据...</p>
       </section>
 
@@ -69,7 +104,12 @@
 
     <footer class="site-footer">
       <p>Source-backed facts only. No ranking, no blacklist, no private contact data.</p>
-      <a href="COMPANIES.md" aria-label="View the GitHub company index">View company index</a>
+      <nav>
+        <a href="README.md">README</a>
+        <a href="COMPANIES.md">COMPANIES</a>
+        <a href="data/companies.json">JSON</a>
+        <a href="data/companies.csv">CSV</a>
+      </nav>
     </footer>
 
     <script src="script.js" type="module"></script>

@@ -1,0 +1,36 @@
+name: Report outdated info
+description: 报告过期、失效或需要复核的信息
+title: "[Outdated] 公司名称或记录 ID"
+labels: ["data", "outdated"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: 公司名称或记录 ID
+      placeholder: 例如：昆明某某科技有限公司
+    validations:
+      required: true
+  - type: textarea
+    id: outdated_part
+    attributes:
+      label: 哪些信息可能过期？
+      placeholder: 官网打不开 / 公司名称变化 / 区域不对 / 来源页面失效 / 业务方向不准确
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 你看到的新来源或证据
+      description: 只提交公开来源，不提交私人聊天记录。
+      placeholder: |
+        - 新官网：https://...
+        - 官方公告：https://...
+    validations:
+      required: false
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议如何处理？
+      placeholder: 标记为 outdated / 更新官网 / 改分类 / 暂时移到待复核
+    validations:
+      required: false

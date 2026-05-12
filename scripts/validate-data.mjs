@@ -1,14 +1,14 @@
-import fs from "node:fs";
+import {
+  ALLOWED_OPPORTUNITIES,
+  ALLOWED_SOURCE_TYPES,
+  ALLOWED_VERIFICATION_STATUS,
+  getCompanies,
+  readDataset
+} from "./companies-lib.mjs";
 
-const file = new URL("../data/companies.json", import.meta.url);
-const dataset = JSON.parse(fs.readFileSync(file, "utf8"));
-
+const dataset = readDataset();
+const companies = getCompanies(dataset);
 const errors = [];
-const allowedVerification = new Set([
-  "official_site",
-  "official_profile",
-  "community_pending"
-]);
 
 function assert(condition, message) {
   if (!condition) errors.push(message);
@@ -33,28 +33,40 @@ assert(Array.isArray(dataset.companies), "Missing companies array.");
 
 if (dataset.meta) {
   assert(isDate(dataset.meta.updated_at), "meta.updated_at must use YYYY-MM-DD.");
+  assert(dataset.meta.primary_source === "data/companies.json", "meta.primary_source must be data/companies.json.");
 }
 
 const ids = new Set();
 
-for (const company of dataset.companies || []) {
-  const label = company.id || company.name_zh || "unknown";
+for (const company of companies) {
+  const label = company.id || company.name || "unknown";
 
   assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(company.id), `${label}: id must be a lowercase slug.`);
   assert(!ids.has(company.id), `${label}: duplicate id.`);
   ids.add(company.id);
 
-  for (const field of ["name_zh", "city", "category", "summary_zh", "source_checked_at", "verification", "status"]) {
+  for (const field of ["name", "city", "category", "source_url", "source_type", "verification_status", "last_checked", "notes"]) {
     assert(typeof company[field] === "string" && company[field].trim().length > 0, `${label}: missing ${field}.`);
   }
 
   assert(Array.isArray(company.tags) && company.tags.length >= 2, `${label}: tags must include at least 2 items.`);
   assert(company.tags.every((tag) => typeof tag === "string" && tag.trim()), `${label}: tags must be non-empty strings.`);
-  assert(Array.isArray(company.source_urls) && company.source_urls.length > 0, `${label}: source_urls must include at least one URL.`);
-  assert(company.source_urls.every(isHttpUrl), `${label}: source_urls must be valid HTTP(S) URLs.`);
-  assert(company.website === "" || company.website === undefined || isHttpUrl(company.website), `${label}: website must be a valid HTTP(S) URL or empty.`);
-  assert(isDate(company.source_checked_at), `${label}: source_checked_at must use YYYY-MM-DD.`);
-  assert(allowedVerification.has(company.verification), `${label}: invalid verification value.`);
+  assert(isHttpUrl(company.source_url), `${label}: source_url must be a valid HTTP(S) URL.`);
+  assert(company.website === "" || isHttpUrl(company.website), `${label}: website must be a valid HTTP(S) URL or empty.`);
+  assert(isDate(company.last_checked), `${label}: last_checked must use YYYY-MM-DD.`);
+  assert(ALLOWED_SOURCE_TYPES.has(company.source_type), `${label}: invalid source_type value.`);
+  assert(ALLOWED_VERIFICATION_STATUS.has(company.verification_status), `${label}: invalid verification_status value.`);
+  assert(Array.isArray(company.opportunities) && company.opportunities.length > 0, `${label}: opportunities must be a non-empty array.`);
+  for (const opportunity of company.opportunities) {
+    assert(ALLOWED_OPPORTUNITIES.has(opportunity), `${label}: invalid opportunity value ${opportunity}.`);
+  }
+  assert(Number.isInteger(company.confidence_score) && company.confidence_score >= 1 && company.confidence_score <= 5, `${label}: confidence_score must be 1-5.`);
+  for (const field of ["suitable_for_students", "suitable_for_freelancers", "suitable_for_job_seekers", "suitable_for_founders"]) {
+    assert(typeof company[field] === "boolean", `${label}: ${field} must be boolean.`);
+  }
+
+  const privateContactPattern = /(1[3-9]\d{9}|微信号|私人微信|手机号|QQ群|QQ：|QQ:)/;
+  assert(!privateContactPattern.test(company.notes), `${label}: notes may contain private contact-like text.`);
 }
 
 if (errors.length) {
@@ -63,4 +75,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Data validation passed: ${dataset.companies.length} companies.`);
+console.log(`Data validation passed: ${companies.length} companies.`);

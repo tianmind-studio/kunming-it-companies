@@ -1,11 +1,18 @@
 {
   "meta": {
-    "name": "Kunming IT Directory",
+    "name": "Kunming Tech Radar",
     "city": "Kunming",
     "province": "Yunnan",
     "country": "China",
-    "updated_at": "2026-05-11",
-    "source_policy": "Each entry must include at least one public source URL."
+    "updated_at": "2026-05-12",
+    "source_policy": "Every company entry must keep at least one public, source-backed URL. Do not add private contacts or unverifiable hiring claims.",
+    "name_zh": "昆明技术机会雷达",
+    "description_zh": "面向昆明/云南大学生、开发者、自由职业者和技术创业者的本地技术机会地图。",
+    "primary_source": "data/companies.json",
+    "generated_outputs": [
+      "COMPANIES.md",
+      "data/companies.csv"
+    ]
   },
   "companies": [
     {
@@ -29,7 +36,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明海天信息技术集团有限公司",
+      "english_name": "Kunming Haitian Information Technology Group Co., Ltd.",
+      "source_url": "https://www.ynhitech.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示其业务覆盖自动化、节能环保、新能源、智能通信、智慧航空等领域，并包含软件开发和系统集成相关能力。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-bocheng-tech",
@@ -52,7 +75,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明博程科技有限公司",
+      "english_name": "Kunming Bocheng Technology Co., Ltd.",
+      "source_url": "https://www.yunk.com.cn/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网介绍其面向企业提供网站建设、系统开发、APP开发、互联网营销等服务。",
+      "opportunities": [
+        "outsourcing"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-chanetsoft",
@@ -75,7 +113,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明昌昱信息科技有限公司",
+      "english_name": "Kunming Changyu Information Technology Co., Ltd.",
+      "source_url": "https://www.chanetsoft.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示云服务、大数据、工业互联网、信息化服务等业务方向。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-katesoft",
@@ -98,7 +151,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明软佳科技有限公司",
+      "english_name": "Kunming Katesoft Technology Co., Ltd.",
+      "source_url": "https://www.katesoft.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示医院信息系统、智能化医院管理和医疗信息化相关产品。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-shengyun-tech",
@@ -121,7 +189,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "盛云科技集团",
+      "english_name": "Shengyun Technology Group",
+      "source_url": "https://ynshine.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网定位为建筑行业数字化转型服务商，展示 BIM、智慧工地和行业数字化相关方案。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-daoshi-tech",
@@ -144,7 +227,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明道实科技有限公司",
+      "english_name": "Kunming Daoshi Technology Co., Ltd.",
+      "source_url": "https://kmdskj.icu/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "公开网站展示软件开发、计算机系统集成、智能化工程等技术服务方向。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-softplus-tech",
@@ -167,7 +266,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南软加科技有限公司",
+      "english_name": "Yunnan Softplus Technology Co., Ltd.",
+      "source_url": "https://www.softplus.dev/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示软件开发、AI 应用、网站建设与企业数字化相关服务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-nantian-information",
@@ -190,7 +305,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南南天电子信息产业股份有限公司",
+      "english_name": "Yunnan Nantian Electronics Information Co., Ltd.",
+      "source_url": "https://www.nantian.com.cn/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示金融科技、软件产品、IT 服务和数字化解决方案相关业务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "shengshizhiyun-yunnan-software",
@@ -213,7 +344,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "盛世智云（云南）软件有限公司",
+      "english_name": "Shengshi Zhiyun (Yunnan) Software Co., Ltd.",
+      "source_url": "https://www.lingrit.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示软件开发、信息化系统和企业数字化相关服务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-inruan-tech",
@@ -236,7 +383,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南银软科技有限公司",
+      "english_name": "Yunnan Inruan Technology Co., Ltd.",
+      "source_url": "https://www.inruan.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示软件开发、系统集成和政企信息化相关服务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-kuiyu-information",
@@ -259,7 +422,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明葵宇信息科技有限公司",
+      "english_name": "Kunming Kuiyu Information Technology Co., Ltd.",
+      "source_url": "https://www.ynkui.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示软件开发、网站建设、小程序和企业互联网服务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-yunagile-tech",
@@ -282,7 +461,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南软捷科技有限公司",
+      "english_name": "Yunnan Yunagile Technology Co., Ltd.",
+      "source_url": "https://www.yunagile.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示软件开发、云服务、系统集成与企业数字化相关能力。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-sichuangtong-tech",
@@ -305,7 +500,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明思创通科技有限公司",
+      "english_name": "Kunming Sichuangtong Technology Co., Ltd.",
+      "source_url": "https://www.kmsct.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示软件开发、信息化服务、系统集成等业务方向。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-qian-tech",
@@ -328,7 +539,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明企安科技有限公司",
+      "english_name": "Kunming Qian Technology Co., Ltd.",
+      "source_url": "https://www.kmqakj.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示网络安全、信息化服务和企业 IT 服务相关内容。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-dayuan-software",
@@ -351,7 +578,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南达远软件有限公司",
+      "english_name": "Yunnan Dayuan Software Co., Ltd.",
+      "source_url": "https://www.dayuansoft.cn/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "公开网站展示医疗行业软件、医院信息化和相关软件产品。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-weihao-computer",
@@ -374,7 +616,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明威豪计算机有限公司",
+      "english_name": "Kunming Weihao Computer Co., Ltd.",
+      "source_url": "https://www.weihaosoft.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "公开网站展示软件产品、行业信息化和系统集成相关业务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-dieyun-tech",
@@ -397,7 +655,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明蝶云科技有限公司",
+      "english_name": "Kunming Dieyun Technology Co., Ltd.",
+      "source_url": "https://www.ynjdy.cn/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示企业管理软件、财务软件和数字化服务相关内容。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-sanxiao-tech",
@@ -420,7 +694,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明三效科技有限公司",
+      "english_name": "Kunming Sanxiao Technology Co., Ltd.",
+      "source_url": "https://yn3x.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示网站建设、小程序、软件开发和互联网服务。",
+      "opportunities": [
+        "outsourcing"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kunming-yuanshiren-tech",
@@ -443,7 +732,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "昆明原始人科技有限公司",
+      "english_name": "Kunming Yuanshiren Technology Co., Ltd.",
+      "source_url": "https://www.kmysr.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "公开网站展示网站建设、软件开发和移动互联网相关服务。",
+      "opportunities": [
+        "outsourcing"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-yinxing-tech",
@@ -466,7 +770,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南银星科技有限公司",
+      "english_name": "Yunnan Yinxing Technology Co., Ltd.",
+      "source_url": "https://www.ynyxkj.net/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网介绍其以 IT 服务为立足点，聚焦信息化系统研发、集成与运维、ICT 实施与运维等领域。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "meijie-tech-group",
@@ -489,7 +808,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "美捷科技（云南）集团有限公司",
+      "english_name": "Meijie Technology (Yunnan) Group Co., Ltd.",
+      "source_url": "https://meijie.group/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网定位为农业产业互联网生态服务商，展示数字化赋能农业产业和云品上行相关业务。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-weiheng-tech",
@@ -513,7 +847,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南唯恒基业科技有限公司",
+      "english_name": "Yunnan Weiheng Base Industry Technology Co., Ltd.",
+      "source_url": "http://www.ynmaker.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "公开资料显示其围绕农业数据、产业互联网和数字化解决方案提供服务。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "baiaix-yunnan-tech",
@@ -536,7 +885,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "白矮星科技（云南）有限公司",
+      "english_name": "Baiaix Technology (Yunnan) Co., Ltd.",
+      "source_url": "https://www.baiaix.com/index.html",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网展示定制化软件开发、移动端应用、PC 端以及 VR/AR 相关服务。",
+      "opportunities": [
+        "outsourcing"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "kjt-2024-001-xifang-network",
@@ -558,7 +922,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明玺钫网络科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-003-kaima-information",
@@ -580,7 +959,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明楷码信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-004-zhihui-jiaoke",
@@ -602,7 +996,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南智慧交科科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-005-jiahe-zhihui",
@@ -624,7 +1033,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明嘉和智慧科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-014-jarvis-intelligent",
@@ -646,7 +1070,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "贾维斯智能科技（云南）有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-017-kubodike-intelligent",
@@ -668,7 +1107,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "库博迪氪（云南）智能科技有限责任公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-024-aerospace-information",
@@ -690,7 +1144,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南航天信息有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-034-tadiran-telecom",
@@ -712,7 +1181,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明塔迪兰电信设备有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-039-yuncheng-shuzhi",
@@ -734,7 +1218,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云程数智（云南）科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-056-tongyu-intelligent",
@@ -756,7 +1255,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南同煜智能科技有限责任公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-064-zhongruan-zhixun",
@@ -778,7 +1292,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南中软智讯电子股份有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-083-juying-tech",
@@ -800,7 +1329,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明聚英科技有限责任公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-101-kemeng-information",
@@ -822,7 +1366,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南科梦信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-161-chuanyang-information",
@@ -844,7 +1403,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南川洋信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-162-linggan-tech",
@@ -866,7 +1440,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南凌感科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-180-kunzhong-network",
@@ -888,7 +1477,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明昆众网络科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-brahma-game",
@@ -910,7 +1514,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南梵天游科技有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的昆明游戏公司，公开描述提到手游业务；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-lorstone",
@@ -932,7 +1551,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "络石软件设计",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的软件设计团队，公开描述提到单页 Web 应用相关技术；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-aykj",
@@ -954,7 +1588,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明奥远科技有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的昆明互联网服务公司；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-tiandu",
@@ -976,7 +1625,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "天度集团",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的昆明本地互联网服务公司；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-junyun",
@@ -998,7 +1662,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明俊云科技有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的昆明网络服务公司，公开描述提到联机加速器业务；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-gezher",
@@ -1020,7 +1699,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南歌者科技有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的农业互联网公司，公开描述提到精准农业和智慧农业方向；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-gznb",
@@ -1042,7 +1736,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南省国有资本运营商城管理有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的农村电商和国资商城相关运营主体；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-gstar",
@@ -1064,7 +1773,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南银河之星科技有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的农业云平台相关公司；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-56zuyin",
@@ -1086,7 +1810,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南遇上时光科技有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的旅游互联网公司；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "old-kmit-cassowary",
@@ -1108,7 +1847,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南犀鸟科技有限公司",
+      "english_name": "",
+      "source_url": "https://github.com/bigzhubak/KM-IT",
+      "source_type": "community_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "老 KM-IT 清单收录的电力和矿业信息化相关创业公司；需要补充当前官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-shenzhan-software",
@@ -1131,7 +1885,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_site",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南申展软件有限公司",
+      "english_name": "",
+      "source_url": "https://www.wopbx.com/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-05-11",
+      "notes": "官网介绍其自研 AI 呼叫中心、智能质检、IPPBX 融合通信、录音系统等通信软件和设备解决方案。",
+      "opportunities": [
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-tiandu-software",
@@ -1154,7 +1923,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_profile",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南天度软件系统有限公司",
+      "english_name": "",
+      "source_url": "https://www.tiandu.cn/Article/Show/825.html",
+      "source_type": "official_profile",
+      "verification_status": "official_page",
+      "last_checked": "2026-05-11",
+      "notes": "天度集团公开文章显示旗下云南天度软件系统有限公司入选专精特新、创新型和科技型中小企业名单，聚焦产业数字化服务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 4,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-weilan-information",
@@ -1177,7 +1962,23 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "official_profile",
-      "status": "active-source-found"
+      "status": "active-source-found",
+      "name": "云南蔚岚信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://www.tiandu.cn/Article/Show/825.html",
+      "source_type": "official_profile",
+      "verification_status": "official_page",
+      "last_checked": "2026-05-11",
+      "notes": "天度集团公开文章显示云南蔚岚信息技术有限公司入选云南省创新型中小企业名单；具体业务仍需补充独立官网或官方主页。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 4,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": true,
+      "suitable_for_founders": true
     },
     {
       "id": "yunnan-zhenhua-tech",
@@ -1200,7 +2001,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南振华技术有限公司",
+      "english_name": "",
+      "source_url": "https://cn.linkedin.com/company/%E4%BA%91%E5%8D%97%E6%8C%AF%E5%8D%8E%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+      "source_type": "public_web",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开资料显示其具备通信工程、电子与智能化工程、涉密信息系统集成、安全防范技术等资质。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 3,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-zheli-information",
@@ -1223,7 +2039,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南这里信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://www.zhipin.com/companys/cc3091cf944429341nR83tW4E1U~.html",
+      "source_type": "recruiting_platform",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开招聘主页介绍其为软件研发创新型企业，方向涉及 AI、大数据、3S、元宇宙、区块链和物联森防等应用。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 3,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-jiuyuan-yinhai-software",
@@ -1246,7 +2077,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南久远银海软件有限公司",
+      "english_name": "",
+      "source_url": "https://www.chidutech.com/web/article/detail/sid/NmTikn4iNaTpIpz",
+      "source_type": "public_web",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开报道显示其通过高新技术企业和 ITSS 认证，属于久远银海在云南的全资软件子公司。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 3,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-xiangnong-information",
@@ -1269,7 +2115,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南香农信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://pitchhub.36kr.com/project/2012748302206465",
+      "source_type": "media_database",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开项目信息显示其拥有综合网络管理、办公自动化等自主软件产品，并曾承担科技型中小企业创新基金相关项目。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 3,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-hedao-kangcheng-information",
@@ -1291,7 +2152,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南合道康成信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/kjt_old/2019/0726/20190726043242887.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-qingcai-information",
@@ -1313,7 +2189,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南青才信息科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/0729/20240729031642274.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kunming-yutong-yangguang-information",
@@ -1335,7 +2226,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明宇同阳光信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/0729/20240729031642274.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-yizhengtong-information",
@@ -1358,7 +2264,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南壹证通信息科技有限公司",
+      "english_name": "",
+      "source_url": "https://m.sme-gov.cn/yunnan/news/79673.html",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kunming-shunfei-information",
@@ -1380,7 +2301,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "昆明顺飞信息技术有限公司",
+      "english_name": "",
+      "source_url": "https://m.sme-gov.cn/yunnan/news/84178.html",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-weihang-intelligent-ftz",
@@ -1402,7 +2338,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南自由贸易试验区苇航智能科技有限责任公司",
+      "english_name": "",
+      "source_url": "https://m.sme-gov.cn/yunnan/news/84178.html",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "yunnan-dingdang-ecommerce-info",
@@ -1425,7 +2376,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南叮当电子商务信息咨询有限公司",
+      "english_name": "",
+      "source_url": "https://www.hh.gov.cn/virtual_attach_file.vsb?afc=zL8-liLlC8L7-inrN-sLRnfnmvbL4NI8nRn2o7WRnm7PMzl0gihFp2hmCIa0MkyYnkyiL1hfL7CbM4liLzLiLNUiL4lDLmn2o7nVL8nVolnFnmLboRG4L8WFL4QfoR7Jv2nto40XtCzNJep00WKNJXdTmQFjj-7YLR-ibpt8bEYOL_qWJ_IVX_IEN3_jN_qH9oI_13SZK_Iam3Sy9_SZtJIUm_IMTSbaQ2CeoDAw_jWx_tC0qIbtpYyPLz9DLSyPLmGPLmUYgtA8pU5cc",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-012-xile-tech",
@@ -1447,7 +2413,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南熙乐科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-016-shangwen-culture-tech",
@@ -1469,7 +2450,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南上闻文化科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-021-yingxiu-tech",
@@ -1491,7 +2487,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南迎修科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-022-yisen-tech",
@@ -1513,7 +2524,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南一森科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-023-zhiao-tech",
@@ -1535,7 +2561,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南知奥科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-026-huiquan-xinda-tech",
@@ -1557,7 +2598,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南汇全新达科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-028-zhuoyao-tech",
@@ -1579,7 +2635,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南焯耀科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-032-xingxing-tech",
@@ -1601,7 +2672,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南兴星科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-033-haiwu-tech",
@@ -1623,7 +2709,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南海午科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     },
     {
       "id": "kjt-2024-036-langchuang-tech",
@@ -1645,7 +2746,22 @@
       ],
       "source_checked_at": "2026-05-11",
       "verification": "community_pending",
-      "status": "needs-review"
+      "status": "needs-review",
+      "name": "云南朗创科技有限公司",
+      "english_name": "",
+      "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+      "source_type": "government_public_list",
+      "verification_status": "community_pending",
+      "last_checked": "2026-05-11",
+      "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+      "opportunities": [
+        "unknown"
+      ],
+      "confidence_score": 2,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": false,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": false
     }
   ]
 }
