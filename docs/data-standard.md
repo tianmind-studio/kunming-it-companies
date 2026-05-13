@@ -42,7 +42,7 @@
 | `official_profile` | 官方公众号文章、集团页面、官方新闻或机构主页 |
 | `government_public_list` | 政府公告、科技型中小企业名单、公共资源交易、采购公告等 |
 | `community_list` | 旧社区清单、开源清单、社区整理资料 |
-| `recruiting_platform` | Boss 直聘、拉勾、猎聘等公开招聘页 |
+| `recruiting_platform` | Boss 直聘、智联招聘、前程无忧、猎聘、拉勾等公开招聘平台公司主页或搜索入口。只能说明“公开可查”，不能自动推断正在招聘。 |
 | `media_database` | 媒体报道、项目数据库、投融资/企业资料平台 |
 | `public_web` | 其他公开网页 |
 | `unknown` | 来源类型暂不清楚，后续应补充 |
@@ -79,7 +79,7 @@
 - `partnership`：从公开业务看，可能与合作、客户、产业项目有关。
 - `unknown`：暂时不判断。
 
-没有明确招聘页时，不要编造 `internship` 或 `hiring`。
+没有明确招聘页时，不要编造 `internship` 或 `hiring`。如果只是发现招聘平台搜索入口，应该先放在 `data/source-leads.csv`，或在公司记录里保守使用 `source_type: recruiting_platform`、`opportunities: ["unknown"]`。
 
 ## 8. `suitable_for_*` 字段
 

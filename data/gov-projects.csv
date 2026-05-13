@@ -1,1 +1,4 @@
 id,project_name,buyer,project_type,city,budget,publish_date,source_url,status,notes
+yn-public-resource-digital,云南省公共资源交易信息网：数字化项目入口,云南省公共资源交易信息网,government_project_source,云南,,unknown,https://ggzy.yn.gov.cn/,source_homepage,政府采购、工程和公共资源交易入口；后续按具体项目公告补充，不在这里编造项目。
+ccgp-kunming-it,中国政府采购网：昆明信息化项目入口,中国政府采购网,government_project_source,昆明,,unknown,https://www.ccgp.gov.cn/,source_homepage,全国政府采购公告入口；后续需用具体公告链接补充项目名称、采购人和发布日期。
+yn-kjt-projects,云南省科技厅：科技项目与创新主体入口,云南省科学技术厅,technology_policy_source,云南,,unknown,https://kjt.yn.gov.cn/,source_homepage,科技项目、科技型企业、创新政策来源入口；后续应记录具体通知或名单链接。

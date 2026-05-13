@@ -13,8 +13,9 @@
 | 技术活动 | `data/events.csv` |
 | 社群和组织 | `data/communities.csv` |
 | 政府数字化项目线索 | `data/gov-projects.csv` |
+| 来源种子 / 后续核验入口 | `data/source-leads.csv` |
 
-公司数据以 `data/companies.json` 为主，`COMPANIES.md` 和 `data/companies.csv` 由脚本生成。
+公司数据以 `data/companies.json` 为主，`COMPANIES.md` 和 `data/companies.csv` 由脚本生成。来源种子只是“下一步去哪里查”，不能直接当作公司或岗位事实。
 
 ## 来源要求
 
@@ -24,7 +25,7 @@
 - 政府采购网、公共资源交易平台、政府部门公告、科技型中小企业名单。
 - Luma、活动行、园区或高校活动页。
 - 可信媒体报道、企业公开资料、公司 GitHub/Gitee 主页。
-- 招聘平台公开公司主页。
+- 招聘平台公开公司主页；如果只是搜索页，先放入 `data/source-leads.csv`，不要直接写成岗位。
 
 不要提交：
 

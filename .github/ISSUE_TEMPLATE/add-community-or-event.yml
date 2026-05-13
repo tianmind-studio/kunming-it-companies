@@ -1,0 +1,60 @@
+name: Add community or event source
+about: 补充昆明/云南本地技术社群、活动、讲座、园区或高校公开入口
+title: "[Community/Event] "
+labels: ["community", "event", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢补充本地技术社群或活动来源。请尽量提供公开网页，不要提交私人微信群二维码、私人微信号、手机号或聊天截图。
+  - type: input
+    id: name
+    attributes:
+      label: 名称
+      description: 社群、活动、讲座、园区活动、高校社团或组织名称
+      placeholder: 例如：昆明 AI 开发者分享会 / 云南大学软件学院活动页
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: 类型
+      options:
+        - 高校技术社团 / 学院入口
+        - 开发者社群
+        - 开源活动
+        - AI / 数据 / 技术讲座
+        - 创业 / 园区活动
+        - 政府 / 产业活动
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: city
+    attributes:
+      label: 城市 / 区县
+      placeholder: 昆明 / 呈贡区 / 云南
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: 公开来源链接
+      description: 官网、活动页、学校/园区/机构公开页面，或活动平台搜索入口
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: 为什么和技术机会有关？
+      description: 请说明它与软件、AI、数据、开发者、创业、产业数字化等方向的关系
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注
+      description: 如果只是搜索入口，请说明“只作为来源种子，不代表当前有活动”。
+    validations:
+      required: false
