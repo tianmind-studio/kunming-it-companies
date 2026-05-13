@@ -125,7 +125,7 @@ main {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
   padding: 22px 0 8px;
 }
@@ -185,7 +185,7 @@ select:focus { border-color: var(--red); }
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
   gap: 12px;
   padding-bottom: 26px;
 }
@@ -226,7 +226,7 @@ select:focus { border-color: var(--red); }
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  padding-bottom: 52px;
+  padding-bottom: 30px;
 }
 
 .company-card {
@@ -348,6 +348,98 @@ select:focus { border-color: var(--red); }
   text-align: center;
 }
 
+.empty.mini {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.resource-title {
+  margin-top: 18px;
+}
+
+.resource-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding-bottom: 52px;
+}
+
+.resource-panel {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--white);
+  padding: 18px;
+  box-shadow: 6px 6px 0 var(--paper-deep);
+}
+
+.resource-panel.wide {
+  grid-column: 1 / -1;
+}
+
+.resource-panel-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resource-panel h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.resource-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.resource-panel-top a,
+.resource-card a {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.resource-list {
+  display: grid;
+  gap: 10px;
+}
+
+.source-lead-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resource-card {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf1;
+}
+
+.resource-card.compact {
+  min-height: 136px;
+}
+
+.resource-card strong {
+  line-height: 1.35;
+}
+
+.resource-card p {
+  color: #465046;
+  font-size: 14px;
+}
+
+.resource-meta {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .site-footer {
   display: flex;
   gap: 18px;
@@ -366,6 +458,8 @@ select:focus { border-color: var(--red); }
 @media (max-width: 980px) {
   .intro-grid { grid-template-columns: repeat(2, 1fr); }
   .toolbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .resource-dashboard,
+  .source-lead-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
@@ -373,6 +467,8 @@ select:focus { border-color: var(--red); }
   .toolbar,
   .stats,
   .company-list,
+  .resource-dashboard,
+  .source-lead-list,
   .intro-grid {
     grid-template-columns: 1fr;
   }

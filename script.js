@@ -6,12 +6,24 @@ const els = {
   companyCount: document.querySelector("#companyCount"),
   verifiedCount: document.querySelector("#verifiedCount"),
   pendingCount: document.querySelector("#pendingCount"),
+  sourceLeadCount: document.querySelector("#sourceLeadCount"),
+  communityCount: document.querySelector("#communityCount"),
+  eventCount: document.querySelector("#eventCount"),
+  projectCount: document.querySelector("#projectCount"),
   sourceDate: document.querySelector("#sourceDate"),
   resultSummary: document.querySelector("#resultSummary"),
-  list: document.querySelector("#companyList")
+  list: document.querySelector("#companyList"),
+  sourceLeadList: document.querySelector("#sourceLeadList"),
+  communityList: document.querySelector("#communityList"),
+  eventList: document.querySelector("#eventList"),
+  projectList: document.querySelector("#projectList")
 };
 
 let companies = [];
+let sourceLeads = [];
+let communities = [];
+let events = [];
+let projects = [];
 let meta = {};
 
 const verificationText = {
@@ -30,14 +42,27 @@ const opportunityText = {
   unknown: "待判断"
 };
 
+function safeHref(value) {
+  try {
+    const url = new URL(value, window.location.href);
+    if (url.protocol === "http:" || url.protocol === "https:") return url.href;
+  } catch {
+    return "";
+  }
+  return "";
+}
+
 function node(tag, options = {}, children = []) {
   const element = document.createElement(tag);
   if (options.className) element.className = options.className;
   if (options.text !== undefined) element.textContent = options.text;
   if (options.href) {
-    element.href = options.href;
-    element.target = "_blank";
-    element.rel = "noreferrer";
+    const href = safeHref(options.href);
+    if (href) {
+      element.href = href;
+      element.target = "_blank";
+      element.rel = "noreferrer";
+    }
   }
   for (const child of children) element.append(child);
   return element;
@@ -62,6 +87,47 @@ function normalize(company) {
     notes: company.notes || company.summary_zh || "",
     opportunities: Array.isArray(company.opportunities) ? company.opportunities : ["unknown"]
   };
+}
+
+function parseCsvLine(line) {
+  const cells = [];
+  let current = "";
+  let quoted = false;
+
+  for (let i = 0; i < line.length; i += 1) {
+    const char = line[i];
+    const next = line[i + 1];
+
+    if (char === '"' && quoted && next === '"') {
+      current += '"';
+      i += 1;
+    } else if (char === '"') {
+      quoted = !quoted;
+    } else if (char === "," && !quoted) {
+      cells.push(current);
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+
+  cells.push(current);
+  return cells;
+}
+
+function parseCsv(text) {
+  const lines = text.trim().split(/\r?\n/);
+  const header = parseCsvLine(lines[0] || "");
+  return lines.slice(1).filter(Boolean).map((line) => {
+    const cells = parseCsvLine(line);
+    return Object.fromEntries(header.map((field, index) => [field, cells[index] || ""]));
+  });
+}
+
+async function loadCsv(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`Failed to load ${path}`);
+  return parseCsv(await response.text());
 }
 
 function searchableText(company) {
@@ -96,6 +162,10 @@ function renderStats() {
   els.companyCount.textContent = String(companies.length);
   els.verifiedCount.textContent = String(companies.filter((company) => company.verification_status === "verified").length);
   els.pendingCount.textContent = String(companies.filter((company) => company.verification_status === "community_pending").length);
+  els.sourceLeadCount.textContent = String(sourceLeads.length);
+  els.communityCount.textContent = String(communities.length);
+  els.eventCount.textContent = String(events.length);
+  els.projectCount.textContent = String(projects.length);
   els.sourceDate.textContent = meta.updated_at || "-";
 }
 
@@ -180,15 +250,87 @@ function render() {
   }
 }
 
+function renderSourceLeadSummary() {
+  const counts = new Map();
+  for (const lead of sourceLeads) counts.set(lead.direction, (counts.get(lead.direction) || 0) + 1);
+
+  els.sourceLeadList.replaceChildren();
+  for (const [direction, count] of [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0], "zh-CN"))) {
+    const example = sourceLeads.find((lead) => lead.direction === direction);
+    const card = node("article", { className: "resource-card compact" }, [
+      node("strong", { text: direction }),
+      node("p", { text: `${count} 个公开来源入口，用于继续发现候选公司和官方招聘主页。` }),
+      example?.source_url ? node("a", { href: example.source_url, text: "打开示例入口" }) : node("span", { text: "待补来源" })
+    ]);
+    els.sourceLeadList.append(card);
+  }
+}
+
+function renderResourceCards(container, rows, options) {
+  container.replaceChildren();
+  const visible = rows.slice(0, options.limit || rows.length);
+
+  if (!visible.length) {
+    container.append(node("p", { className: "empty mini", text: "暂无公开入口，欢迎补充。" }));
+    return;
+  }
+
+  for (const row of visible) {
+    const title = row[options.titleField] || row.name || row.project_name || "未命名入口";
+    const meta = options.metaFields
+      .map((field) => row[field])
+      .filter(Boolean)
+      .join(" · ");
+    const children = [
+      node("strong", { text: title }),
+      meta ? node("span", { className: "resource-meta", text: meta }) : node("span", { className: "resource-meta", text: "公开入口" }),
+      node("p", { text: row.notes || "公开来源入口，等待进一步复核。" })
+    ];
+
+    if (row.source_url) children.push(node("a", { href: row.source_url, text: "查看来源" }));
+    container.append(node("article", { className: "resource-card" }, children));
+  }
+}
+
+function renderResourcePanels() {
+  renderSourceLeadSummary();
+  renderResourceCards(els.communityList, communities, {
+    titleField: "name",
+    metaFields: ["community_type", "city", "status"],
+    limit: 8
+  });
+  renderResourceCards(els.eventList, events, {
+    titleField: "name",
+    metaFields: ["event_type", "city", "status"],
+    limit: 8
+  });
+  renderResourceCards(els.projectList, projects, {
+    titleField: "project_name",
+    metaFields: ["project_type", "city", "status"],
+    limit: 8
+  });
+}
+
 async function init() {
-  const response = await fetch("data/companies.json");
-  const dataset = await response.json();
+  const [dataset, sourceLeadRows, communityRows, eventRows, projectRows] = await Promise.all([
+    fetch("data/companies.json").then((response) => response.json()),
+    loadCsv("data/source-leads.csv"),
+    loadCsv("data/communities.csv"),
+    loadCsv("data/events.csv"),
+    loadCsv("data/gov-projects.csv")
+  ]);
+
   companies = dataset.companies.map(normalize).sort((a, b) => a.name.localeCompare(b.name, "zh-CN"));
+  sourceLeads = sourceLeadRows;
+  communities = communityRows;
+  events = eventRows;
+  projects = projectRows;
   meta = dataset.meta;
 
   populateFilters();
   renderStats();
   render();
+  renderResourcePanels();
 
   els.search.addEventListener("input", render);
   els.category.addEventListener("change", render);

@@ -96,6 +96,22 @@
           <span>needs review</span>
         </div>
         <div>
+          <strong id="sourceLeadCount">0</strong>
+          <span>source leads</span>
+        </div>
+        <div>
+          <strong id="communityCount">0</strong>
+          <span>communities</span>
+        </div>
+        <div>
+          <strong id="eventCount">0</strong>
+          <span>event sources</span>
+        </div>
+        <div>
+          <strong id="projectCount">0</strong>
+          <span>project portals</span>
+        </div>
+        <div>
           <strong id="sourceDate">-</strong>
           <span>last update</span>
         </div>
@@ -110,6 +126,48 @@
       </section>
 
       <section id="companyList" class="company-list" aria-label="公司列表"></section>
+
+      <section class="section-title resource-title">
+        <div>
+          <h2>机会入口</h2>
+          <p>把公司之外的公开来源也放到页面上：招聘平台入口、社群、活动、政府项目门户。它们是继续复核的入口，不是岗位或合作承诺。</p>
+        </div>
+      </section>
+
+      <section class="resource-dashboard" aria-label="机会入口列表">
+        <article class="resource-panel wide">
+          <div class="resource-panel-top">
+            <h3>来源种子池</h3>
+            <a href="data/source-leads.csv">CSV</a>
+          </div>
+          <p>每个方向至少 5 条公开入口，用于继续发现候选公司、官网和官方招聘主页。</p>
+          <div id="sourceLeadList" class="resource-list source-lead-list"></div>
+        </article>
+
+        <article class="resource-panel">
+          <div class="resource-panel-top">
+            <h3>社群 / 组织</h3>
+            <a href="data/communities.csv">CSV</a>
+          </div>
+          <div id="communityList" class="resource-list"></div>
+        </article>
+
+        <article class="resource-panel">
+          <div class="resource-panel-top">
+            <h3>活动 / 讲座</h3>
+            <a href="data/events.csv">CSV</a>
+          </div>
+          <div id="eventList" class="resource-list"></div>
+        </article>
+
+        <article class="resource-panel">
+          <div class="resource-panel-top">
+            <h3>政府项目入口</h3>
+            <a href="data/gov-projects.csv">CSV</a>
+          </div>
+          <div id="projectList" class="resource-list"></div>
+        </article>
+      </section>
     </main>
 
     <footer class="site-footer">

@@ -92,7 +92,12 @@ npm run validate
 - `script.js`
 - `data/companies.json`
 
-它使用纯 HTML + CSS + JS，不需要数据库、登录系统或复杂构建工具。
+它使用纯 HTML + CSS + JS，不需要数据库、登录系统或复杂构建工具。页面现在不只展示公司卡片，也会读取：
+
+- `data/source-leads.csv`：按方向汇总公开来源种子。
+- `data/communities.csv`：展示本地社群、组织和试运行小群入口。
+- `data/events.csv`：展示技术活动和讲座来源入口。
+- `data/gov-projects.csv`：展示政府数字化项目查询入口。
 
 本地预览：
 
