@@ -75,6 +75,7 @@
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
 npm run validate:data
 npm run validate
 ```
@@ -164,6 +165,7 @@ http://127.0.0.1:4178
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
 npm run validate
 ```
 
@@ -195,17 +197,15 @@ npm run validate
 - 交流本地学生实习、项目展示、开发者合作和数字化服务机会。
 - 帮忙复核 `community_pending` 记录，减少过期和错误信息。
 
-为了保护隐私，仓库里不会公开群二维码。想参与复核或补充线索，可以通过下面联系方式联系维护者，备注：`昆明技术机会雷达`。
+为了保护隐私，仓库里不会公开群二维码、个人联系方式或聊天截图。想参与复核或补充线索，请优先通过 [GitHub Issue 模板](https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose) 提交公开来源。
 
-## 联系
+如果确实需要非公开沟通，请先在 Issue 中说明原因，由维护者选择合适渠道；不要在公开 Issue 里粘贴私人联系方式、截图或无法公开复核的信息。
 
-如果你是昆明或云南的开发者、学生、创业者、企业负责人，欢迎通过微信联系我：
+## 复用、引用与更正
 
-微信号：`beizhushaonlan`
-
-<img src="assets/wechat-qr.jpg" alt="Junius 微信二维码" width="260">
-
-添加时可以备注：`昆明技术机会雷达`。
+- 想转载、引用或二次整理本项目，请先阅读 [`docs/reuse-and-citation.md`](docs/reuse-and-citation.md)。
+- 发现隐私信息、错误记录、过期链接或不适合公开展示的内容，请按 [`docs/takedown-and-correction.md`](docs/takedown-and-correction.md) 提交更正。
+- 参与讨论和复核时，请遵守 [`docs/community-guidelines.md`](docs/community-guidelines.md)。
 
 ## License
 

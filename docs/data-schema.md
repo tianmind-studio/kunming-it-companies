@@ -49,7 +49,7 @@
 | `id` | string | yes | 稳定 slug。 |
 | `direction` | string | yes | 必须属于 9 个方向之一。 |
 | `source_title` | string | yes | 入口名称，例如 BOSS 直聘昆明关键词页。 |
-| `source_type` | string | yes | `recruiting_platform` / `official_portal` / `government_portal` / `event_platform`。 |
+| `source_type` | string | yes | `recruiting_platform` / `official_portal` / `government_portal` / `public_resource_portal` / `university_portal` / `event_platform` / `industry_association` / `incubator_or_park` / `open_source` / `media_database` / `search_engine_query`。 |
 | `source_url` | string | yes | 公开可访问链接。 |
 | `city` | string | yes | 通常为 `昆明` 或 `云南`。 |
 | `keyword` | string | yes | 用来发现候选的关键词。 |

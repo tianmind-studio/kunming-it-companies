@@ -71,3 +71,15 @@ body:
         - 不方便说明
     validations:
       required: true
+
+  - type: checkboxes
+    id: public_source_confirmation
+    attributes:
+      label: 公开来源与隐私确认
+      options:
+        - label: 我提供的是公开可访问来源，不是私聊、截图或内部材料。
+          required: true
+        - label: 我没有提交私人联系方式、群二维码、无法核验的薪资/裁员/纠纷信息。
+          required: true
+        - label: 如果只是招聘平台搜索入口，我理解它只能作为来源种子，不代表正在招聘。
+          required: true

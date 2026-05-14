@@ -14,10 +14,38 @@ body:
     id: sources
     attributes:
       label: 可核验来源
-      description: 请提供官网、官方公众号、招聘主页、官方新闻、工商公开页或可信媒体报道。
+      description: 请提供官网、官方公众号文章、招聘主页、官方新闻、工商公开页、政府公告或可信媒体报道。
       placeholder: |
         - 官网：https://...
         - 招聘页：https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: 建议 source_type
+      description: 如果不确定，请选 unknown，维护者会复核。
+      options:
+        - official_site
+        - official_profile
+        - government_public_list
+        - community_list
+        - recruiting_platform
+        - media_database
+        - public_web
+        - unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: verification_status
+    attributes:
+      label: 建议 verification_status
+      options:
+        - verified
+        - official_page
+        - community_pending
+        - outdated
+        - unknown
     validations:
       required: true
   - type: textarea
@@ -26,13 +54,12 @@ body:
       label: 建议更新的业务描述
       description: 用中性事实描述，不写主观评价。
       placeholder: 官网显示该公司主要提供……
-  - type: dropdown
-    id: verification_level
+  - type: checkboxes
+    id: public_source_confirmation
     attributes:
-      label: 建议核验等级
+      label: 公开来源与隐私确认
       options:
-        - official_site
-        - official_profile
-        - community_pending
-    validations:
-      required: true
+        - label: 我提供的是公开可访问来源，不是私聊、截图或内部材料。
+          required: true
+        - label: 我没有提交私人联系方式、群二维码、无法核验的薪资/裁员/纠纷信息。
+          required: true

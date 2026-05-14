@@ -1,0 +1,80 @@
+name: Add source lead
+description: 补充一个公开来源入口，用于后续发现公司、活动、项目或社群线索
+title: "[Source Lead] 来源名称"
+labels: ["source-lead", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        来源种子只表示“可以从这里继续查”，不代表已经确认公司、岗位、活动或合作机会。
+  - type: dropdown
+    id: direction
+    attributes:
+      label: 方向
+      options:
+        - 软件开发 / 外包
+        - 系统集成 / 政企信息化
+        - AI / 大数据
+        - 农业数字化
+        - 医疗信息化
+        - 文旅科技
+        - 金融科技
+        - 网络安全
+        - 通信 / ICT
+    validations:
+      required: true
+  - type: input
+    id: source_title
+    attributes:
+      label: 来源入口名称
+      placeholder: 例如：云南省公共资源交易信息网信息化项目搜索入口
+    validations:
+      required: true
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: 来源类型
+      options:
+        - recruiting_platform
+        - official_portal
+        - government_portal
+        - public_resource_portal
+        - university_portal
+        - event_platform
+        - industry_association
+        - incubator_or_park
+        - open_source
+        - media_database
+        - search_engine_query
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: 公开来源链接
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: keyword
+    attributes:
+      label: 关键词
+      placeholder: 例如：软件开发 / 信息化 / AI / 农业数字化
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注
+      description: 请说明这个入口能帮助发现什么；不要把来源入口写成已经确认的岗位或项目。
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 确认
+      options:
+        - label: 我理解这个来源只是入口，不代表存在确定机会。
+          required: true
+        - label: 我没有提交私人联系方式、截图或无法公开复核的信息。
+          required: true

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Kunming Tech Radar / 昆明技术机会雷达</title>
+  <desc id="desc">Source-backed local technology opportunity map for Kunming and Yunnan.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#13201f"/>
+      <stop offset="0.55" stop-color="#19302e"/>
+      <stop offset="1" stop-color="#3a211d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="28%" r="60%">
+      <stop offset="0" stop-color="#f3e7c8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f3e7c8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g fill="none" stroke="#dff3f0" stroke-opacity="0.35" stroke-width="2">
+    <path d="M120 455 C260 300 360 360 500 210 S850 220 1050 120"/>
+    <path d="M180 180 C330 280 420 120 590 260 S870 390 1030 300"/>
+    <path d="M260 500 C420 420 500 490 690 360 S940 410 1080 500"/>
+  </g>
+  <g fill="#f3e7c8">
+    <circle cx="210" cy="410" r="9"/>
+    <circle cx="420" cy="285" r="9"/>
+    <circle cx="620" cy="240" r="9"/>
+    <circle cx="790" cy="348" r="9"/>
+    <circle cx="990" cy="210" r="9"/>
+  </g>
+  <g fill="#b94738">
+    <circle cx="525" cy="420" r="12"/>
+    <circle cx="915" cy="455" r="12"/>
+  </g>
+  <text x="92" y="118" fill="#f3e7c8" font-size="28" font-family="Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" letter-spacing="4">KUNMING TECH RADAR</text>
+  <text x="88" y="240" fill="#ffffff" font-size="76" font-weight="800" font-family="Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">昆明技术机会雷达</text>
+  <text x="92" y="315" fill="#dff3f0" font-size="34" font-family="Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">可搜索 · 可复核 · 可贡献的本地技术机会地图</text>
+  <text x="92" y="405" fill="#f7eee6" font-size="25" font-family="Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">Source-backed companies, communities, events, and public project portals.</text>
+  <text x="92" y="470" fill="#c9dad7" font-size="22" font-family="Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">github.com/tianmind-studio/kunming-it-companies</text>
+</svg>

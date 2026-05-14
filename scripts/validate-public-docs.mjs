@@ -17,12 +17,25 @@ function listMarkdownFiles(dir) {
     .map((name) => path.join(dir, name));
 }
 
+function listAssetFiles(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).map((name) => path.join(dir, name));
+}
+
 const blockedFiles = [
-  "docs/share-kit.md"
+  "docs/share-kit.md",
+  "assets/wechat-qr.jpg",
+  "assets/wechat-qr.png",
+  "assets/wechat-qr.webp"
 ];
 
 for (const filePath of blockedFiles) {
   assert(!fs.existsSync(filePath), `${filePath} should not be kept in the public repository.`);
+}
+
+for (const filePath of listAssetFiles("assets")) {
+  const lower = path.basename(filePath).toLowerCase();
+  assert(!/(wechat|weixin|qr)/.test(lower), `${filePath}: contact/QR assets should not be committed publicly.`);
 }
 
 const publicDocs = [
@@ -47,14 +60,23 @@ const blockedMarkers = [
   "我整理了",
   "已有读者",
   "线上入口联系维护者",
-  "X / Twitter 文案"
+  "X / Twitter 文案",
+  "微信号：",
+  "assets/wechat-qr",
+  "wechat-qr.jpg",
+  "wechat-qr.png",
+  "wechat-qr.webp",
+  "beizhushaonlan"
 ];
+
+const directPhonePattern = /(^|[^\d])1[3-9]\d{9}([^\d]|$)/;
 
 for (const filePath of publicDocs) {
   const body = read(filePath);
   for (const marker of blockedMarkers) {
     assert(!body.includes(marker), `${filePath} contains public-doc boundary marker: ${marker}`);
   }
+  assert(!directPhonePattern.test(body), `${filePath} appears to contain a direct mobile phone number.`);
 }
 
 if (errors.length) {
