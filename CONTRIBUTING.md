@@ -42,6 +42,7 @@
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
 npm run validate
 ```
 
@@ -51,7 +52,7 @@ npm run validate
 
 ## 字段和边界
 
-请先阅读：[`docs/data-standard.md`](docs/data-standard.md)。
+请先阅读：[`docs/data-standard.md`](docs/data-standard.md)、[`docs/community-guidelines.md`](docs/community-guidelines.md) 和 [`docs/takedown-and-correction.md`](docs/takedown-and-correction.md)。
 
 关键原则：
 

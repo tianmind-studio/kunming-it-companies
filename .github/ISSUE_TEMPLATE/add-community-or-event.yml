@@ -1,5 +1,5 @@
 name: Add community or event source
-about: 补充昆明/云南本地技术社群、活动、讲座、园区或高校公开入口
+description: 补充昆明/云南本地技术社群、活动、讲座、园区或高校公开入口
 title: "[Community/Event] "
 labels: ["community", "event", "needs-triage"]
 body:
@@ -58,3 +58,15 @@ body:
       description: 如果只是搜索入口，请说明“只作为来源种子，不代表当前有活动”。
     validations:
       required: false
+
+  - type: checkboxes
+    id: public_source_confirmation
+    attributes:
+      label: 公开来源与隐私确认
+      options:
+        - label: 我提供的是公开网页、公开活动页、机构主页或平台搜索入口。
+          required: true
+        - label: 我没有提交私人联系方式、群二维码、聊天截图或无法公开复核的信息。
+          required: true
+        - label: 如果只是搜索入口，我理解它不代表当前有具体活动或长期活跃社群。
+          required: true

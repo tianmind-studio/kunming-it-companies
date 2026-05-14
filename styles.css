@@ -531,3 +531,17 @@ select:focus { border-color: var(--red); }
 
   h1 { font-size: 54px; }
 }
+
+.noscript-card {
+  margin: 1rem auto 0;
+  max-width: 1120px;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.noscript-card a {
+  color: var(--accent);
+}

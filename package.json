@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "test": "npm run validate",
-    "validate": "npm run validate:data && node scripts/generate-companies-md.mjs --check && node scripts/export-companies-csv.mjs --check && node scripts/validate-csv.mjs && node scripts/validate-repo-paths.mjs && node scripts/validate-public-docs.mjs && node scripts/validate-site.mjs",
+    "validate": "npm run validate:data && node scripts/generate-companies-md.mjs --check && node scripts/export-companies-csv.mjs --check && node scripts/validate-csv.mjs && node scripts/generate-data-quality-report.mjs --check && node scripts/validate-repo-paths.mjs && node scripts/validate-public-docs.mjs && node scripts/validate-site.mjs",
     "validate:data": "node scripts/validate-data.mjs",
     "generate:companies": "node scripts/generate-companies-md.mjs",
     "export:csv": "node scripts/export-companies-csv.mjs",
-    "serve": "python3 -m http.server 4178 --bind 127.0.0.1"
+    "serve": "python3 -m http.server 4178 --bind 127.0.0.1",
+    "generate:data-quality": "node scripts/generate-data-quality-report.mjs"
   }
 }

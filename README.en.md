@@ -11,6 +11,7 @@ Primary links:
 - Company index: [COMPANIES.md](COMPANIES.md)
 - Primary dataset: [data/companies.json](data/companies.json)
 - Data standard: [docs/data-standard.md](docs/data-standard.md)
+- Data quality report: [docs/data-quality-report.md](docs/data-quality-report.md)
 - Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Who It Helps
@@ -61,11 +62,18 @@ The most valuable contributions are:
 
 If you do not use GitHub often, open an issue with the company or event name, location, public source link, and a short explanation of why it is technology-related.
 
+## Reuse, Citation, and Corrections
+
+- If you reuse, cite, translate, or reorganize this dataset, read [docs/reuse-and-citation.md](docs/reuse-and-citation.md).
+- If you find private information, outdated records, broken links, or entries outside the collection boundary, follow [docs/takedown-and-correction.md](docs/takedown-and-correction.md).
+- For public discussion and contribution norms, see [docs/community-guidelines.md](docs/community-guidelines.md).
+
 ## Local Checks
 
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
 npm run validate
 ```
 

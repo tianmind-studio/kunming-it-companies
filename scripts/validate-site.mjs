@@ -48,6 +48,11 @@ function parseCsv(text) {
 const index = read("index.html");
 const script = read("script.js");
 
+assert(index.includes("assets/social-card.svg"), "index.html should include a non-private social preview image.");
+assert(index.includes("docs/reuse-and-citation.md"), "index.html should link to reuse/citation guidance.");
+assert(index.includes("docs/takedown-and-correction.md"), "index.html should link to correction guidance.");
+assert(!index.includes("wechat-qr"), "index.html must not reference private QR assets.");
+
 const requiredIds = [
   "sourceLeadCount",
   "communityCount",
