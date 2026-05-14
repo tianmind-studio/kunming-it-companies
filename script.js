@@ -11,6 +11,9 @@ const els = {
   eventCount: document.querySelector("#eventCount"),
   projectCount: document.querySelector("#projectCount"),
   sourceDate: document.querySelector("#sourceDate"),
+  verifiedRatio: document.querySelector("#verifiedRatio"),
+  missingDistrictCount: document.querySelector("#missingDistrictCount"),
+  weakSourceCount: document.querySelector("#weakSourceCount"),
   resultSummary: document.querySelector("#resultSummary"),
   list: document.querySelector("#companyList"),
   sourceLeadList: document.querySelector("#sourceLeadList"),
@@ -159,6 +162,10 @@ function populateFilters() {
 }
 
 function renderStats() {
+  const verifiedTotal = companies.filter((company) => ["verified", "official_page"].includes(company.verification_status)).length;
+  const missingDistricts = companies.filter((company) => !company.district).length;
+  const weakSources = companies.filter((company) => Number(company.confidence_score || 0) <= 2).length;
+
   els.companyCount.textContent = String(companies.length);
   els.verifiedCount.textContent = String(companies.filter((company) => company.verification_status === "verified").length);
   els.pendingCount.textContent = String(companies.filter((company) => company.verification_status === "community_pending").length);
@@ -167,6 +174,9 @@ function renderStats() {
   els.eventCount.textContent = String(events.length);
   els.projectCount.textContent = String(projects.length);
   els.sourceDate.textContent = meta.updated_at || "-";
+  els.verifiedRatio.textContent = companies.length ? `${Math.round((verifiedTotal / companies.length) * 100)}%` : "0%";
+  els.missingDistrictCount.textContent = String(missingDistricts);
+  els.weakSourceCount.textContent = String(weakSources);
 }
 
 function verificationMeta(company) {
