@@ -9,6 +9,8 @@
 - `export-companies-csv.mjs`：从 `data/companies.json` 生成 `data/companies.csv`。
 - `validate-data.mjs`：校验公司 JSON 的必填字段、来源、日期、核验状态和可信度评分。
 - `validate-csv.mjs`：检查 CSV 表头、列数、URL/日期格式，并要求 `data/source-leads.csv` 每个方向至少 5 条来源入口。
+- `validate-repo-paths.mjs`：检查仓库是否存在大小写路径冲突，避免 macOS 和 GitHub 上表现不一致。
+- `validate-public-docs.mjs`：检查公开文档是否出现明显的维护者传播话术或 owner-only 内容。
 - `validate-site.mjs`：检查 GitHub Pages 首页是否接入公司之外的来源入口面板，并确认相关 CSV 有基础数据。
 
 ## 常用命令

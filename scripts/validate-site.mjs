@@ -56,7 +56,10 @@ const requiredIds = [
   "sourceLeadList",
   "communityList",
   "eventList",
-  "projectList"
+  "projectList",
+  "verifiedRatio",
+  "missingDistrictCount",
+  "weakSourceCount"
 ];
 
 for (const id of requiredIds) {
@@ -85,6 +88,9 @@ assert(projects.length >= 3, "gov-projects should include public project source 
 assert(script.includes("renderSourceLeadSummary"), "script.js should render source lead summary.");
 assert(script.includes("renderResourceCards"), "script.js should render resource cards.");
 assert(script.includes("safeHref"), "script.js should guard dynamic href values.");
+assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-facing share kit content.");
+assert(index.includes("docs/project-brief.md"), "index.html should link the public project brief.");
+assert(script.includes("weakSourceCount"), "script.js should render data quality metrics.");
 
 for (const [label, rows] of [
   ["source-leads", sourceLeads],
