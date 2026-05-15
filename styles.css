@@ -112,6 +112,60 @@ h1 span { display: block; }
   color: white;
 }
 
+.header-side {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 8px 8px 0 var(--paper-deep);
+}
+
+.contact-card h2 {
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.contact-card p { margin: 0; }
+
+.contact-label {
+  width: fit-content;
+  padding: 4px 8px;
+  background: var(--red);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.wechat-id {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: #f9f3e5;
+  font-weight: 900;
+}
+
+.wechat-id code {
+  font: inherit;
+  color: var(--green);
+}
+
+.wechat-qr {
+  width: min(230px, 100%);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+}
+
+.contact-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .map-visual {
   display: block;
   width: 100%;
@@ -582,6 +636,7 @@ select:focus { border-color: var(--red); }
 
 @media (max-width: 760px) {
   .site-header,
+  .header-side,
   .toolbar,
   .stats,
   .quality-strip,
