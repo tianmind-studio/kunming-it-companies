@@ -51,7 +51,7 @@ const script = read("script.js");
 assert(index.includes("assets/social-card.svg"), "index.html should include a non-private social preview image.");
 assert(index.includes("docs/reuse-and-citation.md"), "index.html should link to reuse/citation guidance.");
 assert(index.includes("docs/takedown-and-correction.md"), "index.html should link to correction guidance.");
-assert(!index.includes("wechat-qr"), "index.html must not reference private QR assets.");
+assert(index.includes("assets/wechat-qr.jpg") && index.includes("beizhushaonlan"), "index.html should expose the approved maintainer WeChat community contact.");
 
 const requiredIds = [
   "sourceLeadCount",
