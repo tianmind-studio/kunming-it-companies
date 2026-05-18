@@ -58,7 +58,7 @@ dist/
 
 ## 线索表单后端
 
-`submit.html` 会把表单提交到同域接口：
+`submit.html` 在国内主站会把表单提交到同域接口；GitHub Pages 备用页会通过受限 CORS 提交到同一个国内接口：
 
 ```text
 POST https://kunming.tianmind.com/api/leads

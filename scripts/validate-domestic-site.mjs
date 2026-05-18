@@ -32,7 +32,8 @@ assert(submit.includes("data-copy-target"), "submit.html should include copyable
 assert(submit.includes('id="leadForm"'), "submit.html should include the online lead form.");
 assert(!submit.includes("表单暂未开放"), "submit.html should not ship the old form placeholder state.");
 assert(submit.includes("公开来源"), "submit.html should emphasize public-source-only submission.");
-assert(submitJs.includes('fetch("/api/leads"'), "submit.js should post leads to the same-origin intake API.");
+assert(submitJs.includes('primaryHost = "kunming.tianmind.com"'), "submit.js should keep the domestic domain as the primary form host.");
+assert(submitJs.includes('"/api/leads"'), "submit.js should post domestic leads to the same-origin intake API.");
 assert(submitJs.includes("navigator.clipboard"), "submit.js should keep copyable submission templates working.");
 
 assert(robots.includes("https://kunming.tianmind.com/sitemap.xml"), "robots.txt should point to the domestic sitemap.");

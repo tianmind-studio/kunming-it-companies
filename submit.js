@@ -1,6 +1,10 @@
 const buttons = document.querySelectorAll("[data-copy-target]");
 const leadForm = document.getElementById("leadForm");
 const formStatus = document.getElementById("formStatus");
+const primaryHost = "kunming.tianmind.com";
+const leadApiEndpoint = window.location.hostname === primaryHost
+  ? "/api/leads"
+  : `https://${primaryHost}/api/leads`;
 
 async function copyTemplate(event) {
   const button = event.currentTarget;
@@ -81,7 +85,7 @@ async function submitLead(event) {
   setStatus("正在提交，维护者会先复核再写入数据。", "neutral");
 
   try {
-    const response = await fetch("/api/leads", {
+    const response = await fetch(leadApiEndpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)

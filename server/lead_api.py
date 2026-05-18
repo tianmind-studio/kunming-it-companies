@@ -44,6 +44,12 @@ PUBLIC_FIELDS = {
 }
 
 REQUIRED_FIELDS = ("lead_type", "title", "city", "source_url", "reason")
+ALLOWED_ORIGINS = {
+    "https://kunming.tianmind.com",
+    "https://tianmind-studio.github.io",
+    "http://127.0.0.1:4178",
+    "http://localhost:4178",
+}
 
 
 def now_cn() -> datetime:
@@ -102,11 +108,27 @@ def append_record(record: dict[str, Any]) -> None:
 class LeadHandler(BaseHTTPRequestHandler):
     server_version = "KunmingLeadAPI/1.0"
 
+    def _cors_origin(self) -> str | None:
+        origin = self.headers.get("Origin")
+        if origin in ALLOWED_ORIGINS:
+            return origin
+        return None
+
+    def _send_cors_headers(self) -> None:
+        origin = self._cors_origin()
+        if not origin:
+            return
+        self.send_header("Access-Control-Allow-Origin", origin)
+        self.send_header("Vary", "Origin")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+
     def _send_json(self, status: int, body: dict[str, Any]) -> None:
         content = json.dumps(body, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Cache-Control", "no-store")
+        self._send_cors_headers()
         self.send_header("Content-Length", str(len(content)))
         self.end_headers()
         self.wfile.write(content)
@@ -114,6 +136,7 @@ class LeadHandler(BaseHTTPRequestHandler):
     def do_OPTIONS(self) -> None:  # noqa: N802
         self.send_response(204)
         self.send_header("Allow", "OPTIONS, GET, POST")
+        self._send_cors_headers()
         self.send_header("Content-Length", "0")
         self.end_headers()
 
