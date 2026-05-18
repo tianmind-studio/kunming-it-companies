@@ -1,6 +1,6 @@
 # Roadmap
 
-Kunming Tech Radar 会从公司索引逐步扩展为本地技术机会资料库。
+昆明技术机会雷达 / Kunming Tech Radar 会从公司索引逐步扩展为本地技术机会资料库。
 
 ## Phase 1: 数据结构
 

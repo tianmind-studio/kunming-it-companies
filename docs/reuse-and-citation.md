@@ -1,11 +1,11 @@
 # Reuse and Citation / 复用与引用
 
-Kunming Tech Radar 是一个公开协作的数据项目。欢迎引用、转载、二次整理或用于非商业研究，但请保留来源和不确定性。
+昆明技术机会雷达 / Kunming Tech Radar 是一个公开协作的数据项目。欢迎引用、转载、二次整理或用于非商业研究，但请保留来源和不确定性。
 
 ## 推荐引用格式
 
 ```text
-Kunming Tech Radar / 昆明技术机会雷达，tianmind-studio/kunming-it-companies，访问日期：YYYY-MM-DD，https://github.com/tianmind-studio/kunming-it-companies
+昆明技术机会雷达 / Kunming Tech Radar，tianmind-studio/kunming-it-companies，访问日期：YYYY-MM-DD，https://github.com/tianmind-studio/kunming-it-companies
 ```
 
 如果引用单条公司或活动记录，请同时保留：

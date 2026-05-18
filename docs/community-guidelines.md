@@ -1,6 +1,6 @@
 # Community Guidelines / 社区协作边界
 
-Kunming Tech Radar 希望成为一个可信、克制、可复核的本地技术机会地图。
+昆明技术机会雷达 / Kunming Tech Radar 希望成为一个可信、克制、可复核的本地技术机会地图。
 
 ## 协作原则
 

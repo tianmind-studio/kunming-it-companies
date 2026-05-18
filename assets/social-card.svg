@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Kunming Tech Radar / 昆明技术机会雷达</title>
-  <desc id="desc">Source-backed local technology opportunity map for Kunming and Yunnan.</desc>
+  <title id="title">昆明技术机会雷达 / Kunming Tech Radar</title>
+  <desc id="desc">可搜索、可复核、可贡献的昆明/云南本地技术机会地图。</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#13201f"/>
