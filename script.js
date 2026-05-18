@@ -1,4 +1,12 @@
 const els = {
+  heroSearchForm: document.querySelector("#heroSearchForm"),
+  heroSearch: document.querySelector("#heroSearchInput"),
+  heroCompanyCount: document.querySelector("#heroCompanyCount"),
+  heroSourceLeadCount: document.querySelector("#heroSourceLeadCount"),
+  heroVerifiedRatio: document.querySelector("#heroVerifiedRatio"),
+  heroUpdatedAt: document.querySelector("#heroUpdatedAt"),
+  homeResultSummary: document.querySelector("#homeResultSummary"),
+  featuredList: document.querySelector("#featuredCompanyList"),
   search: document.querySelector("#searchInput"),
   category: document.querySelector("#categorySelect"),
   district: document.querySelector("#districtSelect"),
@@ -166,6 +174,7 @@ function renderStats() {
   const verifiedTotal = companies.filter((company) => ["verified", "official_page"].includes(company.verification_status)).length;
   const missingDistricts = companies.filter((company) => !company.district).length;
   const weakSources = companies.filter((company) => Number(company.confidence_score || 0) <= 2).length;
+  const verifiedRatio = companies.length ? `${Math.round((verifiedTotal / companies.length) * 100)}%` : "0%";
 
   els.companyCount.textContent = String(companies.length);
   els.verifiedCount.textContent = String(companies.filter((company) => company.verification_status === "verified").length);
@@ -175,9 +184,14 @@ function renderStats() {
   els.eventCount.textContent = String(events.length);
   els.projectCount.textContent = String(projects.length);
   els.sourceDate.textContent = meta.updated_at || "-";
-  els.verifiedRatio.textContent = companies.length ? `${Math.round((verifiedTotal / companies.length) * 100)}%` : "0%";
+  els.verifiedRatio.textContent = verifiedRatio;
   els.missingDistrictCount.textContent = String(missingDistricts);
   els.weakSourceCount.textContent = String(weakSources);
+
+  if (els.heroCompanyCount) els.heroCompanyCount.textContent = String(companies.length);
+  if (els.heroSourceLeadCount) els.heroSourceLeadCount.textContent = String(sourceLeads.length);
+  if (els.heroVerifiedRatio) els.heroVerifiedRatio.textContent = verifiedRatio;
+  if (els.heroUpdatedAt) els.heroUpdatedAt.textContent = meta.updated_at || "-";
 }
 
 function verificationMeta(company) {
@@ -207,6 +221,40 @@ function renderTags(items, className = "tag") {
   return wrap;
 }
 
+function renderFeatured(companiesToShow) {
+  if (!els.featuredList) return;
+
+  els.featuredList.replaceChildren();
+  const visible = companiesToShow.slice(0, 6);
+  if (els.homeResultSummary) {
+    els.homeResultSummary.textContent = `显示 ${companiesToShow.length} / ${companies.length} 条，预览前 ${visible.length} 条`;
+  }
+
+  if (!visible.length) {
+    els.featuredList.append(node("p", { className: "empty", text: "没有匹配记录。换个关键词，或提交公开来源补充线索。" }));
+    return;
+  }
+
+  for (const company of visible) {
+    const badge = verificationMeta(company);
+    const sourceUrl = company.website || company.source_url;
+    const cardChildren = [
+      node("div", { className: "featured-top" }, [
+        node("h3", { text: company.name }),
+        node("span", badge)
+      ]),
+      node("p", { text: company.notes }),
+      node("div", { className: "featured-meta" }, [
+        node("span", { text: company.district || "区域待补" }),
+        node("span", { text: company.category || "方向待补" }),
+        node("span", { text: `可信度 ${company.confidence_score || 1}/5` })
+      ])
+    ];
+    if (sourceUrl) cardChildren.push(node("a", { href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }));
+    els.featuredList.append(node("article", { className: "featured-card" }, cardChildren));
+  }
+}
+
 function render() {
   const query = els.search.value.trim().toLowerCase();
   const queryTokens = query.split(/\s+/).filter(Boolean);
@@ -224,6 +272,7 @@ function render() {
     return matchesQuery && matchesCategory && matchesDistrict && matchesVerification;
   });
 
+  renderFeatured(filtered);
   els.resultSummary.textContent = `显示 ${filtered.length} / ${companies.length} 条记录`;
   els.list.replaceChildren();
 
@@ -270,6 +319,7 @@ function applyIntent(event) {
   const scrollTarget = target.dataset.scroll;
 
   if (query !== undefined) els.search.value = query;
+  if (query !== undefined && els.heroSearch) els.heroSearch.value = query;
   if (verification !== undefined) els.verification.value = verification;
   els.category.value = "";
   els.district.value = "";
@@ -362,7 +412,23 @@ async function init() {
   render();
   renderResourcePanels();
 
-  els.search.addEventListener("input", render);
+  els.search.addEventListener("input", () => {
+    if (els.heroSearch) els.heroSearch.value = els.search.value;
+    render();
+  });
+  els.heroSearch?.addEventListener("input", () => {
+    els.search.value = els.heroSearch.value;
+    render();
+  });
+  els.heroSearchForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    els.search.value = els.heroSearch?.value || "";
+    els.category.value = "";
+    els.district.value = "";
+    els.verification.value = "";
+    render();
+    document.querySelector("#directory")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
   els.category.addEventListener("change", render);
   els.district.addEventListener("change", render);
   els.verification.addEventListener("change", render);

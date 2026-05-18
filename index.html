@@ -60,29 +60,54 @@
     </script>
   </head>
   <body>
+    <nav class="topbar" aria-label="主导航">
+      <a class="brand" href="/">
+        <strong>昆明技术机会雷达</strong>
+        <span>Kunming Tech Radar</span>
+      </a>
+      <div class="topbar-links">
+        <a href="#directory">查公司</a>
+        <a href="#resourceList">看入口</a>
+        <a href="submit.html">提交线索</a>
+        <a href="data/companies.csv">下载数据</a>
+      </div>
+    </nav>
+
     <header class="site-header">
       <div class="header-copy">
-        <p class="kicker">国内可访问入口 / GitHub 开源底座</p>
-        <h1><span>昆明技术</span><span>机会雷达</span></h1>
-        <p class="lede">一个开源的本地技术机会数据库。适合在查找昆明 IT 公司、昆明软件公司、昆明 AI 公司、云南数字化项目和 Kunming tech companies 时，先看到可检索、可复核、可贡献的公开资料。</p>
-        <div class="hero-actions">
-          <a href="#companyList">直接查公司</a>
-          <a href="#search-intents">按搜索目标浏览</a>
-          <a href="#contact">加微信 / 入社群</a>
-          <a href="submit.html">提交线索</a>
-          <a href="docs/use-cases.md">按角色使用</a>
-          <a href="data/companies.csv">下载 CSV</a>
-          <a href="data/companies.json">下载 JSON</a>
+        <p class="kicker">昆明 / 云南 技术机会资料库</p>
+        <h1><span>找本地技术公司</span><span>先看公开来源。</span></h1>
+        <p class="lede">面向昆明开发者、学生、自由职业者和企业的本地技术资料库。这里可以直接搜索昆明 IT 公司、软件团队、AI/数据服务商、活动社群和云南数字化项目入口。</p>
+        <form id="heroSearchForm" class="hero-search" role="search">
+          <label for="heroSearchInput">搜索公司、方向、区县或机会</label>
+          <div>
+            <input id="heroSearchInput" type="search" placeholder="试试：软件、AI、系统集成、高新区、招聘">
+            <button type="submit">搜索</button>
+          </div>
+        </form>
+        <div class="quick-queries" aria-label="热门搜索">
+          <button type="button" data-query="软件" data-verification="" data-scroll="#directory">昆明软件公司</button>
+          <button type="button" data-query="AI" data-verification="" data-scroll="#directory">昆明 AI 公司</button>
+          <button type="button" data-query="系统集成" data-verification="" data-scroll="#directory">系统集成</button>
+          <button type="button" data-query="" data-verification="community_pending" data-scroll="#directory">待复核线索</button>
         </div>
       </div>
       <div class="header-side">
-        <aside id="contact" class="contact-card" aria-label="联系维护者">
-          <p class="contact-label">本地社群 / 合作入口</p>
-          <h2>加微信，进入昆明技术机会雷达社群</h2>
-          <p>如果你想补充线索、交流本地技术机会、找合作方向，欢迎直接联系维护者 Junius。</p>
-          <p class="wechat-id">微信号：<code>beizhushaonlan</code></p>
-          <img class="wechat-qr" src="assets/wechat-qr.jpg" alt="Junius 微信二维码">
-          <p class="contact-note">添加时备注「昆明技术机会雷达」。此联系方式由维护者本人主动公开；数据区仍不展示第三方未经授权的私人联系方式。</p>
+        <aside class="radar-panel" aria-label="数据状态">
+          <div class="radar-panel-top">
+            <span>DATA STATUS</span>
+            <strong id="heroUpdatedAt">-</strong>
+          </div>
+          <div class="radar-metrics">
+            <div><strong id="heroCompanyCount">0</strong><span>公司 / 团队</span></div>
+            <div><strong id="heroSourceLeadCount">0</strong><span>来源入口</span></div>
+            <div><strong id="heroVerifiedRatio">0%</strong><span>强来源占比</span></div>
+          </div>
+          <p>数据先按公开来源入库，再人工复核。提交页和 CSV/JSON 下载都可在国内站直接完成。</p>
+          <div class="panel-actions">
+            <a href="submit.html">提交公开线索</a>
+            <a href="data/companies.json">下载 JSON</a>
+          </div>
         </aside>
         <img class="map-visual" src="assets/kunming-network.svg" alt="昆明各城区技术节点示意图">
       </div>
@@ -96,6 +121,49 @@
     </noscript>
 
     <main>
+      <section id="directory" class="primary-tool" aria-label="本地公司目录">
+        <div class="section-title primary-title">
+          <div>
+            <p class="kicker">Directory</p>
+            <h2>先看这些可复核公司</h2>
+            <p>首屏搜索会同步更新这里和完整列表。所有记录都保留来源、核验状态和可信度，不把线索包装成确定机会。</p>
+          </div>
+          <p id="homeResultSummary" aria-live="polite">正在加载数据...</p>
+        </div>
+
+        <section class="toolbar compact-toolbar" aria-label="筛选公司">
+          <label class="search-box">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="公司名、方向、标签、备注..." autocomplete="off">
+          </label>
+          <label>
+            <span>方向</span>
+            <select id="categorySelect">
+              <option value="">全部方向</option>
+            </select>
+          </label>
+          <label>
+            <span>区域</span>
+            <select id="districtSelect">
+              <option value="">全部区域</option>
+            </select>
+          </label>
+          <label>
+            <span>核验状态</span>
+            <select id="verificationSelect">
+              <option value="">全部状态</option>
+              <option value="verified">官网已核验</option>
+              <option value="official_page">官方页核验</option>
+              <option value="community_pending">社区待复核</option>
+              <option value="outdated">疑似过期</option>
+              <option value="unknown">状态未知</option>
+            </select>
+          </label>
+        </section>
+
+        <div id="featuredCompanyList" class="featured-list" aria-label="公司预览"></div>
+      </section>
+
       <section class="intro-grid" aria-label="项目说明">
         <article>
           <strong>给学生</strong>
@@ -126,11 +194,11 @@
       <section class="domestic-entry" aria-label="国内主入口说明">
         <div>
           <p class="kicker">Mainland-first</p>
-          <h2>先让普通用户能打开、能查、能提交</h2>
-          <p>这个页面可以直接部署到 `kunming.tianmind.com`。GitHub 仓库继续作为开源数据源、维护记录和开发者协作入口；本页面向不会用 GitHub 的学生、求职者、企业和本地技术从业者。</p>
+          <h2>国内站做主入口，GitHub 做开源底座</h2>
+          <p>普通用户在本站完成搜索、筛选、下载和提交；开发者再到 GitHub 查看维护记录、Issue 和数据脚本。这样不会用 GitHub 的同学和求职者也能参与补线索。</p>
         </div>
         <div class="domestic-actions">
-          <a href="submit.html"><strong>不会 GitHub</strong><span>复制模板或加微信提交公开线索。</span></a>
+          <a href="submit.html"><strong>在线提交</strong><span>表单、微信和复制模板都保留，只收公开来源。</span></a>
           <a href="data/companies.csv"><strong>表格下载</strong><span>CSV 可直接用 WPS、Excel 或飞书表格打开。</span></a>
           <a href="#resourceList"><strong>公司之外</strong><span>查看活动、社群、来源种子和政府项目入口。</span></a>
         </div>
@@ -195,36 +263,6 @@
           <img src="assets/wechat-qr.jpg" alt="Junius 微信二维码">
           <p>扫码或搜索微信号添加，备注：昆明技术机会雷达。</p>
         </div>
-      </section>
-
-      <section class="toolbar" aria-label="筛选公司">
-        <label class="search-box">
-          <span>搜索</span>
-          <input id="searchInput" type="search" placeholder="公司名、方向、标签、备注..." autocomplete="off">
-        </label>
-        <label>
-          <span>方向</span>
-          <select id="categorySelect">
-            <option value="">全部方向</option>
-          </select>
-        </label>
-        <label>
-          <span>区域</span>
-          <select id="districtSelect">
-            <option value="">全部区域</option>
-          </select>
-        </label>
-        <label>
-          <span>核验状态</span>
-          <select id="verificationSelect">
-            <option value="">全部状态</option>
-            <option value="verified">官网已核验</option>
-            <option value="official_page">官方页核验</option>
-            <option value="community_pending">社区待复核</option>
-            <option value="outdated">疑似过期</option>
-            <option value="unknown">状态未知</option>
-          </select>
-        </label>
       </section>
 
       <section class="stats" aria-label="数据统计">

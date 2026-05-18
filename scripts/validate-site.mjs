@@ -58,6 +58,7 @@ assert(index.includes("docs/reuse-and-citation.md"), "index.html should link to 
 assert(index.includes("docs/takedown-and-correction.md"), "index.html should link to correction guidance.");
 assert(index.includes("submit.html"), "index.html should link to the low-friction submission page.");
 assert(index.includes("assets/wechat-qr.jpg") && index.includes("beizhushaonlan"), "index.html should expose the approved maintainer WeChat community contact.");
+assert(index.includes('id="heroSearchForm"') && index.includes('id="directory"'), "index.html should expose a first-screen search flow and directory preview.");
 assert(fs.existsSync("robots.txt"), "robots.txt should exist for indexing.");
 assert(fs.existsSync("sitemap.xml") && read("sitemap.xml").includes("docs/search-guide.md"), "sitemap.xml should include public guidance pages.");
 
@@ -102,6 +103,7 @@ assert(script.includes("renderSourceLeadSummary"), "script.js should render sour
 assert(script.includes("renderResourceCards"), "script.js should render resource cards.");
 assert(script.includes("safeHref"), "script.js should guard dynamic href values.");
 assert(script.includes("applyIntent"), "script.js should wire search-intent shortcuts.");
+assert(script.includes("renderFeatured"), "script.js should render first-screen company previews.");
 assert(script.includes("queryTokens.every"), "script.js should support multi-token search.");
 assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-facing share kit content.");
 assert(index.includes("docs/project-brief.md"), "index.html should link the public project brief.");
