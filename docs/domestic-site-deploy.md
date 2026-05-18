@@ -43,6 +43,7 @@ dist/
 `dist/` 会包含：
 
 - `index.html`
+- `guides.html`
 - `submit.html`
 - `styles.css`
 - `script.js`
@@ -50,6 +51,7 @@ dist/
 - `assets/`
 - `data/`
 - `docs/`
+- `docs/*.html`（由 Markdown 自动生成的网页版说明）
 - `COMPANIES.md`
 - `README.md`
 - `README.en.md`

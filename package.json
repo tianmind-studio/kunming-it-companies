@@ -9,7 +9,7 @@
     "validate:data": "node scripts/validate-data.mjs",
     "generate:companies": "node scripts/generate-companies-md.mjs",
     "export:csv": "node scripts/export-companies-csv.mjs",
-    "serve": "python3 -m http.server 4178 --bind 127.0.0.1",
+    "serve": "npm run build:site && python3 -m http.server 4178 --bind 127.0.0.1 --directory dist",
     "generate:data-quality": "node scripts/generate-data-quality-report.mjs",
     "build:site": "node scripts/build-static-site.mjs"
   }

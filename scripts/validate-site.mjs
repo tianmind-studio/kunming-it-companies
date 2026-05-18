@@ -52,15 +52,16 @@ assert(index.includes("assets/social-card.svg"), "index.html should include a no
 assert(index.includes("昆明 IT 公司") && index.includes("Kunming tech companies"), "index.html should expose human-readable search intent copy.");
 assert(index.includes("<link rel=\"canonical\" href=\"https://kunming.tianmind.com/\">"), "index.html should include the domestic canonical URL.");
 assert(index.includes("application/ld+json") && index.includes("\"@type\": \"Dataset\""), "index.html should expose Dataset structured data.");
-assert(index.includes("docs/use-cases.md"), "index.html should link to role-based usage guidance.");
-assert(index.includes("docs/search-guide.md"), "index.html should link to search guidance.");
-assert(index.includes("docs/reuse-and-citation.md"), "index.html should link to reuse/citation guidance.");
-assert(index.includes("docs/takedown-and-correction.md"), "index.html should link to correction guidance.");
+assert(index.includes("guides.html"), "index.html should link to a user-facing guides page.");
+assert(index.includes("docs/use-cases.html"), "index.html should link to role-based usage guidance as HTML.");
+assert(index.includes("docs/search-guide.html"), "index.html should link to search guidance as HTML.");
+assert(index.includes("docs/reuse-and-citation.html"), "index.html should link to reuse/citation guidance as HTML.");
+assert(index.includes("docs/takedown-and-correction.html"), "index.html should link to correction guidance as HTML.");
 assert(index.includes("submit.html"), "index.html should link to the low-friction submission page.");
 assert(index.includes("assets/wechat-qr.jpg") && index.includes("beizhushaonlan"), "index.html should expose the approved maintainer WeChat community contact.");
 assert(index.includes('id="heroSearchForm"') && index.includes('id="directory"'), "index.html should expose a first-screen search flow and directory preview.");
 assert(fs.existsSync("robots.txt"), "robots.txt should exist for indexing.");
-assert(fs.existsSync("sitemap.xml") && read("sitemap.xml").includes("docs/search-guide.md"), "sitemap.xml should include public guidance pages.");
+assert(fs.existsSync("sitemap.xml") && read("sitemap.xml").includes("docs/search-guide.html"), "sitemap.xml should include public HTML guidance pages.");
 
 const requiredIds = [
   "sourceLeadCount",
@@ -106,7 +107,9 @@ assert(script.includes("applyIntent"), "script.js should wire search-intent shor
 assert(script.includes("renderFeatured"), "script.js should render first-screen company previews.");
 assert(script.includes("queryTokens.every"), "script.js should support multi-token search.");
 assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-facing share kit content.");
-assert(index.includes("docs/project-brief.md"), "index.html should link the public project brief.");
+assert(!index.includes("docs/search-guide.md") && !index.includes("docs/use-cases.md"), "index.html should not expose Markdown docs as the main user path.");
+assert(index.includes("docs/project-brief.html"), "index.html should link the public project brief as HTML.");
+assert(read("scripts/build-static-site.mjs").includes("generateMarkdownPages"), "build script should generate HTML pages from public Markdown docs.");
 assert(script.includes("weakSourceCount"), "script.js should render data quality metrics.");
 
 for (const [label, rows] of [

@@ -59,6 +59,7 @@
 ## 快速浏览入口
 
 - [国内静态站首页](https://kunming.tianmind.com/)：面向学生、求职者、自由职业者、企业和非技术用户，搜索、筛选、下载和提交线索都在页面内完成。
+- [网页使用指南](https://kunming.tianmind.com/guides.html)：把角色用法、搜索指南、数据标准、复用和更正规则做成国内站网页入口。
 - [提交线索页](submit.html)：不会 GitHub 也可以直接填在线表单、复制模板或加微信提交公开来源。
 - [GitHub Pages 备用入口](https://tianmind-studio.github.io/kunming-it-companies/)：同一套静态页面的备份访问地址。
 - [公司索引 COMPANIES.md](COMPANIES.md)：适合在 GitHub 内直接阅读和搜索。
