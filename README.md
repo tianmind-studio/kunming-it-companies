@@ -59,7 +59,7 @@
 ## 快速浏览入口
 
 - [国内静态站首页](https://kunming.tianmind.com/)：面向学生、求职者、自由职业者、企业和非技术用户，搜索、筛选、下载和提交线索都在页面内完成。
-- [提交线索页](submit.html)：不会 GitHub 也可以复制模板、加微信或等待在线表单入口。
+- [提交线索页](submit.html)：不会 GitHub 也可以直接填在线表单、复制模板或加微信提交公开来源。
 - [GitHub Pages 备用入口](https://tianmind-studio.github.io/kunming-it-companies/)：同一套静态页面的备份访问地址。
 - [公司索引 COMPANIES.md](COMPANIES.md)：适合在 GitHub 内直接阅读和搜索。
 - [按角色使用](docs/use-cases.md)：学生、开发者、自由职业者、创业者、企业和外地读者怎么用。
@@ -181,7 +181,7 @@ dist/
 
 ### 我只知道一个公司，怎么提交？
 
-不会 GitHub 的用户优先打开 [`submit.html`](submit.html)，复制模板后通过维护者微信提交公开来源。后续可以接入国内可访问在线表单。
+不会 GitHub 的用户优先打开 [`submit.html`](submit.html)，直接填写在线表单；也可以复制模板后通过维护者微信提交公开来源。
 
 会 GitHub 的用户可以打开 Issue，选择 `Add company` 模板，填公司名、城市/区县、官网或公开主页、主要方向、信息来源。
 

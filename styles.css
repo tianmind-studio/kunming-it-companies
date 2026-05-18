@@ -298,12 +298,14 @@ main {
 }
 
 .domestic-entry h2,
+.lead-form-section h2,
 .form-placeholder h2 {
   font-size: 36px;
   line-height: 1.12;
 }
 
 .domestic-entry p,
+.lead-form-section p,
 .form-placeholder p {
   color: var(--muted);
 }
@@ -359,6 +361,134 @@ main {
   font: inherit;
   font-weight: 800;
 }
+
+.lead-form-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(320px, 1.22fr);
+  gap: 18px;
+  align-items: start;
+  margin: 18px 0 28px;
+  padding: 20px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: #fffaf0;
+  box-shadow: 8px 8px 0 var(--paper-deep);
+}
+
+.form-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.form-copy ul {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 0;
+  padding-left: 20px;
+  color: #354035;
+}
+
+.lead-form {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.lead-form label {
+  display: grid;
+  gap: 6px;
+  color: #344240;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbfa;
+  color: var(--ink);
+  font: 15px/1.5 "Avenir Next", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.lead-form textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.check-line {
+  display: flex !important;
+  grid-template-columns: none;
+  gap: 9px !important;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f9f3e5;
+}
+
+.check-line input {
+  width: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  margin-top: 2px;
+}
+
+.site-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-submit-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.form-submit-row button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.form-submit-row button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.form-status {
+  min-height: 24px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.form-status[data-state="success"] { color: var(--green); }
+.form-status[data-state="error"] { color: var(--red); }
 
 .template-section {
   display: grid;
@@ -869,6 +999,7 @@ select:focus { border-color: var(--red); }
   .resource-dashboard,
   .source-lead-list,
   .community-contact,
+  .lead-form-section,
   .domestic-entry,
   .trust-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -884,8 +1015,11 @@ select:focus { border-color: var(--red); }
   .source-lead-list,
   .intro-grid,
   .community-contact,
+  .lead-form-section,
   .domestic-entry,
   .domestic-actions,
+  .form-row,
+  .form-submit-row,
   .intent-grid,
   .trust-guide,
   .trust-guide ul {
@@ -907,6 +1041,7 @@ select:focus { border-color: var(--red); }
   .community-copy h2,
   .section-heading h2,
   .domestic-entry h2,
+  .lead-form-section h2,
   .form-placeholder h2,
   .trust-guide h2 { font-size: 32px; }
 

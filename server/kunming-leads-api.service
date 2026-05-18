@@ -1,0 +1,23 @@
+[Unit]
+Description=Kunming Tech Radar lead intake API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+Environment=PYTHONUNBUFFERED=1
+Environment=KUNMING_LEADS_PORT=3924
+Environment=KUNMING_LEADS_FILE=/opt/kunming-tech-radar/leads/leads.jsonl
+ExecStart=/usr/bin/python3 /opt/kunming-tech-radar/api/lead_api.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=full
+ReadWritePaths=/opt/kunming-tech-radar/leads
+
+[Install]
+WantedBy=multi-user.target

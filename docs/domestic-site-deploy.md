@@ -23,7 +23,7 @@ km.tianmind.com
 - 查看公司卡片、来源链接、可信度和核验日期；
 - 查看来源种子、活动/社群、政府数字化项目入口；
 - 下载 `data/companies.csv`、`data/companies.json` 和其他 CSV；
-- 打开 `submit.html`，通过微信、表单占位和复制模板提交公开线索。
+- 打开 `submit.html`，通过同域在线表单、微信和复制模板提交公开线索。
 
 GitHub 链接只保留为开源协作入口，不作为普通用户完成核心动作的前提。
 
@@ -55,6 +55,63 @@ dist/
 - `README.en.md`
 - `robots.txt`
 - `sitemap.xml`
+
+## 线索表单后端
+
+`submit.html` 会把表单提交到同域接口：
+
+```text
+POST https://kunming.tianmind.com/api/leads
+```
+
+后端代码在：
+
+```text
+server/lead_api.py
+server/kunming-leads-api.service
+```
+
+设计边界：
+
+- 只保存待复核线索，不自动发布；
+- 必填字段包括线索类型、名称、城市、公开来源链接和收录/修正理由；
+- 公开来源链接必须是 `http` 或 `https`；
+- 提交内容存到服务器私有 JSONL 文件，不放在 Web 根目录；
+- 不要求用户会使用 GitHub，也不把 GitHub Issue 作为唯一提交路径。
+
+服务器默认路径：
+
+```text
+/opt/kunming-tech-radar/api/lead_api.py
+/opt/kunming-tech-radar/leads/leads.jsonl
+```
+
+服务端口：
+
+```text
+127.0.0.1:3924
+```
+
+nginx 需要把 `/api/` 反代到本机服务，例如：
+
+```nginx
+location /api/ {
+    proxy_pass http://127.0.0.1:3924/;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    client_max_body_size 64k;
+}
+```
+
+查看待复核线索：
+
+```bash
+ssh tianmind-104 "tail -n 20 /opt/kunming-tech-radar/leads/leads.jsonl"
+```
+
+导入正式数据前必须人工复核公开来源。不要把表单里的联系方式、私人说明或无法核验内容直接写入公开数据。
 
 ## 部署配置
 
@@ -93,6 +150,8 @@ dist/
 ```bash
 curl -sL https://kunming.tianmind.com/ | rg "国内可访问入口"
 curl -sL https://kunming.tianmind.com/submit.html | rg "不会 GitHub"
+curl -sL https://kunming.tianmind.com/submit.html | rg "leadForm|/api/leads"
+curl -sL https://kunming.tianmind.com/api/health
 curl -sL https://kunming.tianmind.com/data/companies.json | node -e "let s=''; process.stdin.on('data',d=>s+=d); process.stdin.on('end',()=>console.log(JSON.parse(s).companies.length))"
 curl -sI https://kunming.tianmind.com/robots.txt
 curl -sL https://kunming.tianmind.com/sitemap.xml | rg "submit.html"
@@ -101,7 +160,8 @@ curl -sL https://kunming.tianmind.com/sitemap.xml | rg "submit.html"
 同时检查：
 
 - 首页 title / description 是否指向昆明 IT 公司与技术机会地图；
-- `submit.html` 是否能复制模板；
+- `submit.html` 是否能提交表单、复制模板；
+- `/api/leads` 是否只保存待复核线索，不直接公开；
 - CSV/JSON 是否能直接下载；
 - 微信二维码是否能正常显示；
 - GitHub Pages 是否仍可作为备用入口。

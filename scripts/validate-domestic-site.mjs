@@ -12,6 +12,7 @@ function read(path) {
 
 const index = read("index.html");
 const submit = read("submit.html");
+const submitJs = read("submit.js");
 const deploy = JSON.parse(read("deploy.json"));
 const robots = read("robots.txt");
 const sitemap = read("sitemap.xml");
@@ -28,8 +29,11 @@ assert(index.includes("data/companies.csv") && index.includes("data/companies.js
 
 assert(submit.includes("beizhushaonlan"), "submit.html should expose the approved WeChat submission route.");
 assert(submit.includes("data-copy-target"), "submit.html should include copyable submission templates.");
-assert(submit.includes("表单暂未开放"), "submit.html should include the form placeholder state.");
+assert(submit.includes('id="leadForm"'), "submit.html should include the online lead form.");
+assert(!submit.includes("表单暂未开放"), "submit.html should not ship the old form placeholder state.");
 assert(submit.includes("公开来源"), "submit.html should emphasize public-source-only submission.");
+assert(submitJs.includes('fetch("/api/leads"'), "submit.js should post leads to the same-origin intake API.");
+assert(submitJs.includes("navigator.clipboard"), "submit.js should keep copyable submission templates working.");
 
 assert(robots.includes("https://kunming.tianmind.com/sitemap.xml"), "robots.txt should point to the domestic sitemap.");
 assert(sitemap.includes("https://kunming.tianmind.com/submit.html"), "sitemap.xml should include the submission page.");

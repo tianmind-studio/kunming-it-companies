@@ -42,18 +42,112 @@
         </div>
         <div class="domestic-actions">
           <a href="#contact"><strong>微信提交</strong><span>复制模板后发给维护者，适合大多数用户。</span></a>
-          <a href="#form-placeholder"><strong>在线表单</strong><span>预留入口，后续接入国内表单或自建收集页。</span></a>
+          <a href="#lead-form"><strong>在线表单</strong><span>直接提交公开来源线索，维护者复核后再写入数据。</span></a>
           <a href="https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose"><strong>GitHub Issue</strong><span>适合开发者和开源贡献者。</span></a>
         </div>
       </section>
 
-      <section id="form-placeholder" class="form-placeholder" aria-label="在线表单占位">
-        <div>
-          <p class="kicker">Form placeholder</p>
-          <h2>在线表单入口预留</h2>
-          <p>正式上线前建议接入一个国内可访问表单，用于收集公司线索、过期信息、活动社群和政府项目入口。表单字段应和下方模板保持一致，并明确提示只提交公开来源。</p>
+      <section id="lead-form" class="lead-form-section" aria-label="在线提交公开线索">
+        <div class="form-copy">
+          <p class="kicker">Online form</p>
+          <h2>直接提交公开线索</h2>
+          <p>表单只收集用于复核的公开来源，不会自动展示到页面。公司、活动、社群、岗位入口和政府数字化项目都需要附公开链接。</p>
+          <ul>
+            <li>适合不会 GitHub 的学生、求职者、本地开发者和企业负责人。</li>
+            <li>不要提交身份证、手机号、私人微信、聊天截图或未经核实的负面评价。</li>
+            <li>如果表单不可用，可以复制下方模板后通过微信提交。</li>
+          </ul>
         </div>
-        <button type="button" disabled>表单暂未开放</button>
+
+        <form id="leadForm" class="lead-form" autocomplete="on">
+          <label>
+            线索类型
+            <select name="lead_type" required>
+              <option value="company">公司 / 软件团队 / 服务商</option>
+              <option value="correction">修正过期信息</option>
+              <option value="community">活动 / 社群 / 高校组织</option>
+              <option value="government_project">政府数字化项目入口</option>
+              <option value="job_entry">岗位 / 招聘入口</option>
+            </select>
+          </label>
+
+          <label>
+            名称
+            <input name="title" required maxlength="120" placeholder="公司、活动、社群、项目或入口名称">
+          </label>
+
+          <div class="form-row">
+            <label>
+              城市
+              <input name="city" required maxlength="40" value="昆明">
+            </label>
+            <label>
+              区县 / 园区
+              <input name="district" maxlength="80" placeholder="可留空">
+            </label>
+          </div>
+
+          <label>
+            方向
+            <select name="category">
+              <option value="">待维护者判断</option>
+              <option value="software">软件开发 / 外包 / SaaS</option>
+              <option value="ai_data">AI / 数据 / 算法</option>
+              <option value="it_service">IT 服务 / 系统集成</option>
+              <option value="digital_project">数字化项目 / 政务信息化</option>
+              <option value="community">活动 / 社群 / 高校入口</option>
+              <option value="jobs">岗位 / 招聘入口</option>
+            </select>
+          </label>
+
+          <label>
+            公开来源链接
+            <input name="source_url" type="url" required inputmode="url" placeholder="https://...">
+          </label>
+
+          <label>
+            为什么值得收录或修正
+            <textarea name="reason" required maxlength="800" placeholder="说明它和昆明/云南技术机会、软件、AI、数据、系统集成、数字化服务或招聘入口的关系。"></textarea>
+          </label>
+
+          <div class="form-row">
+            <label>
+              提交人身份
+              <select name="relationship">
+                <option value="">可不填</option>
+                <option value="public_source">公开线索整理</option>
+                <option value="company_member">公司 / 团队成员</option>
+                <option value="student">学生</option>
+                <option value="job_seeker">求职者</option>
+                <option value="organizer">活动 / 社群组织者</option>
+              </select>
+            </label>
+            <label>
+              联系方式
+              <input name="contact" maxlength="120" placeholder="可留微信或邮箱；不公开展示">
+            </label>
+          </div>
+
+          <label>
+            补充说明
+            <textarea name="notes" maxlength="800" placeholder="可写待核验点、建议分类、是否需要标记过期等。"></textarea>
+          </label>
+
+          <label class="check-line">
+            <input name="public_only" type="checkbox" required>
+            <span>我确认提交内容来自公开来源，且不包含他人私人信息。</span>
+          </label>
+
+          <label class="site-field" aria-hidden="true" tabindex="-1">
+            留空
+            <input name="website" autocomplete="off" tabindex="-1">
+          </label>
+
+          <div class="form-submit-row">
+            <button type="submit">提交线索</button>
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </section>
 
       <section id="templates" class="template-section" aria-label="复制提交模板">

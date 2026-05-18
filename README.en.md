@@ -79,7 +79,7 @@ The most valuable contributions are:
 4. Add local university tech groups, developer events, park activities, or government digital project portals.
 5. Report outdated links, duplicates, or records outside the collection boundary.
 
-If you do not use GitHub often, use [submit.html](submit.html) first: copy a template, send public source links through the maintainer WeChat route, or use the future form entry once it is enabled. Developers can still open a GitHub issue with the company or event name, location, public source link, and a short explanation of why it is technology-related.
+If you do not use GitHub often, use [submit.html](submit.html) first: submit the same-origin online form, copy a template, or send public source links through the maintainer WeChat route. Developers can still open a GitHub issue with the company or event name, location, public source link, and a short explanation of why it is technology-related.
 
 ## Reuse, Citation, and Corrections
 
