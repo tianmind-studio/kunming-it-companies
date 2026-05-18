@@ -6,11 +6,14 @@ It collects public information about technology-related companies, IT companies,
 
 Primary links:
 
-- Website: <https://tianmind-studio.github.io/kunming-it-companies/>
+- Mainland-facing website: <https://kunming.tianmind.com/> (prepared for deployment)
+- Backup GitHub Pages site: <https://tianmind-studio.github.io/kunming-it-companies/>
 - Chinese README: [README.md](README.md)
 - Company index: [COMPANIES.md](COMPANIES.md)
+- Low-friction submission page: [submit.html](submit.html)
 - Use cases: [docs/use-cases.md](docs/use-cases.md)
 - Search guide: [docs/search-guide.md](docs/search-guide.md)
+- Domestic static deployment notes: [docs/domestic-site-deploy.md](docs/domestic-site-deploy.md)
 - Primary dataset: [data/companies.json](data/companies.json)
 - Data standard: [docs/data-standard.md](docs/data-standard.md)
 - Data quality report: [docs/data-quality-report.md](docs/data-quality-report.md)
@@ -76,7 +79,7 @@ The most valuable contributions are:
 4. Add local university tech groups, developer events, park activities, or government digital project portals.
 5. Report outdated links, duplicates, or records outside the collection boundary.
 
-If you do not use GitHub often, open an issue with the company or event name, location, public source link, and a short explanation of why it is technology-related.
+If you do not use GitHub often, use [submit.html](submit.html) first: copy a template, send public source links through the maintainer WeChat route, or use the future form entry once it is enabled. Developers can still open a GitHub issue with the company or event name, location, public source link, and a short explanation of why it is technology-related.
 
 ## Reuse, Citation, and Corrections
 
@@ -90,6 +93,7 @@ If you do not use GitHub often, open an issue with the company or event name, lo
 npm run generate:companies
 npm run export:csv
 npm run generate:data-quality
+npm run build:site
 npm run validate
 ```
 

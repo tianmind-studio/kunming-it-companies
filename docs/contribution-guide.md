@@ -64,4 +64,4 @@ npm run validate
 
 5. 提交 Pull Request，并说明公开来源。
 
-如果你不熟悉 GitHub，可以直接开 Issue，把名称、城市、公开来源链接和为什么与技术相关写清楚。
+如果你不熟悉 GitHub，可以打开 [`../submit.html`](../submit.html) 复制模板，通过维护者微信提交公开来源。会 GitHub 的用户可以直接开 Issue，把名称、城市、公开来源链接和为什么与技术相关写清楚。

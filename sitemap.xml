@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/</loc>
+    <loc>https://kunming.tianmind.com/</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/COMPANIES.md</loc>
+    <loc>https://kunming.tianmind.com/submit.html</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/README.md</loc>
+    <loc>https://kunming.tianmind.com/COMPANIES.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/README.en.md</loc>
+    <loc>https://kunming.tianmind.com/README.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/docs/use-cases.md</loc>
+    <loc>https://kunming.tianmind.com/README.en.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/docs/search-guide.md</loc>
+    <loc>https://kunming.tianmind.com/docs/use-cases.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/docs/data-standard.md</loc>
+    <loc>https://kunming.tianmind.com/docs/search-guide.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/docs/data-schema.md</loc>
+    <loc>https://kunming.tianmind.com/docs/data-standard.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/docs/reuse-and-citation.md</loc>
+    <loc>https://kunming.tianmind.com/docs/data-schema.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
   <url>
-    <loc>https://tianmind-studio.github.io/kunming-it-companies/docs/data-quality-report.md</loc>
+    <loc>https://kunming.tianmind.com/docs/reuse-and-citation.md</loc>
+    <lastmod>2026-05-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kunming.tianmind.com/docs/data-quality-report.md</loc>
     <lastmod>2026-05-18</lastmod>
   </url>
 </urlset>

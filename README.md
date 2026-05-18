@@ -4,7 +4,12 @@
 
 它不是公司黄页，也不做就业承诺。这个项目想解决一个更具体的问题：把散落在官网、招聘平台、政府公告、公众号、PDF 和熟人网络里的本地技术机会，整理成可以检索、可以复核、可以持续维护的开放数据。
 
-如果你是在搜索“昆明 IT 公司”“昆明软件公司”“昆明程序员”“昆明 AI 公司”“云南软件公司”“云南数字化项目”或 “Kunming tech companies”，建议先从 [GitHub Pages 展示页](https://tianmind-studio.github.io/kunming-it-companies/) 和 [公司索引](COMPANIES.md) 开始，再按 `verification_status` 和 `source_url` 判断信息强度。
+这个仓库是开源数据源和维护记录。面向普通用户的主入口建议部署在国内可访问域名：
+
+- 国内主入口：<https://kunming.tianmind.com/>（待正式部署）
+- 备用入口：<https://tianmind-studio.github.io/kunming-it-companies/>
+
+如果你是在搜索“昆明 IT 公司”“昆明软件公司”“昆明程序员”“昆明 AI 公司”“云南软件公司”“云南数字化项目”或 “Kunming tech companies”，普通用户建议先用国内站点；开发者和数据贡献者可以继续使用本仓库。
 
 ## 这个项目帮谁解决什么问题
 
@@ -53,7 +58,9 @@
 
 ## 快速浏览入口
 
-- [GitHub Pages 展示页](https://tianmind-studio.github.io/kunming-it-companies/)：搜索公司名，按方向、区域、核验状态筛选。
+- [国内静态站首页](https://kunming.tianmind.com/)：面向学生、求职者、自由职业者、企业和非技术用户，搜索、筛选、下载和提交线索都在页面内完成。
+- [提交线索页](submit.html)：不会 GitHub 也可以复制模板、加微信或等待在线表单入口。
+- [GitHub Pages 备用入口](https://tianmind-studio.github.io/kunming-it-companies/)：同一套静态页面的备份访问地址。
 - [公司索引 COMPANIES.md](COMPANIES.md)：适合在 GitHub 内直接阅读和搜索。
 - [按角色使用](docs/use-cases.md)：学生、开发者、自由职业者、创业者、企业和外地读者怎么用。
 - [搜索指南](docs/search-guide.md)：把常见搜索词映射到真实数据、页面和来源边界。
@@ -63,7 +70,8 @@
 - [数据标准](docs/data-standard.md)：收录边界、字段解释、核验规则。
 - [来源补强手册](docs/source-research-playbook.md)：每个方向至少 5 条公开来源入口，以及如何避免编造岗位。
 - [为什么要做昆明技术机会雷达](docs/why-kunming-tech-radar.md)：项目背景和使用场景。
-- [贡献指南](CONTRIBUTING.md)：如何补充公司、修正过期信息。
+- [贡献指南](CONTRIBUTING.md)：开发者如何补充公司、修正过期信息。
+- [国内站部署说明](docs/domestic-site-deploy.md)：如何把静态站部署到 `kunming.tianmind.com`。
 
 ## 数据源策略
 
@@ -111,13 +119,21 @@ npm run validate
 
 项目宁愿慢一点，也不把没有公开来源的信息写成确定事实。
 
-## GitHub Pages 静态展示页
+## 国内站与 GitHub 的分工
 
-仓库根目录已经包含一个轻量页面：
+本项目按这个分工维护：
+
+1. `data/companies.json`、CSV、脚本和提交记录保留在 GitHub，作为开源底座。
+2. `kunming.tianmind.com` 作为普通用户主入口，承载搜索、筛选、查看、下载和低门槛提交。
+3. GitHub Pages 只是同一套静态页面的备用入口，不再作为唯一入口。
+
+仓库根目录已经包含一个可直接静态部署的页面：
 
 - `index.html`
+- `submit.html`
 - `styles.css`
 - `script.js`
+- `submit.js`
 - `data/companies.json`
 
 它使用纯 HTML + CSS + JS，不需要数据库、登录系统或复杂构建工具。页面现在不只展示公司卡片，也会读取：
@@ -139,7 +155,21 @@ npm run serve
 http://127.0.0.1:4178
 ```
 
-部署到 GitHub Pages：
+构建国内静态站：
+
+```bash
+npm run build:site
+```
+
+输出目录：
+
+```text
+dist/
+```
+
+部署准备见：[`docs/domestic-site-deploy.md`](docs/domestic-site-deploy.md)。
+
+部署到 GitHub Pages 备用入口：
 
 1. 打开 GitHub 仓库 Settings。
 2. 进入 Pages。
@@ -151,9 +181,9 @@ http://127.0.0.1:4178
 
 ### 我只知道一个公司，怎么提交？
 
-最简单方式：打开 Issue，选择 `Add company` 模板，填公司名、城市/区县、官网或公开主页、主要方向、信息来源。
+不会 GitHub 的用户优先打开 [`submit.html`](submit.html)，复制模板后通过维护者微信提交公开来源。后续可以接入国内可访问在线表单。
 
-你不需要会写 JSON，也不需要会提交 PR。只要给出公开来源，维护者就可以整理。
+会 GitHub 的用户可以打开 Issue，选择 `Add company` 模板，填公司名、城市/区县、官网或公开主页、主要方向、信息来源。
 
 ### 我发现信息过期，怎么反馈？
 
@@ -212,7 +242,7 @@ npm run validate
 - 交流本地学生实习、项目展示、开发者合作和数字化服务机会。
 - 帮忙复核 `community_pending` 记录，减少过期和错误信息。
 
-为了保护隐私，仓库里不会公开群二维码、他人个人联系方式或聊天截图。想参与复核或补充线索，可以优先通过 [GitHub Issue 模板](https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose) 提交公开来源。
+为了保护隐私，仓库里不会公开群二维码、他人个人联系方式或聊天截图。想参与复核或补充线索，普通用户可以先通过 [`submit.html`](submit.html) 复制模板并加微信提交；开发者可以使用 GitHub Issue 模板提交公开来源。
 
 ## 联系 / 本地社群
 

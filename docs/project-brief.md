@@ -33,8 +33,10 @@
 
 | Page | Purpose |
 | --- | --- |
+| [`submit.html`](../submit.html) | Low-friction submission page for users who cannot or do not want to use GitHub. |
 | [`docs/use-cases.md`](use-cases.md) | How students, developers, freelancers, founders, companies, and non-local readers can use the project. |
 | [`docs/search-guide.md`](search-guide.md) | Maps common search phrases to real data files, filters, and verification boundaries. |
+| [`docs/domestic-site-deploy.md`](domestic-site-deploy.md) | Deployment notes for using `kunming.tianmind.com` as the main public entry. |
 | [`docs/data-quality-report.md`](data-quality-report.md) | Shows current verification status, missing districts, and weak-source records. |
 
 ## Data Quality Rules

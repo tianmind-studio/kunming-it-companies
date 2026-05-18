@@ -19,7 +19,7 @@
 
 ## 如何提交
 
-优先通过 GitHub Issue 提交：
+普通用户可以通过 [`../submit.html`](../submit.html) 复制模板并联系维护者；开发者可以通过 GitHub Issue 提交：
 
 1. 说明要更正或删除的记录 ID / 名称。
 2. 贴出公开来源链接。

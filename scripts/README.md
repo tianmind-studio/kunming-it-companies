@@ -11,7 +11,9 @@
 - `validate-csv.mjs`：检查 CSV 表头、列数、URL/日期格式，并要求 `data/source-leads.csv` 每个方向至少 5 条来源入口。
 - `validate-repo-paths.mjs`：检查仓库是否存在大小写路径冲突，避免 macOS 和 GitHub 上表现不一致。
 - `validate-public-docs.mjs`：检查公开文档是否出现明显的维护者传播话术或 owner-only 内容。
-- `validate-site.mjs`：检查 GitHub Pages 首页是否接入公司之外的来源入口面板，并确认相关 CSV 有基础数据。
+- `validate-site.mjs`：检查静态首页是否接入公司之外的来源入口面板，并确认相关 CSV 有基础数据。
+- `validate-domestic-site.mjs`：检查 `kunming.tianmind.com` 国内主入口、`submit.html` 和部署配置是否接好。
+- `build-static-site.mjs`：把国内站需要的静态文件复制到 `dist/`，供 TianMind 部署工具上传。
 
 ## 常用命令
 
@@ -19,6 +21,7 @@
 npm run generate:companies
 npm run export:csv
 npm run validate:data
+npm run build:site
 npm run validate
 ```
 

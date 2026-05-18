@@ -5,7 +5,7 @@
 ## 推荐引用格式
 
 ```text
-昆明技术机会雷达 / Kunming Tech Radar，tianmind-studio/kunming-it-companies，访问日期：YYYY-MM-DD，https://github.com/tianmind-studio/kunming-it-companies
+昆明技术机会雷达 / Kunming Tech Radar，访问日期：YYYY-MM-DD，https://kunming.tianmind.com/；开源数据源：https://github.com/tianmind-studio/kunming-it-companies
 ```
 
 如果引用单条公司或活动记录，请同时保留：
@@ -33,13 +33,13 @@
 机器读取建议优先用 JSON：
 
 ```text
-https://tianmind-studio.github.io/kunming-it-companies/data/companies.json
+https://kunming.tianmind.com/data/companies.json
 ```
 
 表格工具建议用 CSV：
 
 ```text
-https://tianmind-studio.github.io/kunming-it-companies/data/companies.csv
+https://kunming.tianmind.com/data/companies.csv
 ```
 
 ## 可以做什么
@@ -47,7 +47,7 @@ https://tianmind-studio.github.io/kunming-it-companies/data/companies.csv
 - 在文章、报告、课堂项目或研究笔记中引用本项目。
 - 基于公开数据做可视化、统计或本地技术生态分析。
 - 在保留来源和日期的前提下二次整理。
-- 提交 Issue 或 PR 修正过期信息。
+- 通过 `submit.html`、Issue 或 PR 修正过期信息。
 
 ## 不要做什么
 

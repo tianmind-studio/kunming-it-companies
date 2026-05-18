@@ -1,0 +1,9 @@
+{
+  "name": "kunming-tech-radar",
+  "domain": "kunming.tianmind.com",
+  "server": "tianmind-104",
+  "type": "static",
+  "build": "npm run build:site",
+  "output": "dist",
+  "ssl": true
+}

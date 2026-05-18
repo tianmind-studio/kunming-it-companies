@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>提交昆明技术线索 / 昆明技术机会雷达</title>
+    <meta name="description" content="不会 GitHub 也可以提交昆明/云南技术公司、软件团队、活动、社群和政府数字化项目公开线索。">
+    <link rel="canonical" href="https://kunming.tianmind.com/submit.html">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header compact-header">
+      <div class="header-copy">
+        <p class="kicker">提交公开线索</p>
+        <h1><span>不会 GitHub</span><span>也能补充</span></h1>
+        <p class="lede">只要有公开来源链接，就可以补充公司、活动、社群或政府数字化项目入口。请不要提交私人联系方式、聊天截图、未经核实的负面信息或无法公开复核的承诺。</p>
+        <div class="hero-actions">
+          <a href="index.html">返回首页</a>
+          <a href="#templates">复制模板</a>
+          <a href="#contact">微信提交</a>
+          <a href="data/companies.csv">下载 CSV</a>
+        </div>
+      </div>
+      <div class="header-side">
+        <aside id="contact" class="contact-card" aria-label="微信提交线索">
+          <p class="contact-label">低门槛入口</p>
+          <h2>加微信提交公开来源</h2>
+          <p>适合不会 GitHub 的同学、求职者、公司负责人或本地从业者。</p>
+          <p class="wechat-id">微信号：<code>beizhushaonlan</code></p>
+          <img class="wechat-qr" src="assets/wechat-qr.jpg" alt="Junius 微信二维码">
+          <p class="contact-note">添加时备注「昆明技术机会雷达」。请优先复制下方模板，把公开来源链接一起发来。</p>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="domestic-entry" aria-label="提交方式">
+        <div>
+          <p class="kicker">Submit routes</p>
+          <h2>三种提交方式</h2>
+          <p>国内站点先解决普通用户能提交的问题；GitHub 仍保留给熟悉开源协作的人使用。</p>
+        </div>
+        <div class="domestic-actions">
+          <a href="#contact"><strong>微信提交</strong><span>复制模板后发给维护者，适合大多数用户。</span></a>
+          <a href="#form-placeholder"><strong>在线表单</strong><span>预留入口，后续接入国内表单或自建收集页。</span></a>
+          <a href="https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose"><strong>GitHub Issue</strong><span>适合开发者和开源贡献者。</span></a>
+        </div>
+      </section>
+
+      <section id="form-placeholder" class="form-placeholder" aria-label="在线表单占位">
+        <div>
+          <p class="kicker">Form placeholder</p>
+          <h2>在线表单入口预留</h2>
+          <p>正式上线前建议接入一个国内可访问表单，用于收集公司线索、过期信息、活动社群和政府项目入口。表单字段应和下方模板保持一致，并明确提示只提交公开来源。</p>
+        </div>
+        <button type="button" disabled>表单暂未开放</button>
+      </section>
+
+      <section id="templates" class="template-section" aria-label="复制提交模板">
+        <div class="section-heading">
+          <p class="kicker">Copy templates</p>
+          <h2>复制模板后提交</h2>
+          <p>公开来源越清楚，越容易进入数据集。不能确认的内容可以写“待确认”，不要猜。</p>
+        </div>
+
+        <article class="template-card">
+          <div class="template-top">
+            <h3>新增公司 / 团队</h3>
+            <button type="button" data-copy-target="companyTemplate">复制</button>
+          </div>
+          <textarea id="companyTemplate" readonly>【新增公司 / 团队线索】
+公司或团队名称：
+城市 / 区县：
+官网或公开主页：
+招聘页或公开招聘主页（没有可留空）：
+主要方向：软件开发 / IT 服务 / AI / 数据 / 系统集成 / 数字化服务 / 其他
+为什么和技术相关：
+公开来源链接：
+补充说明：
+提交人身份（可选）：公开线索 / 公司成员 / 学生 / 求职者 / 其他
+</textarea>
+        </article>
+
+        <article class="template-card">
+          <div class="template-top">
+            <h3>修正过期信息</h3>
+            <button type="button" data-copy-target="correctionTemplate">复制</button>
+          </div>
+          <textarea id="correctionTemplate" readonly>【修正过期信息】
+公司 / 活动 / 项目名称：
+当前页面里哪条信息可能过期：
+新的公开来源链接：
+建议处理方式：更新官网 / 更新区县 / 标记过期 / 删除重复 / 其他
+说明：
+</textarea>
+        </article>
+
+        <article class="template-card">
+          <div class="template-top">
+            <h3>活动 / 社群 / 高校组织</h3>
+            <button type="button" data-copy-target="communityTemplate">复制</button>
+          </div>
+          <textarea id="communityTemplate" readonly>【活动 / 社群 / 组织线索】
+名称：
+类型：活动 / 讲座 / 社群 / 高校组织 / 园区活动 / 其他
+城市 / 区县：
+公开来源链接：
+为什么和技术机会有关：
+是否只是搜索入口：是 / 否
+补充说明：
+</textarea>
+        </article>
+
+        <article class="template-card">
+          <div class="template-top">
+            <h3>政府数字化项目入口</h3>
+            <button type="button" data-copy-target="govTemplate">复制</button>
+          </div>
+          <textarea id="govTemplate" readonly>【政府数字化项目 / 公开入口】
+项目或入口名称：
+采购人 / 机构 / 平台：
+城市 / 区县：
+公开来源链接：
+它和数字化、软件、数据、系统集成或 IT 服务的关系：
+这是具体项目公告还是查询入口：
+补充说明：
+</textarea>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>提交内容必须来自公开来源。维护者会先复核，再决定是否写入数据。</p>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="data/companies.csv">CSV</a>
+        <a href="data/companies.json">JSON</a>
+        <a href="docs/data-standard.md">数据标准</a>
+        <a href="docs/takedown-and-correction.md">更正规则</a>
+        <a href="https://github.com/tianmind-studio/kunming-it-companies">开源仓库</a>
+      </nav>
+    </footer>
+
+    <script src="submit.js" type="module"></script>
+  </body>
+</html>

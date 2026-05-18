@@ -228,7 +228,7 @@ function render() {
   els.list.replaceChildren();
 
   if (!filtered.length) {
-    els.list.append(node("p", { className: "empty", text: "没有匹配记录。可以换个关键词，或通过 GitHub issue 补充公司。" }));
+    els.list.append(node("p", { className: "empty", text: "没有匹配记录。可以换个关键词，或打开提交线索页补充公开来源。" }));
     return;
   }
 
@@ -370,6 +370,6 @@ async function init() {
 }
 
 init().catch((error) => {
-  els.resultSummary.textContent = "数据加载失败，请确认通过本地服务器或 GitHub Pages 打开。";
+  els.resultSummary.textContent = "数据加载失败，请确认通过国内站点或本地服务器打开。";
   console.error(error);
 });

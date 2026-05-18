@@ -1,6 +1,10 @@
 # Support / 支持与反馈
 
-For public data corrections, new source leads, outdated links, or questions about the dataset, please use GitHub Issues:
+For public data corrections, new source leads, outdated links, or questions about the dataset, non-technical users can start from the domestic submission page:
+
+- Submission page: <https://kunming.tianmind.com/submit.html>
+
+Developers and open-source contributors can also use GitHub Issues:
 
 - Add company: <https://github.com/tianmind-studio/kunming-it-companies/issues/new?template=add-company.yml>
 - Update company: <https://github.com/tianmind-studio/kunming-it-companies/issues/new?template=update-company.yml>
@@ -12,6 +16,7 @@ Do not post private contact details, screenshots, tokens, or personal data in pu
 
 中文说明：
 
-- 如果你不会提交 PR，直接开 Issue，把公司名、城市/区县、公开来源链接和为什么技术相关写清楚即可。
+- 如果你不会提交 PR，优先打开 `submit.html` 复制模板，通过维护者微信提交公开来源。等在线表单接入后，也可以直接用表单提交。
+- 如果你会用 GitHub，可以开 Issue，把公司名、城市/区县、公开来源链接和为什么技术相关写清楚。
 - 如果你只是看到一个招聘平台搜索页、活动平台搜索页或政府门户首页，请把它当作来源入口，不要写成确定岗位、活动或项目。
 - 如果涉及隐私、错误记录、过期链接或不适合公开展示的信息，请使用 outdated/correction 相关模板，并只描述问题类型。

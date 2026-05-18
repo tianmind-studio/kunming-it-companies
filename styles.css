@@ -51,6 +51,10 @@ a { color: inherit; }
   border-bottom: 2px solid var(--ink);
 }
 
+.compact-header {
+  align-items: start;
+}
+
 .kicker {
   width: fit-content;
   margin: 0 0 18px;
@@ -280,6 +284,131 @@ main {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.domestic-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 18px;
+  align-items: start;
+  margin: 18px 0 28px;
+  padding: 22px 0;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.domestic-entry h2,
+.form-placeholder h2 {
+  font-size: 36px;
+  line-height: 1.12;
+}
+
+.domestic-entry p,
+.form-placeholder p {
+  color: var(--muted);
+}
+
+.domestic-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.domestic-actions a {
+  display: grid;
+  gap: 8px;
+  min-height: 120px;
+  padding: 14px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--paper-deep);
+}
+
+.domestic-actions strong {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.domestic-actions span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.form-placeholder {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 0 28px;
+  padding: 20px;
+  border: 2px dashed var(--ink);
+  border-radius: 8px;
+  background: #fffaf0;
+}
+
+.form-placeholder button {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: #edf1ef;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 800;
+}
+
+.template-section {
+  display: grid;
+  gap: 14px;
+  padding: 18px 0 48px;
+}
+
+.template-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 6px 6px 0 var(--paper-deep);
+}
+
+.template-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.template-top h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.template-top button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.template-card textarea {
+  min-height: 210px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #f8fbfa;
+  color: var(--ink);
+  font: 14px/1.7 "Avenir Next", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .intent-panel {
@@ -735,10 +864,12 @@ select:focus { border-color: var(--red); }
   .intro-grid { grid-template-columns: repeat(2, 1fr); }
   .toolbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .intent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .domestic-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .quality-strip,
   .resource-dashboard,
   .source-lead-list,
   .community-contact,
+  .domestic-entry,
   .trust-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -753,6 +884,8 @@ select:focus { border-color: var(--red); }
   .source-lead-list,
   .intro-grid,
   .community-contact,
+  .domestic-entry,
+  .domestic-actions,
   .intent-grid,
   .trust-guide,
   .trust-guide ul {
@@ -773,7 +906,15 @@ select:focus { border-color: var(--red); }
   h1 { font-size: 54px; }
   .community-copy h2,
   .section-heading h2,
+  .domestic-entry h2,
+  .form-placeholder h2,
   .trust-guide h2 { font-size: 32px; }
+
+  .form-placeholder,
+  .template-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .noscript-card {

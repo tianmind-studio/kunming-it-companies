@@ -12,6 +12,8 @@
 
 建议先看：
 
+- [国内站首页](../index.html)
+- [提交线索页](../submit.html)
 - [`COMPANIES.md`](../COMPANIES.md)
 - [`data/companies.csv`](../data/companies.csv)
 - [`docs/data-standard.md`](data-standard.md)
@@ -53,7 +55,7 @@
 - 所在城市 / 区县。
 - 主要技术方向和公开业务说明。
 
-不会提交 Pull Request 也可以直接使用 GitHub Issue 模板：[`提交线索`](https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose)。
+不会提交 Pull Request 也可以使用 [`submit.html`](../submit.html) 复制模板，通过维护者微信提交公开来源。会 GitHub 的用户仍可使用 Issue 模板。
 
 ## 外地读者 / Non-local Readers
 

@@ -6,14 +6,14 @@
 
 | 搜索词 | 推荐入口 | 说明 |
 | --- | --- | --- |
-| 昆明 IT 公司 | [GitHub Pages](../index.html)、[`COMPANIES.md`](../COMPANIES.md) | 搜索 `IT`、`信息技术`、`系统集成`、`软件` 等词。 |
-| 昆明软件公司 | [GitHub Pages](../index.html)、[`data/companies.csv`](../data/companies.csv) | 搜索 `软件`、`外包`、`ERP`、`App`、`小程序`、`Web`。 |
+| 昆明 IT 公司 | [国内站首页](../index.html)、[`COMPANIES.md`](../COMPANIES.md) | 搜索 `IT`、`信息技术`、`系统集成`、`软件` 等词。 |
+| 昆明软件公司 | [国内站首页](../index.html)、[`data/companies.csv`](../data/companies.csv) | 搜索 `软件`、`外包`、`ERP`、`App`、`小程序`、`Web`。 |
 | 昆明技术公司 | [公司索引](../COMPANIES.md) | 适合先按 `category` 和 `tags` 粗筛，再打开来源复核。 |
-| 昆明 AI 公司 | [GitHub Pages](../index.html)、[`data/source-leads.csv`](../data/source-leads.csv) | 搜索 `AI`、`大数据`、`云服务`、`智能`；弱来源不要直接当作已核验公司。 |
+| 昆明 AI 公司 | [国内站首页](../index.html)、[`data/source-leads.csv`](../data/source-leads.csv) | 搜索 `AI`、`大数据`、`云服务`、`智能`；弱来源不要直接当作已核验公司。 |
 | 云南软件公司 | [`data/companies.json`](../data/companies.json)、[`data/companies.csv`](../data/companies.csv) | 当前以昆明为主，也保留云南其他城市和省级来源。 |
 | 云南数字化项目 | [`data/gov-projects.csv`](../data/gov-projects.csv) | 政府采购、公共资源交易和科技项目入口只表示可继续查询，不代表确定合作机会。 |
 | 昆明程序员 / 本地开发者社群 | [`data/communities.csv`](../data/communities.csv)、[`data/events.csv`](../data/events.csv) | 只收录公开主页、活动页、组织页或平台入口，不收私人群二维码。 |
-| Kunming tech companies | [`README.en.md`](../README.en.md)、[GitHub Pages](../index.html) | English readers can use verification fields to understand source strength. |
+| Kunming tech companies | [`README.en.md`](../README.en.md)、[国内站首页](../index.html) | English readers can use verification fields to understand source strength. |
 
 ## 页面搜索技巧
 
@@ -22,6 +22,7 @@
 - 想帮忙补数据，筛选 `社区待复核`，优先补官网、区县和第二来源。
 - 想做表格分析，下载 [`data/companies.csv`](../data/companies.csv)。
 - 想自动处理数据，读取 [`data/companies.json`](../data/companies.json)。
+- 不会 GitHub 也想补线索，打开 [`submit.html`](../submit.html) 复制模板。
 
 ## 不要把搜索入口当成结论
 
