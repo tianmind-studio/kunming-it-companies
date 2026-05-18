@@ -49,9 +49,16 @@ const index = read("index.html");
 const script = read("script.js");
 
 assert(index.includes("assets/social-card.svg"), "index.html should include a non-private social preview image.");
+assert(index.includes("昆明 IT 公司") && index.includes("Kunming tech companies"), "index.html should expose human-readable search intent copy.");
+assert(index.includes("<link rel=\"canonical\" href=\"https://tianmind-studio.github.io/kunming-it-companies/\">"), "index.html should include a canonical GitHub Pages URL.");
+assert(index.includes("application/ld+json") && index.includes("\"@type\": \"Dataset\""), "index.html should expose Dataset structured data.");
+assert(index.includes("docs/use-cases.md"), "index.html should link to role-based usage guidance.");
+assert(index.includes("docs/search-guide.md"), "index.html should link to search guidance.");
 assert(index.includes("docs/reuse-and-citation.md"), "index.html should link to reuse/citation guidance.");
 assert(index.includes("docs/takedown-and-correction.md"), "index.html should link to correction guidance.");
 assert(index.includes("assets/wechat-qr.jpg") && index.includes("beizhushaonlan"), "index.html should expose the approved maintainer WeChat community contact.");
+assert(fs.existsSync("robots.txt"), "robots.txt should exist for GitHub Pages indexing.");
+assert(fs.existsSync("sitemap.xml") && read("sitemap.xml").includes("docs/search-guide.md"), "sitemap.xml should include public guidance pages.");
 
 const requiredIds = [
   "sourceLeadCount",
@@ -93,6 +100,8 @@ assert(projects.length >= 3, "gov-projects should include public project source 
 assert(script.includes("renderSourceLeadSummary"), "script.js should render source lead summary.");
 assert(script.includes("renderResourceCards"), "script.js should render resource cards.");
 assert(script.includes("safeHref"), "script.js should guard dynamic href values.");
+assert(script.includes("applyIntent"), "script.js should wire search-intent shortcuts.");
+assert(script.includes("queryTokens.every"), "script.js should support multi-token search.");
 assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-facing share kit content.");
 assert(index.includes("docs/project-brief.md"), "index.html should link the public project brief.");
 assert(script.includes("weakSourceCount"), "script.js should render data quality metrics.");
@@ -114,4 +123,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log("Site validation passed: resource panels are wired.");
+console.log("Site validation passed: resource panels and search intents are wired.");

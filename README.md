@@ -4,17 +4,7 @@
 
 它不是公司黄页，也不做就业承诺。这个项目想解决一个更具体的问题：把散落在官网、招聘平台、政府公告、公众号、PDF 和熟人网络里的本地技术机会，整理成可以检索、可以复核、可以持续维护的开放数据。
 
-## 联系维护者 / 加入本地社群
-
-如果你是昆明或云南的开发者、学生、创业者、企业负责人，想补充线索、交流本地技术机会，或加入我正在做的本地技术社群，欢迎直接加我微信：
-
-微信号：`beizhushaonlan`
-
-<img src="assets/wechat-qr.jpg" alt="Junius 微信二维码" width="260">
-
-添加时可以备注：`昆明技术机会雷达`。
-
-说明：这里的微信是维护者本人主动公开的联系入口，用于项目交流和社群引流；项目数据仍只收录可公开核验的信息，不收集或展示第三方未经授权的私人联系方式。
+如果你是在搜索“昆明 IT 公司”“昆明软件公司”“昆明程序员”“昆明 AI 公司”“云南软件公司”“云南数字化项目”或 “Kunming tech companies”，建议先从 [GitHub Pages 展示页](https://tianmind-studio.github.io/kunming-it-companies/) 和 [公司索引](COMPANIES.md) 开始，再按 `verification_status` 和 `source_url` 判断信息强度。
 
 ## 这个项目帮谁解决什么问题
 
@@ -65,6 +55,8 @@
 
 - [GitHub Pages 展示页](https://tianmind-studio.github.io/kunming-it-companies/)：搜索公司名，按方向、区域、核验状态筛选。
 - [公司索引 COMPANIES.md](COMPANIES.md)：适合在 GitHub 内直接阅读和搜索。
+- [按角色使用](docs/use-cases.md)：学生、开发者、自由职业者、创业者、企业和外地读者怎么用。
+- [搜索指南](docs/search-guide.md)：把常见搜索词映射到真实数据、页面和来源边界。
 - [结构化主数据 data/companies.json](data/companies.json)：维护者优先修改这里。
 - [CSV 导出 data/companies.csv](data/companies.csv)：由 JSON 自动导出，方便表格工具打开。
 - [项目简介](docs/project-brief.md)：一页看懂项目用途、数据范围和贡献方式。
@@ -95,6 +87,17 @@ npm run validate
 本项目不自动抓取公司信息。新增数据必须来自公开来源，并保留原始链接。
 
 补来源时先看 [`data/source-leads.csv`](data/source-leads.csv)：它是 9 个方向的公开来源种子池。注意：招聘平台入口只证明“可以继续查”，不证明“正在招聘”；没有具体公开招聘主页时，不要把 `opportunities` 写成 `internship` 或 `hiring`。
+
+## 怎么判断信息可信度
+
+| 字段 | 怎么看 |
+| --- | --- |
+| `source_url` | 最重要的原始来源。复用或判断前先打开它。 |
+| `source_type` | 区分官网、官方页、政府名单、招聘平台、媒体数据库或社区清单。 |
+| `verification_status` | `verified` / `official_page` 更强；`community_pending` 表示还需要复核。 |
+| `last_checked` | 最近核验日期。日期越久，越需要重新打开来源确认。 |
+| `confidence_score` | 1-5 分的来源强度，不是公司好坏评分。 |
+| `opportunities` | 阅读提示，不代表正在招聘、正在外包或愿意合作。 |
 
 ## 当前最需要的贡献
 

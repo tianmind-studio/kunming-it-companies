@@ -19,7 +19,8 @@ const els = {
   sourceLeadList: document.querySelector("#sourceLeadList"),
   communityList: document.querySelector("#communityList"),
   eventList: document.querySelector("#eventList"),
-  projectList: document.querySelector("#projectList")
+  projectList: document.querySelector("#projectList"),
+  intentButtons: document.querySelectorAll("[data-query], [data-scroll]")
 };
 
 let companies = [];
@@ -208,13 +209,15 @@ function renderTags(items, className = "tag") {
 
 function render() {
   const query = els.search.value.trim().toLowerCase();
+  const queryTokens = query.split(/\s+/).filter(Boolean);
   const category = els.category.value;
   const district = els.district.value;
   const verification = els.verification.value;
 
   const filtered = companies.filter((company) => {
     const normalizedDistrict = company.district || "待补区域";
-    const matchesQuery = !query || searchableText(company).includes(query);
+    const text = searchableText(company);
+    const matchesQuery = !queryTokens.length || queryTokens.every((token) => text.includes(token));
     const matchesCategory = !category || company.category === category;
     const matchesDistrict = !district || normalizedDistrict === district;
     const matchesVerification = !verification || company.verification_status === verification;
@@ -257,6 +260,23 @@ function render() {
     ]);
 
     els.list.append(card);
+  }
+}
+
+function applyIntent(event) {
+  const target = event.currentTarget;
+  const query = target.dataset.query;
+  const verification = target.dataset.verification;
+  const scrollTarget = target.dataset.scroll;
+
+  if (query !== undefined) els.search.value = query;
+  if (verification !== undefined) els.verification.value = verification;
+  els.category.value = "";
+  els.district.value = "";
+  render();
+
+  if (scrollTarget) {
+    document.querySelector(scrollTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -346,6 +366,7 @@ async function init() {
   els.category.addEventListener("change", render);
   els.district.addEventListener("change", render);
   els.verification.addEventListener("change", render);
+  for (const button of els.intentButtons) button.addEventListener("click", applyIntent);
 }
 
 init().catch((error) => {

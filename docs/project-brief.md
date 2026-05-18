@@ -29,6 +29,14 @@
 | `data/events.csv` | Public event and activity entry points. |
 | `data/gov-projects.csv` | Government procurement and digital project portals. |
 
+## Public Entry Pages
+
+| Page | Purpose |
+| --- | --- |
+| [`docs/use-cases.md`](use-cases.md) | How students, developers, freelancers, founders, companies, and non-local readers can use the project. |
+| [`docs/search-guide.md`](search-guide.md) | Maps common search phrases to real data files, filters, and verification boundaries. |
+| [`docs/data-quality-report.md`](data-quality-report.md) | Shows current verification status, missing districts, and weak-source records. |
+
 ## Data Quality Rules
 
 Every record should be traceable to a public source. When the source is weak, the record should stay marked as `community_pending` or use a lower `confidence_score`.

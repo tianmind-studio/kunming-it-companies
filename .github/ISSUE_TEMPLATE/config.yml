@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the data standard first
+    url: https://github.com/tianmind-studio/kunming-it-companies/blob/main/docs/data-standard.md
+    about: Check collection boundaries, source types, verification status, and privacy rules.
+  - name: Use the website search page
+    url: https://tianmind-studio.github.io/kunming-it-companies/
+    about: Search companies, filter by category, district, and verification status before opening a new issue.
+  - name: Reuse and citation guide
+    url: https://github.com/tianmind-studio/kunming-it-companies/blob/main/docs/reuse-and-citation.md
+    about: Preserve source links, verification dates, and uncertainty when reusing the data.

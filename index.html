@@ -3,32 +3,76 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>昆明技术机会雷达 / Kunming Tech Radar</title>
-    <meta name="description" content="昆明技术机会雷达：整理昆明/云南技术公司、IT 公司、软件团队、岗位、活动、社群和数字化项目线索。">
-    <meta property="og:title" content="昆明技术机会雷达 / Kunming Tech Radar">
-    <meta property="og:description" content="可搜索、可复核、可贡献的昆明/云南本地技术机会地图。">
+    <title>昆明 IT 公司与技术机会地图 / Kunming Tech Radar</title>
+    <meta name="description" content="昆明技术机会雷达：整理昆明 IT 公司、昆明软件公司、昆明 AI 公司、云南技术团队、活动、社群和数字化项目线索。">
+    <link rel="canonical" href="https://tianmind-studio.github.io/kunming-it-companies/">
+    <meta property="og:title" content="昆明 IT 公司与技术机会地图 / Kunming Tech Radar">
+    <meta property="og:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、活动、社群和数字化项目地图。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tianmind-studio.github.io/kunming-it-companies/">
     <meta property="og:image" content="https://tianmind-studio.github.io/kunming-it-companies/assets/social-card.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="昆明技术机会雷达 / Kunming Tech Radar">
-    <meta name="twitter:description" content="可搜索、可复核、可贡献的昆明/云南本地技术机会地图。">
+    <meta name="twitter:title" content="昆明 IT 公司与技术机会地图 / Kunming Tech Radar">
+    <meta name="twitter:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、活动、社群和数字化项目地图。">
     <meta name="twitter:image" content="https://tianmind-studio.github.io/kunming-it-companies/assets/social-card.svg">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2313201f'/%3E%3Cpath d='M14 42 26 22l10 15 7-9 7 14' fill='none' stroke='%23dff3f0' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='26' cy='22' r='4' fill='%23f3e7c8'/%3E%3Ccircle cx='43' cy='28' r='4' fill='%23b94738'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "昆明技术机会雷达 / Kunming Tech Radar",
+        "alternateName": [
+          "昆明 IT 公司地图",
+          "昆明软件公司索引",
+          "Kunming tech companies"
+        ],
+        "description": "A source-backed open dataset of technology-related companies, software teams, events, communities, and government digital project entry points in Kunming and Yunnan.",
+        "url": "https://tianmind-studio.github.io/kunming-it-companies/",
+        "keywords": [
+          "昆明 IT 公司",
+          "昆明软件公司",
+          "昆明技术公司",
+          "昆明 AI 公司",
+          "云南软件公司",
+          "云南数字化项目",
+          "Kunming tech companies"
+        ],
+        "creator": {
+          "@type": "Organization",
+          "name": "Tianmind Studio",
+          "url": "https://github.com/tianmind-studio"
+        },
+        "license": "https://github.com/tianmind-studio/kunming-it-companies/blob/main/LICENSE",
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "https://tianmind-studio.github.io/kunming-it-companies/data/companies.json"
+          },
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://tianmind-studio.github.io/kunming-it-companies/data/companies.csv"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="header-copy">
-        <p class="kicker">Kunming Tech Radar</p>
+        <p class="kicker">昆明 IT 公司 / Yunnan Open Data</p>
         <h1><span>昆明技术</span><span>机会雷达</span></h1>
-        <p class="lede">一个开源的本地技术机会数据库，整理昆明及云南范围内的技术公司、IT 公司、软件团队、岗位、活动、社群与数字化项目线索。</p>
+        <p class="lede">一个开源的本地技术机会数据库。适合在查找昆明 IT 公司、昆明软件公司、昆明 AI 公司、云南数字化项目和 Kunming tech companies 时，先看到可检索、可复核、可贡献的公开资料。</p>
         <div class="hero-actions">
           <a href="COMPANIES.md">公司索引</a>
+          <a href="#search-intents">按搜索目标浏览</a>
           <a href="#contact">加微信 / 入社群</a>
+          <a href="docs/use-cases.md">按角色使用</a>
           <a href="docs/project-brief.md">项目简介</a>
           <a href="docs/data-standard.md">数据标准</a>
-          <a href="docs/source-research-playbook.md">来源补强</a>
+          <a href="docs/search-guide.md">搜索指南</a>
           <a href="docs/reuse-and-citation.md">引用复用</a>
           <a href="https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose">提交线索</a>
         </div>
@@ -79,6 +123,48 @@
           <strong>社区试运行</strong>
           <p>我正在做昆明/云南本地技术社群；加我微信后可以申请加入，群内公开线索会继续沉淀回数据。</p>
         </article>
+      </section>
+
+      <section id="search-intents" class="intent-panel" aria-label="常见搜索目标">
+        <div class="section-heading">
+          <p class="kicker">Search paths</p>
+          <h2>按真实搜索目标进入</h2>
+          <p>每个入口都对应已有数据、筛选器或公开来源说明。点击后会直接设置搜索条件或跳到对应资源区。</p>
+        </div>
+        <div class="intent-grid">
+          <button type="button" data-query="IT" data-verification="" data-scroll="#companyList">
+            <strong>昆明 IT 公司</strong>
+            <span>查看信息技术、系统集成、软件服务相关记录。</span>
+          </button>
+          <button type="button" data-query="软件" data-verification="" data-scroll="#companyList">
+            <strong>昆明软件公司</strong>
+            <span>筛选软件开发、外包、ERP、Web/App、小程序等方向。</span>
+          </button>
+          <button type="button" data-query="AI" data-verification="" data-scroll="#companyList">
+            <strong>昆明 AI 公司</strong>
+            <span>定位 AI、大数据、云服务、产业智能化候选记录。</span>
+          </button>
+          <button type="button" data-query="" data-verification="community_pending" data-scroll="#companyList">
+            <strong>待复核公司</strong>
+            <span>适合贡献官网、官方页、区县和第二来源。</span>
+          </button>
+          <button type="button" data-query="" data-verification="" data-scroll="#projectList">
+            <strong>云南数字化项目</strong>
+            <span>跳到政府采购、公共资源交易和数字化项目入口。</span>
+          </button>
+          <button type="button" data-query="" data-verification="" data-scroll="#communityList">
+            <strong>昆明程序员社群</strong>
+            <span>查看高校、园区、开发者组织和本地社群入口。</span>
+          </button>
+          <button type="button" data-query="Kunming" data-verification="" data-scroll="#companyList">
+            <strong>Kunming tech companies</strong>
+            <span>For non-Chinese readers looking for a local tech-company map.</span>
+          </button>
+          <a href="docs/search-guide.md">
+            <strong>不知道怎么查？</strong>
+            <span>阅读搜索指南，理解关键词、数据边界和核验状态。</span>
+          </a>
+        </div>
       </section>
 
       <section id="community" class="community-contact" aria-label="本地社群入口">
@@ -183,6 +269,20 @@
         </div>
       </section>
 
+      <section class="trust-guide" aria-label="可信度说明">
+        <div>
+          <p class="kicker">Source-aware</p>
+          <h2>先看来源，再判断机会</h2>
+          <p>这个项目不把弱来源包装成确定机会。官网、官方页、政府公告、招聘平台和社区清单会被分开标注，页面上的“机会提示”只用于阅读和检索，不代表正在招聘、愿意合作或商业背书。</p>
+        </div>
+        <ul>
+          <li><strong>官网已核验</strong><span>找到公司或产品官网，业务方向和名称基本对应。</span></li>
+          <li><strong>官方页核验</strong><span>来自官方文章、集团页、政府公告等强来源，但可能缺少独立官网。</span></li>
+          <li><strong>社区待复核</strong><span>适合作为线索继续查官网、招聘页、政府名单或第二来源。</span></li>
+          <li><strong>可信度 1-5</strong><span>分数越高，来源越直接；低分记录优先补来源而不是下结论。</span></li>
+        </ul>
+      </section>
+
       <section class="section-title">
         <div>
           <h2>公司卡片</h2>
@@ -244,6 +344,8 @@
         <a href="data/companies.json">JSON</a>
         <a href="data/companies.csv">CSV</a>
         <a href="data/source-leads.csv">Sources</a>
+        <a href="docs/use-cases.md">Use Cases</a>
+        <a href="docs/search-guide.md">Search Guide</a>
         <a href="docs/project-brief.md">Project Brief</a>
         <a href="docs/reuse-and-citation.md">Reuse</a>
         <a href="docs/takedown-and-correction.md">Corrections</a>

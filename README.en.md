@@ -2,13 +2,15 @@
 
 Kunming Tech Radar is an open, source-aware local technology opportunity map for Kunming and Yunnan.
 
-It collects public information about technology-related companies, recruiting pages, events, communities, and government digital project leads. It is not a ranking, a job board, a recruiter, or a guarantee of any opportunity. The project exists to make scattered local signals easier to search, verify, and maintain.
+It collects public information about technology-related companies, IT companies, software teams, AI/data companies, recruiting pages, events, communities, and government digital project leads. It is not a ranking, a job board, a recruiter, or a guarantee of any opportunity. The project exists to make scattered local signals easier to search, verify, and maintain.
 
 Primary links:
 
 - Website: <https://tianmind-studio.github.io/kunming-it-companies/>
 - Chinese README: [README.md](README.md)
 - Company index: [COMPANIES.md](COMPANIES.md)
+- Use cases: [docs/use-cases.md](docs/use-cases.md)
+- Search guide: [docs/search-guide.md](docs/search-guide.md)
 - Primary dataset: [data/companies.json](data/companies.json)
 - Data standard: [docs/data-standard.md](docs/data-standard.md)
 - Data quality report: [docs/data-quality-report.md](docs/data-quality-report.md)
@@ -41,6 +43,20 @@ Current coverage:
 | Government project portals | [data/gov-projects.csv](data/gov-projects.csv) |
 
 `community_pending` does not mean a record is invalid. It means the record still needs stronger public sources such as an official website, an official page, a recruiting page, or a government/project source.
+
+## Search Intents Covered
+
+The site and docs are organized around real lookup needs:
+
+- Kunming IT companies
+- Kunming software companies
+- Kunming AI and data companies
+- Yunnan software companies
+- Yunnan digital transformation and public project entry points
+- Kunming developer communities and events
+- Kunming tech companies for non-local readers
+
+Each search intent should map back to existing data, source links, or a documented verification method. The project avoids keyword-only copy that is not backed by data.
 
 ## Data Principles
 

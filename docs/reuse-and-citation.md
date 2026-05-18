@@ -15,6 +15,33 @@
 - `verification_status` / `status`；
 - 本项目链接。
 
+## 推荐保留字段
+
+如果把数据导入表格、知识库、地图或研究笔记，至少保留这些字段，避免把线索误读成确定事实：
+
+| 字段 | 为什么要保留 |
+| --- | --- |
+| `name` | 公司或公开品牌名。 |
+| `city` / `district` | 本地生态分析需要保留地理信息；不确定时不要猜。 |
+| `category` / `tags` | 说明记录为什么和技术、软件、数据或数字化有关。 |
+| `source_url` | 原始来源，复核时最重要。 |
+| `source_type` | 区分官网、官方页、政府名单、招聘平台、社区清单等来源类型。 |
+| `verification_status` | 表示核验强度，不能省略。 |
+| `last_checked` | 记录最近复核日期。 |
+| `confidence_score` | 来源强度评分，不是公司排名。 |
+
+机器读取建议优先用 JSON：
+
+```text
+https://tianmind-studio.github.io/kunming-it-companies/data/companies.json
+```
+
+表格工具建议用 CSV：
+
+```text
+https://tianmind-studio.github.io/kunming-it-companies/data/companies.csv
+```
+
 ## 可以做什么
 
 - 在文章、报告、课堂项目或研究笔记中引用本项目。

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tianmind-studio.github.io/kunming-it-companies/sitemap.xml
