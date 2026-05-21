@@ -147,7 +147,8 @@ assert(script.includes("safeHref"), "script.js should guard dynamic href values.
 assert(script.includes("loadJson"), "script.js should check JSON fetch responses before rendering.");
 assert(script.includes("applyIntent"), "script.js should wire search-intent shortcuts.");
 assert(script.includes("renderFeatured"), "script.js should render first-screen company previews.");
-assert(script.includes("queryTokens.every"), "script.js should support multi-token search.");
+assert(script.includes("buildQueryGroups") && script.includes("matchesQueryGroups"), "script.js should support natural-language search intent matching.");
+assert(script.includes("queryIntentPatterns") && script.includes("queryStopWords"), "script.js should normalize local search phrases such as Kunming software company.");
 assert(script.includes("matchesAudience") && script.includes("matchesOpportunity"), "script.js should filter by audience and opportunity hints.");
 assert(script.includes("sourceTypeText"), "script.js should render source type labels.");
 assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-facing share kit content.");

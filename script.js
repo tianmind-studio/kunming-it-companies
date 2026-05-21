@@ -68,6 +68,66 @@ const sourceTypeText = {
   unknown: "未知来源"
 };
 
+const queryIntentPatterns = [
+  { patterns: ["软件", "software"], terms: ["软件", "外包", "小程序", "app", "erp"] },
+  { patterns: ["it", "信息技术"], terms: ["it", "信息技术", "软件", "系统集成", "互联网服务"] },
+  { patterns: ["ai", "人工智能"], terms: ["ai", "人工智能", "大数据", "智能科技"] },
+  { patterns: ["大数据", "data"], terms: ["大数据", "数据"] },
+  { patterns: ["系统集成"], terms: ["系统集成"] },
+  { patterns: ["政企"], terms: ["政企", "政府", "信息化"] },
+  { patterns: ["数字化"], terms: ["数字化", "信息化", "智慧"] },
+  { patterns: ["高新区"], terms: ["高新区"] },
+  { patterns: ["五华"], terms: ["五华区"] },
+  { patterns: ["盘龙"], terms: ["盘龙区"] },
+  { patterns: ["官渡"], terms: ["官渡区"] },
+  { patterns: ["西山"], terms: ["西山区"] },
+  { patterns: ["呈贡"], terms: ["呈贡区"] },
+  { patterns: ["安宁"], terms: ["安宁"] },
+  { patterns: ["招聘", "岗位", "工作", "hiring", "job"], terms: ["招聘", "hiring"] },
+  { patterns: ["实习", "internship"], terms: ["实习", "internship"] },
+  { patterns: ["外包", "交付"], terms: ["外包", "outsourcing"] },
+  { patterns: ["合作", "客户"], terms: ["合作", "partnership"] },
+  { patterns: ["待复核", "复核"], terms: ["待复核", "社区待复核", "community_pending"] },
+  { patterns: ["官网"], terms: ["官网", "official_site"] },
+  { patterns: ["官方页"], terms: ["官方页", "official_page"] }
+];
+
+const queryStopWords = [
+  "昆明",
+  "云南",
+  "本地",
+  "公司",
+  "企业",
+  "团队",
+  "机构",
+  "技术",
+  "机会",
+  "雷达",
+  "地图",
+  "索引",
+  "目录",
+  "名单",
+  "查询",
+  "搜索",
+  "看看",
+  "哪些",
+  "有哪些",
+  "有限责任公司",
+  "股份有限公司",
+  "有限公司",
+  "集团",
+  "kunming",
+  "yunnan",
+  "local",
+  "company",
+  "companies",
+  "map",
+  "list",
+  "directory",
+  "index",
+  "search"
+];
+
 function safeHref(value) {
   try {
     const url = new URL(value, window.location.href);
@@ -76,6 +136,61 @@ function safeHref(value) {
     return "";
   }
   return "";
+}
+
+function normalizedQuery(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[，,。.;；:：/、|]+/g, " ")
+    .replace(/\s+/g, " ");
+}
+
+function hasPattern(normalized, compact, pattern) {
+  const lowerPattern = pattern.toLowerCase();
+  return normalized.includes(lowerPattern) || compact.includes(lowerPattern.replace(/\s+/g, ""));
+}
+
+function buildQueryGroups(rawQuery) {
+  const normalized = normalizedQuery(rawQuery);
+  if (!normalized) return [];
+
+  const compact = normalized.replace(/\s+/g, "");
+  const groups = [];
+  const seen = new Set();
+  let leftover = ` ${normalized} `;
+
+  function addGroup(terms) {
+    const group = terms.map((term) => term.toLowerCase()).filter(Boolean);
+    const key = group.join("|");
+    if (!group.length || seen.has(key)) return;
+    groups.push(group);
+    seen.add(key);
+  }
+
+  for (const intent of queryIntentPatterns) {
+    if (intent.patterns.some((pattern) => hasPattern(normalized, compact, pattern))) {
+      addGroup(intent.terms);
+      for (const pattern of intent.patterns) {
+        leftover = leftover.replaceAll(pattern.toLowerCase(), " ");
+      }
+    }
+  }
+
+  for (const stopWord of queryStopWords) {
+    const lowerStopWord = stopWord.toLowerCase();
+    leftover = leftover.replaceAll(lowerStopWord, " ");
+  }
+
+  for (const token of leftover.split(/\s+/).map((item) => item.trim()).filter(Boolean)) {
+    addGroup([token]);
+  }
+
+  return groups;
+}
+
+function matchesQueryGroups(text, groups) {
+  return !groups.length || groups.every((group) => group.some((term) => text.includes(term)));
 }
 
 function node(tag, options = {}, children = []) {
@@ -280,8 +395,7 @@ function renderFeatured(companiesToShow) {
 }
 
 function render() {
-  const query = els.search.value.trim().toLowerCase();
-  const queryTokens = query.split(/\s+/).filter(Boolean);
+  const queryGroups = buildQueryGroups(els.search.value);
   const category = els.category.value;
   const district = els.district.value;
   const verification = els.verification.value;
@@ -291,7 +405,7 @@ function render() {
   const filtered = companies.filter((company) => {
     const normalizedDistrict = company.district || "待补区域";
     const text = searchableText(company);
-    const matchesQuery = !queryTokens.length || queryTokens.every((token) => text.includes(token));
+    const matchesQuery = matchesQueryGroups(text, queryGroups);
     const matchesCategory = !category || company.category === category;
     const matchesDistrict = !district || normalizedDistrict === district;
     const matchesVerification = !verification || company.verification_status === verification;
