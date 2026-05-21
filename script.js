@@ -14,6 +14,12 @@ const els = {
   verification: document.querySelector("#verificationSelect"),
   audience: document.querySelector("#audienceSelect"),
   opportunity: document.querySelector("#opportunitySelect"),
+  sort: document.querySelector("#sortSelect"),
+  activeFilters: document.querySelector("#activeFilters"),
+  resetFilters: document.querySelector("#resetFilters"),
+  copySearchLink: document.querySelector("#copySearchLink"),
+  downloadResultCsv: document.querySelector("#downloadResultCsv"),
+  shareStatus: document.querySelector("#shareStatus"),
   companyCount: document.querySelector("#companyCount"),
   strongSourceCount: document.querySelector("#strongSourceCount"),
   pendingCount: document.querySelector("#pendingCount"),
@@ -31,6 +37,14 @@ const els = {
   communityList: document.querySelector("#communityList"),
   eventList: document.querySelector("#eventList"),
   projectList: document.querySelector("#projectList"),
+  directionTotal: document.querySelector("#directionTotal"),
+  districtTotal: document.querySelector("#districtTotal"),
+  directionBreakdown: document.querySelector("#directionBreakdown"),
+  districtBreakdown: document.querySelector("#districtBreakdown"),
+  reviewQueueList: document.querySelector("#reviewQueueList"),
+  companyDialog: document.querySelector("#companyDialog"),
+  companyDialogBody: document.querySelector("#companyDialogBody"),
+  closeCompanyDialog: document.querySelector("#closeCompanyDialog"),
   intentButtons: document.querySelectorAll("[data-query], [data-scroll]")
 };
 
@@ -40,6 +54,8 @@ let communities = [];
 let events = [];
 let projects = [];
 let meta = {};
+let currentFiltered = [];
+let lastDialogTrigger = null;
 
 const verificationText = {
   verified: "官网已核验",
@@ -55,6 +71,13 @@ const opportunityText = {
   outsourcing: "外包/交付",
   partnership: "合作/客户线索",
   unknown: "待判断"
+};
+
+const audienceText = {
+  suitable_for_students: "学生",
+  suitable_for_job_seekers: "求职者",
+  suitable_for_freelancers: "自由职业者",
+  suitable_for_founders: "创业者"
 };
 
 const sourceTypeText = {
@@ -193,9 +216,126 @@ function matchesQueryGroups(text, groups) {
   return !groups.length || groups.every((group) => group.some((term) => text.includes(term)));
 }
 
+function fieldValue(field) {
+  return field?.value || "";
+}
+
+function currentSearchState() {
+  return {
+    q: fieldValue(els.search).trim(),
+    category: fieldValue(els.category),
+    district: fieldValue(els.district),
+    verification: fieldValue(els.verification),
+    audience: fieldValue(els.audience),
+    opportunity: fieldValue(els.opportunity),
+    sort: fieldValue(els.sort) || "relevance"
+  };
+}
+
+function setField(field, value) {
+  if (field) field.value = value || "";
+}
+
+function applySearchState(state) {
+  setField(els.search, state.q);
+  setField(els.heroSearch, state.q);
+  setField(els.category, state.category);
+  setField(els.district, state.district);
+  setField(els.verification, state.verification);
+  setField(els.audience, state.audience);
+  setField(els.opportunity, state.opportunity);
+  setField(els.sort, state.sort || "relevance");
+}
+
+function readSearchStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    q: params.get("q") || "",
+    category: params.get("category") || "",
+    district: params.get("district") || "",
+    verification: params.get("verification") || "",
+    audience: params.get("audience") || "",
+    opportunity: params.get("opportunity") || "",
+    sort: params.get("sort") || "relevance"
+  };
+}
+
+function syncUrl(state) {
+  const params = new URLSearchParams();
+  const defaults = { sort: "relevance" };
+  for (const [key, value] of Object.entries(state)) {
+    if (!value || defaults[key] === value) continue;
+    params.set(key, value);
+  }
+  const query = params.toString();
+  const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`;
+  window.history.replaceState(null, "", nextUrl);
+}
+
+function sourceUrlFor(company) {
+  return company.website || company.source_url || "";
+}
+
+function confidence(company) {
+  return Number(company.confidence_score || 0);
+}
+
+function reviewReasons(company) {
+  const reasons = [];
+  if (company.verification_status === "community_pending") reasons.push("社区待复核");
+  if (confidence(company) <= 2) reasons.push("弱来源");
+  if (!company.district) reasons.push("缺区县");
+  if (!company.website) reasons.push("缺官网");
+  if ((company.opportunities || []).includes("unknown")) reasons.push("机会提示待判断");
+  return reasons;
+}
+
+function reviewScore(company) {
+  let score = 0;
+  if (company.verification_status === "community_pending") score += 30;
+  if (confidence(company) <= 2) score += 30;
+  if (!company.district) score += 20;
+  if (!company.website) score += 12;
+  if ((company.opportunities || []).includes("unknown")) score += 8;
+  return score;
+}
+
+function verificationWeight(company) {
+  return {
+    verified: 5,
+    official_page: 4,
+    community_pending: 2,
+    outdated: 1,
+    unknown: 0
+  }[company.verification_status] || 0;
+}
+
+function sortCompanies(rows, mode) {
+  return [...rows].sort((a, b) => {
+    if (mode === "trust") {
+      return verificationWeight(b) - verificationWeight(a) || confidence(b) - confidence(a) || a.name.localeCompare(b.name, "zh-CN");
+    }
+    if (mode === "review") {
+      return reviewScore(b) - reviewScore(a) || a.name.localeCompare(b.name, "zh-CN");
+    }
+    if (mode === "recent") {
+      return (b.last_checked || "").localeCompare(a.last_checked || "") || a.name.localeCompare(b.name, "zh-CN");
+    }
+    if (mode === "name") {
+      return a.name.localeCompare(b.name, "zh-CN");
+    }
+    return verificationWeight(b) - verificationWeight(a)
+      || Number(Boolean(b.district)) - Number(Boolean(a.district))
+      || confidence(b) - confidence(a)
+      || a.name.localeCompare(b.name, "zh-CN");
+  });
+}
+
 function node(tag, options = {}, children = []) {
   const element = document.createElement(tag);
+  if (options.id) element.id = options.id;
   if (options.className) element.className = options.className;
+  if (options.style) element.setAttribute("style", options.style);
   if (options.text !== undefined) element.textContent = options.text;
   if (options.href) {
     const href = safeHref(options.href);
@@ -333,6 +473,54 @@ function renderStats() {
   if (els.heroUpdatedAt) els.heroUpdatedAt.textContent = meta.updated_at || "-";
 }
 
+function countBy(rows, getKey) {
+  const counts = new Map();
+  for (const row of rows) {
+    const key = getKey(row) || "待补";
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "zh-CN"));
+}
+
+function renderBarList(container, rows, total) {
+  if (!container) return;
+  container.replaceChildren();
+  for (const [label, count] of rows.slice(0, 8)) {
+    const pct = total ? Math.round((count / total) * 100) : 0;
+    container.append(node("div", { className: "bar-row" }, [
+      node("div", { className: "bar-row-top" }, [
+        node("span", { text: label }),
+        node("strong", { text: String(count) })
+      ]),
+      node("div", { className: "bar-track" }, [
+        node("span", { className: "bar-fill", style: `width: ${pct}%` })
+      ])
+    ]));
+  }
+}
+
+function renderInsights() {
+  const directionRows = countBy(companies, (company) => company.category || "方向待补");
+  const districtRows = countBy(companies, (company) => company.district || "区域待补");
+  const reviewRows = sortCompanies(companies.filter((company) => reviewScore(company) > 0), "review").slice(0, 6);
+
+  if (els.directionTotal) els.directionTotal.textContent = String(directionRows.length);
+  if (els.districtTotal) els.districtTotal.textContent = String(districtRows.length);
+  renderBarList(els.directionBreakdown, directionRows, companies.length);
+  renderBarList(els.districtBreakdown, districtRows, companies.length);
+
+  if (!els.reviewQueueList) return;
+  els.reviewQueueList.replaceChildren();
+  for (const company of reviewRows) {
+    const trigger = node("button", { text: company.name });
+    trigger.addEventListener("click", () => openCompanyDialog(company, trigger));
+    els.reviewQueueList.append(node("div", { className: "review-queue-item" }, [
+      trigger,
+      node("span", { text: reviewReasons(company).slice(0, 3).join(" · ") || "常规复核" })
+    ]));
+  }
+}
+
 function verificationMeta(company) {
   const status = company.verification_status || "unknown";
   const cls = {
@@ -358,6 +546,169 @@ function renderTags(items, className = "tag") {
   const wrap = node("div", { className: "tags" });
   for (const item of items) wrap.append(node("span", { className, text: item }));
   return wrap;
+}
+
+function optionLabel(select, value) {
+  if (!select || !value) return "";
+  for (const optionItem of select.options) {
+    if (optionItem.value === value) return optionItem.textContent || value;
+  }
+  return value;
+}
+
+function resetOneFilter(key) {
+  const state = currentSearchState();
+  state[key] = key === "sort" ? "relevance" : "";
+  applySearchState(state);
+  render();
+}
+
+function renderActiveFilters(state, resultCount) {
+  if (!els.activeFilters) return;
+  els.activeFilters.replaceChildren();
+  const chips = [
+    ["q", "关键词", state.q],
+    ["category", "方向", optionLabel(els.category, state.category)],
+    ["district", "区域", optionLabel(els.district, state.district)],
+    ["verification", "状态", optionLabel(els.verification, state.verification)],
+    ["audience", "人群", optionLabel(els.audience, state.audience)],
+    ["opportunity", "机会", optionLabel(els.opportunity, state.opportunity)],
+    ["sort", "排序", state.sort !== "relevance" ? optionLabel(els.sort, state.sort) : ""]
+  ].filter(([, , value]) => value);
+
+  els.activeFilters.append(node("span", { className: "result-count-pill", text: `${resultCount} 条结果` }));
+  for (const [key, label, value] of chips) {
+    const chip = node("button", { className: "filter-chip", text: `${label}: ${value} ×` });
+    chip.type = "button";
+    chip.addEventListener("click", () => resetOneFilter(key));
+    els.activeFilters.append(chip);
+  }
+  if (!chips.length) {
+    els.activeFilters.append(node("span", { className: "filter-hint", text: "当前显示全部公开记录" }));
+  }
+}
+
+function csvEscape(value) {
+  const text = String(value ?? "");
+  if (/[",\n]/.test(text)) return `"${text.replaceAll('"', '""')}"`;
+  return text;
+}
+
+function downloadCurrentCsv() {
+  const headers = ["name", "district", "category", "verification_status", "source_type", "confidence_score", "last_checked", "source_url"];
+  const rows = currentFiltered.map((company) => headers.map((field) => {
+    if (field === "source_url") return sourceUrlFor(company);
+    return company[field] ?? "";
+  }));
+  const csv = `${headers.join(",")}\n${rows.map((row) => row.map(csvEscape).join(",")).join("\n")}\n`;
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "kunming-tech-radar-filtered.csv";
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  setShareStatus(`已导出 ${currentFiltered.length} 条当前结果。`);
+}
+
+function setShareStatus(message) {
+  if (!els.shareStatus) return;
+  els.shareStatus.textContent = message;
+  window.clearTimeout(setShareStatus.timer);
+  setShareStatus.timer = window.setTimeout(() => {
+    if (els.shareStatus?.textContent === message) els.shareStatus.textContent = "";
+  }, 3200);
+}
+
+async function copyCurrentLink() {
+  const url = window.location.href;
+  try {
+    await navigator.clipboard.writeText(url);
+    setShareStatus("已复制当前筛选链接。");
+  } catch {
+    setShareStatus("当前浏览器不允许自动复制，可直接复制地址栏链接。");
+  }
+}
+
+function resetFilters() {
+  applySearchState({ sort: "relevance" });
+  render();
+  els.search?.focus();
+}
+
+function detailRows(company) {
+  return [
+    ["区域", company.district || "区域待补"],
+    ["方向", company.category || "方向待补"],
+    ["核验状态", verificationText[company.verification_status] || "状态未知"],
+    ["来源类型", sourceTypeText[company.source_type] || company.source_type || "来源待补"],
+    ["可信度", `${confidence(company) || 1}/5`],
+    ["最近核验", company.last_checked || "待补"],
+    ["适合查看", peopleLabels(company).join("、")],
+    ["机会提示", (company.opportunities || ["unknown"]).map((item) => opportunityText[item] || item).join("、")]
+  ];
+}
+
+function openCompanyDialog(company, trigger) {
+  if (!els.companyDialog || !els.companyDialogBody) return;
+  lastDialogTrigger = trigger || document.activeElement;
+  const badge = verificationMeta(company);
+  const sourceUrl = sourceUrlFor(company);
+  const sourceUrls = [...new Set([sourceUrl, ...(Array.isArray(company.source_urls) ? company.source_urls : [])].filter(Boolean))];
+
+  const titleRow = node("div", { className: "dialog-title-row" }, [
+    node("div", {}, [
+      node("p", { className: "kicker", text: "Company detail" }),
+      node("h2", { id: "dialogCompanyName", text: company.name })
+    ]),
+    node("span", badge)
+  ]);
+
+  const rows = detailRows(company).map(([label, value]) => node("div", { className: "detail-row" }, [
+    node("span", { text: label }),
+    node("strong", { text: value })
+  ]));
+
+  const sourceLinks = sourceUrls.length
+    ? sourceUrls.map((url, index) => node("a", { href: url, text: index === 0 ? "主来源" : `补充来源 ${index}` }))
+    : [node("span", { text: "待补公开来源" })];
+
+  const submitUrl = `submit.html?company=${encodeURIComponent(company.name)}&type=update`;
+  els.companyDialogBody.replaceChildren(
+    titleRow,
+    node("p", { className: "dialog-summary", text: company.notes || "暂无摘要，等待公开来源补充。" }),
+    node("div", { className: "detail-grid" }, rows),
+    node("div", { className: "dialog-section" }, [
+      node("strong", { text: "公开来源" }),
+      node("div", { className: "dialog-links" }, sourceLinks)
+    ]),
+    node("div", { className: "dialog-section" }, [
+      node("strong", { text: "复核提示" }),
+      node("p", { text: reviewReasons(company).join("、") || "暂无高优先级复核项。" })
+    ]),
+    node("div", { className: "dialog-actions" }, [
+      sourceUrl ? node("a", { href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }) : node("span", { text: "来源待补" }),
+      node("a", { href: submitUrl, text: "补充公开来源" })
+    ])
+  );
+
+  if (typeof els.companyDialog.showModal === "function") {
+    els.companyDialog.showModal();
+  } else {
+    els.companyDialog.setAttribute("open", "");
+  }
+}
+
+function closeCompanyDialog() {
+  if (!els.companyDialog) return;
+  if (els.companyDialog.open && typeof els.companyDialog.close === "function") {
+    els.companyDialog.close();
+  } else {
+    els.companyDialog.removeAttribute("open");
+  }
+  lastDialogTrigger?.focus?.();
 }
 
 function renderFeatured(companiesToShow) {
@@ -389,20 +740,26 @@ function renderFeatured(companiesToShow) {
         node("span", { text: `可信度 ${company.confidence_score || 1}/5` })
       ])
     ];
-    if (sourceUrl) cardChildren.push(node("a", { href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }));
+    const detailButton = node("button", { className: "card-action secondary", text: "查看详情" });
+    detailButton.type = "button";
+    detailButton.addEventListener("click", () => openCompanyDialog(company, detailButton));
+    const actions = [detailButton];
+    if (sourceUrl) actions.push(node("a", { href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }));
+    cardChildren.push(node("div", { className: "inline-actions" }, actions));
     els.featuredList.append(node("article", { className: "featured-card" }, cardChildren));
   }
 }
 
-function render() {
-  const queryGroups = buildQueryGroups(els.search.value);
-  const category = els.category.value;
-  const district = els.district.value;
-  const verification = els.verification.value;
-  const audience = els.audience.value;
-  const opportunity = els.opportunity.value;
+function render(options = {}) {
+  const state = currentSearchState();
+  const queryGroups = buildQueryGroups(state.q);
+  const category = state.category;
+  const district = state.district;
+  const verification = state.verification;
+  const audience = state.audience;
+  const opportunity = state.opportunity;
 
-  const filtered = companies.filter((company) => {
+  const filtered = sortCompanies(companies.filter((company) => {
     const normalizedDistrict = company.district || "待补区域";
     const text = searchableText(company);
     const matchesQuery = matchesQueryGroups(text, queryGroups);
@@ -412,8 +769,11 @@ function render() {
     const matchesAudience = !audience || Boolean(company[audience]);
     const matchesOpportunity = !opportunity || (company.opportunities || []).includes(opportunity);
     return matchesQuery && matchesCategory && matchesDistrict && matchesVerification && matchesAudience && matchesOpportunity;
-  });
+  }), state.sort);
 
+  currentFiltered = filtered;
+  if (options.syncUrl !== false) syncUrl(state);
+  renderActiveFilters(state, filtered.length);
   renderFeatured(filtered);
   els.resultSummary.textContent = `显示 ${filtered.length} / ${companies.length} 条记录`;
   els.list.replaceChildren();
@@ -434,8 +794,14 @@ function render() {
     const opportunities = renderTags((company.opportunities || ["unknown"]).map((item) => opportunityText[item] || item), "tag opportunity");
     const tags = renderTags(company.tags || []);
 
-    const footerChildren = [node("span", { className: "source", text: `核验：${company.last_checked || "待补"} · 可信度 ${company.confidence_score || 1}/5` })];
-    if (sourceUrl) footerChildren.push(node("a", { className: "visit", href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }));
+    const detailButton = node("button", { className: "visit secondary", text: "详情" });
+    detailButton.type = "button";
+    detailButton.addEventListener("click", () => openCompanyDialog(company, detailButton));
+    const footerChildren = [
+      node("span", { className: "source", text: `核验：${company.last_checked || "待补"} · 可信度 ${company.confidence_score || 1}/5` }),
+      node("div", { className: "card-actions" }, [detailButton])
+    ];
+    if (sourceUrl) footerChildren[1].append(node("a", { className: "visit", href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }));
 
     const card = node("article", { className: "company-card" }, [
       top,
@@ -468,6 +834,7 @@ function applyIntent(event) {
   els.district.value = "";
   els.audience.value = "";
   els.opportunity.value = "";
+  els.sort.value = "relevance";
   render();
 
   if (scrollTarget) {
@@ -553,8 +920,10 @@ async function init() {
   meta = dataset.meta;
 
   populateFilters();
+  applySearchState(readSearchStateFromUrl());
   renderStats();
-  render();
+  renderInsights();
+  render({ syncUrl: false });
   renderResourcePanels();
 
   els.search.addEventListener("input", () => {
@@ -573,6 +942,7 @@ async function init() {
     els.verification.value = "";
     els.audience.value = "";
     els.opportunity.value = "";
+    els.sort.value = "relevance";
     render();
     document.querySelector("#directory")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
@@ -581,6 +951,15 @@ async function init() {
   els.verification.addEventListener("change", render);
   els.audience.addEventListener("change", render);
   els.opportunity.addEventListener("change", render);
+  els.sort.addEventListener("change", render);
+  els.resetFilters?.addEventListener("click", resetFilters);
+  els.copySearchLink?.addEventListener("click", copyCurrentLink);
+  els.downloadResultCsv?.addEventListener("click", downloadCurrentCsv);
+  els.closeCompanyDialog?.addEventListener("click", closeCompanyDialog);
+  els.companyDialog?.addEventListener("click", (event) => {
+    if (event.target === els.companyDialog) closeCompanyDialog();
+  });
+  els.companyDialog?.addEventListener("close", () => lastDialogTrigger?.focus?.());
   for (const button of els.intentButtons) button.addEventListener("click", applyIntent);
 }
 

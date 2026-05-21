@@ -183,6 +183,26 @@
               <option value="internship">实习线索</option>
             </select>
           </label>
+          <label>
+            <span>排序</span>
+            <select id="sortSelect">
+              <option value="relevance">推荐排序</option>
+              <option value="review">优先复核</option>
+              <option value="trust">可信度优先</option>
+              <option value="recent">最近核验</option>
+              <option value="name">名称 A-Z</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="result-tools" aria-label="当前筛选操作">
+          <div id="activeFilters" class="active-filters" aria-live="polite"></div>
+          <div class="result-actions">
+            <button type="button" id="resetFilters">清空筛选</button>
+            <button type="button" id="copySearchLink">复制当前链接</button>
+            <button type="button" id="downloadResultCsv">导出当前结果</button>
+          </div>
+          <p id="shareStatus" class="share-status" aria-live="polite"></p>
         </section>
 
         <div id="featuredCompanyList" class="featured-list" aria-label="公司预览"></div>
@@ -342,6 +362,37 @@
         </div>
       </section>
 
+      <section class="insight-board" aria-label="数据雷达概览">
+        <div class="section-heading">
+          <p class="kicker">Radar view</p>
+          <h2>把分散信息变成可行动视图</h2>
+          <p>方向、区域和复核优先级都由当前公开数据自动汇总。这里不是排名，也不是公司评价，只帮助读者决定先看哪里、先补哪里。</p>
+        </div>
+        <div class="insight-grid">
+          <article>
+            <div class="insight-top">
+              <strong>方向分布</strong>
+              <span id="directionTotal">0</span>
+            </div>
+            <div id="directionBreakdown" class="bar-list"></div>
+          </article>
+          <article>
+            <div class="insight-top">
+              <strong>区域分布</strong>
+              <span id="districtTotal">0</span>
+            </div>
+            <div id="districtBreakdown" class="bar-list"></div>
+          </article>
+          <article>
+            <div class="insight-top">
+              <strong>复核队列</strong>
+              <a href="docs/data-cleanup-plan.html">查看计划</a>
+            </div>
+            <div id="reviewQueueList" class="review-queue-list"></div>
+          </article>
+        </div>
+      </section>
+
       <section class="trust-guide" aria-label="可信度说明">
         <div>
           <p class="kicker">Source-aware</p>
@@ -426,6 +477,13 @@
         <a href="https://github.com/tianmind-studio/kunming-it-companies">开源仓库</a>
       </nav>
     </footer>
+
+    <dialog id="companyDialog" class="company-dialog" aria-labelledby="dialogCompanyName">
+      <div class="dialog-shell">
+        <button type="button" id="closeCompanyDialog" class="dialog-close" aria-label="关闭详情">×</button>
+        <div id="companyDialogBody"></div>
+      </div>
+    </dialog>
 
     <script src="script.js" type="module"></script>
   </body>

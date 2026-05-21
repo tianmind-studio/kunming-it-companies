@@ -88,7 +88,17 @@ const requiredIds = [
   "missingDistrictCount",
   "weakSourceCount",
   "audienceSelect",
-  "opportunitySelect"
+  "opportunitySelect",
+  "sortSelect",
+  "activeFilters",
+  "resetFilters",
+  "copySearchLink",
+  "downloadResultCsv",
+  "directionBreakdown",
+  "districtBreakdown",
+  "reviewQueueList",
+  "companyDialog",
+  "companyDialogBody"
 ];
 
 for (const id of requiredIds) {
@@ -149,6 +159,10 @@ assert(script.includes("applyIntent"), "script.js should wire search-intent shor
 assert(script.includes("renderFeatured"), "script.js should render first-screen company previews.");
 assert(script.includes("buildQueryGroups") && script.includes("matchesQueryGroups"), "script.js should support natural-language search intent matching.");
 assert(script.includes("queryIntentPatterns") && script.includes("queryStopWords"), "script.js should normalize local search phrases such as Kunming software company.");
+assert(script.includes("currentSearchState") && script.includes("syncUrl"), "script.js should keep shareable filter state in the URL.");
+assert(script.includes("downloadCurrentCsv"), "script.js should export the current filtered result set.");
+assert(script.includes("openCompanyDialog"), "script.js should expose company detail dialogs.");
+assert(script.includes("renderInsights"), "script.js should render dataset insight panels.");
 assert(script.includes("matchesAudience") && script.includes("matchesOpportunity"), "script.js should filter by audience and opportunity hints.");
 assert(script.includes("sourceTypeText"), "script.js should render source type labels.");
 assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-facing share kit content.");
