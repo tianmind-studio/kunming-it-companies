@@ -1,10 +1,31 @@
 # 昆明技术机会雷达 / Kunming Tech Radar
 
-昆明技术机会雷达是一个开源的本地技术机会数据库，整理昆明及云南范围内的技术公司、IT 公司、软件团队、岗位、活动、社群与数字化项目线索。
+[![validate](https://github.com/tianmind-studio/kunming-it-companies/actions/workflows/validate.yml/badge.svg)](https://github.com/tianmind-studio/kunming-it-companies/actions/workflows/validate.yml)
 
-它不是公司黄页，也不做就业承诺。这个项目想解决一个更具体的问题：把散落在官网、招聘平台、政府公告、公众号、PDF 和熟人网络里的本地技术机会，整理成可以检索、可以复核、可以持续维护的开放数据。
+**项目一句话介绍：**昆明技术机会雷达是一个整理昆明/云南技术公司、社群活动和数字化项目公开线索的开源数据项目。
 
-这个仓库是开源数据源和维护记录。面向普通用户的主入口建议部署在国内可访问域名：
+**One-line intro:** Kunming Tech Radar is an open, source-backed dataset of tech companies, communities, events, and digital-project leads in Kunming and Yunnan.
+
+这个仓库整理昆明及云南范围内的技术公司、IT 公司、软件团队、AI / 大数据 / 系统集成 / 数字化服务相关机构，以及技术活动、社群和政府数字化项目查询入口。
+
+它不是公司黄页、招聘中介或公司排名，也不做就业承诺和商业背书。项目的核心价值是把散落在官网、招聘平台、政府公告、公众号、PDF 和历史清单里的公开线索，整理成可以检索、可以复核、可以持续维护的开放数据。
+
+## 30 秒快速入口
+
+| 你想做什么 | 入口 |
+| --- | --- |
+| 搜索公司 / 方向 / 区县 / 核验状态 | [国内静态站首页](https://kunming.tianmind.com/) |
+| 下载数据 | [JSON](data/companies.json) / [CSV](data/companies.csv) |
+| 看数据是否可信 | [数据质量报告](docs/data-quality-report.md) / [数据标准](docs/data-standard.md) |
+| 看哪些记录最需要复核 | [数据清理计划](docs/data-cleanup-plan.md) |
+| 查看本次数据变更 | [数据变更摘要](docs/data-change-summary.md) |
+| 提交公开线索 | [提交线索页](submit.html) / [GitHub Issue](https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose) |
+| 加入本地复核社群 | [联系 / 本地社群](#联系--本地社群) |
+| 本地运行与部署 | [本地预览](#国内站与-github-的分工) / [部署说明](docs/domestic-site-deploy.md) |
+| 复用或引用数据 | [复用、引用与更正](#复用引用与更正) |
+| 使用公开介绍文字 | [公开分享短介绍](docs/promotion.md) |
+
+面向普通用户的主入口建议部署在国内可访问域名：
 
 - 国内主入口：<https://kunming.tianmind.com/>（待正式部署）
 - 备用入口：<https://tianmind-studio.github.io/kunming-it-companies/>
@@ -47,6 +68,9 @@
 | 官网已核验 | 24 |
 | 官方页核验 | 2 |
 | 社区待复核 | 47 |
+| 弱来源记录 | 43 |
+| 缺区县记录 | 39 |
+| 强来源占比 | 36% |
 | 已导出 CSV | [`data/companies.csv`](data/companies.csv) |
 | 来源种子池 | 45 条公开来源入口，覆盖 9 个方向 × 每方向至少 5 条 |
 | 社群 / 活动入口 | [`data/communities.csv`](data/communities.csv)、[`data/events.csv`](data/events.csv) |
@@ -54,7 +78,11 @@
 | 覆盖区域 | 五华区、盘龙区、官渡区、西山区、呈贡区、高新区、安宁 / 其他、待补区域 |
 | 覆盖方向 | 软件开发 / 外包、系统集成 / 政企信息化、AI / 大数据、农业数字化、医疗信息化、文旅科技、金融科技、网络安全、通信 / ICT |
 
-说明：`社区待复核` 不等于无效，只表示目前还缺少官网、官方页、业务方向或区域等更强来源。`来源种子池` 只用于发现候选，不代表存在岗位或合作机会。
+这些数字应和 [`docs/data-quality-report.md`](docs/data-quality-report.md) 保持一致。更新 `data/companies.json` 后请运行 `npm run generate:data-quality`，避免 README、报告和页面统计互相打架。
+
+说明：`社区待复核`、`弱来源` 和 `缺区县` 不是项目缺陷标签，而是开放协作入口。它们表示这些记录仍需要本地开发者、学生、企业或维护者补充公开官网、官方页、区县来源、政府项目页、公众号文章或招聘页。`来源种子池` 只用于发现候选，不代表存在岗位或合作机会。
+
+![昆明技术机会雷达社交预览图](assets/social-card.svg)
 
 ## 快速浏览入口
 
@@ -69,6 +97,8 @@
 - [CSV 导出 data/companies.csv](data/companies.csv)：由 JSON 自动导出，方便表格工具打开。
 - [项目简介](docs/project-brief.md)：一页看懂项目用途、数据范围和贡献方式。
 - [数据标准](docs/data-standard.md)：收录边界、字段解释、核验规则。
+- [数据清理计划](docs/data-cleanup-plan.md)：列出当前最值得人工复核的记录和建议复核方向。
+- [数据变更摘要](docs/data-change-summary.md)：对比上一版本数据，方便 PR review。
 - [来源补强手册](docs/source-research-playbook.md)：每个方向至少 5 条公开来源入口，以及如何避免编造岗位。
 - [为什么要做昆明技术机会雷达](docs/why-kunming-tech-radar.md)：项目背景和使用场景。
 - [贡献指南](CONTRIBUTING.md)：开发者如何补充公司、修正过期信息。
@@ -83,12 +113,25 @@
 3. `scripts/export-companies-csv.mjs` 从 JSON 导出 `data/companies.csv`。
 4. 不手工维护 `COMPANIES.md` 和 `companies.csv` 里的公司正文。
 
+公司记录必须保留这些可信度字段：
+
+| 字段 | 用途 |
+| --- | --- |
+| `source_url` / `source_urls` | 原始公开来源和补充来源 |
+| `source_type` | 官网、官方页、政府名单、招聘平台、社区清单等来源类型 |
+| `verification_status` | `verified` / `official_page` / `community_pending` / `outdated` / `unknown` |
+| `last_checked` | 最近核验日期，格式为 `YYYY-MM-DD` |
+| `confidence_score` | 来源强度 1-5 分，不是公司评分 |
+| `opportunities` | 检索提示，不代表正在招聘、外包或合作 |
+| `suitable_for_*` | 适合谁阅读这条记录，不是业务承诺 |
+
 常用命令：
 
 ```bash
 npm run generate:companies
 npm run export:csv
 npm run generate:data-quality
+npm run data:diff
 npm run validate:data
 npm run validate
 ```
@@ -119,6 +162,8 @@ npm run validate
 5. 报告过期官网、失效来源、重复公司或不符合收录边界的记录。
 
 项目宁愿慢一点，也不把没有公开来源的信息写成确定事实。
+
+当前最适合本地开发者参与的是复核队列：47 条 `community_pending`、43 条弱来源和 39 条缺区县记录已经集中列在 [`docs/data-cleanup-plan.md`](docs/data-cleanup-plan.md)。提交公开来源就是对项目最直接的贡献。
 
 ## 国内站与 GitHub 的分工
 

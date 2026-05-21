@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { getCompanies, readDataset } from "./companies-lib.mjs";
 
 const root = process.cwd();
 const outDir = path.join(root, "dist");
@@ -27,12 +28,15 @@ const dirs = ["assets", "data", "docs"];
 const docsToRender = [
   "community-guidelines.md",
   "contribution-guide.md",
+  "data-change-summary.md",
+  "data-cleanup-plan.md",
   "data-quality-report.md",
   "data-schema.md",
   "data-standard.md",
   "domestic-site-deploy.md",
   "kunming-it-map.md",
   "opportunity-radar.md",
+  "promotion.md",
   "project-brief.md",
   "reuse-and-citation.md",
   "search-guide.md",
@@ -90,6 +94,85 @@ function removeJunkFiles(dir) {
       removeJunkFiles(fullPath);
     }
   }
+}
+
+function parseCsvLine(line) {
+  const cells = [];
+  let current = "";
+  let quoted = false;
+
+  for (let i = 0; i < line.length; i += 1) {
+    const char = line[i];
+    const next = line[i + 1];
+
+    if (char === '"' && quoted && next === '"') {
+      current += '"';
+      i += 1;
+    } else if (char === '"') {
+      quoted = !quoted;
+    } else if (char === "," && !quoted) {
+      cells.push(current);
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+
+  cells.push(current);
+  return cells;
+}
+
+function countCsvRows(relativePath) {
+  const content = fs.readFileSync(path.join(root, relativePath), "utf8").trim();
+  if (!content) return 0;
+  const lines = content.split(/\r?\n/);
+  const header = parseCsvLine(lines[0] || "");
+  if (!header.length) return 0;
+  return lines.slice(1).filter((line) => line.trim()).length;
+}
+
+function getStaticStats() {
+  const dataset = readDataset();
+  const companies = getCompanies(dataset);
+  const strongSources = companies.filter((company) => ["verified", "official_page"].includes(company.verification_status)).length;
+  const pending = companies.filter((company) => company.verification_status === "community_pending").length;
+  const missingDistricts = companies.filter((company) => !company.district).length;
+  const weakSources = companies.filter((company) => Number(company.confidence_score || 0) <= 2).length;
+  const verifiedRatio = companies.length ? `${Math.round((strongSources / companies.length) * 100)}%` : "0%";
+
+  return {
+    heroUpdatedAt: dataset.meta?.updated_at || "-",
+    heroCompanyCount: companies.length,
+    heroSourceLeadCount: countCsvRows("data/source-leads.csv"),
+    heroStrongSourceCount: strongSources,
+    heroPendingCount: pending,
+    companyCount: companies.length,
+    strongSourceCount: strongSources,
+    pendingCount: pending,
+    sourceLeadCount: countCsvRows("data/source-leads.csv"),
+    communityCount: countCsvRows("data/communities.csv"),
+    eventCount: countCsvRows("data/events.csv"),
+    projectCount: countCsvRows("data/gov-projects.csv"),
+    sourceDate: dataset.meta?.updated_at || "-",
+    verifiedRatio,
+    missingDistrictCount: missingDistricts,
+    weakSourceCount: weakSources
+  };
+}
+
+function replaceStat(html, id, value) {
+  const pattern = new RegExp(`(<strong id="${id}">)([^<]*)(</strong>)`, "g");
+  return html.replace(pattern, `$1${escapeHtml(String(value))}$3`);
+}
+
+function injectStaticStatsIntoIndex() {
+  const indexPath = path.join(outDir, "index.html");
+  let html = fs.readFileSync(indexPath, "utf8");
+  const stats = getStaticStats();
+  for (const [id, value] of Object.entries(stats)) {
+    html = replaceStat(html, id, value);
+  }
+  fs.writeFileSync(indexPath, html);
 }
 
 function escapeHtml(value) {
@@ -332,6 +415,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
 for (const file of rootFiles) copyFile(file);
 for (const dir of dirs) copyDir(dir);
+injectStaticStatsIntoIndex();
 generateMarkdownPages();
 removeJunkFiles(outDir);
 

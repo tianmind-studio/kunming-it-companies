@@ -1,8 +1,14 @@
 # Kunming Tech Radar
 
-Kunming Tech Radar is an open, source-aware local technology opportunity map for Kunming and Yunnan.
+[![validate](https://github.com/tianmind-studio/kunming-it-companies/actions/workflows/validate.yml/badge.svg)](https://github.com/tianmind-studio/kunming-it-companies/actions/workflows/validate.yml)
 
-It collects public information about technology-related companies, IT companies, software teams, AI/data companies, recruiting pages, events, communities, and government digital project leads. It is not a ranking, a job board, a recruiter, or a guarantee of any opportunity. The project exists to make scattered local signals easier to search, verify, and maintain.
+**One-line intro:** Kunming Tech Radar is an open, source-backed dataset of tech companies, communities, events, and digital-project leads in Kunming and Yunnan.
+
+**中文一句话：**昆明技术机会雷达是一个整理昆明/云南技术公司、社群活动和数字化项目公开线索的开源数据项目。
+
+Kunming Tech Radar collects public information about technology-related companies, IT companies, software teams, AI/data companies, public source leads, events, communities, and government digital project entry points in Kunming and Yunnan.
+
+It is not a ranking, a job board, a recruiter, a company endorsement, or a guarantee of any opportunity. The project exists to make scattered local signals easier to search, verify, reuse, and maintain.
 
 Primary links:
 
@@ -17,7 +23,10 @@ Primary links:
 - Primary dataset: [data/companies.json](data/companies.json)
 - Data standard: [docs/data-standard.md](docs/data-standard.md)
 - Data quality report: [docs/data-quality-report.md](docs/data-quality-report.md)
+- Data cleanup plan: [docs/data-cleanup-plan.md](docs/data-cleanup-plan.md)
+- Data change summary: [docs/data-change-summary.md](docs/data-change-summary.md)
 - Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Public sharing copy: [docs/promotion.md](docs/promotion.md)
 
 ## Who It Helps
 
@@ -41,11 +50,16 @@ Current coverage:
 | Verified official websites | 24 |
 | Verified official pages | 2 |
 | Community pending records | 47 |
+| Weak-source records | 43 |
+| Missing district records | 39 |
+| Strong-source ratio | 36% |
 | Source leads | 45 public entry points across 9 directions |
 | Community and event sources | [data/communities.csv](data/communities.csv), [data/events.csv](data/events.csv) |
 | Government project portals | [data/gov-projects.csv](data/gov-projects.csv) |
 
-`community_pending` does not mean a record is invalid. It means the record still needs stronger public sources such as an official website, an official page, a recruiting page, or a government/project source.
+The numbers should stay aligned with [docs/data-quality-report.md](docs/data-quality-report.md). After data changes, run `npm run generate:data-quality` and `npm run validate`.
+
+`community_pending`, weak-source records, and missing districts are open collaboration entry points, not defect labels. They show where local developers, students, companies, and maintainers can help by adding public official websites, official pages, district evidence, government project pages, official articles, or recruiting pages.
 
 ## Search Intents Covered
 
@@ -93,6 +107,7 @@ If you do not use GitHub often, use [submit.html](submit.html) first: submit the
 npm run generate:companies
 npm run export:csv
 npm run generate:data-quality
+npm run data:diff
 npm run build:site
 npm run validate
 ```

@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { getCompanies, readDataset } from "./companies-lib.mjs";
 
 const errors = [];
 
@@ -62,6 +63,12 @@ assert(index.includes("assets/wechat-qr.jpg") && index.includes("beizhushaonlan"
 assert(index.includes('id="heroSearchForm"') && index.includes('id="directory"'), "index.html should expose a first-screen search flow and directory preview.");
 assert(fs.existsSync("robots.txt"), "robots.txt should exist for indexing.");
 assert(fs.existsSync("sitemap.xml") && read("sitemap.xml").includes("docs/search-guide.html"), "sitemap.xml should include public HTML guidance pages.");
+assert(read("guides.html").includes("docs/promotion.html"), "guides.html should expose the public sharing copy page.");
+assert(read("guides.html").includes("docs/data-cleanup-plan.html"), "guides.html should expose the data cleanup plan page.");
+assert(read("guides.html").includes("docs/data-change-summary.html"), "guides.html should expose the data change summary page.");
+assert(read("sitemap.xml").includes("docs/promotion.html"), "sitemap.xml should include the public sharing copy page.");
+assert(read("sitemap.xml").includes("docs/data-cleanup-plan.html"), "sitemap.xml should include the data cleanup plan page.");
+assert(read("sitemap.xml").includes("docs/data-change-summary.html"), "sitemap.xml should include the data change summary page.");
 
 const requiredIds = [
   "sourceLeadCount",
@@ -72,9 +79,26 @@ const requiredIds = [
   "communityList",
   "eventList",
   "projectList",
+  "heroCompanyCount",
+  "heroSourceLeadCount",
+  "heroStrongSourceCount",
+  "heroPendingCount",
+  "strongSourceCount",
   "verifiedRatio",
   "missingDistrictCount",
-  "weakSourceCount"
+  "weakSourceCount",
+  "audienceSelect",
+  "opportunitySelect",
+  "sortSelect",
+  "activeFilters",
+  "resetFilters",
+  "copySearchLink",
+  "downloadResultCsv",
+  "directionBreakdown",
+  "districtBreakdown",
+  "reviewQueueList",
+  "companyDialog",
+  "companyDialogBody"
 ];
 
 for (const id of requiredIds) {
@@ -95,21 +119,59 @@ const sourceLeads = parseCsv(read("data/source-leads.csv"));
 const communities = parseCsv(read("data/communities.csv"));
 const events = parseCsv(read("data/events.csv"));
 const projects = parseCsv(read("data/gov-projects.csv"));
+const dataset = readDataset();
+const companies = getCompanies(dataset);
+const strongSourceCount = companies.filter((company) => ["verified", "official_page"].includes(company.verification_status)).length;
+const pendingCount = companies.filter((company) => company.verification_status === "community_pending").length;
+const missingDistrictCount = companies.filter((company) => !company.district).length;
+const weakSourceCount = companies.filter((company) => Number(company.confidence_score || 0) <= 2).length;
+const verifiedRatio = companies.length ? `${Math.round((strongSourceCount / companies.length) * 100)}%` : "0%";
+
+function assertStaticStat(id, expected) {
+  assert(index.includes(`id="${id}">${expected}</strong>`), `index.html static fallback for #${id} should be ${expected}.`);
+}
 
 assert(sourceLeads.length >= 45, "source-leads should keep at least 45 seed entries.");
 assert(communities.length >= 8, "communities should include the community pilot entry.");
 assert(events.length >= 6, "events should include public event source entries.");
 assert(projects.length >= 3, "gov-projects should include public project source entries.");
+assertStaticStat("heroCompanyCount", companies.length);
+assertStaticStat("heroSourceLeadCount", sourceLeads.length);
+assertStaticStat("heroStrongSourceCount", strongSourceCount);
+assertStaticStat("heroPendingCount", pendingCount);
+assertStaticStat("heroUpdatedAt", dataset.meta?.updated_at || "-");
+assertStaticStat("companyCount", companies.length);
+assertStaticStat("strongSourceCount", strongSourceCount);
+assertStaticStat("pendingCount", pendingCount);
+assertStaticStat("sourceLeadCount", sourceLeads.length);
+assertStaticStat("communityCount", communities.length);
+assertStaticStat("eventCount", events.length);
+assertStaticStat("projectCount", projects.length);
+assertStaticStat("sourceDate", dataset.meta?.updated_at || "-");
+assertStaticStat("verifiedRatio", verifiedRatio);
+assertStaticStat("missingDistrictCount", missingDistrictCount);
+assertStaticStat("weakSourceCount", weakSourceCount);
 assert(script.includes("renderSourceLeadSummary"), "script.js should render source lead summary.");
 assert(script.includes("renderResourceCards"), "script.js should render resource cards.");
 assert(script.includes("safeHref"), "script.js should guard dynamic href values.");
+assert(script.includes("loadJson"), "script.js should check JSON fetch responses before rendering.");
 assert(script.includes("applyIntent"), "script.js should wire search-intent shortcuts.");
 assert(script.includes("renderFeatured"), "script.js should render first-screen company previews.");
-assert(script.includes("queryTokens.every"), "script.js should support multi-token search.");
+assert(script.includes("buildQueryGroups") && script.includes("matchesQueryGroups"), "script.js should support natural-language search intent matching.");
+assert(script.includes("queryIntentPatterns") && script.includes("queryStopWords"), "script.js should normalize local search phrases such as Kunming software company.");
+assert(script.includes("currentSearchState") && script.includes("syncUrl"), "script.js should keep shareable filter state in the URL.");
+assert(script.includes("downloadCurrentCsv"), "script.js should export the current filtered result set.");
+assert(script.includes("openCompanyDialog"), "script.js should expose company detail dialogs.");
+assert(script.includes("renderInsights"), "script.js should render dataset insight panels.");
+assert(script.includes("matchesAudience") && script.includes("matchesOpportunity"), "script.js should filter by audience and opportunity hints.");
+assert(script.includes("sourceTypeText"), "script.js should render source type labels.");
 assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-facing share kit content.");
 assert(!index.includes("docs/search-guide.md") && !index.includes("docs/use-cases.md"), "index.html should not expose Markdown docs as the main user path.");
 assert(index.includes("docs/project-brief.html"), "index.html should link the public project brief as HTML.");
 assert(read("scripts/build-static-site.mjs").includes("generateMarkdownPages"), "build script should generate HTML pages from public Markdown docs.");
+assert(read("scripts/build-static-site.mjs").includes("promotion.md"), "build script should render the public sharing copy page.");
+assert(read("scripts/build-static-site.mjs").includes("data-cleanup-plan.md"), "build script should render the data cleanup plan page.");
+assert(read("scripts/build-static-site.mjs").includes("data-change-summary.md"), "build script should render the data change summary page.");
 assert(script.includes("weakSourceCount"), "script.js should render data quality metrics.");
 
 for (const [label, rows] of [

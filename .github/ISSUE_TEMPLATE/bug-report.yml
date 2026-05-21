@@ -1,0 +1,61 @@
+name: Bug report
+description: 报告静态站、搜索筛选、下载、脚本或文档链接问题
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请描述可以复现的页面、脚本或文档问题。不要在 Issue 中粘贴私人信息、账号凭证、聊天截图或无法公开复核的内容。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题区域
+      options:
+        - 首页 / 搜索筛选
+        - 提交线索页
+        - CSV / JSON 下载
+        - 数据生成或校验脚本
+        - 文档或链接
+        - GitHub Actions / CI
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 请说明你看到的现象、期望结果和实际结果。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 ...
+        2. 搜索 ...
+        3. 点击 ...
+    validations:
+      required: false
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器 / 环境
+      placeholder: 例如：Chrome on macOS / 手机微信内置浏览器 / GitHub Pages
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: 错误信息
+      description: 如果有控制台或命令行错误，可以贴最小必要内容；不要贴 token、cookie、私有路径或敏感日志。
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 确认
+      options:
+        - label: 我没有提交账号凭证、私人联系方式、聊天截图或其他敏感内容。
+          required: true

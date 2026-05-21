@@ -43,6 +43,7 @@ for (const filePath of listAssetFiles("assets")) {
 }
 
 const publicDocs = [
+  "AGENTS.md",
   "README.md",
   "README.en.md",
   "ROADMAP.md",
@@ -95,8 +96,17 @@ for (const filePath of publicDocs) {
 
 const index = read("index.html");
 const readme = read("README.md");
+const agents = read("AGENTS.md");
 assert(index.includes("beizhushaonlan") && index.includes("assets/wechat-qr.jpg"), "index.html should expose the approved maintainer WeChat community contact.");
 assert(readme.includes("beizhushaonlan") && readme.includes("assets/wechat-qr.jpg"), "README.md should expose the approved maintainer WeChat community contact.");
+assert(agents.includes("data/companies.json") && agents.includes("npm run validate"), "AGENTS.md should name the primary data source and required validation command.");
+assert(agents.includes("Do not invent") && agents.includes("private"), "AGENTS.md should preserve public-source and privacy boundaries for future agents.");
+assert(fs.existsSync(".github/ISSUE_TEMPLATE/bug-report.yml"), "Bug report issue template should exist.");
+assert(fs.existsSync(".github/ISSUE_TEMPLATE/data-correction-privacy-request.yml"), "Data correction / privacy request issue template should exist.");
+assert(fs.existsSync("docs/data-cleanup-plan.md"), "Data cleanup plan should exist.");
+assert(fs.existsSync("docs/data-change-summary.md"), "Data change summary should exist.");
+assert(read("package.json").includes("data:diff") && fs.existsSync("scripts/report-data-changes.mjs"), "Data diff script should be exposed in package.json.");
+assert(read("package.json").includes("generate:data-cleanup") && fs.existsSync("scripts/generate-data-cleanup-plan.mjs"), "Data cleanup generator should be exposed in package.json.");
 
 if (errors.length) {
   console.error(`Public documentation validation failed with ${errors.length} issue(s):`);
