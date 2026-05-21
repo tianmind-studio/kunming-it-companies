@@ -406,15 +406,55 @@ function parseCsv(text) {
 }
 
 async function loadCsv(path) {
-  const response = await fetch(path);
+  const response = await fetch(path, { credentials: "omit" });
   if (!response.ok) throw new Error(`Failed to load ${path}`);
   return parseCsv(await response.text());
 }
 
 async function loadJson(path) {
-  const response = await fetch(path);
+  const response = await fetch(path, { credentials: "omit" });
   if (!response.ok) throw new Error(`Failed to load ${path}`);
   return response.json();
+}
+
+function normalizeSiteDataPayload(payload) {
+  if (!payload?.dataset?.companies) return null;
+  return {
+    dataset: payload.dataset,
+    sourceLeadRows: Array.isArray(payload.sourceLeads) ? payload.sourceLeads : [],
+    communityRows: Array.isArray(payload.communities) ? payload.communities : [],
+    eventRows: Array.isArray(payload.events) ? payload.events : [],
+    projectRows: Array.isArray(payload.projects) ? payload.projects : []
+  };
+}
+
+function readInlineSiteData() {
+  const element = document.querySelector("#kunmingSiteData");
+  const text = element?.textContent?.trim();
+  if (!text) return null;
+  return normalizeSiteDataPayload(JSON.parse(text));
+}
+
+async function loadSiteData() {
+  const inlineData = readInlineSiteData();
+  if (inlineData) return inlineData;
+
+  try {
+    const combined = await loadJson("data/site-data.json");
+    const normalized = normalizeSiteDataPayload(combined);
+    if (normalized) return normalized;
+  } catch (error) {
+    console.warn("Combined site data unavailable, falling back to individual data files.", error);
+  }
+
+  const [dataset, sourceLeadRows, communityRows, eventRows, projectRows] = await Promise.all([
+    loadJson("data/companies.json"),
+    loadCsv("data/source-leads.csv"),
+    loadCsv("data/communities.csv"),
+    loadCsv("data/events.csv"),
+    loadCsv("data/gov-projects.csv")
+  ]);
+  return { dataset, sourceLeadRows, communityRows, eventRows, projectRows };
 }
 
 function searchableText(company) {
@@ -904,13 +944,7 @@ function renderResourcePanels() {
 }
 
 async function init() {
-  const [dataset, sourceLeadRows, communityRows, eventRows, projectRows] = await Promise.all([
-    loadJson("data/companies.json"),
-    loadCsv("data/source-leads.csv"),
-    loadCsv("data/communities.csv"),
-    loadCsv("data/events.csv"),
-    loadCsv("data/gov-projects.csv")
-  ]);
+  const { dataset, sourceLeadRows, communityRows, eventRows, projectRows } = await loadSiteData();
 
   companies = dataset.companies.map(normalize).sort((a, b) => a.name.localeCompare(b.name, "zh-CN"));
   sourceLeads = sourceLeadRows;

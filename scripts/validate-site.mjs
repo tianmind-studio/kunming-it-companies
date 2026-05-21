@@ -53,6 +53,8 @@ assert(index.includes("assets/social-card.svg"), "index.html should include a no
 assert(index.includes("昆明 IT 公司") && index.includes("Kunming tech companies"), "index.html should expose human-readable search intent copy.");
 assert(index.includes("<link rel=\"canonical\" href=\"https://kunming.tianmind.com/\">"), "index.html should include the domestic canonical URL.");
 assert(index.includes("application/ld+json") && index.includes("\"@type\": \"Dataset\""), "index.html should expose Dataset structured data.");
+assert(index.includes("data/site-data.json"), "index.html should preload the combined site data payload for faster first render.");
+assert(index.includes("rel=\"modulepreload\" href=\"script.js\""), "index.html should modulepreload the main script for faster first render.");
 assert(index.includes("guides.html"), "index.html should link to a user-facing guides page.");
 assert(index.includes("docs/use-cases.html"), "index.html should link to role-based usage guidance as HTML.");
 assert(index.includes("docs/search-guide.html"), "index.html should link to search guidance as HTML.");
@@ -100,6 +102,11 @@ const requiredIds = [
   "companyDialog",
   "companyDialogBody"
 ];
+
+const idMatches = [...index.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
+const duplicateIds = [...new Set(idMatches.filter((id, index, all) => all.indexOf(id) !== index))];
+assert(!duplicateIds.length, `index.html has duplicate id values: ${duplicateIds.join(", ")}.`);
+assert(script.includes("loadSiteData") && script.includes("kunmingSiteData"), "script.js should load combined or inline site data before falling back to individual files.");
 
 for (const id of requiredIds) {
   assert(index.includes(`id=\"${id}\"`), `index.html missing #${id}.`);

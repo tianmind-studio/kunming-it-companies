@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getCompanies, readDataset } from "./companies-lib.mjs";
+import { safeJsonForHtml } from "./site-data-lib.mjs";
 
 const root = process.cwd();
 const outDir = path.join(root, "dist");
@@ -172,6 +173,11 @@ function injectStaticStatsIntoIndex() {
   for (const [id, value] of Object.entries(stats)) {
     html = replaceStat(html, id, value);
   }
+  html = html.replace(/\n\s*<link id="siteDataPreload"[^>]+>\n/, "\n");
+  html = html.replace(
+    "    <!-- KTR_BOOTSTRAP_DATA -->",
+    `    <script id="kunmingSiteData" type="application/json">${safeJsonForHtml()}</script>`
+  );
   fs.writeFileSync(indexPath, html);
 }
 

@@ -1,0 +1,3505 @@
+{
+  "dataset": {
+    "meta": {
+      "name": "Kunming Tech Radar",
+      "city": "Kunming",
+      "province": "Yunnan",
+      "country": "China",
+      "updated_at": "2026-05-13",
+      "source_policy": "Every company entry must keep at least one public, source-backed URL. Do not add private contacts or unverifiable hiring claims.",
+      "name_zh": "昆明技术机会雷达",
+      "description_zh": "面向昆明/云南大学生、开发者、自由职业者和技术创业者的本地技术机会地图。",
+      "primary_source": "data/companies.json",
+      "generated_outputs": [
+        "COMPANIES.md",
+        "data/companies.csv"
+      ]
+    },
+    "companies": [
+      {
+        "id": "kunming-haitian-information",
+        "name_zh": "昆明海天信息技术集团有限公司",
+        "name_en": "Kunming Haitian Information Technology Group Co., Ltd.",
+        "city": "昆明",
+        "district": "高新区",
+        "category": "系统集成 / 工业数字化",
+        "tags": [
+          "系统集成",
+          "软件开发",
+          "工业自动化",
+          "智能通信"
+        ],
+        "website": "https://www.ynhitech.com/",
+        "summary_zh": "官网展示其业务覆盖自动化、节能环保、新能源、智能通信、智慧航空等领域，并包含软件开发和系统集成相关能力。",
+        "summary_en": "Public website presents automation, energy-saving, new energy, smart communication, aviation, software development, and system integration capabilities.",
+        "source_urls": [
+          "https://www.ynhitech.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明海天信息技术集团有限公司",
+        "english_name": "Kunming Haitian Information Technology Group Co., Ltd.",
+        "source_url": "https://www.ynhitech.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示其业务覆盖自动化、节能环保、新能源、智能通信、智慧航空等领域，并包含软件开发和系统集成相关能力。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-bocheng-tech",
+        "name_zh": "昆明博程科技有限公司",
+        "name_en": "Kunming Bocheng Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "软件开发 / 互联网服务",
+        "tags": [
+          "网站建设",
+          "系统开发",
+          "APP开发",
+          "数字营销"
+        ],
+        "website": "https://www.yunk.com.cn/",
+        "summary_zh": "官网介绍其面向企业提供网站建设、系统开发、APP开发、互联网营销等服务。",
+        "summary_en": "Public website describes website development, system development, app development, and internet marketing services.",
+        "source_urls": [
+          "https://www.yunk.com.cn/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明博程科技有限公司",
+        "english_name": "Kunming Bocheng Technology Co., Ltd.",
+        "source_url": "https://www.yunk.com.cn/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网介绍其面向企业提供网站建设、系统开发、APP开发、互联网营销等服务。",
+        "opportunities": [
+          "outsourcing"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-chanetsoft",
+        "name_zh": "昆明昌昱信息科技有限公司",
+        "name_en": "Kunming Changyu Information Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "云服务 / 产业数字化",
+        "tags": [
+          "云服务",
+          "大数据",
+          "工业互联网",
+          "信息化服务"
+        ],
+        "website": "https://www.chanetsoft.com/",
+        "summary_zh": "官网展示云服务、大数据、工业互联网、信息化服务等业务方向。",
+        "summary_en": "Public website presents cloud service, big data, industrial internet, and information technology service offerings.",
+        "source_urls": [
+          "https://www.chanetsoft.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明昌昱信息科技有限公司",
+        "english_name": "Kunming Changyu Information Technology Co., Ltd.",
+        "source_url": "https://www.chanetsoft.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示云服务、大数据、工业互联网、信息化服务等业务方向。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-katesoft",
+        "name_zh": "昆明软佳科技有限公司",
+        "name_en": "Kunming Katesoft Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "医疗信息化",
+        "tags": [
+          "医疗信息化",
+          "HIS",
+          "医院管理系统",
+          "软件产品"
+        ],
+        "website": "https://www.katesoft.com/",
+        "summary_zh": "官网展示医院信息系统、智能化医院管理和医疗信息化相关产品。",
+        "summary_en": "Public website presents hospital information systems and healthcare information management software.",
+        "source_urls": [
+          "https://www.katesoft.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明软佳科技有限公司",
+        "english_name": "Kunming Katesoft Technology Co., Ltd.",
+        "source_url": "https://www.katesoft.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示医院信息系统、智能化医院管理和医疗信息化相关产品。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-shengyun-tech",
+        "name_zh": "盛云科技集团",
+        "name_en": "Shengyun Technology Group",
+        "city": "昆明",
+        "district": "",
+        "category": "数字建造 / 智慧城市",
+        "tags": [
+          "BIM",
+          "智慧工地",
+          "数字建造",
+          "行业数字化"
+        ],
+        "website": "https://ynshine.com/",
+        "summary_zh": "官网定位为建筑行业数字化转型服务商，展示 BIM、智慧工地和行业数字化相关方案。",
+        "summary_en": "Public website positions the group around construction-industry digital transformation, BIM, and smart construction-site solutions.",
+        "source_urls": [
+          "https://ynshine.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "盛云科技集团",
+        "english_name": "Shengyun Technology Group",
+        "source_url": "https://ynshine.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网定位为建筑行业数字化转型服务商，展示 BIM、智慧工地和行业数字化相关方案。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-daoshi-tech",
+        "name_zh": "昆明道实科技有限公司",
+        "name_en": "Kunming Daoshi Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "软件开发 / 系统集成",
+        "tags": [
+          "软件开发",
+          "系统集成",
+          "智能化工程",
+          "IT服务"
+        ],
+        "website": "https://kmdskj.icu/",
+        "summary_zh": "公开网站展示软件开发、计算机系统集成、智能化工程等技术服务方向。",
+        "summary_en": "Public website presents software development, computer system integration, and intelligent engineering services.",
+        "source_urls": [
+          "https://kmdskj.icu/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明道实科技有限公司",
+        "english_name": "Kunming Daoshi Technology Co., Ltd.",
+        "source_url": "https://kmdskj.icu/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "公开网站展示软件开发、计算机系统集成、智能化工程等技术服务方向。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-softplus-tech",
+        "name_zh": "云南软加科技有限公司",
+        "name_en": "Yunnan Softplus Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / AI 应用",
+        "tags": [
+          "软件开发",
+          "AI应用",
+          "网站建设",
+          "企业数字化"
+        ],
+        "website": "https://www.softplus.dev/",
+        "summary_zh": "官网展示软件开发、AI 应用、网站建设与企业数字化相关服务。",
+        "summary_en": "Public website presents software development, AI application, website development, and enterprise digitalization services.",
+        "source_urls": [
+          "https://www.softplus.dev/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南软加科技有限公司",
+        "english_name": "Yunnan Softplus Technology Co., Ltd.",
+        "source_url": "https://www.softplus.dev/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示软件开发、AI 应用、网站建设与企业数字化相关服务。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-nantian-information",
+        "name_zh": "云南南天电子信息产业股份有限公司",
+        "name_en": "Yunnan Nantian Electronics Information Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "金融科技 / IT 服务",
+        "tags": [
+          "金融科技",
+          "软件开发",
+          "系统集成",
+          "IT服务"
+        ],
+        "website": "https://www.nantian.com.cn/",
+        "summary_zh": "官网展示金融科技、软件产品、IT 服务和数字化解决方案相关业务。",
+        "summary_en": "Public website presents fintech, software products, IT services, and digital transformation solutions.",
+        "source_urls": [
+          "https://www.nantian.com.cn/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南南天电子信息产业股份有限公司",
+        "english_name": "Yunnan Nantian Electronics Information Co., Ltd.",
+        "source_url": "https://www.nantian.com.cn/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示金融科技、软件产品、IT 服务和数字化解决方案相关业务。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "shengshizhiyun-yunnan-software",
+        "name_zh": "盛世智云（云南）软件有限公司",
+        "name_en": "Shengshi Zhiyun (Yunnan) Software Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 数字化服务",
+        "tags": [
+          "软件开发",
+          "信息化服务",
+          "企业数字化",
+          "系统服务"
+        ],
+        "website": "https://www.lingrit.com/",
+        "summary_zh": "官网展示软件开发、信息化系统和企业数字化相关服务。",
+        "summary_en": "Public website presents software development, information systems, and enterprise digitalization services.",
+        "source_urls": [
+          "https://www.lingrit.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "盛世智云（云南）软件有限公司",
+        "english_name": "Shengshi Zhiyun (Yunnan) Software Co., Ltd.",
+        "source_url": "https://www.lingrit.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示软件开发、信息化系统和企业数字化相关服务。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-inruan-tech",
+        "name_zh": "云南银软科技有限公司",
+        "name_en": "Yunnan Inruan Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 信息化服务",
+        "tags": [
+          "软件开发",
+          "系统集成",
+          "政企信息化",
+          "技术服务"
+        ],
+        "website": "https://www.inruan.com/",
+        "summary_zh": "官网展示软件开发、系统集成和政企信息化相关服务。",
+        "summary_en": "Public website presents software development, system integration, and government/enterprise information services.",
+        "source_urls": [
+          "https://www.inruan.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南银软科技有限公司",
+        "english_name": "Yunnan Inruan Technology Co., Ltd.",
+        "source_url": "https://www.inruan.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示软件开发、系统集成和政企信息化相关服务。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-kuiyu-information",
+        "name_zh": "昆明葵宇信息科技有限公司",
+        "name_en": "Kunming Kuiyu Information Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 数字化服务",
+        "tags": [
+          "软件开发",
+          "网站建设",
+          "小程序",
+          "企业服务"
+        ],
+        "website": "https://www.ynkui.com/",
+        "summary_zh": "官网展示软件开发、网站建设、小程序和企业互联网服务。",
+        "summary_en": "Public website presents software development, website development, mini-program, and enterprise internet services.",
+        "source_urls": [
+          "https://www.ynkui.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明葵宇信息科技有限公司",
+        "english_name": "Kunming Kuiyu Information Technology Co., Ltd.",
+        "source_url": "https://www.ynkui.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示软件开发、网站建设、小程序和企业互联网服务。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-yunagile-tech",
+        "name_zh": "云南软捷科技有限公司",
+        "name_en": "Yunnan Yunagile Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 云服务",
+        "tags": [
+          "软件开发",
+          "云服务",
+          "系统集成",
+          "企业数字化"
+        ],
+        "website": "https://www.yunagile.com/",
+        "summary_zh": "官网展示软件开发、云服务、系统集成与企业数字化相关能力。",
+        "summary_en": "Public website presents software development, cloud service, system integration, and enterprise digitalization capabilities.",
+        "source_urls": [
+          "https://www.yunagile.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南软捷科技有限公司",
+        "english_name": "Yunnan Yunagile Technology Co., Ltd.",
+        "source_url": "https://www.yunagile.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示软件开发、云服务、系统集成与企业数字化相关能力。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-sichuangtong-tech",
+        "name_zh": "昆明思创通科技有限公司",
+        "name_en": "Kunming Sichuangtong Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 信息化服务",
+        "tags": [
+          "软件开发",
+          "系统集成",
+          "信息化服务",
+          "技术支持"
+        ],
+        "website": "https://www.kmsct.com/",
+        "summary_zh": "官网展示软件开发、信息化服务、系统集成等业务方向。",
+        "summary_en": "Public website presents software development, information services, and system integration offerings.",
+        "source_urls": [
+          "https://www.kmsct.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明思创通科技有限公司",
+        "english_name": "Kunming Sichuangtong Technology Co., Ltd.",
+        "source_url": "https://www.kmsct.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示软件开发、信息化服务、系统集成等业务方向。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-qian-tech",
+        "name_zh": "昆明企安科技有限公司",
+        "name_en": "Kunming Qian Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "网络安全 / IT 服务",
+        "tags": [
+          "网络安全",
+          "IT服务",
+          "系统集成",
+          "企业服务"
+        ],
+        "website": "https://www.kmqakj.com/",
+        "summary_zh": "官网展示网络安全、信息化服务和企业 IT 服务相关内容。",
+        "summary_en": "Public website presents cybersecurity, information technology, and enterprise IT services.",
+        "source_urls": [
+          "https://www.kmqakj.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明企安科技有限公司",
+        "english_name": "Kunming Qian Technology Co., Ltd.",
+        "source_url": "https://www.kmqakj.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示网络安全、信息化服务和企业 IT 服务相关内容。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-dayuan-software",
+        "name_zh": "云南达远软件有限公司",
+        "name_en": "Yunnan Dayuan Software Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "医疗信息化",
+        "tags": [
+          "医疗信息化",
+          "医院管理系统",
+          "软件产品",
+          "行业信息化"
+        ],
+        "website": "https://www.dayuansoft.cn/",
+        "summary_zh": "公开网站展示医疗行业软件、医院信息化和相关软件产品。",
+        "summary_en": "Public website presents healthcare software, hospital information systems, and related software products.",
+        "source_urls": [
+          "https://www.dayuansoft.cn/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南达远软件有限公司",
+        "english_name": "Yunnan Dayuan Software Co., Ltd.",
+        "source_url": "https://www.dayuansoft.cn/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "公开网站展示医疗行业软件、医院信息化和相关软件产品。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-weihao-computer",
+        "name_zh": "昆明威豪计算机有限公司",
+        "name_en": "Kunming Weihao Computer Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 系统集成",
+        "tags": [
+          "软件开发",
+          "系统集成",
+          "行业软件",
+          "IT服务"
+        ],
+        "website": "https://www.weihaosoft.com/",
+        "summary_zh": "公开网站展示软件产品、行业信息化和系统集成相关业务。",
+        "summary_en": "Public website presents software products, industry information systems, and system integration services.",
+        "source_urls": [
+          "https://www.weihaosoft.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明威豪计算机有限公司",
+        "english_name": "Kunming Weihao Computer Co., Ltd.",
+        "source_url": "https://www.weihaosoft.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "公开网站展示软件产品、行业信息化和系统集成相关业务。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-dieyun-tech",
+        "name_zh": "昆明蝶云科技有限公司",
+        "name_en": "Kunming Dieyun Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "企业管理软件 / ERP",
+        "tags": [
+          "ERP",
+          "企业管理软件",
+          "财务软件",
+          "数字化服务"
+        ],
+        "website": "https://www.ynjdy.cn/",
+        "summary_zh": "官网展示企业管理软件、财务软件和数字化服务相关内容。",
+        "summary_en": "Public website presents enterprise management software, finance software, and digital service offerings.",
+        "source_urls": [
+          "https://www.ynjdy.cn/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明蝶云科技有限公司",
+        "english_name": "Kunming Dieyun Technology Co., Ltd.",
+        "source_url": "https://www.ynjdy.cn/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示企业管理软件、财务软件和数字化服务相关内容。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-sanxiao-tech",
+        "name_zh": "昆明三效科技有限公司",
+        "name_en": "Kunming Sanxiao Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 互联网服务",
+        "tags": [
+          "软件开发",
+          "网站建设",
+          "小程序",
+          "互联网服务"
+        ],
+        "website": "https://yn3x.com/",
+        "summary_zh": "官网展示网站建设、小程序、软件开发和互联网服务。",
+        "summary_en": "Public website presents website development, mini-programs, software development, and internet services.",
+        "source_urls": [
+          "https://yn3x.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明三效科技有限公司",
+        "english_name": "Kunming Sanxiao Technology Co., Ltd.",
+        "source_url": "https://yn3x.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示网站建设、小程序、软件开发和互联网服务。",
+        "opportunities": [
+          "outsourcing"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kunming-yuanshiren-tech",
+        "name_zh": "昆明原始人科技有限公司",
+        "name_en": "Kunming Yuanshiren Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / 互联网服务",
+        "tags": [
+          "软件开发",
+          "网站建设",
+          "移动应用",
+          "企业服务"
+        ],
+        "website": "https://www.kmysr.com/",
+        "summary_zh": "公开网站展示网站建设、软件开发和移动互联网相关服务。",
+        "summary_en": "Public website presents website development, software development, and mobile internet services.",
+        "source_urls": [
+          "https://www.kmysr.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "昆明原始人科技有限公司",
+        "english_name": "Kunming Yuanshiren Technology Co., Ltd.",
+        "source_url": "https://www.kmysr.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "公开网站展示网站建设、软件开发和移动互联网相关服务。",
+        "opportunities": [
+          "outsourcing"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-yinxing-tech",
+        "name_zh": "云南银星科技有限公司",
+        "name_en": "Yunnan Yinxing Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "系统集成 / ICT 服务",
+        "tags": [
+          "系统集成",
+          "ICT服务",
+          "大数据",
+          "云计算"
+        ],
+        "website": "https://www.ynyxkj.net/",
+        "summary_zh": "官网介绍其以 IT 服务为立足点，聚焦信息化系统研发、集成与运维、ICT 实施与运维等领域。",
+        "summary_en": "Public website describes IT services around information system R&D, integration and operations, and ICT implementation and operations.",
+        "source_urls": [
+          "https://www.ynyxkj.net/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南银星科技有限公司",
+        "english_name": "Yunnan Yinxing Technology Co., Ltd.",
+        "source_url": "https://www.ynyxkj.net/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网介绍其以 IT 服务为立足点，聚焦信息化系统研发、集成与运维、ICT 实施与运维等领域。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "meijie-tech-group",
+        "name_zh": "美捷科技（云南）集团有限公司",
+        "name_en": "Meijie Technology (Yunnan) Group Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "农业产业互联网",
+        "tags": [
+          "农业产业互联网",
+          "电商服务",
+          "数字化运营",
+          "乡村振兴"
+        ],
+        "website": "https://meijie.group/",
+        "summary_zh": "官网定位为农业产业互联网生态服务商，展示数字化赋能农业产业和云品上行相关业务。",
+        "summary_en": "Public website positions the company as an agricultural industrial internet service provider with digital operations for Yunnan agricultural products.",
+        "source_urls": [
+          "https://meijie.group/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "美捷科技（云南）集团有限公司",
+        "english_name": "Meijie Technology (Yunnan) Group Co., Ltd.",
+        "source_url": "https://meijie.group/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网定位为农业产业互联网生态服务商，展示数字化赋能农业产业和云品上行相关业务。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-weiheng-tech",
+        "name_zh": "云南唯恒基业科技有限公司",
+        "name_en": "Yunnan Weiheng Base Industry Technology Co., Ltd.",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "农业数据 / 产业数字化",
+        "tags": [
+          "农业数据",
+          "产业互联网",
+          "数据服务",
+          "数字化解决方案"
+        ],
+        "website": "http://www.ynmaker.com/",
+        "summary_zh": "公开资料显示其围绕农业数据、产业互联网和数字化解决方案提供服务。",
+        "summary_en": "Public sources present agriculture data, industrial internet, and digital solution services.",
+        "source_urls": [
+          "http://www.ynmaker.com/",
+          "https://www.weihengag.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南唯恒基业科技有限公司",
+        "english_name": "Yunnan Weiheng Base Industry Technology Co., Ltd.",
+        "source_url": "http://www.ynmaker.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "公开资料显示其围绕农业数据、产业互联网和数字化解决方案提供服务。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "baiaix-yunnan-tech",
+        "name_zh": "白矮星科技（云南）有限公司",
+        "name_en": "Baiaix Technology (Yunnan) Co., Ltd.",
+        "city": "昆明",
+        "district": "",
+        "category": "软件开发 / VR AR",
+        "tags": [
+          "软件开发",
+          "VR",
+          "AR",
+          "移动应用"
+        ],
+        "website": "https://www.baiaix.com/index.html",
+        "summary_zh": "官网展示定制化软件开发、移动端应用、PC 端以及 VR/AR 相关服务。",
+        "summary_en": "Public website presents custom software development, mobile apps, PC applications, and VR/AR services.",
+        "source_urls": [
+          "https://www.baiaix.com/index.html"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "白矮星科技（云南）有限公司",
+        "english_name": "Baiaix Technology (Yunnan) Co., Ltd.",
+        "source_url": "https://www.baiaix.com/index.html",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网展示定制化软件开发、移动端应用、PC 端以及 VR/AR 相关服务。",
+        "opportunities": [
+          "outsourcing"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "kjt-2024-001-xifang-network",
+        "name_zh": "昆明玺钫网络科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "安宁市",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "网络科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明玺钫网络科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-003-kaima-information",
+        "name_zh": "昆明楷码信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "呈贡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "信息技术",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明楷码信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-004-zhihui-jiaoke",
+        "name_zh": "云南智慧交科科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "呈贡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "智能科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南智慧交科科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-005-jiahe-zhihui",
+        "name_zh": "昆明嘉和智慧科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "呈贡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "智能科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明嘉和智慧科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-014-jarvis-intelligent",
+        "name_zh": "贾维斯智能科技（云南）有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "呈贡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "智能科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "贾维斯智能科技（云南）有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-017-kubodike-intelligent",
+        "name_zh": "库博迪氪（云南）智能科技有限责任公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "呈贡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "智能科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "库博迪氪（云南）智能科技有限责任公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-024-aerospace-information",
+        "name_zh": "云南航天信息有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "信息技术",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南航天信息有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-034-tadiran-telecom",
+        "name_zh": "昆明塔迪兰电信设备有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "通信设备",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明塔迪兰电信设备有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-039-yuncheng-shuzhi",
+        "name_zh": "云程数智（云南）科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "智能科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云程数智（云南）科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-056-tongyu-intelligent",
+        "name_zh": "云南同煜智能科技有限责任公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "盘龙区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "智能科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南同煜智能科技有限责任公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-064-zhongruan-zhixun",
+        "name_zh": "云南中软智讯电子股份有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "盘龙区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "信息技术",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南中软智讯电子股份有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-083-juying-tech",
+        "name_zh": "昆明聚英科技有限责任公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明聚英科技有限责任公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-101-kemeng-information",
+        "name_zh": "云南科梦信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "信息技术",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南科梦信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-161-chuanyang-information",
+        "name_zh": "云南川洋信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "信息技术",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南川洋信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-162-linggan-tech",
+        "name_zh": "云南凌感科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南凌感科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-180-kunzhong-network",
+        "name_zh": "昆明昆众网络科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "西山区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "网络科技",
+          "待核验",
+          "科技型中小企业"
+        ],
+        "website": "",
+        "summary_zh": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Listed in the 2024 Yunnan technology SME candidate list; business details need community verification from official sources.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明昆众网络科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "云南省科技厅2024年第4批拟入库科技型中小企业名单中列出的昆明企业，名称显示具备信息、网络、智能、通信或相关技术属性；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-brahma-game",
+        "name_zh": "云南梵天游科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "游戏 / 移动互联网",
+        "tags": [
+          "游戏",
+          "移动互联网",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的昆明游戏公司，公开描述提到手游业务；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南梵天游科技有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的昆明游戏公司，公开描述提到手游业务；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-lorstone",
+        "name_zh": "络石软件设计",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "软件外包 / Web 应用",
+        "tags": [
+          "软件外包",
+          "Web应用",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的软件设计团队，公开描述提到单页 Web 应用相关技术；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "络石软件设计",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的软件设计团队，公开描述提到单页 Web 应用相关技术；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-aykj",
+        "name_zh": "昆明奥远科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "网站建设 / 互联网服务",
+        "tags": [
+          "网站建设",
+          "互联网服务",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的昆明互联网服务公司；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明奥远科技有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的昆明互联网服务公司；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-tiandu",
+        "name_zh": "天度集团",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "互联网营销 / 软件服务",
+        "tags": [
+          "互联网营销",
+          "软件服务",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的昆明本地互联网服务公司；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "天度集团",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的昆明本地互联网服务公司；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-junyun",
+        "name_zh": "昆明俊云科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "网络服务 / 游戏加速",
+        "tags": [
+          "网络服务",
+          "游戏加速",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的昆明网络服务公司，公开描述提到联机加速器业务；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明俊云科技有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的昆明网络服务公司，公开描述提到联机加速器业务；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-gezher",
+        "name_zh": "云南歌者科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "农业数字化",
+        "tags": [
+          "农业数字化",
+          "物联网",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的农业互联网公司，公开描述提到精准农业和智慧农业方向；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南歌者科技有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的农业互联网公司，公开描述提到精准农业和智慧农业方向；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-gznb",
+        "name_zh": "云南省国有资本运营商城管理有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "农村电商 / 数字化平台",
+        "tags": [
+          "农村电商",
+          "平台运营",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的农村电商和国资商城相关运营主体；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南省国有资本运营商城管理有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的农村电商和国资商城相关运营主体；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-gstar",
+        "name_zh": "云南银河之星科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "农业物联网 / 云平台",
+        "tags": [
+          "农业物联网",
+          "云平台",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的农业云平台相关公司；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南银河之星科技有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的农业云平台相关公司；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-56zuyin",
+        "name_zh": "云南遇上时光科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "旅游互联网",
+        "tags": [
+          "旅游互联网",
+          "自由行平台",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的旅游互联网公司；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南遇上时光科技有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的旅游互联网公司；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "old-kmit-cassowary",
+        "name_zh": "云南犀鸟科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "电力信息化 / 行业软件",
+        "tags": [
+          "电力信息化",
+          "行业软件",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "老 KM-IT 清单收录的电力和矿业信息化相关创业公司；需要补充当前官网或官方主页复核。",
+        "summary_en": "Imported as a pending item from the older KM-IT community list; official source still needs verification.",
+        "source_urls": [
+          "https://github.com/bigzhubak/KM-IT"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南犀鸟科技有限公司",
+        "english_name": "",
+        "source_url": "https://github.com/bigzhubak/KM-IT",
+        "source_type": "community_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "老 KM-IT 清单收录的电力和矿业信息化相关创业公司；需要补充当前官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-shenzhan-software",
+        "name_zh": "云南申展软件有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "通信软件 / 呼叫中心",
+        "tags": [
+          "通信软件",
+          "AI呼叫中心",
+          "融合通信",
+          "科技型中小企业"
+        ],
+        "website": "https://www.wopbx.com/",
+        "summary_zh": "官网介绍其自研 AI 呼叫中心、智能质检、IPPBX 融合通信、录音系统等通信软件和设备解决方案。",
+        "summary_en": "Public website presents related technology products, software, ICT, or digital service capabilities.",
+        "source_urls": [
+          "https://www.wopbx.com/"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_site",
+        "status": "active-source-found",
+        "name": "云南申展软件有限公司",
+        "english_name": "",
+        "source_url": "https://www.wopbx.com/",
+        "source_type": "official_site",
+        "verification_status": "verified",
+        "last_checked": "2026-05-11",
+        "notes": "官网介绍其自研 AI 呼叫中心、智能质检、IPPBX 融合通信、录音系统等通信软件和设备解决方案。",
+        "opportunities": [
+          "partnership"
+        ],
+        "confidence_score": 5,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-tiandu-software",
+        "name_zh": "云南天度软件系统有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "产业数字化 / 软件服务",
+        "tags": [
+          "产业数字化",
+          "软件开发",
+          "小程序",
+          "企业服务"
+        ],
+        "website": "https://www.tiandu.cn/Article/Show/825.html",
+        "summary_zh": "天度集团公开文章显示旗下云南天度软件系统有限公司入选专精特新、创新型和科技型中小企业名单，聚焦产业数字化服务。",
+        "summary_en": "Public website presents related technology products, software, ICT, or digital service capabilities.",
+        "source_urls": [
+          "https://www.tiandu.cn/Article/Show/825.html"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_profile",
+        "status": "active-source-found",
+        "name": "云南天度软件系统有限公司",
+        "english_name": "",
+        "source_url": "https://www.tiandu.cn/Article/Show/825.html",
+        "source_type": "official_profile",
+        "verification_status": "official_page",
+        "last_checked": "2026-05-11",
+        "notes": "天度集团公开文章显示旗下云南天度软件系统有限公司入选专精特新、创新型和科技型中小企业名单，聚焦产业数字化服务。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 4,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-weilan-information",
+        "name_zh": "云南蔚岚信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "信息技术 / 数字化服务",
+        "tags": [
+          "信息技术",
+          "产业数字化",
+          "企业服务",
+          "待补官网"
+        ],
+        "website": "https://www.tiandu.cn/Article/Show/825.html",
+        "summary_zh": "天度集团公开文章显示云南蔚岚信息技术有限公司入选云南省创新型中小企业名单；具体业务仍需补充独立官网或官方主页。",
+        "summary_en": "Public website presents related technology products, software, ICT, or digital service capabilities.",
+        "source_urls": [
+          "https://www.tiandu.cn/Article/Show/825.html"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "official_profile",
+        "status": "active-source-found",
+        "name": "云南蔚岚信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://www.tiandu.cn/Article/Show/825.html",
+        "source_type": "official_profile",
+        "verification_status": "official_page",
+        "last_checked": "2026-05-11",
+        "notes": "天度集团公开文章显示云南蔚岚信息技术有限公司入选云南省创新型中小企业名单；具体业务仍需补充独立官网或官方主页。",
+        "opportunities": [
+          "outsourcing",
+          "partnership"
+        ],
+        "confidence_score": 4,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": true,
+        "suitable_for_job_seekers": true,
+        "suitable_for_founders": true
+      },
+      {
+        "id": "yunnan-zhenhua-tech",
+        "name_zh": "云南振华技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "通信工程 / 信息系统集成",
+        "tags": [
+          "通信工程",
+          "信息系统集成",
+          "安防技术",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开资料显示其具备通信工程、电子与智能化工程、涉密信息系统集成、安全防范技术等资质。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://cn.linkedin.com/company/%E4%BA%91%E5%8D%97%E6%8C%AF%E5%8D%8E%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南振华技术有限公司",
+        "english_name": "",
+        "source_url": "https://cn.linkedin.com/company/%E4%BA%91%E5%8D%97%E6%8C%AF%E5%8D%8E%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "source_type": "public_web",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开资料显示其具备通信工程、电子与智能化工程、涉密信息系统集成、安全防范技术等资质。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 3,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-zheli-information",
+        "name_zh": "云南这里信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "AI / 大数据 / 林业信息化",
+        "tags": [
+          "AI",
+          "大数据",
+          "3S",
+          "物联森防"
+        ],
+        "website": "",
+        "summary_zh": "公开招聘主页介绍其为软件研发创新型企业，方向涉及 AI、大数据、3S、元宇宙、区块链和物联森防等应用。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://www.zhipin.com/companys/cc3091cf944429341nR83tW4E1U~.html"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南这里信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://www.zhipin.com/companys/cc3091cf944429341nR83tW4E1U~.html",
+        "source_type": "recruiting_platform",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开招聘主页介绍其为软件研发创新型企业，方向涉及 AI、大数据、3S、元宇宙、区块链和物联森防等应用。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 3,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-jiuyuan-yinhai-software",
+        "name_zh": "云南久远银海软件有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "民生软件 / 信息技术服务",
+        "tags": [
+          "软件服务",
+          "ITSS",
+          "民生信息化",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开报道显示其通过高新技术企业和 ITSS 认证，属于久远银海在云南的全资软件子公司。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://www.chidutech.com/web/article/detail/sid/NmTikn4iNaTpIpz"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南久远银海软件有限公司",
+        "english_name": "",
+        "source_url": "https://www.chidutech.com/web/article/detail/sid/NmTikn4iNaTpIpz",
+        "source_type": "public_web",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开报道显示其通过高新技术企业和 ITSS 认证，属于久远银海在云南的全资软件子公司。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 3,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-xiangnong-information",
+        "name_zh": "云南香农信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "软件产品 / 网络管理",
+        "tags": [
+          "软件产品",
+          "网络管理",
+          "OA",
+          "信息技术"
+        ],
+        "website": "",
+        "summary_zh": "公开项目信息显示其拥有综合网络管理、办公自动化等自主软件产品，并曾承担科技型中小企业创新基金相关项目。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://pitchhub.36kr.com/project/2012748302206465"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南香农信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://pitchhub.36kr.com/project/2012748302206465",
+        "source_type": "media_database",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开项目信息显示其拥有综合网络管理、办公自动化等自主软件产品，并曾承担科技型中小企业创新基金相关项目。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 3,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-hedao-kangcheng-information",
+        "name_zh": "云南合道康成信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "信息技术 / 待核验",
+        "tags": [
+          "信息技术",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/kjt_old/2019/0726/20190726043242887.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南合道康成信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/kjt_old/2019/0726/20190726043242887.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-qingcai-information",
+        "name_zh": "云南青才信息科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "信息技术 / 待核验",
+        "tags": [
+          "信息技术",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/0729/20240729031642274.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南青才信息科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/0729/20240729031642274.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kunming-yutong-yangguang-information",
+        "name_zh": "昆明宇同阳光信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "五华区",
+        "category": "信息技术 / 待核验",
+        "tags": [
+          "信息技术",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/0729/20240729031642274.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明宇同阳光信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/0729/20240729031642274.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-yizhengtong-information",
+        "name_zh": "云南壹证通信息科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "信息技术 / 待核验",
+        "tags": [
+          "信息技术",
+          "数字认证",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://m.sme-gov.cn/yunnan/news/79673.html"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南壹证通信息科技有限公司",
+        "english_name": "",
+        "source_url": "https://m.sme-gov.cn/yunnan/news/79673.html",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kunming-shunfei-information",
+        "name_zh": "昆明顺飞信息技术有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "信息技术 / 待核验",
+        "tags": [
+          "信息技术",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://m.sme-gov.cn/yunnan/news/84178.html"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "昆明顺飞信息技术有限公司",
+        "english_name": "",
+        "source_url": "https://m.sme-gov.cn/yunnan/news/84178.html",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-weihang-intelligent-ftz",
+        "name_zh": "云南自由贸易试验区苇航智能科技有限责任公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "智能科技 / 待核验",
+        "tags": [
+          "智能科技",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://m.sme-gov.cn/yunnan/news/84178.html"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南自由贸易试验区苇航智能科技有限责任公司",
+        "english_name": "",
+        "source_url": "https://m.sme-gov.cn/yunnan/news/84178.html",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "yunnan-dingdang-ecommerce-info",
+        "name_zh": "云南叮当电子商务信息咨询有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "",
+        "category": "电子商务 / 信息服务",
+        "tags": [
+          "电子商务",
+          "信息服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://www.hh.gov.cn/virtual_attach_file.vsb?afc=zL8-liLlC8L7-inrN-sLRnfnmvbL4NI8nRn2o7WRnm7PMzl0gihFp2hmCIa0MkyYnkyiL1hfL7CbM4liLzLiLNUiL4lDLmn2o7nVL8nVolnFnmLboRG4L8WFL4QfoR7Jv2nto40XtCzNJep00WKNJXdTmQFjj-7YLR-ibpt8bEYOL_qWJ_IVX_IEN3_jN_qH9oI_13SZK_Iam3Sy9_SZtJIUm_IMTSbaQ2CeoDAw_jWx_tC0qIbtpYyPLz9DLSyPLmGPLmUYgtA8pU5cc"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南叮当电子商务信息咨询有限公司",
+        "english_name": "",
+        "source_url": "https://www.hh.gov.cn/virtual_attach_file.vsb?afc=zL8-liLlC8L7-inrN-sLRnfnmvbL4NI8nRn2o7WRnm7PMzl0gihFp2hmCIa0MkyYnkyiL1hfL7CbM4liLzLiLNUiL4lDLmn2o7nVL8nVolnFnmLboRG4L8WFL4QfoR7Jv2nto40XtCzNJep00WKNJXdTmQFjj-7YLR-ibpt8bEYOL_qWJ_IVX_IEN3_jN_qH9oI_13SZK_Iam3Sy9_SZtJIUm_IMTSbaQ2CeoDAw_jWx_tC0qIbtpYyPLz9DLSyPLmGPLmUYgtA8pU5cc",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-012-xile-tech",
+        "name_zh": "云南熙乐科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "呈贡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南熙乐科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-016-shangwen-culture-tech",
+        "name_zh": "云南上闻文化科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "呈贡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南上闻文化科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-021-yingxiu-tech",
+        "name_zh": "云南迎修科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南迎修科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-022-yisen-tech",
+        "name_zh": "云南一森科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南一森科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-023-zhiao-tech",
+        "name_zh": "云南知奥科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南知奥科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-026-huiquan-xinda-tech",
+        "name_zh": "云南汇全新达科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南汇全新达科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-028-zhuoyao-tech",
+        "name_zh": "云南焯耀科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南焯耀科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-032-xingxing-tech",
+        "name_zh": "云南兴星科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南兴星科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-033-haiwu-tech",
+        "name_zh": "云南海午科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南海午科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      },
+      {
+        "id": "kjt-2024-036-langchuang-tech",
+        "name_zh": "云南朗创科技有限公司",
+        "name_en": "",
+        "city": "昆明",
+        "district": "官渡区",
+        "category": "IT 候选 / 待核验",
+        "tags": [
+          "科技服务",
+          "科技型中小企业",
+          "待核验"
+        ],
+        "website": "",
+        "summary_zh": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "summary_en": "Pending company candidate from public sources; official source and business details need community verification.",
+        "source_urls": [
+          "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf"
+        ],
+        "source_checked_at": "2026-05-11",
+        "verification": "community_pending",
+        "status": "needs-review",
+        "name": "云南朗创科技有限公司",
+        "english_name": "",
+        "source_url": "https://kjt.yn.gov.cn/uploadfile/s49/2024/1022/20241022100746178.pdf",
+        "source_type": "government_public_list",
+        "verification_status": "community_pending",
+        "last_checked": "2026-05-11",
+        "notes": "公开名单或公开资料中出现的昆明技术相关企业；具体业务方向仍需社区补充官网或官方主页复核。",
+        "opportunities": [
+          "unknown"
+        ],
+        "confidence_score": 2,
+        "suitable_for_students": true,
+        "suitable_for_freelancers": false,
+        "suitable_for_job_seekers": false,
+        "suitable_for_founders": false
+      }
+    ]
+  },
+  "sourceLeads": [
+    {
+      "id": "software-outsourcing-boss",
+      "direction": "软件开发 / 外包",
+      "source_title": "BOSS 直聘昆明关键词页：软件开发",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91&city=101290100",
+      "city": "昆明",
+      "keyword": "软件开发",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "software-outsourcing-zhaopin",
+      "direction": "软件开发 / 外包",
+      "source_title": "智联招聘昆明关键词页：软件开发",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kw%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91",
+      "city": "昆明",
+      "keyword": "软件开发",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "software-outsourcing-51job",
+      "direction": "软件开发 / 外包",
+      "source_title": "前程无忧昆明关键词页：软件开发",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91,2,1.html",
+      "city": "昆明",
+      "keyword": "软件开发",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "software-outsourcing-liepin",
+      "direction": "软件开发 / 外包",
+      "source_title": "猎聘昆明关键词页：软件开发",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91",
+      "city": "昆明",
+      "keyword": "软件开发",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "software-outsourcing-lagou",
+      "direction": "软件开发 / 外包",
+      "source_title": "拉勾昆明关键词页：软件开发",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91",
+      "city": "昆明",
+      "keyword": "软件开发",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "system-integration-gov-boss",
+      "direction": "系统集成 / 政企信息化",
+      "source_title": "BOSS 直聘昆明关键词页：系统集成",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90&city=101290100",
+      "city": "昆明",
+      "keyword": "系统集成",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "system-integration-gov-zhaopin",
+      "direction": "系统集成 / 政企信息化",
+      "source_title": "智联招聘昆明关键词页：系统集成",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kw%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90",
+      "city": "昆明",
+      "keyword": "系统集成",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "system-integration-gov-51job",
+      "direction": "系统集成 / 政企信息化",
+      "source_title": "前程无忧昆明关键词页：系统集成",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90,2,1.html",
+      "city": "昆明",
+      "keyword": "系统集成",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "system-integration-gov-liepin",
+      "direction": "系统集成 / 政企信息化",
+      "source_title": "猎聘昆明关键词页：系统集成",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90",
+      "city": "昆明",
+      "keyword": "系统集成",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "system-integration-gov-lagou",
+      "direction": "系统集成 / 政企信息化",
+      "source_title": "拉勾昆明关键词页：系统集成",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90",
+      "city": "昆明",
+      "keyword": "系统集成",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ai-data-boss",
+      "direction": "AI / 大数据",
+      "source_title": "BOSS 直聘昆明关键词页：AI 大数据",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=AI%20%E5%A4%A7%E6%95%B0%E6%8D%AE&city=101290100",
+      "city": "昆明",
+      "keyword": "AI 大数据",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ai-data-zhaopin",
+      "direction": "AI / 大数据",
+      "source_title": "智联招聘昆明关键词页：AI 大数据",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kwAI%20%E5%A4%A7%E6%95%B0%E6%8D%AE",
+      "city": "昆明",
+      "keyword": "AI 大数据",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ai-data-51job",
+      "direction": "AI / 大数据",
+      "source_title": "前程无忧昆明关键词页：AI 大数据",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,AI%20%E5%A4%A7%E6%95%B0%E6%8D%AE,2,1.html",
+      "city": "昆明",
+      "keyword": "AI 大数据",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ai-data-liepin",
+      "direction": "AI / 大数据",
+      "source_title": "猎聘昆明关键词页：AI 大数据",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20AI%20%E5%A4%A7%E6%95%B0%E6%8D%AE",
+      "city": "昆明",
+      "keyword": "AI 大数据",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ai-data-lagou",
+      "direction": "AI / 大数据",
+      "source_title": "拉勾昆明关键词页：AI 大数据",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=AI%20%E5%A4%A7%E6%95%B0%E6%8D%AE",
+      "city": "昆明",
+      "keyword": "AI 大数据",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "agri-digital-boss",
+      "direction": "农业数字化",
+      "source_title": "BOSS 直聘昆明关键词页：农业数字化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%86%9C%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96&city=101290100",
+      "city": "昆明",
+      "keyword": "农业数字化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "agri-digital-zhaopin",
+      "direction": "农业数字化",
+      "source_title": "智联招聘昆明关键词页：农业数字化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kw%E5%86%9C%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96",
+      "city": "昆明",
+      "keyword": "农业数字化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "agri-digital-51job",
+      "direction": "农业数字化",
+      "source_title": "前程无忧昆明关键词页：农业数字化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,%E5%86%9C%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96,2,1.html",
+      "city": "昆明",
+      "keyword": "农业数字化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "agri-digital-liepin",
+      "direction": "农业数字化",
+      "source_title": "猎聘昆明关键词页：农业数字化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20%E5%86%9C%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96",
+      "city": "昆明",
+      "keyword": "农业数字化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "agri-digital-lagou",
+      "direction": "农业数字化",
+      "source_title": "拉勾昆明关键词页：农业数字化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=%E5%86%9C%E4%B8%9A%E6%95%B0%E5%AD%97%E5%8C%96",
+      "city": "昆明",
+      "keyword": "农业数字化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "health-informatics-boss",
+      "direction": "医疗信息化",
+      "source_title": "BOSS 直聘昆明关键词页：医疗信息化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%8C%BB%E7%96%97%E4%BF%A1%E6%81%AF%E5%8C%96&city=101290100",
+      "city": "昆明",
+      "keyword": "医疗信息化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "health-informatics-zhaopin",
+      "direction": "医疗信息化",
+      "source_title": "智联招聘昆明关键词页：医疗信息化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kw%E5%8C%BB%E7%96%97%E4%BF%A1%E6%81%AF%E5%8C%96",
+      "city": "昆明",
+      "keyword": "医疗信息化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "health-informatics-51job",
+      "direction": "医疗信息化",
+      "source_title": "前程无忧昆明关键词页：医疗信息化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,%E5%8C%BB%E7%96%97%E4%BF%A1%E6%81%AF%E5%8C%96,2,1.html",
+      "city": "昆明",
+      "keyword": "医疗信息化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "health-informatics-liepin",
+      "direction": "医疗信息化",
+      "source_title": "猎聘昆明关键词页：医疗信息化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20%E5%8C%BB%E7%96%97%E4%BF%A1%E6%81%AF%E5%8C%96",
+      "city": "昆明",
+      "keyword": "医疗信息化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "health-informatics-lagou",
+      "direction": "医疗信息化",
+      "source_title": "拉勾昆明关键词页：医疗信息化",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=%E5%8C%BB%E7%96%97%E4%BF%A1%E6%81%AF%E5%8C%96",
+      "city": "昆明",
+      "keyword": "医疗信息化",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "culture-tourism-tech-boss",
+      "direction": "文旅科技",
+      "source_title": "BOSS 直聘昆明关键词页：文旅科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=%E6%96%87%E6%97%85%E7%A7%91%E6%8A%80&city=101290100",
+      "city": "昆明",
+      "keyword": "文旅科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "culture-tourism-tech-zhaopin",
+      "direction": "文旅科技",
+      "source_title": "智联招聘昆明关键词页：文旅科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kw%E6%96%87%E6%97%85%E7%A7%91%E6%8A%80",
+      "city": "昆明",
+      "keyword": "文旅科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "culture-tourism-tech-51job",
+      "direction": "文旅科技",
+      "source_title": "前程无忧昆明关键词页：文旅科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,%E6%96%87%E6%97%85%E7%A7%91%E6%8A%80,2,1.html",
+      "city": "昆明",
+      "keyword": "文旅科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "culture-tourism-tech-liepin",
+      "direction": "文旅科技",
+      "source_title": "猎聘昆明关键词页：文旅科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20%E6%96%87%E6%97%85%E7%A7%91%E6%8A%80",
+      "city": "昆明",
+      "keyword": "文旅科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "culture-tourism-tech-lagou",
+      "direction": "文旅科技",
+      "source_title": "拉勾昆明关键词页：文旅科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=%E6%96%87%E6%97%85%E7%A7%91%E6%8A%80",
+      "city": "昆明",
+      "keyword": "文旅科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "fintech-boss",
+      "direction": "金融科技",
+      "source_title": "BOSS 直聘昆明关键词页：金融科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80&city=101290100",
+      "city": "昆明",
+      "keyword": "金融科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "fintech-zhaopin",
+      "direction": "金融科技",
+      "source_title": "智联招聘昆明关键词页：金融科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kw%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80",
+      "city": "昆明",
+      "keyword": "金融科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "fintech-51job",
+      "direction": "金融科技",
+      "source_title": "前程无忧昆明关键词页：金融科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80,2,1.html",
+      "city": "昆明",
+      "keyword": "金融科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "fintech-liepin",
+      "direction": "金融科技",
+      "source_title": "猎聘昆明关键词页：金融科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80",
+      "city": "昆明",
+      "keyword": "金融科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "fintech-lagou",
+      "direction": "金融科技",
+      "source_title": "拉勾昆明关键词页：金融科技",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80",
+      "city": "昆明",
+      "keyword": "金融科技",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "cybersecurity-boss",
+      "direction": "网络安全",
+      "source_title": "BOSS 直聘昆明关键词页：网络安全",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8&city=101290100",
+      "city": "昆明",
+      "keyword": "网络安全",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "cybersecurity-zhaopin",
+      "direction": "网络安全",
+      "source_title": "智联招聘昆明关键词页：网络安全",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kw%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8",
+      "city": "昆明",
+      "keyword": "网络安全",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "cybersecurity-51job",
+      "direction": "网络安全",
+      "source_title": "前程无忧昆明关键词页：网络安全",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8,2,1.html",
+      "city": "昆明",
+      "keyword": "网络安全",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "cybersecurity-liepin",
+      "direction": "网络安全",
+      "source_title": "猎聘昆明关键词页：网络安全",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8",
+      "city": "昆明",
+      "keyword": "网络安全",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "cybersecurity-lagou",
+      "direction": "网络安全",
+      "source_title": "拉勾昆明关键词页：网络安全",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8",
+      "city": "昆明",
+      "keyword": "网络安全",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ict-telecom-boss",
+      "direction": "通信 / ICT",
+      "source_title": "BOSS 直聘昆明关键词页：ICT 通信",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhipin.com/web/geek/job?query=ICT%20%E9%80%9A%E4%BF%A1&city=101290100",
+      "city": "昆明",
+      "keyword": "ICT 通信",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ict-telecom-zhaopin",
+      "direction": "通信 / ICT",
+      "source_title": "智联招聘昆明关键词页：ICT 通信",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.zhaopin.com/sou/jl763/kwICT%20%E9%80%9A%E4%BF%A1",
+      "city": "昆明",
+      "keyword": "ICT 通信",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ict-telecom-51job",
+      "direction": "通信 / ICT",
+      "source_title": "前程无忧昆明关键词页：ICT 通信",
+      "source_type": "recruiting_platform",
+      "source_url": "https://search.51job.com/list/250200,000000,0000,00,9,99,ICT%20%E9%80%9A%E4%BF%A1,2,1.html",
+      "city": "昆明",
+      "keyword": "ICT 通信",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ict-telecom-liepin",
+      "direction": "通信 / ICT",
+      "source_title": "猎聘昆明关键词页：ICT 通信",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.liepin.com/zhaopin/?key=%E6%98%86%E6%98%8E%20ICT%20%E9%80%9A%E4%BF%A1",
+      "city": "昆明",
+      "keyword": "ICT 通信",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    },
+    {
+      "id": "ict-telecom-lagou",
+      "direction": "通信 / ICT",
+      "source_title": "拉勾昆明关键词页：ICT 通信",
+      "source_type": "recruiting_platform",
+      "source_url": "https://www.lagou.com/wn/jobs?city=%E6%98%86%E6%98%8E&kd=ICT%20%E9%80%9A%E4%BF%A1",
+      "city": "昆明",
+      "keyword": "ICT 通信",
+      "last_checked": "2026-05-13",
+      "status": "seed_source",
+      "notes": "公开招聘平台搜索入口；只用于发现候选公司或官方招聘主页，不代表存在岗位，不写 internship/hiring。"
+    }
+  ],
+  "communities": [
+    {
+      "id": "ynu-software-ai-school",
+      "name": "云南大学软件学院&人工智能学院",
+      "community_type": "university_tech_school",
+      "city": "昆明",
+      "contact_method": "public_page",
+      "source_url": "https://www.sei.ynu.edu.cn/",
+      "status": "source_homepage",
+      "notes": "高校软件与人工智能相关公开主页，可作为后续查找讲座、学生项目、实习合作入口的源头。"
+    },
+    {
+      "id": "kmust-official",
+      "name": "昆明理工大学",
+      "community_type": "university_source",
+      "city": "昆明",
+      "contact_method": "public_page",
+      "source_url": "https://www.kmust.edu.cn/",
+      "status": "source_homepage",
+      "notes": "高校官方主页；后续应继续补信息学院、创新创业、就业与技术社团等更细来源。"
+    },
+    {
+      "id": "ynufe-official",
+      "name": "云南财经大学",
+      "community_type": "university_source",
+      "city": "昆明",
+      "contact_method": "public_page",
+      "source_url": "https://www.ynufe.edu.cn/",
+      "status": "source_homepage",
+      "notes": "高校官方主页；适合后续查找金融科技、数据分析、创新创业相关活动入口。"
+    },
+    {
+      "id": "ynnu-official",
+      "name": "云南师范大学",
+      "community_type": "university_source",
+      "city": "昆明",
+      "contact_method": "public_page",
+      "source_url": "https://www.ynnu.edu.cn/",
+      "status": "source_homepage",
+      "notes": "高校官方主页；适合后续查找学生技术社团、创新创业和教育数字化相关公开入口。"
+    },
+    {
+      "id": "yn-kjt-portal",
+      "name": "云南省科学技术厅",
+      "community_type": "government_science_portal",
+      "city": "云南",
+      "contact_method": "public_page",
+      "source_url": "https://kjt.yn.gov.cn/",
+      "status": "source_homepage",
+      "notes": "科技政策、创新主体、科技活动和项目通知入口；不是单一社群。"
+    },
+    {
+      "id": "huodongxing-kunming-developer",
+      "name": "活动行：昆明 开发者",
+      "community_type": "event_platform_search",
+      "city": "昆明",
+      "contact_method": "public_search",
+      "source_url": "https://www.huodongxing.com/events?keyword=%E6%98%86%E6%98%8E%20%E5%BC%80%E5%8F%91%E8%80%85",
+      "status": "source_search_page",
+      "notes": "活动搜索入口；只作为发现线下开发者活动的来源，不代表当前有活动。"
+    },
+    {
+      "id": "huodongxing-kunming-startup",
+      "name": "活动行：昆明 创业",
+      "community_type": "event_platform_search",
+      "city": "昆明",
+      "contact_method": "public_search",
+      "source_url": "https://www.huodongxing.com/events?keyword=%E6%98%86%E6%98%8E%20%E5%88%9B%E4%B8%9A",
+      "status": "source_search_page",
+      "notes": "活动搜索入口；适合后续发现创业、路演、园区活动。"
+    },
+    {
+      "id": "kunming-tech-radar-community-pilot",
+      "name": "昆明技术机会雷达复核入口（试运行）",
+      "community_type": "local_tech_opportunity_group",
+      "city": "昆明 / 云南",
+      "contact_method": "github_issue_or_public_form",
+      "source_url": "https://github.com/tianmind-studio/kunming-it-companies/issues",
+      "status": "pilot_active",
+      "notes": "小规模复核入口，用于补充公开来源、修正过期记录和复核 community_pending 公司；不公开私人联系方式，通过 GitHub Issue 提交公开来源。"
+    }
+  ],
+  "events": [
+    {
+      "id": "huodongxing-kunming-ai",
+      "name": "活动行：昆明 AI 活动搜索",
+      "event_type": "event_search",
+      "date": "unknown",
+      "city": "昆明",
+      "venue": "online_listing",
+      "organizer": "活动行",
+      "source_url": "https://www.huodongxing.com/events?keyword=%E6%98%86%E6%98%8E%20AI",
+      "status": "source_search_page",
+      "notes": "活动搜索入口；只作为发现 AI/大模型/数据讲座的源头，不代表当前有具体活动。"
+    },
+    {
+      "id": "huodongxing-kunming-data",
+      "name": "活动行：昆明 数据 活动搜索",
+      "event_type": "event_search",
+      "date": "unknown",
+      "city": "昆明",
+      "venue": "online_listing",
+      "organizer": "活动行",
+      "source_url": "https://www.huodongxing.com/events?keyword=%E6%98%86%E6%98%8E%20%E6%95%B0%E6%8D%AE",
+      "status": "source_search_page",
+      "notes": "活动搜索入口；只作为发现数据、BI、产业数字化活动的源头。"
+    },
+    {
+      "id": "huodongxing-kunming-startup",
+      "name": "活动行：昆明 创业 活动搜索",
+      "event_type": "event_search",
+      "date": "unknown",
+      "city": "昆明",
+      "venue": "online_listing",
+      "organizer": "活动行",
+      "source_url": "https://www.huodongxing.com/events?keyword=%E6%98%86%E6%98%8E%20%E5%88%9B%E4%B8%9A",
+      "status": "source_search_page",
+      "notes": "活动搜索入口；适合发现创业、路演、园区活动。"
+    },
+    {
+      "id": "huodongxing-kunming-developer",
+      "name": "活动行：昆明 开发者 活动搜索",
+      "event_type": "event_search",
+      "date": "unknown",
+      "city": "昆明",
+      "venue": "online_listing",
+      "organizer": "活动行",
+      "source_url": "https://www.huodongxing.com/events?keyword=%E6%98%86%E6%98%8E%20%E5%BC%80%E5%8F%91%E8%80%85",
+      "status": "source_search_page",
+      "notes": "活动搜索入口；适合发现开发者、开源、技术分享活动。"
+    },
+    {
+      "id": "bagevent-kunming-ai",
+      "name": "百格活动：昆明 AI 搜索",
+      "event_type": "event_search",
+      "date": "unknown",
+      "city": "昆明",
+      "venue": "online_listing",
+      "organizer": "百格活动",
+      "source_url": "https://www.bagevent.com/search?keyword=%E6%98%86%E6%98%8E%20AI",
+      "status": "source_search_page",
+      "notes": "活动搜索入口；只作为发现候选活动的来源。"
+    },
+    {
+      "id": "yn-kjt-notices",
+      "name": "云南省科技厅通知与征集入口",
+      "event_type": "policy_event_source",
+      "date": "unknown",
+      "city": "云南",
+      "venue": "online_listing",
+      "organizer": "云南省科学技术厅",
+      "source_url": "https://kjt.yn.gov.cn/",
+      "status": "source_homepage",
+      "notes": "科技政策、征集和活动通知入口；后续应把具体活动/通知单独核验后再入库。"
+    }
+  ],
+  "projects": [
+    {
+      "id": "yn-public-resource-digital",
+      "project_name": "云南省公共资源交易信息网：数字化项目入口",
+      "buyer": "云南省公共资源交易信息网",
+      "project_type": "government_project_source",
+      "city": "云南",
+      "budget": "",
+      "publish_date": "unknown",
+      "source_url": "https://ggzy.yn.gov.cn/",
+      "status": "source_homepage",
+      "notes": "政府采购、工程和公共资源交易入口；后续按具体项目公告补充，不在这里编造项目。"
+    },
+    {
+      "id": "ccgp-kunming-it",
+      "project_name": "中国政府采购网：昆明信息化项目入口",
+      "buyer": "中国政府采购网",
+      "project_type": "government_project_source",
+      "city": "昆明",
+      "budget": "",
+      "publish_date": "unknown",
+      "source_url": "https://www.ccgp.gov.cn/",
+      "status": "source_homepage",
+      "notes": "全国政府采购公告入口；后续需用具体公告链接补充项目名称、采购人和发布日期。"
+    },
+    {
+      "id": "yn-kjt-projects",
+      "project_name": "云南省科技厅：科技项目与创新主体入口",
+      "buyer": "云南省科学技术厅",
+      "project_type": "technology_policy_source",
+      "city": "云南",
+      "budget": "",
+      "publish_date": "unknown",
+      "source_url": "https://kjt.yn.gov.cn/",
+      "status": "source_homepage",
+      "notes": "科技项目、科技型企业、创新政策来源入口；后续应记录具体通知或名单链接。"
+    }
+  ]
+}
