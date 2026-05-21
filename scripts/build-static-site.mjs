@@ -173,11 +173,16 @@ function injectStaticStatsIntoIndex() {
   for (const [id, value] of Object.entries(stats)) {
     html = replaceStat(html, id, value);
   }
+  const styles = fs.readFileSync(path.join(outDir, "styles.css"), "utf8");
+  const script = fs.readFileSync(path.join(outDir, "script.js"), "utf8");
+  html = html.replace('    <link rel="stylesheet" href="styles.css">\n', `    <style>\n${styles}\n    </style>\n`);
+  html = html.replace(/\n\s*<link rel="modulepreload" href="script\.js">\n/, "\n");
   html = html.replace(/\n\s*<link id="siteDataPreload"[^>]+>\n/, "\n");
   html = html.replace(
     "    <!-- KTR_BOOTSTRAP_DATA -->",
     `    <script id="kunmingSiteData" type="application/json">${safeJsonForHtml()}</script>`
   );
+  html = html.replace('    <script src="script.js" type="module"></script>', `    <script type="module">\n${script}\n    </script>`);
   fs.writeFileSync(indexPath, html);
 }
 
