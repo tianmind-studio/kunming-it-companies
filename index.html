@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>昆明 IT 公司与技术机会地图 / Kunming Tech Radar</title>
-    <meta name="description" content="昆明技术机会雷达：整理昆明 IT 公司、昆明软件公司、昆明 AI 公司、云南技术团队、活动、社群和数字化项目线索。">
+    <title>昆明 IT 公司、软件公司与技术机会雷达 / Kunming Tech Radar</title>
+    <meta name="description" content="昆明技术机会雷达：整理昆明 IT 公司、昆明软件公司、云南软件公司、昆明 AI 公司、昆明程序员社群和云南数字化项目公开线索。">
     <link rel="canonical" href="https://kunming.tianmind.com/">
-    <meta property="og:title" content="昆明 IT 公司与技术机会地图 / Kunming Tech Radar">
-    <meta property="og:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、活动、社群和数字化项目地图。">
+    <meta property="og:title" content="昆明 IT 公司、软件公司与技术机会雷达 / Kunming Tech Radar">
+    <meta property="og:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、AI/数据机构、社群活动和数字化项目入口。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kunming.tianmind.com/">
     <meta property="og:image" content="https://kunming.tianmind.com/assets/social-card.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="昆明 IT 公司与技术机会地图 / Kunming Tech Radar">
-    <meta name="twitter:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、活动、社群和数字化项目地图。">
+    <meta name="twitter:title" content="昆明 IT 公司、软件公司与技术机会雷达 / Kunming Tech Radar">
+    <meta name="twitter:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、AI/数据机构、社群活动和数字化项目入口。">
     <meta name="twitter:image" content="https://kunming.tianmind.com/assets/social-card.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
@@ -76,9 +76,9 @@
 
     <header class="site-header">
       <div class="header-copy">
-        <p class="kicker">昆明 / 云南 技术机会资料库</p>
-        <h1><span>找本地技术公司</span><span>先看公开来源。</span></h1>
-        <p class="lede">面向昆明开发者、学生、自由职业者和企业的本地技术资料库。这里可以直接搜索昆明 IT 公司、软件团队、AI/数据服务商、活动社群和云南数字化项目入口。</p>
+        <p class="kicker">公开来源 · 可复核 · 持续维护</p>
+        <h1><span>昆明技术机会</span><span>先从可信数据开始。</span></h1>
+        <p class="lede">面向昆明/云南学生、开发者、自由职业者、创业者和企业负责人的本地技术生态资料库。你可以搜索 IT 公司、软件团队、AI/数据机构、社群活动和数字化项目入口，也可以提交公开来源帮助复核。</p>
         <form id="heroSearchForm" class="hero-search" role="search">
           <label for="heroSearchInput">搜索公司、方向、区县或机会</label>
           <div>
@@ -97,16 +97,18 @@
         <aside class="radar-panel" aria-label="数据状态">
           <div class="radar-panel-top">
             <span>DATA STATUS</span>
-            <strong id="heroUpdatedAt">-</strong>
+            <strong id="heroUpdatedAt">2026-05-13</strong>
           </div>
           <div class="radar-metrics">
-            <div><strong id="heroCompanyCount">0</strong><span>公司 / 团队</span></div>
-            <div><strong id="heroSourceLeadCount">0</strong><span>来源入口</span></div>
-            <div><strong id="heroVerifiedRatio">0%</strong><span>强来源占比</span></div>
+            <div><strong id="heroCompanyCount">73</strong><span>公司 / 团队</span></div>
+            <div><strong id="heroSourceLeadCount">45</strong><span>来源入口</span></div>
+            <div><strong id="heroStrongSourceCount">26</strong><span>强来源记录</span></div>
+            <div><strong id="heroPendingCount">47</strong><span>待复核记录</span></div>
           </div>
-          <p>数据先按公开来源入库，再人工复核。提交页和 CSV/JSON 下载都可在国内站直接完成。</p>
+          <p>数据先按公开来源入库，再人工复核。页面不会把招聘平台入口、政府门户或社区清单写成确定岗位、外包或合作机会。</p>
           <div class="panel-actions">
             <a href="submit.html">提交公开线索</a>
+            <a href="data/companies.csv">下载 CSV</a>
             <a href="data/companies.json">下载 JSON</a>
           </div>
         </aside>
@@ -158,6 +160,27 @@
               <option value="community_pending">社区待复核</option>
               <option value="outdated">疑似过期</option>
               <option value="unknown">状态未知</option>
+            </select>
+          </label>
+          <label>
+            <span>适合人群</span>
+            <select id="audienceSelect">
+              <option value="">全部人群</option>
+              <option value="suitable_for_students">学生</option>
+              <option value="suitable_for_job_seekers">求职者</option>
+              <option value="suitable_for_freelancers">自由职业者</option>
+              <option value="suitable_for_founders">创业者</option>
+            </select>
+          </label>
+          <label>
+            <span>机会提示</span>
+            <select id="opportunitySelect">
+              <option value="">全部提示</option>
+              <option value="unknown">待判断</option>
+              <option value="outsourcing">外包/交付线索</option>
+              <option value="partnership">合作/客户线索</option>
+              <option value="hiring">招聘线索</option>
+              <option value="internship">实习线索</option>
             </select>
           </label>
         </section>
@@ -268,35 +291,35 @@
 
       <section class="stats" aria-label="数据统计">
         <div>
-          <strong id="companyCount">0</strong>
+          <strong id="companyCount">73</strong>
           <span>companies</span>
         </div>
         <div>
-          <strong id="verifiedCount">0</strong>
-          <span>verified site</span>
+          <strong id="strongSourceCount">26</strong>
+          <span>strong sources</span>
         </div>
         <div>
-          <strong id="pendingCount">0</strong>
+          <strong id="pendingCount">47</strong>
           <span>needs review</span>
         </div>
         <div>
-          <strong id="sourceLeadCount">0</strong>
+          <strong id="sourceLeadCount">45</strong>
           <span>source leads</span>
         </div>
         <div>
-          <strong id="communityCount">0</strong>
+          <strong id="communityCount">8</strong>
           <span>communities</span>
         </div>
         <div>
-          <strong id="eventCount">0</strong>
+          <strong id="eventCount">6</strong>
           <span>event sources</span>
         </div>
         <div>
-          <strong id="projectCount">0</strong>
+          <strong id="projectCount">3</strong>
           <span>project portals</span>
         </div>
         <div>
-          <strong id="sourceDate">-</strong>
+          <strong id="sourceDate">2026-05-13</strong>
           <span>last update</span>
         </div>
       </section>
@@ -304,17 +327,17 @@
       <section class="quality-strip" aria-label="数据质量优先级">
         <div>
           <span>verified ratio</span>
-          <strong id="verifiedRatio">0%</strong>
+          <strong id="verifiedRatio">36%</strong>
           <p>官网或官方页核验记录占比。</p>
         </div>
         <div>
           <span>missing districts</span>
-          <strong id="missingDistrictCount">0</strong>
+          <strong id="missingDistrictCount">39</strong>
           <p>优先补区县，地图才更像本地雷达。</p>
         </div>
         <div>
           <span>weak sources</span>
-          <strong id="weakSourceCount">0</strong>
+          <strong id="weakSourceCount">43</strong>
           <p>低可信记录需要官网、官方页或第二来源。</p>
         </div>
       </section>
@@ -398,6 +421,7 @@
         <a href="docs/search-guide.html">Search Guide</a>
         <a href="docs/project-brief.html">Project Brief</a>
         <a href="docs/reuse-and-citation.html">Reuse</a>
+        <a href="docs/promotion.html">Intro Copy</a>
         <a href="docs/takedown-and-correction.html">Corrections</a>
         <a href="https://github.com/tianmind-studio/kunming-it-companies">开源仓库</a>
       </nav>

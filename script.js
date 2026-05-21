@@ -3,7 +3,8 @@ const els = {
   heroSearch: document.querySelector("#heroSearchInput"),
   heroCompanyCount: document.querySelector("#heroCompanyCount"),
   heroSourceLeadCount: document.querySelector("#heroSourceLeadCount"),
-  heroVerifiedRatio: document.querySelector("#heroVerifiedRatio"),
+  heroStrongSourceCount: document.querySelector("#heroStrongSourceCount"),
+  heroPendingCount: document.querySelector("#heroPendingCount"),
   heroUpdatedAt: document.querySelector("#heroUpdatedAt"),
   homeResultSummary: document.querySelector("#homeResultSummary"),
   featuredList: document.querySelector("#featuredCompanyList"),
@@ -11,8 +12,10 @@ const els = {
   category: document.querySelector("#categorySelect"),
   district: document.querySelector("#districtSelect"),
   verification: document.querySelector("#verificationSelect"),
+  audience: document.querySelector("#audienceSelect"),
+  opportunity: document.querySelector("#opportunitySelect"),
   companyCount: document.querySelector("#companyCount"),
-  verifiedCount: document.querySelector("#verifiedCount"),
+  strongSourceCount: document.querySelector("#strongSourceCount"),
   pendingCount: document.querySelector("#pendingCount"),
   sourceLeadCount: document.querySelector("#sourceLeadCount"),
   communityCount: document.querySelector("#communityCount"),
@@ -52,6 +55,17 @@ const opportunityText = {
   outsourcing: "外包/交付",
   partnership: "合作/客户线索",
   unknown: "待判断"
+};
+
+const sourceTypeText = {
+  official_site: "官网",
+  official_profile: "官方页",
+  government_public_list: "政府公开名单",
+  community_list: "社区历史清单",
+  recruiting_platform: "招聘平台公开页",
+  media_database: "媒体 / 数据库",
+  public_web: "公开网页",
+  unknown: "未知来源"
 };
 
 function safeHref(value) {
@@ -142,6 +156,12 @@ async function loadCsv(path) {
   return parseCsv(await response.text());
 }
 
+async function loadJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`Failed to load ${path}`);
+  return response.json();
+}
+
 function searchableText(company) {
   return [
     company.name,
@@ -152,6 +172,9 @@ function searchableText(company) {
     company.notes,
     company.source_type,
     verificationText[company.verification_status],
+    sourceTypeText[company.source_type],
+    ...peopleLabels(company),
+    ...(company.opportunities || []).map((item) => opportunityText[item] || item),
     ...(company.tags || []),
     ...(company.opportunities || [])
   ].join(" ").toLowerCase();
@@ -177,7 +200,7 @@ function renderStats() {
   const verifiedRatio = companies.length ? `${Math.round((verifiedTotal / companies.length) * 100)}%` : "0%";
 
   els.companyCount.textContent = String(companies.length);
-  els.verifiedCount.textContent = String(companies.filter((company) => company.verification_status === "verified").length);
+  els.strongSourceCount.textContent = String(verifiedTotal);
   els.pendingCount.textContent = String(companies.filter((company) => company.verification_status === "community_pending").length);
   els.sourceLeadCount.textContent = String(sourceLeads.length);
   els.communityCount.textContent = String(communities.length);
@@ -190,7 +213,8 @@ function renderStats() {
 
   if (els.heroCompanyCount) els.heroCompanyCount.textContent = String(companies.length);
   if (els.heroSourceLeadCount) els.heroSourceLeadCount.textContent = String(sourceLeads.length);
-  if (els.heroVerifiedRatio) els.heroVerifiedRatio.textContent = verifiedRatio;
+  if (els.heroStrongSourceCount) els.heroStrongSourceCount.textContent = String(verifiedTotal);
+  if (els.heroPendingCount) els.heroPendingCount.textContent = String(companies.filter((company) => company.verification_status === "community_pending").length);
   if (els.heroUpdatedAt) els.heroUpdatedAt.textContent = meta.updated_at || "-";
 }
 
@@ -261,6 +285,8 @@ function render() {
   const category = els.category.value;
   const district = els.district.value;
   const verification = els.verification.value;
+  const audience = els.audience.value;
+  const opportunity = els.opportunity.value;
 
   const filtered = companies.filter((company) => {
     const normalizedDistrict = company.district || "待补区域";
@@ -269,7 +295,9 @@ function render() {
     const matchesCategory = !category || company.category === category;
     const matchesDistrict = !district || normalizedDistrict === district;
     const matchesVerification = !verification || company.verification_status === verification;
-    return matchesQuery && matchesCategory && matchesDistrict && matchesVerification;
+    const matchesAudience = !audience || Boolean(company[audience]);
+    const matchesOpportunity = !opportunity || (company.opportunities || []).includes(opportunity);
+    return matchesQuery && matchesCategory && matchesDistrict && matchesVerification && matchesAudience && matchesOpportunity;
   });
 
   renderFeatured(filtered);
@@ -299,7 +327,8 @@ function render() {
       top,
       node("div", { className: "meta-row" }, [
         node("div", { className: "category", text: company.category }),
-        node("span", badge)
+        node("span", badge),
+        node("span", { className: "source-type", text: sourceTypeText[company.source_type] || company.source_type || "来源待补" })
       ]),
       node("p", { className: "summary", text: company.notes }),
       node("div", { className: "label-block" }, [node("strong", { text: "适合查看" }), audience]),
@@ -323,6 +352,8 @@ function applyIntent(event) {
   if (verification !== undefined) els.verification.value = verification;
   els.category.value = "";
   els.district.value = "";
+  els.audience.value = "";
+  els.opportunity.value = "";
   render();
 
   if (scrollTarget) {
@@ -393,7 +424,7 @@ function renderResourcePanels() {
 
 async function init() {
   const [dataset, sourceLeadRows, communityRows, eventRows, projectRows] = await Promise.all([
-    fetch("data/companies.json").then((response) => response.json()),
+    loadJson("data/companies.json"),
     loadCsv("data/source-leads.csv"),
     loadCsv("data/communities.csv"),
     loadCsv("data/events.csv"),
@@ -426,16 +457,24 @@ async function init() {
     els.category.value = "";
     els.district.value = "";
     els.verification.value = "";
+    els.audience.value = "";
+    els.opportunity.value = "";
     render();
     document.querySelector("#directory")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
   els.category.addEventListener("change", render);
   els.district.addEventListener("change", render);
   els.verification.addEventListener("change", render);
+  els.audience.addEventListener("change", render);
+  els.opportunity.addEventListener("change", render);
   for (const button of els.intentButtons) button.addEventListener("click", applyIntent);
 }
 
 init().catch((error) => {
-  els.resultSummary.textContent = "数据加载失败，请确认通过国内站点或本地服务器打开。";
+  const message = "数据加载失败，请确认通过国内站点、GitHub Pages 或本地服务器打开。仍可直接下载 JSON / CSV。";
+  if (els.resultSummary) els.resultSummary.textContent = message;
+  if (els.homeResultSummary) els.homeResultSummary.textContent = message;
+  els.list?.replaceChildren(node("p", { className: "empty", text: message }));
+  els.featuredList?.replaceChildren(node("p", { className: "empty", text: message }));
   console.error(error);
 });

@@ -73,8 +73,16 @@
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
+npm run data:diff
 npm run validate:data
 npm run validate
+```
+
+`npm run data:diff` compares `data/companies.json` with the previous Git version by default and writes `docs/data-change-summary.md`. For PR review against another base, run:
+
+```bash
+npm run data:diff -- --base-ref origin/main
 ```
 
 详情见：[`docs/data-standard.md`](data-standard.md)。

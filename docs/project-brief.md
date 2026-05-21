@@ -38,10 +38,14 @@
 | [`docs/search-guide.md`](search-guide.md) | Maps common search phrases to real data files, filters, and verification boundaries. |
 | [`docs/domestic-site-deploy.md`](domestic-site-deploy.md) | Deployment notes for using `kunming.tianmind.com` as the main public entry. |
 | [`docs/data-quality-report.md`](data-quality-report.md) | Shows current verification status, missing districts, and weak-source records. |
+| [`docs/data-cleanup-plan.md`](data-cleanup-plan.md) | Lists the highest-priority manual review records and suggested public-source directions. |
+| [`docs/data-change-summary.md`](data-change-summary.md) | Compares company data with the previous version for PR review. |
 
 ## Data Quality Rules
 
 Every record should be traceable to a public source. When the source is weak, the record should stay marked as `community_pending` or use a lower `confidence_score`.
+
+The current dataset intentionally exposes open collaboration queues: community-pending records, weak-source records, and missing-district records. These queues are not company-quality judgments. They show where contributors can add public official websites, official pages, district evidence, government project pages, official articles, recruiting pages, or public activity pages.
 
 The project does not copy private contact details, private chat records, screenshots, unverified salary claims, or negative rumors. If a public source contains private contact details, keep the source URL but do not duplicate the private details into the dataset.
 
@@ -58,6 +62,8 @@ The project does not copy private contact details, private chat records, screens
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
+npm run data:diff
 npm run validate
 ```
 

@@ -14,6 +14,8 @@
 
 `data/companies.csv` 和 `COMPANIES.md` 由脚本从 `data/companies.json` 生成，不要手工编辑。
 
+当前最需要协作的是公开复核队列：`community_pending`、弱来源和缺区县记录。它们已经集中整理在 [`docs/data-cleanup-plan.md`](data-cleanup-plan.md)，贡献者可以从那里挑选记录补官网、公开工商资料页、政府项目页、公众号文章、招聘页或公开活动页。
+
 ## 基本要求
 
 每条记录尽量包含公开来源，例如：
@@ -54,6 +56,8 @@
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
+npm run data:diff
 ```
 
 4. 运行完整校验：

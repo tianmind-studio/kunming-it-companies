@@ -1,0 +1,64 @@
+name: Data correction / privacy request
+description: 请求修正错误、重复、不适合公开或可能涉及隐私的数据
+title: "[Correction/Privacy] "
+labels: ["data", "privacy", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        如果涉及隐私或不适合公开展示的信息，请描述问题类型，不要在 Issue 中再次复制敏感内容。
+  - type: input
+    id: record
+    attributes:
+      label: 相关记录
+      description: 公司名、记录 ID、页面链接或 CSV 文件名。
+      placeholder: 例如：yunnan-nantian-information / data/companies.json
+    validations:
+      required: true
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: 请求类型
+      options:
+        - 信息错误
+        - 来源过期或失效
+        - 重复记录
+        - 不符合收录边界
+        - 可能涉及隐私
+        - 可能涉及侵权
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: 问题说明
+      description: 请说明应更正或移除的原因。涉及隐私时只描述类型，不要贴出完整敏感内容。
+    validations:
+      required: true
+  - type: textarea
+    id: public_sources
+    attributes:
+      label: 支持来源
+      description: 如果有公开来源可支持更正，请贴链接。
+      placeholder: |
+        - 官方公告：https://...
+        - 新官网：https://...
+    validations:
+      required: false
+  - type: textarea
+    id: requested_action
+    attributes:
+      label: 建议处理方式
+      placeholder: 标记为 outdated / 更新来源 / 合并重复记录 / 移除不适合公开字段
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 确认
+      options:
+        - label: 我理解本项目只根据公开来源进行更正和复核。
+          required: true
+        - label: 我没有在 Issue 中重新发布私人联系方式、聊天截图或其他敏感内容。
+          required: true

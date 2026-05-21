@@ -14,6 +14,8 @@ for (const filePath of paths) {
   const key = filePath.toLowerCase();
   const existing = seen.get(key);
   assert(!existing, `Case-insensitive path collision: ${existing} and ${filePath}.`);
+  assert(!/(^|\/)\._/.test(filePath), `${filePath}: macOS AppleDouble files must not be tracked.`);
+  assert(!/(^|\/)\.DS_Store$/.test(filePath), `${filePath}: .DS_Store files must not be tracked.`);
   seen.set(key, filePath);
 }
 

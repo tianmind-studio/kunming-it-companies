@@ -7,6 +7,9 @@
 - `companies-lib.mjs`：公司数据规范化、统计、CSV 导出、分类映射等共享逻辑。
 - `generate-companies-md.mjs`：从 `data/companies.json` 生成 `COMPANIES.md`。
 - `export-companies-csv.mjs`：从 `data/companies.json` 生成 `data/companies.csv`。
+- `generate-data-quality-report.mjs`：生成 `docs/data-quality-report.md`，汇总核验状态、来源类型、缺区县、弱来源和最近核验分布。
+- `generate-data-cleanup-plan.mjs`：生成 `docs/data-cleanup-plan.md`，列出待复核、弱来源和缺区县记录的人工复核优先级。
+- `report-data-changes.mjs`：对比上一版本 `data/companies.json`，输出新增、删除、来源升级/降级和字段缺失变化。
 - `validate-data.mjs`：校验公司 JSON 的必填字段、来源、日期、核验状态和可信度评分。
 - `validate-csv.mjs`：检查 CSV 表头、列数、URL/日期格式，并要求 `data/source-leads.csv` 每个方向至少 5 条来源入口。
 - `validate-repo-paths.mjs`：检查仓库是否存在大小写路径冲突，避免 macOS 和 GitHub 上表现不一致。
@@ -20,6 +23,8 @@
 ```bash
 npm run generate:companies
 npm run export:csv
+npm run generate:data-quality
+npm run data:diff
 npm run validate:data
 npm run build:site
 npm run validate
