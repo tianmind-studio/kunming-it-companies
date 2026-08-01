@@ -4,7 +4,7 @@
     "city": "Kunming",
     "province": "Yunnan",
     "country": "China",
-    "updated_at": "2026-05-13",
+    "updated_at": "2026-08-01",
     "source_policy": "Every company entry must keep at least one public, source-backed URL. Do not add private contacts or unverifiable hiring claims.",
     "name_zh": "昆明技术机会雷达",
     "description_zh": "面向昆明/云南大学生、开发者、自由职业者和技术创业者的本地技术机会地图。",
@@ -2762,6 +2762,47 @@
       "suitable_for_freelancers": false,
       "suitable_for_job_seekers": false,
       "suitable_for_founders": false
+    },
+    {
+      "id": "kunming-bianyi-xianshi-tech",
+      "name_zh": "昆明编译现实科技有限公司",
+      "name_en": "",
+      "city": "昆明",
+      "district": "",
+      "category": "软件开发 / AI 应用",
+      "tags": [
+        "AI Agent",
+        "企业知识库",
+        "GEO",
+        "网站与小程序"
+      ],
+      "website": "https://tianmind.com/company/",
+      "summary_zh": "官方公司资料页说明其以 TianMind 为工作品牌，提供企业官网与网站升级、GEO 与 AI 搜索可见性、企业知识库与 AI Agent，以及 Web 与微信小程序 MVP 等服务。",
+      "summary_en": "The official company profile presents TianMind as its working brand and describes enterprise websites, GEO and AI-search visibility, knowledge bases and AI agents, and Web and WeChat Mini Program MVP delivery.",
+      "source_urls": [
+        "https://tianmind.com/company/",
+        "https://tianmind.com/geo-kunming/",
+        "https://tianmind.com/methodology/"
+      ],
+      "source_checked_at": "2026-08-01",
+      "verification": "official_site",
+      "status": "active-source-found",
+      "name": "昆明编译现实科技有限公司",
+      "english_name": "",
+      "source_url": "https://tianmind.com/company/",
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-08-01",
+      "notes": "官方公司资料页说明其以 TianMind 为工作品牌，提供企业官网与网站升级、GEO 与 AI 搜索可见性、企业知识库与 AI Agent，以及 Web 与微信小程序 MVP 等服务。",
+      "opportunities": [
+        "outsourcing",
+        "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": true
     }
   ]
 }
