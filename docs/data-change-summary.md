@@ -4,13 +4,13 @@
 
 Base ref: `origin/main`
 
-Current dataset update: `2026-08-01`
+Current dataset update: `2026-08-03`
 
 ## Summary
 
 | Metric | Count |
 | --- | --- |
-| Added records | 1 |
+| Added records | 0 |
 | Deleted records | 0 |
 | Changed existing records | 0 |
 | Source upgrades | 0 |
@@ -19,9 +19,7 @@ Current dataset update: `2026-08-01`
 
 ## Added records
 
-| ID | Name | Status | Source type | Source |
-| --- | --- | --- | --- | --- |
-| kunming-bianyi-xianshi-tech | 昆明编译现实科技有限公司 | 官网已核验 | 官网 | https://tianmind.com/company/ |
+No changes.
 
 ## Deleted records
 

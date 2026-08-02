@@ -38,6 +38,7 @@ assert(submitJs.includes("navigator.clipboard"), "submit.js should keep copyable
 
 assert(robots.includes("https://kunming.tianmind.com/sitemap.xml"), "robots.txt should point to the domestic sitemap.");
 assert(sitemap.includes("https://kunming.tianmind.com/submit.html"), "sitemap.xml should include the submission page.");
+assert(sitemap.includes("https://kunming.tianmind.com/companies/"), "sitemap.xml should include the verified-company page index.");
 assert(!sitemap.includes("tianmind-studio.github.io"), "sitemap.xml should not point to GitHub Pages as primary.");
 
 if (errors.length) {

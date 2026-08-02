@@ -1,10 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
-import { getCompanies, readDataset } from "./companies-lib.mjs";
+import { getCompanies, readDataset, sourceTypeLabel } from "./companies-lib.mjs";
+import { safeDocumentHref } from "./site-security-lib.mjs";
 import { safeJsonForHtml } from "./site-data-lib.mjs";
 
 const root = process.cwd();
 const outDir = path.join(root, "dist");
+const indexNowKey = "7b2f684dc42149d8a7e103c36f2a90be";
 
 const rootFiles = [
   "index.html",
@@ -20,6 +22,7 @@ const rootFiles = [
   "README.en.md",
   "SUPPORT.md",
   "LICENSE",
+  `${indexNowKey}.txt`,
   "robots.txt",
   "sitemap.xml"
 ];
@@ -194,12 +197,230 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
-function rewriteHref(href, context = "docs") {
-  if (href === "../COMPANIES.md" || href === "COMPANIES.md") {
-    return context === "root" ? "index.html#directory" : "../#directory";
+function isHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
   }
-  if (href.endsWith(".md")) return href.replace(/\.md(#.*)?$/, ".html$1");
-  return href;
+}
+
+function uniqueHttpUrls(company) {
+  return [...new Set([
+    company.website,
+    company.source_url,
+    ...(Array.isArray(company.source_urls) ? company.source_urls : [])
+  ].filter(isHttpUrl))];
+}
+
+function companyPageFile(company) {
+  if (!/^[a-z0-9-]+$/.test(company.id || "")) {
+    throw new Error(`Unsafe company id for static page: ${company.id || "(missing)"}`);
+  }
+  return `${company.id}.html`;
+}
+
+function verificationLabel(status) {
+  return {
+    verified: "官网已核验",
+    official_page: "官方页核验"
+  }[status] || "状态待复核";
+}
+
+function safeJsonLd(value) {
+  return JSON.stringify(value, null, 2).replaceAll("<", "\\u003c");
+}
+
+function renderCompanyPage(company) {
+  const file = companyPageFile(company);
+  const canonical = `https://kunming.tianmind.com/companies/${file}`;
+  const sources = uniqueHttpUrls(company);
+  const summary = company.summary_zh || company.notes || "该记录等待更多公开来源补充。";
+  const name = company.name_zh || company.name;
+  const tags = Array.isArray(company.tags) ? company.tags : [];
+  const dateModified = company.last_checked || company.source_checked_at || "2026-08-03";
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    name: `${name}公开来源记录`,
+    url: canonical,
+    dateModified,
+    isPartOf: {
+      "@type": "Dataset",
+      name: "昆明技术机会雷达 / Kunming Tech Radar",
+      url: "https://kunming.tianmind.com/"
+    },
+    mainEntity: {
+      "@type": "Organization",
+      ...(isHttpUrl(company.entity_id) ? { "@id": company.entity_id } : {}),
+      name,
+      ...(company.name_en ? { alternateName: company.name_en } : {}),
+      ...(isHttpUrl(company.entity_id)
+        ? { url: new URL(company.entity_id).origin + "/" }
+        : isHttpUrl(company.website) ? { url: company.website } : {}),
+      description: summary,
+      ...(tags.length ? { knowsAbout: tags } : {}),
+      ...(sources.length ? {
+        subjectOf: sources.map((url) => ({
+          "@type": "WebPage",
+          url
+        }))
+      } : {})
+    }
+  };
+  const sourceList = sources.length
+    ? sources.map((url, index) => `<li><a href="${escapeHtml(url)}" rel="noopener">${index === 0 ? "主来源" : `补充来源 ${index}`}</a></li>`).join("\n")
+    : "<li>尚无可直接打开的公开来源。</li>";
+  const tagList = tags.length
+    ? `<div class="tags">${tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>`
+    : "";
+
+  return `<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${escapeHtml(name)}｜公开来源记录｜昆明技术机会雷达</title>
+    <meta name="description" content="${escapeHtml(`${name}的公开来源、业务方向、核验状态与最近核验时间。${summary}`)}">
+    <meta name="robots" content="index,follow,max-snippet:-1">
+    <link rel="canonical" href="${canonical}">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">${safeJsonLd(schema)}</script>
+  </head>
+  <body class="doc-page">
+    <nav class="topbar" aria-label="主导航">
+      <a class="brand" href="../index.html">
+        <strong>昆明技术机会雷达</strong>
+        <span>Kunming Tech Radar</span>
+      </a>
+      <div class="topbar-links">
+        <a href="./">已核验记录</a>
+        <a href="../index.html#directory">查全部公司</a>
+        <a href="../submit.html">补充来源</a>
+      </div>
+    </nav>
+    <main class="doc-shell">
+      <article class="doc-article">
+        <p class="kicker">Verified public record · ${escapeHtml(dateModified)}</p>
+        <h1>${escapeHtml(name)}</h1>
+        ${company.name_en ? `<p>${escapeHtml(company.name_en)}</p>` : ""}
+        <p>${escapeHtml(summary)}</p>
+        ${tagList}
+        <h2>记录信息</h2>
+        <div class="doc-table-wrap">
+          <table>
+            <tbody>
+              <tr><th>所在城市</th><td>${escapeHtml(company.city || "昆明")}</td></tr>
+              <tr><th>区县</th><td>${escapeHtml(company.district || "公开来源暂未明确")}</td></tr>
+              <tr><th>业务方向</th><td>${escapeHtml(company.category || "待补")}</td></tr>
+              <tr><th>核验状态</th><td>${escapeHtml(verificationLabel(company.verification_status))}</td></tr>
+              <tr><th>来源类型</th><td>${escapeHtml(sourceTypeLabel(company.source_type))}</td></tr>
+              <tr><th>最近核验</th><td>${escapeHtml(dateModified)}</td></tr>
+              <tr><th>可信度</th><td>${escapeHtml(String(company.confidence_score || 1))} / 5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>公开来源</h2>
+        <ul>${sourceList}</ul>
+        <h2>使用边界</h2>
+        <p>本页由公开来源整理，只用于检索和事实核验，不构成公司排名、商业推荐、招聘承诺或第三方背书。发现名称、业务或来源过期时，可通过补充来源入口提交更正。</p>
+        <p><a href="./">返回全部已核验记录</a> · <a href="../submit.html?company=${encodeURIComponent(name)}&amp;type=update">提交更正来源</a></p>
+      </article>
+    </main>
+  </body>
+</html>
+`;
+}
+
+function renderCompanyIndexPage(companies) {
+  const items = companies.map((company) => {
+    const name = company.name_zh || company.name;
+    const summary = company.summary_zh || company.notes || "等待更多公开来源补充。";
+    return `<a href="${escapeHtml(companyPageFile(company))}">
+      <span>${escapeHtml(verificationLabel(company.verification_status))}</span>
+      <strong>${escapeHtml(name)}</strong>
+      <p>${escapeHtml(company.category || "方向待补")} · ${escapeHtml(company.district || company.city || "区域待补")}</p>
+      <p>${escapeHtml(summary)}</p>
+    </a>`;
+  }).join("\n");
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "昆明技术机会雷达已核验公司记录",
+    numberOfItems: companies.length,
+    itemListElement: companies.map((company, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: company.name_zh || company.name,
+      url: `https://kunming.tianmind.com/companies/${companyPageFile(company)}`
+    }))
+  };
+  return `<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>已核验公司公开记录｜昆明技术机会雷达</title>
+    <meta name="description" content="昆明技术机会雷达中由公司官网、官方页面或政府公开来源支持的公司记录，每条均提供独立详情页和来源链接。">
+    <meta name="robots" content="index,follow,max-snippet:-1">
+    <link rel="canonical" href="https://kunming.tianmind.com/companies/">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">${safeJsonLd(itemList)}</script>
+  </head>
+  <body class="doc-page">
+    <nav class="topbar" aria-label="主导航">
+      <a class="brand" href="../index.html">
+        <strong>昆明技术机会雷达</strong>
+        <span>Kunming Tech Radar</span>
+      </a>
+      <div class="topbar-links">
+        <a href="../index.html#directory">查全部公司</a>
+        <a href="../guides.html">使用指南</a>
+        <a href="../submit.html">提交线索</a>
+      </div>
+    </nav>
+    <main class="guide-shell">
+      <header class="guide-hero">
+        <p class="kicker">Source-backed records</p>
+        <h1>已核验公司公开记录</h1>
+        <p>这里只列出有公司官网、官方页面或政府公开来源支持的记录。独立页面用于稳定引用与事实核验，不代表排名、推荐或商业背书。</p>
+      </header>
+      <section class="guide-grid" aria-label="已核验公司列表">${items}</section>
+    </main>
+  </body>
+</html>
+`;
+}
+
+function updateBuiltSitemap(companies, indexLastModified) {
+  const sitemapPath = path.join(outDir, "sitemap.xml");
+  let sitemap = fs.readFileSync(sitemapPath, "utf8");
+  const indexEntry = /(<loc>https:\/\/kunming\.tianmind\.com\/companies\/<\/loc>\s*<lastmod>)[^<]+(<\/lastmod>)/;
+  if (!indexEntry.test(sitemap)) throw new Error("Sitemap is missing the company index entry.");
+  sitemap = sitemap.replace(indexEntry, `$1${indexLastModified}$2`);
+  const entries = companies.map((company) => `  <url>
+    <loc>https://kunming.tianmind.com/companies/${companyPageFile(company)}</loc>
+    <lastmod>${escapeHtml(company.last_checked || company.source_checked_at || "2026-08-03")}</lastmod>
+  </url>`).join("\n");
+  sitemap = sitemap.replace("</urlset>", `${entries}\n</urlset>`);
+  fs.writeFileSync(sitemapPath, sitemap);
+}
+
+function generateCompanyPages() {
+  const dataset = readDataset();
+  const companies = getCompanies(dataset)
+    .filter((company) => ["verified", "official_page"].includes(company.verification_status))
+    .sort((a, b) => (a.name_zh || a.name).localeCompare(b.name_zh || b.name, "zh-CN"));
+  const companyOut = path.join(outDir, "companies");
+  fs.mkdirSync(companyOut, { recursive: true });
+  fs.writeFileSync(path.join(companyOut, "index.html"), renderCompanyIndexPage(companies));
+  for (const company of companies) {
+    fs.writeFileSync(path.join(companyOut, companyPageFile(company)), renderCompanyPage(company));
+  }
+  updateBuiltSitemap(companies, dataset.meta?.updated_at || "2026-08-03");
 }
 
 function renderInline(markdown, context = "docs") {
@@ -207,7 +428,8 @@ function renderInline(markdown, context = "docs") {
   text = text.replace(/`([^`]+)`/g, "<code>$1</code>");
   text = text.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
-    const safeHref = escapeHtml(rewriteHref(href.trim(), context));
+    const safeHref = escapeHtml(safeDocumentHref(href, context));
+    if (!safeHref) return label;
     return `<a href="${safeHref}">${label}</a>`;
   });
   text = text.replace(/\.md(<\/code>)/g, ".html$1");
@@ -428,6 +650,7 @@ for (const file of rootFiles) copyFile(file);
 for (const dir of dirs) copyDir(dir);
 injectStaticStatsIntoIndex();
 generateMarkdownPages();
+generateCompanyPages();
 removeJunkFiles(outDir);
 
 console.log(`Static site built into ${path.relative(root, outDir)}/`);

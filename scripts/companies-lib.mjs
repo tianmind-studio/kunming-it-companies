@@ -226,8 +226,9 @@ export function csvEscape(value) {
   if (Array.isArray(value)) value = value.join(";");
   if (typeof value === "boolean") value = value ? "true" : "false";
   const str = String(value ?? "");
-  if (/[",\n]/.test(str)) return `"${str.replaceAll('"', '""')}"`;
-  return str;
+  const formulaSafe = /^[\t\r\n ]*[=+\-@]/.test(str) || /^[\t\r]/.test(str) ? `'${str}` : str;
+  if (/[",\n\r]/.test(formulaSafe)) return `"${formulaSafe.replaceAll('"', '""')}"`;
+  return formulaSafe;
 }
 
 export function toCsv(companies) {

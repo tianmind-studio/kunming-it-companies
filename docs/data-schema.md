@@ -26,6 +26,7 @@
 | `category` | string | yes | 一个主要方向。 |
 | `tags` | array | yes | 2-6 个短标签。 |
 | `website` | string | no | 官网；没有则留空。 |
+| `entity_id` | string | no | 跨页面复用的 Schema.org 实体标识；使用带片段的 HTTP(S) URL，例如 `https://example.com/#organization`。 |
 | `source_url` | string | yes | 最主要的公开来源。 |
 | `source_type` | string | yes | 见 `docs/data-standard.md`。 |
 | `verification_status` | string | yes | `verified` / `official_page` / `community_pending` / `outdated` / `unknown`。 |
