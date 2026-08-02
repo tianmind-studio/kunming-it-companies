@@ -2,6 +2,8 @@
 ._*
 **/._*
 node_modules/
+__pycache__/
+*.py[cod]
 dist/
 output/
 *.log

@@ -2,6 +2,7 @@ import {
   ALLOWED_OPPORTUNITIES,
   ALLOWED_SOURCE_TYPES,
   ALLOWED_VERIFICATION_STATUS,
+  csvEscape,
   getCompanies,
   readDataset
 } from "./companies-lib.mjs";
@@ -45,6 +46,9 @@ const verificationMap = {
 assert(dataset && typeof dataset === "object", "Dataset must be an object.");
 assert(dataset.meta && typeof dataset.meta === "object", "Missing meta object.");
 assert(Array.isArray(dataset.companies), "Missing companies array.");
+assert(csvEscape("=1+1").startsWith("'"), "CSV export must neutralize formula cells beginning with =.");
+assert(csvEscape(" \t@SUM(A1)").startsWith("'"), "CSV export must neutralize formula cells after leading whitespace.");
+assert(csvEscape("\tplain text").startsWith("'"), "CSV export must neutralize leading tab cells.");
 
 if (dataset.meta) {
   assert(isDate(dataset.meta.updated_at), "meta.updated_at must use a valid YYYY-MM-DD date.");
@@ -70,6 +74,7 @@ for (const company of companies) {
   assert(company.tags.every((tag) => typeof tag === "string" && tag.trim()), `${label}: tags must be non-empty strings.`);
   assert(isHttpUrl(company.source_url), `${label}: source_url must be a valid HTTP(S) URL.`);
   assert(company.website === "" || isHttpUrl(company.website), `${label}: website must be a valid HTTP(S) URL or empty.`);
+  assert(company.entity_id === undefined || (isHttpUrl(company.entity_id) && company.entity_id.includes("#")), `${label}: entity_id must be an HTTP(S) URL with a fragment when present.`);
   assert(isDate(company.last_checked), `${label}: last_checked must use a valid YYYY-MM-DD date.`);
   assert(compareDate(company.last_checked, today) <= 0, `${label}: last_checked cannot be in the future.`);
   if (!latestChecked || compareDate(company.last_checked, latestChecked) > 0) latestChecked = company.last_checked;

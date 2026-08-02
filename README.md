@@ -219,9 +219,9 @@ dist/
 
 1. 打开 GitHub 仓库 Settings。
 2. 进入 Pages。
-3. Source 选择 `Deploy from a branch`。
-4. Branch 选择 `main`，目录选择 `/root`。
-5. 保存后等待 GitHub Pages 构建完成。
+3. Source 选择 `GitHub Actions`。
+4. 推送到 `main` 后，`.github/workflows/pages.yml` 会运行校验、构建 `dist/` 并部署该目录。
+5. 在 Actions 和 Pages 页面确认构建及部署成功。
 
 ## 如何贡献
 

@@ -15,6 +15,7 @@
     "generate:site-data": "node scripts/generate-site-data.mjs",
     "data:diff": "node scripts/report-data-changes.mjs",
     "report:data-changes": "node scripts/report-data-changes.mjs",
-    "build:site": "node scripts/build-static-site.mjs"
+    "build:site": "node scripts/build-static-site.mjs && node scripts/validate-built-site.mjs",
+    "validate:built-site": "node scripts/validate-built-site.mjs"
   }
 }

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { getCompanies, readDataset } from "./companies-lib.mjs";
+import { safeDocumentHref } from "./site-security-lib.mjs";
 
 const errors = [];
 
@@ -56,6 +57,7 @@ assert(index.includes("application/ld+json") && index.includes("\"@type\": \"Dat
 assert(index.includes("data/site-data.json"), "index.html should preload the combined site data payload for faster first render.");
 assert(index.includes("rel=\"modulepreload\" href=\"script.js\""), "index.html should modulepreload the main script for faster first render.");
 assert(index.includes("guides.html"), "index.html should link to a user-facing guides page.");
+assert(index.includes("companies/"), "index.html should link to crawlable verified-company pages.");
 assert(index.includes("docs/use-cases.html"), "index.html should link to role-based usage guidance as HTML.");
 assert(index.includes("docs/search-guide.html"), "index.html should link to search guidance as HTML.");
 assert(index.includes("docs/reuse-and-citation.html"), "index.html should link to reuse/citation guidance as HTML.");
@@ -71,6 +73,7 @@ assert(read("guides.html").includes("docs/data-change-summary.html"), "guides.ht
 assert(read("sitemap.xml").includes("docs/promotion.html"), "sitemap.xml should include the public sharing copy page.");
 assert(read("sitemap.xml").includes("docs/data-cleanup-plan.html"), "sitemap.xml should include the data cleanup plan page.");
 assert(read("sitemap.xml").includes("docs/data-change-summary.html"), "sitemap.xml should include the data change summary page.");
+assert(read("sitemap.xml").includes("https://kunming.tianmind.com/companies/"), "sitemap.xml should include the verified-company page index.");
 
 const requiredIds = [
   "sourceLeadCount",
@@ -176,6 +179,15 @@ assert(!index.includes("docs/share-kit.md"), "index.html should not link owner-f
 assert(!index.includes("docs/search-guide.md") && !index.includes("docs/use-cases.md"), "index.html should not expose Markdown docs as the main user path.");
 assert(index.includes("docs/project-brief.html"), "index.html should link the public project brief as HTML.");
 assert(read("scripts/build-static-site.mjs").includes("generateMarkdownPages"), "build script should generate HTML pages from public Markdown docs.");
+assert(read("scripts/build-static-site.mjs").includes("generateCompanyPages"), "build script should generate crawlable pages for verified company records.");
+assert(read("scripts/build-static-site.mjs").includes("safeDocumentHref"), "Markdown links should pass through the safe document URL allowlist.");
+assert(read("scripts/build-static-site.mjs").includes("if (!safeHref) return label;"), "Unsafe Markdown links should render as text instead of active links.");
+for (const unsafeHref of ["javascript:alert(1)", "data:text/html,boom", "vbscript:msgbox(1)", "//evil.example/path", "https:\\evil.example/path", "\tjavascript:alert(1)"]) {
+  assert(safeDocumentHref(unsafeHref) === "", `Markdown URL allowlist should reject ${JSON.stringify(unsafeHref)}.`);
+}
+for (const safeHref of ["https://example.com/path", "http://example.com/", "../README.md", "#section", "/companies/"]) {
+  assert(Boolean(safeDocumentHref(safeHref)), `Markdown URL allowlist should accept ${JSON.stringify(safeHref)}.`);
+}
 assert(read("scripts/build-static-site.mjs").includes("promotion.md"), "build script should render the public sharing copy page.");
 assert(read("scripts/build-static-site.mjs").includes("data-cleanup-plan.md"), "build script should render the data cleanup plan page.");
 assert(read("scripts/build-static-site.mjs").includes("data-change-summary.md"), "build script should render the data change summary page.");

@@ -573,6 +573,13 @@ function verificationMeta(company) {
   return { text: verificationText[status] || "状态未知", className: `badge ${cls}` };
 }
 
+function companyDetailUrl(company) {
+  const isVerified = ["verified", "official_page"].includes(company.verification_status);
+  return isVerified && /^[a-z0-9-]+$/.test(company.id || "")
+    ? `companies/${company.id}.html`
+    : "";
+}
+
 function peopleLabels(company) {
   const labels = [];
   if (company.suitable_for_students) labels.push("学生");
@@ -630,8 +637,9 @@ function renderActiveFilters(state, resultCount) {
 
 function csvEscape(value) {
   const text = String(value ?? "");
-  if (/[",\n]/.test(text)) return `"${text.replaceAll('"', '""')}"`;
-  return text;
+  const formulaSafe = /^[\t\r\n ]*[=+\-@]/.test(text) || /^[\t\r]/.test(text) ? `'${text}` : text;
+  if (/[",\n\r]/.test(formulaSafe)) return `"${formulaSafe.replaceAll('"', '""')}"`;
+  return formulaSafe;
 }
 
 function downloadCurrentCsv() {
@@ -783,7 +791,9 @@ function renderFeatured(companiesToShow) {
     const detailButton = node("button", { className: "card-action secondary", text: "查看详情" });
     detailButton.type = "button";
     detailButton.addEventListener("click", () => openCompanyDialog(company, detailButton));
+    const detailUrl = companyDetailUrl(company);
     const actions = [detailButton];
+    if (detailUrl) actions.push(node("a", { href: detailUrl, text: "独立详情页" }));
     if (sourceUrl) actions.push(node("a", { href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }));
     cardChildren.push(node("div", { className: "inline-actions" }, actions));
     els.featuredList.append(node("article", { className: "featured-card" }, cardChildren));
@@ -837,10 +847,12 @@ function render(options = {}) {
     const detailButton = node("button", { className: "visit secondary", text: "详情" });
     detailButton.type = "button";
     detailButton.addEventListener("click", () => openCompanyDialog(company, detailButton));
+    const detailUrl = companyDetailUrl(company);
     const footerChildren = [
       node("span", { className: "source", text: `核验：${company.last_checked || "待补"} · 可信度 ${company.confidence_score || 1}/5` }),
       node("div", { className: "card-actions" }, [detailButton])
     ];
+    if (detailUrl) footerChildren[1].append(node("a", { className: "visit secondary", href: detailUrl, text: "独立页" }));
     if (sourceUrl) footerChildren[1].append(node("a", { className: "visit", href: sourceUrl, text: company.website ? "访问官网" : "查看来源" }));
 
     const card = node("article", { className: "company-card" }, [
