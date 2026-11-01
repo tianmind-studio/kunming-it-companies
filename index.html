@@ -3,22 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>昆明 IT 公司、软件公司与技术机会雷达 / Kunming Tech Radar</title>
-    <meta name="description" content="昆明技术机会雷达：整理昆明 IT 公司、昆明软件公司、云南软件公司、昆明 AI 公司、昆明程序员社群和云南数字化项目公开线索。">
+    <title>昆明 IT 公司、OPC 创业与技术社群 / Kunming Tech Radar</title>
+    <meta name="description" content="昆明 IT 公司与技术社群雷达：查软件团队、了解 AI 与 OPC 一人公司创业资源，查看来源日期，带着作品与问题认识本地同行。">
     <link rel="canonical" href="https://kunming.tianmind.com/">
-    <meta property="og:title" content="昆明 IT 公司、软件公司与技术机会雷达 / Kunming Tech Radar">
-    <meta property="og:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、AI/数据机构、社群活动和数字化项目入口。">
+    <meta property="og:title" content="昆明 IT 公司、OPC 创业与技术社群 / Kunming Tech Radar">
+    <meta property="og:description" content="查本地公司，了解 OPC 创业资源，带着作品和问题认识技术同行。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kunming.tianmind.com/">
     <meta property="og:image" content="https://kunming.tianmind.com/assets/social-card.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="昆明 IT 公司、软件公司与技术机会雷达 / Kunming Tech Radar">
-    <meta name="twitter:description" content="可搜索、可复核、可贡献的昆明/云南本地技术公司、软件团队、AI/数据机构、社群活动和数字化项目入口。">
+    <meta name="twitter:title" content="昆明 IT 公司、OPC 创业与技术社群 / Kunming Tech Radar">
+    <meta name="twitter:description" content="查本地公司，了解 OPC 创业资源，带着作品和问题认识技术同行。">
     <meta name="twitter:image" content="https://kunming.tianmind.com/assets/social-card.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <link rel="modulepreload" href="script.js">
-    <link id="siteDataPreload" rel="preload" href="data/site-data.json" as="fetch" type="application/json" crossorigin="anonymous">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -62,13 +61,16 @@
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#mainContent">跳到公司目录</a>
     <nav class="topbar" aria-label="主导航">
-      <a class="brand" href="/">
+      <a class="brand" href="./">
         <strong>昆明技术机会雷达</strong>
         <span>Kunming Tech Radar</span>
       </a>
       <div class="topbar-links">
         <a href="#directory">查公司</a>
+        <a href="#opc">OPC 起步</a>
+        <a href="?entry=nav#community">加微信交流</a>
         <a href="companies/">已核验记录</a>
         <a href="#resourceList">看入口</a>
         <a href="guides.html">使用指南</a>
@@ -80,8 +82,12 @@
     <header class="site-header">
       <div class="header-copy">
         <p class="kicker">公开来源 · 可复核 · 持续维护</p>
-        <h1><span>昆明技术机会</span><span>先从可信数据开始。</span></h1>
-        <p class="lede">面向昆明/云南学生、开发者、自由职业者、创业者和企业负责人的本地技术生态资料库。你可以搜索 IT 公司、软件团队、AI/数据机构、社群活动和数字化项目入口，也可以提交公开来源帮助复核。</p>
+        <h1><span>技术在昆明，</span><span>从一条可靠线索开始。</span></h1>
+        <p class="lede">查本地技术公司，先看来源与核验日期。软件、AI、系统集成与创业资源，从公开资料找到下一步。</p>
+        <div class="launch-actions">
+          <a class="launch-primary" href="#directory">查找本地公司 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M12 5v14m-6-6 6 6 6-6"/></svg></a>
+          <a href="?entry=hero#community">认识本地同行 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        </div>
         <form id="heroSearchForm" class="hero-search" role="search">
           <label for="heroSearchInput">搜索公司、方向、区县或机会</label>
           <div>
@@ -100,12 +106,12 @@
         <aside class="radar-panel" aria-label="数据状态">
           <div class="radar-panel-top">
             <span>DATA STATUS</span>
-            <strong id="heroUpdatedAt">2026-08-03</strong>
+            <strong id="heroUpdatedAt">2026-09-14</strong>
           </div>
           <div class="radar-metrics">
-            <div><strong id="heroCompanyCount">74</strong><span>公司 / 团队</span></div>
+            <div><strong id="heroCompanyCount">75</strong><span>公司 / 团队</span></div>
             <div><strong id="heroSourceLeadCount">45</strong><span>来源入口</span></div>
-            <div><strong id="heroStrongSourceCount">27</strong><span>强来源记录</span></div>
+            <div><strong id="heroStrongSourceCount">28</strong><span>强来源记录</span></div>
             <div><strong id="heroPendingCount">47</strong><span>待复核记录</span></div>
           </div>
           <p>数据先按公开来源入库，再人工复核。页面不会把招聘平台入口、政府门户或社区清单写成确定岗位、外包或合作机会。</p>
@@ -115,7 +121,7 @@
             <a href="data/companies.json">下载 JSON</a>
           </div>
         </aside>
-        <img class="map-visual" src="assets/kunming-network.svg" alt="昆明各城区技术节点示意图">
+        <img width="720" height="420" class="map-visual" src="assets/kunming-network.svg" alt="昆明各城区技术节点示意图">
       </div>
     </header>
 
@@ -126,13 +132,13 @@
       </section>
     </noscript>
 
-    <main>
+    <main id="mainContent" tabindex="-1">
       <section id="directory" class="primary-tool" aria-label="本地公司目录">
         <div class="section-title primary-title">
           <div>
             <p class="kicker">Directory</p>
-            <h2>先看这些可复核公司</h2>
-            <p>首屏搜索会同步更新这里和完整列表。所有记录都保留来源、核验状态和可信度，不把线索包装成确定机会。</p>
+            <h2>找到值得继续了解的团队</h2>
+            <p>搜索名称、方向或区县，再按来源核验状态缩小范围。机会提示用于检索，不代表正在招聘或合作。</p>
           </div>
           <p id="homeResultSummary" aria-live="polite">正在加载数据...</p>
         </div>
@@ -208,9 +214,45 @@
           <p id="shareStatus" class="share-status" aria-live="polite"></p>
         </section>
 
+        <div class="preview-heading"><h3>快速预览</h3><a href="#companyList">查看完整结果 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M12 5v14m-6-6 6 6 6-6"/></svg></a></div>
         <div id="featuredCompanyList" class="featured-list" aria-label="公司预览"></div>
       </section>
 
+      <section class="section-title">
+        <div>
+          <h2>公司检索结果</h2>
+          <p>只展示公开来源支持的信息；适合人群是检索提示，不是招聘或合作承诺。</p>
+        </div>
+        <p id="resultSummary" aria-live="polite">正在加载数据...</p>
+      </section>
+
+      <section id="companyList" class="company-list" aria-label="公司列表"></section>
+
+
+      <section id="opc" class="opc-section" aria-labelledby="opcTitle" data-release="20260914-opc-community-v1">
+        <div class="opc-heading">
+          <div><p class="kicker">昆明 · AI · 一人公司</p><h2 id="opcTitle">一个人起步，也可以找到同行。</h2></div>
+          <p>OPC 在这里指借助 AI 工具开展业务的创业方式。先找一个真实需求、做一件能展示的作品，再讨论团队与资源。</p>
+        </div>
+        <div class="opc-paths">
+          <article><span class="opc-number">01 / 还在找方向</span><h3>从你熟悉的行业开始</h3><p>写清谁遇到了什么问题。用一页介绍或一个小演示，验证对方是否真的需要。</p><a href="?entry=opc-start#community">带一个想法来交流 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></article>
+          <article><span class="opc-number">02 / 已经在做产品</span><h3>让作品先被看见</h3><p>带上可公开的 Demo、技能方向和正在找的协作。具体到问题，才容易找到合适的人。</p><a href="?entry=opc-build#community">聊作品与协作 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></article>
+          <article><span class="opc-number">03 / 想认识本地同行</span><h3>从公开资源认识生态</h3><p>查公司与社区来源，先核对活动、空间的当前状态，再决定联系或参与。</p><a href="#opcResources">查看本地资源 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M12 5v14m-6-6 6 6 6-6"/></svg></a></article>
+        </div>
+        <div id="opcResources" class="opc-resources">
+          <div><h3>本地 OPC 资源观察</h3><p class="opc-note">资料核对：2026-09-14。以下是资源背景，不是正在招生、开放工位或活动报名的公告。</p></div>
+          <article class="opc-resource"><div><span class="opc-number">空间 / 西山区</span><h4>庾园社区 AI 青创空间</h4><p>云南网报道了这里的一人公司创业实践与社区支持。是否有空余工位、如何参与，请向运营方核实。</p></div><a href="https://society.yunnan.cn/system/2026/04/03/033950272.shtml" target="_blank" rel="noopener noreferrer">云南网 · 2026-04-03 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></article>
+          <article class="opc-resource"><div><span class="opc-number">政策 / 报道入口</span><h4>云南支持人工智能 OPC 创业</h4><p>云南网报道了省人社厅发布的 OPC 创业支持措施。先了解方向；具体适用条件与办理入口，以主管部门现行说明为准。</p></div><a href="https://yn.yunnan.cn/system/2026/07/16/034085615.shtml" target="_blank" rel="noopener noreferrer">云南网 · 2026-07-16 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></article>
+          <div class="opc-resource-footer"><span>知道新的公开活动或资源？附上主办方链接，帮助大家核对。</span><a href="submit.html">补充公开线索 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+        </div>
+        <details class="opc-samples"><summary>还没有作品？看看维护者做过的公开样本</summary><div class="opc-sample-grid"><article><h3>需求整理演示</h3><p>把一个想法整理成目标、范围和下一步。公开交互样本，不提交真实业务数据。</p><a href="https://junius.tianmind.com/intake.html" target="_blank" rel="noopener noreferrer">打开演示 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></article><article><h3>可搜索的公司资料库</h3><p>你正在使用的雷达本身就是公开项目：结构化资料、筛选检索、来源核验与静态公司页。</p><a href="companies/">查看已核验记录 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></article></div><p class="opc-note">公开样本用于了解实现方式，不代表获客或营收承诺。讨论自己的项目：<a href="?entry=sample#community">带上目标，联系维护者</a>。</p></details>
+      </section>
+      <section id="news-review" class="primary-tool" aria-labelledby="radarReviewTitle" data-intake-release="20260914-news-review-v1">
+        <div class="section-title"><div><p class="kicker">新闻线索 → 公司核验</p><h2 id="radarReviewTitle">报道里出现了，资料库还没收录？</h2><p>这里保留需要继续识别公司的公开报道。名称匹配只是提示；只有核对公司公开来源后，才会关联到公司记录。</p></div></div>
+        <p id="radarReviewSummary" role="status">正在加载报道核验状态…</p>
+        <details><summary>查看报道与核验进度</summary><div id="radarReviewList" class="resource-grid"></div></details>
+        <p><a href="submit.html">补充公司官网或公开来源 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a> · <a href="data/radar-review.json">下载核验队列</a></p>
+      </section>
       <section class="intro-grid" aria-label="项目说明">
         <article>
           <strong>给学生</strong>
@@ -296,9 +338,10 @@
       <section id="community" class="community-contact" aria-label="本地社群入口">
         <div class="community-copy">
           <p class="kicker">Local Community Pilot</p>
-          <h2>我正在做一个昆明本地技术社群</h2>
-          <p>如果你是昆明或云南的开发者、学生、自由职业者、创业者，或者正在找本地数字化/AI/软件项目机会，可以先加我微信。社群用于补充公开来源、交流本地项目机会、复核过期信息，不是招聘中介群，也不做公司背书。</p>
-          <p class="community-note">加微信时请备注：<strong>昆明技术机会雷达</strong>。我会先确认你的方向，再邀请进入本地社群。</p>
+          <h2>你在做什么？<br>来聊一个具体问题。</h2>
+          <p>我是 Junius，维护这个昆明本地技术资料库。欢迎开发者、自由职业者、OPC 创业者和企业负责人交流 AI 应用、产品实践与本地协作，也可以申请加入技术社群。</p>
+          <p class="community-note">加微信请备注：<strong id="contactRemark">昆明雷达＋你的方向</strong>。说说你会什么、正在做什么、希望找什么帮助。我会先了解方向，再确认社群邀请。</p>
+          <p>社群用于交流与补充公开线索，不承诺订单、岗位、投资或入驻资格。</p>
           <div class="hero-actions">
             <a href="submit.html">提交公开线索</a>
             <a href="data/companies.csv">下载表格</a>
@@ -307,18 +350,21 @@
         <div class="community-card" aria-label="维护者微信">
           <strong>维护者微信</strong>
           <p class="wechat-id">beizhushaonlan</p>
-          <img src="assets/wechat-qr.jpg" alt="Junius 微信二维码">
-          <p>扫码或搜索微信号添加，备注：昆明技术机会雷达。</p>
+          <button type="button" id="copyWechat" class="launch-primary">复制微信号</button>
+          <p id="copyWechatStatus" role="status" aria-live="polite">复制后打开微信，搜索微信号添加。</p>
+          <img src="assets/wechat-qr.jpg" alt="Junius 微信二维码" width="888" height="1131" loading="lazy">
+          <a href="assets/wechat-qr.jpg" target="_blank" rel="noopener">打开二维码大图</a>
+          <p>电脑可扫码；手机可长按二维码保存，或直接搜索上方微信号。</p>
         </div>
       </section>
 
       <section class="stats" aria-label="数据统计">
         <div>
-          <strong id="companyCount">74</strong>
+          <strong id="companyCount">75</strong>
           <span>companies</span>
         </div>
         <div>
-          <strong id="strongSourceCount">27</strong>
+          <strong id="strongSourceCount">28</strong>
           <span>strong sources</span>
         </div>
         <div>
@@ -342,7 +388,7 @@
           <span>project portals</span>
         </div>
         <div>
-          <strong id="sourceDate">2026-08-03</strong>
+          <strong id="sourceDate">2026-09-14</strong>
           <span>last update</span>
         </div>
       </section>
@@ -350,12 +396,12 @@
       <section class="quality-strip" aria-label="数据质量优先级">
         <div>
           <span>verified ratio</span>
-          <strong id="verifiedRatio">36%</strong>
+          <strong id="verifiedRatio">37%</strong>
           <p>官网或官方页核验记录占比。</p>
         </div>
         <div>
           <span>missing districts</span>
-          <strong id="missingDistrictCount">40</strong>
+          <strong id="missingDistrictCount">41</strong>
           <p>优先补区县，地图才更像本地雷达。</p>
         </div>
         <div>
@@ -409,16 +455,6 @@
           <li><strong>可信度 1-5</strong><span>分数越高，来源越直接；低分记录优先补来源而不是下结论。</span></li>
         </ul>
       </section>
-
-      <section class="section-title">
-        <div>
-          <h2>公司卡片</h2>
-          <p>只展示公开来源支持的信息；适合人群是检索提示，不是招聘或合作承诺。</p>
-        </div>
-        <p id="resultSummary" aria-live="polite">正在加载数据...</p>
-      </section>
-
-      <section id="companyList" class="company-list" aria-label="公司列表"></section>
 
       <section class="section-title resource-title">
         <div>
@@ -480,15 +516,17 @@
         <a href="docs/takedown-and-correction.html">Corrections</a>
         <a href="https://github.com/tianmind-studio/kunming-it-companies">开源仓库</a>
       </nav>
+      <p class="site-credit">技术支持：<a href="https://bianyixianshi.com/" target="_blank" rel="noopener noreferrer">编译现实</a></p>
     </footer>
 
     <dialog id="companyDialog" class="company-dialog" aria-labelledby="dialogCompanyName">
       <div class="dialog-shell">
-        <button type="button" id="closeCompanyDialog" class="dialog-close" aria-label="关闭详情">×</button>
+        <button type="button" id="closeCompanyDialog" class="dialog-close" aria-label="关闭详情"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" width="20" height="20"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
         <div id="companyDialogBody"></div>
       </div>
     </dialog>
 
+    <nav class="mobile-contact" aria-label="快捷参与"><a href="#directory">查公司</a><a href="?entry=mobile#community">认识本地同行 <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M7 17 17 7M7 7h10v10"/></svg></a></nav>
     <!-- KTR_BOOTSTRAP_DATA -->
     <script src="script.js" type="module"></script>
   </body>

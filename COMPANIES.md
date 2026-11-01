@@ -1,16 +1,16 @@
 # Kunming Tech Radar 公司索引
 
-这里是 GitHub 直接可读、可搜索的昆明技术机会索引。当前共收录 74 条记录，结构化主数据源是 [`data/companies.json`](data/companies.json)。
+这里是 GitHub 直接可读、可搜索的昆明技术机会索引。当前共收录 75 条记录，结构化主数据源是 [`data/companies.json`](data/companies.json)。
 
 > This file is generated from `data/companies.json`. Update the JSON first, then run `npm run generate:companies`.
 
 ## 数据质量摘要
 
-- 已收录公司 / 机构：74
-- 官网已核验：25
+- 已收录公司 / 机构：75
+- 官网已核验：26
 - 官方页核验：2
 - 社区待复核：47
-- 已填写官网：27
+- 已填写官网：28
 - 官网待补：47
 - 覆盖区域：五华区、盘龙区、官渡区、西山区、呈贡区、高新区、安宁 / 其他、待补区域
 - 覆盖方向：软件开发 / 外包、系统集成 / 政企信息化、AI / 大数据、农业数字化、医疗信息化、文旅科技、金融科技、网络安全、通信 / ICT
@@ -59,6 +59,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | 昆明编译现实科技有限公司 | 软件开发 / AI 应用 | 待补 | 官网已核验 | 学生、自由职业者、创业者 | [官网](https://tianmind.com/company/) | 2026-08-01 |
 | 昆明昌昱信息科技有限公司 | 云服务 / 产业数字化 | 官渡区 | 官网已核验 | 学生、求职者、创业者 | [官网](https://www.chanetsoft.com/) | 2026-05-11 |
+| 云南宁安数字科技股份公司 | AI / 算力服务 | 待补 | 官网已核验 | 学生、自由职业者、创业者 | [官网](https://www.ningandigital.com/) | 2026-09-14 |
 | 云南软加科技有限公司 | 软件开发 / AI 应用 | 待补 | 官网已核验 | 学生、求职者、自由职业者、创业者 | [官网](https://www.softplus.dev/) | 2026-05-11 |
 | 云南软捷科技有限公司 | 软件开发 / 云服务 | 待补 | 官网已核验 | 学生、求职者、自由职业者、创业者 | [官网](https://www.yunagile.com/) | 2026-05-11 |
 | 云南这里信息技术有限公司 | AI / 大数据 / 林业信息化 | 待补 | 社区待复核 | 学生 | [公开来源](https://www.zhipin.com/companys/cc3091cf944429341nR83tW4E1U~.html) | 2026-05-11 |
@@ -248,6 +249,7 @@
 | 云南合道康成信息技术有限公司 | 信息技术 / 待核验 | 社区待复核 | 待判断 | [公开来源](https://kjt.yn.gov.cn/uploadfile/kjt_old/2019/0726/20190726043242887.pdf) |
 | 云南久远银海软件有限公司 | 民生软件 / 信息技术服务 | 社区待复核 | 待判断 | [公开来源](https://www.chidutech.com/web/article/detail/sid/NmTikn4iNaTpIpz) |
 | 云南南天电子信息产业股份有限公司 | 金融科技 / IT 服务 | 官网已核验 | 外包/交付、合作/客户线索 | [官网](https://www.nantian.com.cn/) |
+| 云南宁安数字科技股份公司 | AI / 算力服务 | 官网已核验 | 待判断 | [官网](https://www.ningandigital.com/) |
 | 云南软加科技有限公司 | 软件开发 / AI 应用 | 官网已核验 | 外包/交付、合作/客户线索 | [官网](https://www.softplus.dev/) |
 | 云南软捷科技有限公司 | 软件开发 / 云服务 | 官网已核验 | 外包/交付、合作/客户线索 | [官网](https://www.yunagile.com/) |
 | 云南申展软件有限公司 | 通信软件 / 呼叫中心 | 官网已核验 | 合作/客户线索 | [官网](https://www.wopbx.com/) |

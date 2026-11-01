@@ -114,3 +114,17 @@ npm run validate
 ## 不要为了看起来完整而牺牲可信度
 
 这个项目的价值不是“公司越多越好”，而是让每条线索都能回到公开来源。不能确认就标 `community_pending`；来源弱就写 `confidence_score: 2-3`；没有招聘证据就保留 `opportunities: ["unknown"]`。
+
+## 报道与公司库之间的核验队列
+
+`data/radar-review.json` 记录已有公开 RSS 快照中的报道及核验状态。它不是公司表：标题提及不证明主体全称、当地业务、正在招聘或合作意向，名称匹配也不会自动收录。公司搜索无结果时，可以转到首页的“报道核验进度”。
+
+本地导入入口是 `npm run radar:review -- --snapshot "$HOME/xin system/data/kunming-it-radar/latest.json"`。这是本机已有快照的导入，不联网、不抓详情、不重新运行新闻采集；只接受约定的公开快照路径。随后运行 `npm run generate:site-data`、`npm run validate` 和 `npm run build:site`，将核验进度编入静态页面。
+
+- `needs_review`：等待识别主体、核对官网等来源。自动匹配仅提供提示。
+- `linked`：核对公开来源后，人工关联到公司库中的现有 ID。
+- `no_company_in_title`：本次人工阅读标题未见明确公司名，不代表正文没有公司。
+
+人工决定保存于 `data/radar-review-decisions.json`，以队列的稳定 ID 为键，记录 `decision`、`companyIds` 和 `reviewedAt`。不要写私下认识的关系、联系方式或未核实判断。确认新公司后先更新主数据并完成生成、校验，再写关联决定、重新导入队列；简称写入公司的公开 `aliases`，用于检索与名称匹配。
+
+重复导入相同输入不会写文件。未处理的旧报道会保留；最多保存 36 条，满额时导入失败并保留旧队列，等待人工处理后再接收新快照。快照回退、样本数据、危险链接、敏感文本和无效关联均会阻止导入。新闻抓取失败时不导入、不重试。队列的快照日期不等于报道日期，关联到公司也不代表报道内容已获全面验证。

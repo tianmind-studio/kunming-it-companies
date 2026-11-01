@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import { getCompanies, readDataset } from "./companies-lib.mjs";
 import { safeDocumentHref } from "./site-security-lib.mjs";
+import { renderInline, renderMarkdown } from "./markdown-lib.mjs";
 
 const errors = [];
 
@@ -54,7 +55,7 @@ assert(index.includes("assets/social-card.svg"), "index.html should include a no
 assert(index.includes("昆明 IT 公司") && index.includes("Kunming tech companies"), "index.html should expose human-readable search intent copy.");
 assert(index.includes("<link rel=\"canonical\" href=\"https://kunming.tianmind.com/\">"), "index.html should include the domestic canonical URL.");
 assert(index.includes("application/ld+json") && index.includes("\"@type\": \"Dataset\""), "index.html should expose Dataset structured data.");
-assert(index.includes("data/site-data.json"), "index.html should preload the combined site data payload for faster first render.");
+assert(script.includes("data/site-data.json"), "script.js should load the combined site data payload without credentialed preloads.");
 assert(index.includes("rel=\"modulepreload\" href=\"script.js\""), "index.html should modulepreload the main script for faster first render.");
 assert(index.includes("guides.html"), "index.html should link to a user-facing guides page.");
 assert(index.includes("companies/"), "index.html should link to crawlable verified-company pages.");
@@ -180,8 +181,9 @@ assert(!index.includes("docs/search-guide.md") && !index.includes("docs/use-case
 assert(index.includes("docs/project-brief.html"), "index.html should link the public project brief as HTML.");
 assert(read("scripts/build-static-site.mjs").includes("generateMarkdownPages"), "build script should generate HTML pages from public Markdown docs.");
 assert(read("scripts/build-static-site.mjs").includes("generateCompanyPages"), "build script should generate crawlable pages for verified company records.");
-assert(read("scripts/build-static-site.mjs").includes("safeDocumentHref"), "Markdown links should pass through the safe document URL allowlist.");
-assert(read("scripts/build-static-site.mjs").includes("if (!safeHref) return label;"), "Unsafe Markdown links should render as text instead of active links.");
+assert(renderInline("[unsafe](javascript:alert)") === "unsafe", "Unsafe Markdown links should render as text instead of active links.");
+assert(renderInline("[source](data-standard.md#来源)").includes('href="data-standard.html#来源"'), "Local document fragments must survive HTML conversion.");
+assert(renderMarkdown("## 联系 / 本地社群").includes('id="联系--本地社群"'), "Rendered headings must expose navigable anchors.");
 for (const unsafeHref of ["javascript:alert(1)", "data:text/html,boom", "vbscript:msgbox(1)", "//evil.example/path", "https:\\evil.example/path", "\tjavascript:alert(1)"]) {
   assert(safeDocumentHref(unsafeHref) === "", `Markdown URL allowlist should reject ${JSON.stringify(unsafeHref)}.`);
 }

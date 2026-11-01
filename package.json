@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "npm run validate",
-    "validate": "npm run validate:data && node scripts/generate-companies-md.mjs --check && node scripts/export-companies-csv.mjs --check && node scripts/validate-csv.mjs && node scripts/generate-site-data.mjs --check && node scripts/generate-data-quality-report.mjs --check && node scripts/generate-data-cleanup-plan.mjs --check && node scripts/validate-repo-paths.mjs && node scripts/validate-public-docs.mjs && node scripts/validate-site.mjs && node scripts/validate-domestic-site.mjs && python3 -m py_compile server/lead_api.py",
+    "validate": "npm run test:unit && npm run validate:data && node scripts/generate-companies-md.mjs --check && node scripts/export-companies-csv.mjs --check && node scripts/validate-csv.mjs && node scripts/generate-site-data.mjs --check && node scripts/generate-data-quality-report.mjs --check && node scripts/generate-data-cleanup-plan.mjs --check && node scripts/validate-repo-paths.mjs && node scripts/validate-public-docs.mjs && node scripts/validate-site.mjs && node scripts/validate-domestic-site.mjs && python3 -m py_compile server/lead_api.py",
     "validate:data": "node scripts/validate-data.mjs",
     "generate:companies": "node scripts/generate-companies-md.mjs",
     "export:csv": "node scripts/export-companies-csv.mjs",
@@ -16,6 +16,9 @@
     "data:diff": "node scripts/report-data-changes.mjs",
     "report:data-changes": "node scripts/report-data-changes.mjs",
     "build:site": "node scripts/build-static-site.mjs && node scripts/validate-built-site.mjs",
-    "validate:built-site": "node scripts/validate-built-site.mjs"
+    "validate:built-site": "node scripts/validate-built-site.mjs",
+    "radar:review": "node scripts/radar-company-review.mjs",
+    "test:radar-review": "node --test tests/radar-company-review.test.mjs",
+    "test:unit": "node --test tests/*.test.mjs"
   }
 }

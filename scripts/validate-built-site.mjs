@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import { getCompanies, readDataset } from "./companies-lib.mjs";
 
 const root = process.cwd();
@@ -13,6 +14,18 @@ function assert(condition, message) {
 
 function read(relativePath) {
   return fs.readFileSync(path.join(dist, relativePath), "utf8");
+}
+
+// Replacement-string tokens such as $& in source code must stay literal when
+// assets are inlined; checking source files alone cannot catch a corrupted build.
+const home = read("index.html");
+const inlineModule = home.match(/<script type="module">([\s\S]*?)<\/script>/)?.[1];
+assert(inlineModule?.trim() === read("script.js").trim(), "built inline module must exactly preserve script.js, including replacement-string tokens.");
+const inlineStyle = home.match(/<style>([\s\S]*?)<\/style>/)?.[1];
+assert(inlineStyle?.trim() === read("styles.css").trim(), "built inline CSS must exactly preserve styles.css.");
+if (inlineModule) {
+  const parsed = spawnSync(process.execPath, ["--input-type=module", "--check"], { input:inlineModule, encoding:"utf8", timeout:10000 });
+  assert(parsed.status === 0, "built inline JavaScript must parse as an ES module.");
 }
 
 const dataset = readDataset();
@@ -71,10 +84,51 @@ for (const relativePath of ["README.html", "SUPPORT.html", ...fs.readdirSync(pat
   assert(!/href=["']\s*(?:javascript|data|vbscript):/i.test(html), `${relativePath} must not contain an active dangerous link protocol.`);
 }
 
+function listHtmlFiles(directory) {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+    const file = path.join(directory, entry.name);
+    return entry.isDirectory() ? listHtmlFiles(file) : entry.name.endsWith(".html") ? [file] : [];
+  });
+}
+
+// Check the actual publication artifact, including generated docs and detail pages.
+// This is local-only: external source URLs are not fetched or treated as live checks.
+const htmlFiles = listHtmlFiles(dist);
+for (const file of htmlFiles) {
+  const html = fs.readFileSync(file, "utf8").replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
+  const relative = path.relative(dist, file);
+  for (const [, rawHref] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
+    const href = rawHref.replaceAll("&amp;", "&");
+    if (/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(href)) continue;
+    let url;
+    let target;
+    try {
+      url = new URL(href, `https://build.invalid/${relative}`);
+      target = path.resolve(dist, `.${decodeURIComponent(url.pathname)}`);
+    } catch {
+      assert(false, `${relative}: malformed internal URL.`);
+      continue;
+    }
+    if (target !== dist && !target.startsWith(dist + path.sep)) {
+      assert(false, `${relative}: internal URL escapes the built site.`);
+      continue;
+    }
+    if (fs.existsSync(target) && fs.statSync(target).isDirectory()) target = path.join(target, "index.html");
+    assert(fs.existsSync(target), `${relative}: missing local link or asset ${href}.`);
+    if (url.hash && fs.existsSync(target) && target.endsWith(".html")) {
+      let fragment;
+      try { fragment = decodeURIComponent(url.hash.slice(1)); }
+      catch { assert(false, `${relative}: malformed URL fragment.`); continue; }
+      const targetHtml = fs.readFileSync(target, "utf8");
+      assert(targetHtml.includes(`id="${fragment}"`), `${relative}: missing anchor target ${href}.`);
+    }
+  }
+}
+
 if (errors.length) {
   console.error(`Built-site validation failed with ${errors.length} issue(s):`);
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
 
-console.log(`Built-site validation passed: ${companies.length} verified company pages are crawlable.`);
+console.log(`Built-site validation passed: ${companies.length} verified company pages; local links, assets and anchors checked across ${htmlFiles.length} HTML files.`);
