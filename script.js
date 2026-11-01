@@ -1010,15 +1010,19 @@ function renderRadarReview(review) {
   if (!summary || !list) return;
   if (!Array.isArray(review?.items)) { summary.textContent = '报道核验队列暂不可用，可通过提交线索补充公开来源。'; return; }
   const counts = review.summary;
-  summary.textContent = `来源快照 ${String(review.snapshotGeneratedAt).slice(0,10)} · ${counts.total} 条报道 · ${counts.needsReview} 条待核验 · ${counts.linked} 条已人工关联公司。报道日期不等于快照日期。`;
+  summary.textContent = `来源快照 ${String(review.snapshotGeneratedAt).slice(0,10)} · ${counts.total} 条报道 · ${counts.needsReview} 条待核验 · ${counts.linked} 条已关联公司 · ${counts.noCompanyInTitle || 0} 条标题未见公司 · ${counts.reviewedNotAdded || 0} 条已复核暂未收录。报道日期不等于快照日期。`;
+  list.replaceChildren();
   for (const item of [...review.items].sort((a,b) => (a.status !== 'needs_review') - (b.status !== 'needs_review'))) {
-    const status = {needs_review:'待识别与核验',linked:'已关联公司',no_company_in_title:'标题未见明确公司名'}[item.status] || '待核验';
+    const status = {needs_review:'待识别与核验',linked:'已关联公司',no_company_in_title:'标题未见明确公司名',reviewed_not_added:'已复核·暂未收录'}[item.status] || '待核验';
     const links = (item.matchedCompanyIds || []).map(id=>companies.find(c=>c.id===id)).filter(Boolean);
     const article = node('article',{className:'resource-card'},[
       node('span',{className:'resource-meta',text:`${status} · 报道日期 ${item.publishedAt ? item.publishedAt.slice(0,10) : '未标注'}`}),
       node('h3',{text:item.title}),
       node('a',{href:item.url,text:'查看公开报道'})
     ]);
+    if (item.review?.reason) article.append(node('p',{text:item.review.reason}));
+    if (item.review?.candidateNames?.length) article.append(node('p',{text:`待补录候选：${item.review.candidateNames.join('、')}。候选不等于已收录或核验通过。`}));
+    for (const [index,url] of (item.review?.evidenceUrls || []).entries()) article.append(node('a',{href:url,text:`复核依据 ${index + 1}`}));
     for (const company of links) article.append(node('p',{},[node('span',{text:item.status==='linked'?'关联记录：':'名称匹配提示（仍需核验）：'}),node('a',{href:`?q=${encodeURIComponent(company.name)}#directory`,text:company.name})]));
     list.append(article);
   }
