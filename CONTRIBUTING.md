@@ -2,7 +2,7 @@
 
 感谢你补充昆明和云南的技术机会公开信息。这个项目只整理公开来源，不做排名、就业承诺、公司背书或负面爆料归档。
 
-如果你不熟悉 GitHub，优先使用 [`submit.html`](submit.html)：填写在线表单、复制模板，或通过维护者微信提交公开来源。会 GitHub 的贡献者可以直接开 Issue 或提交 PR。
+如果你不熟悉 GitHub，优先使用[在线提交页](https://kunming.tianmind.com/submit.html)：填写在线表单、复制模板，或通过维护者微信提交公开来源。会 GitHub 的贡献者可以直接开 Issue 或提交 PR。
 
 ## 可以贡献什么
 
@@ -16,7 +16,7 @@
 | 报告错误 / 隐私问题 | [Data correction / privacy request](https://github.com/tianmind-studio/kunming-it-companies/issues/new?template=data-correction-privacy-request.yml) | 按实际影响处理 |
 | 报告网页或脚本问题 | [Bug report](https://github.com/tianmind-studio/kunming-it-companies/issues/new?template=bug-report.yml) | 静态站、脚本或文档 |
 
-公司数据以 `data/companies.json` 为主。`COMPANIES.md` 和 `data/companies.csv` 由脚本生成，不要手工改公司正文。
+公司数据以 `data/companies.json` 为主。`COMPANIES.md`、`data/companies.csv`、`data/site-data.json`、`docs/data-quality-report.md` 和 `docs/data-cleanup-plan.md` 由脚本生成，不要手工改生成内容。
 
 ## 来源要求
 
@@ -43,25 +43,29 @@
 4. 如果来源较弱，把记录保持为 `community_pending`，`confidence_score` 不要写高。
 5. 如果只是来源入口，不要写成确定公司、岗位、活动或项目。
 
-## 直接修改数据
+## 本地修改与检查
 
-1. 修改 `data/companies.json`。
-2. 运行：
+需要 Node.js 22、npm 和 Python 3。当前没有第三方 npm 依赖，无需配置数据库、账号或服务端凭据。
+
+1. Fork 或克隆仓库，在独立分支修改公司主数据 `data/companies.json` 或对应资源 CSV。
+2. 保留已有记录的稳定 `id`，核对主体与重复记录。只更新实际复核过的记录日期；`meta.updated_at` 表示数据集变更日期，不代表全量重新核验。
+3. 重新生成受影响的输出并检查：
 
 ```bash
 npm run generate:companies
 npm run export:csv
 npm run generate:data-quality
+npm run generate:site-data
+npm run data:diff -- --base-ref origin/main
 npm run validate
-```
-
-3. 如果改了静态站或文档，再运行：
-
-```bash
 npm run build:site
 ```
 
-4. 提交 PR，并在 PR 里说明改了什么、来源是什么、是否涉及隐私或敏感边界。
+`data:diff` 将比较结果写入 `docs/data-change-summary.md`。如果你的数据基线来自其他分支，请把 `origin/main` 换成实际基线。同步 README 中英版本的统计快照，并把相关生成文件与源数据放在同一个 PR。
+
+只修改网页、文档、模板或脚本时，运行 `npm run validate` 和 `npm run build:site`。修改页面交互后，还应通过 `npm run serve` 在桌面与手机尺寸检查搜索、筛选、清空条件、来源链接和错误提示。构建通过不能代替浏览器交互检查，也不能证明在线服务已发布。
+
+PR 请说明具体改动、公开来源、实际核验日期及运行过的检查。新增事实保留可复核链接；来源不足时保持待复核状态。自动化校验通过后，仍由维护者复核事实与收录边界。
 
 ## 字段和边界
 
@@ -74,8 +78,8 @@ npm run build:site
 
 关键原则：
 
-- 不确定的字段可以留空或写 `unknown`，不要猜。
-- `notes` 只写事实，不写主观评价。
+- 字段必须符合[数据结构](docs/data-schema.md)。允许为空的字段留空；支持 `unknown` 的枚举字段可写 `unknown`，不要为通过校验而猜值。
+- `notes` 只写公开来源支持的事实，不写主观评价。`confidence_score` 是来源强度，不是公司评分。
 - 没有明确招聘页时，不要编造实习或招聘信息。
 - 发现信息过期时，优先标记 `outdated`，不要直接删除已有有效数据。
 - `opportunities` 和 `suitable_for_*` 是检索提示，不是承诺。

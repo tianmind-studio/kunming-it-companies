@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getCompanies, readDataset, sourceTypeLabel } from "./companies-lib.mjs";
-import { safeDocumentHref } from "./site-security-lib.mjs";
+import { renderMarkdown } from "./markdown-lib.mjs";
 import { safeJsonForHtml } from "./site-data-lib.mjs";
 
 const root = process.cwd();
@@ -166,7 +166,7 @@ function getStaticStats() {
 
 function replaceStat(html, id, value) {
   const pattern = new RegExp(`(<strong id="${id}">)([^<]*)(</strong>)`, "g");
-  return html.replace(pattern, `$1${escapeHtml(String(value))}$3`);
+  return html.replace(pattern, (_, before, _old, after) => before + escapeHtml(String(value)) + after);
 }
 
 function injectStaticStatsIntoIndex() {
@@ -178,14 +178,14 @@ function injectStaticStatsIntoIndex() {
   }
   const styles = fs.readFileSync(path.join(outDir, "styles.css"), "utf8");
   const script = fs.readFileSync(path.join(outDir, "script.js"), "utf8");
-  html = html.replace('    <link rel="stylesheet" href="styles.css">\n', `    <style>\n${styles}\n    </style>\n`);
+  html = html.replace('    <link rel="stylesheet" href="styles.css">\n', () => `    <style>\n${styles}\n    </style>\n`);
   html = html.replace(/\n\s*<link rel="modulepreload" href="script\.js">\n/, "\n");
   html = html.replace(/\n\s*<link id="siteDataPreload"[^>]+>\n/, "\n");
   html = html.replace(
     "    <!-- KTR_BOOTSTRAP_DATA -->",
-    `    <script id="kunmingSiteData" type="application/json">${safeJsonForHtml()}</script>`
+    () => `    <script id="kunmingSiteData" type="application/json">${safeJsonForHtml()}</script>`
   );
-  html = html.replace('    <script src="script.js" type="module"></script>', `    <script type="module">\n${script}\n    </script>`);
+  html = html.replace('    <script src="script.js" type="module"></script>', () => `    <script type="module">\n${script}\n    </script>`);
   fs.writeFileSync(indexPath, html);
 }
 
@@ -329,6 +329,7 @@ function renderCompanyPage(company) {
         <p><a href="./">返回全部已核验记录</a> · <a href="../submit.html?company=${encodeURIComponent(name)}&amp;type=update">提交更正来源</a></p>
       </article>
     </main>
+    <footer class="site-footer">技术支持：<a href="https://bianyixianshi.com/">编译现实</a></footer>
   </body>
 </html>
 `;
@@ -390,6 +391,7 @@ function renderCompanyIndexPage(companies) {
       </header>
       <section class="guide-grid" aria-label="已核验公司列表">${items}</section>
     </main>
+    <footer class="site-footer">技术支持：<a href="https://bianyixianshi.com/">编译现实</a></footer>
   </body>
 </html>
 `;
@@ -421,130 +423,6 @@ function generateCompanyPages() {
     fs.writeFileSync(path.join(companyOut, companyPageFile(company)), renderCompanyPage(company));
   }
   updateBuiltSitemap(companies, dataset.meta?.updated_at || "2026-08-03");
-}
-
-function renderInline(markdown, context = "docs") {
-  let text = escapeHtml(markdown);
-  text = text.replace(/`([^`]+)`/g, "<code>$1</code>");
-  text = text.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-  text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
-    const safeHref = escapeHtml(safeDocumentHref(href, context));
-    if (!safeHref) return label;
-    return `<a href="${safeHref}">${label}</a>`;
-  });
-  text = text.replace(/\.md(<\/code>)/g, ".html$1");
-  return text;
-}
-
-function renderTable(lines, context = "docs") {
-  const rows = lines.map((line) => line.trim().replace(/^\||\|$/g, "").split("|").map((cell) => cell.trim()));
-  const [header, , ...body] = rows;
-  const head = header.map((cell) => `<th>${renderInline(cell, context)}</th>`).join("");
-  const bodyHtml = body.map((row) => `<tr>${row.map((cell) => `<td>${renderInline(cell, context)}</td>`).join("")}</tr>`).join("\n");
-  return `<div class="doc-table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${bodyHtml}</tbody></table></div>`;
-}
-
-function renderMarkdown(markdown, context = "docs") {
-  const lines = markdown.split(/\r?\n/);
-  const html = [];
-  let paragraph = [];
-  let list = [];
-  let orderedList = [];
-  let code = [];
-  let inCode = false;
-  let table = [];
-
-  function flushParagraph() {
-    if (!paragraph.length) return;
-    html.push(`<p>${renderInline(paragraph.join(" "), context)}</p>`);
-    paragraph = [];
-  }
-
-  function flushList() {
-    if (list.length) {
-      html.push(`<ul>${list.map((item) => `<li>${renderInline(item, context)}</li>`).join("")}</ul>`);
-      list = [];
-    }
-    if (orderedList.length) {
-      html.push(`<ol>${orderedList.map((item) => `<li>${renderInline(item, context)}</li>`).join("")}</ol>`);
-      orderedList = [];
-    }
-  }
-
-  function flushTable() {
-    if (!table.length) return;
-    html.push(renderTable(table, context));
-    table = [];
-  }
-
-  for (const line of lines) {
-    if (line.trim().startsWith("```")) {
-      if (inCode) {
-        html.push(`<pre><code>${escapeHtml(code.join("\n"))}</code></pre>`);
-        code = [];
-        inCode = false;
-      } else {
-        flushParagraph();
-        flushList();
-        flushTable();
-        inCode = true;
-      }
-      continue;
-    }
-
-    if (inCode) {
-      code.push(line);
-      continue;
-    }
-
-    if (!line.trim()) {
-      flushParagraph();
-      flushList();
-      flushTable();
-      continue;
-    }
-
-    if (/^\|.+\|$/.test(line.trim())) {
-      flushParagraph();
-      flushList();
-      table.push(line);
-      continue;
-    }
-
-    flushTable();
-
-    const heading = line.match(/^(#{1,4})\s+(.+)$/);
-    if (heading) {
-      flushParagraph();
-      flushList();
-      const level = heading[1].length;
-      html.push(`<h${level}>${renderInline(heading[2], context)}</h${level}>`);
-      continue;
-    }
-
-    const unordered = line.match(/^\s*[-*]\s+(.+)$/);
-    if (unordered) {
-      flushParagraph();
-      orderedList = [];
-      list.push(unordered[1]);
-      continue;
-    }
-
-    const ordered = line.match(/^\s*\d+\.\s+(.+)$/);
-    if (ordered) {
-      flushParagraph();
-      list = [];
-      orderedList.push(ordered[1]);
-      continue;
-    }
-
-    paragraph.push(line.trim());
-  }
-
-  flushParagraph();
-  flushList();
-  flushTable();
-  return html.join("\n");
 }
 
 function pageTitle(markdown, fallback) {
@@ -586,6 +464,7 @@ function renderDocPage(relativeMd) {
         ${body}
       </article>
     </main>
+    <footer class="site-footer">技术支持：<a href="https://bianyixianshi.com/">编译现实</a></footer>
   </body>
 </html>
 `;
@@ -625,6 +504,7 @@ function renderRootMarkdownPage(relativeMd) {
         ${body}
       </article>
     </main>
+    <footer class="site-footer">技术支持：<a href="https://bianyixianshi.com/">编译现实</a></footer>
   </body>
 </html>
 `;

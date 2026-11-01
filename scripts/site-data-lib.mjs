@@ -59,7 +59,8 @@ function readCsv(relativePath) {
 
 export function createSiteDataPayload() {
   const payload = {
-    dataset: readJson("data/companies.json")
+    dataset: readJson("data/companies.json"),
+    radarReview: readJson("data/radar-review.json")
   };
 
   for (const [field, relativePath] of csvResources) {

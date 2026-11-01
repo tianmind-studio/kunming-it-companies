@@ -4,13 +4,13 @@
 
 Base ref: `origin/main`
 
-Current dataset update: `2026-08-03`
+Current dataset update: `2026-09-14`
 
 ## Summary
 
 | Metric | Count |
 | --- | --- |
-| Added records | 0 |
+| Added records | 1 |
 | Deleted records | 0 |
 | Changed existing records | 0 |
 | Source upgrades | 0 |
@@ -19,7 +19,9 @@ Current dataset update: `2026-08-03`
 
 ## Added records
 
-No changes.
+| ID | Name | Status | Source type | Source |
+| --- | --- | --- | --- | --- |
+| yunnan-ningan-digital | 云南宁安数字科技股份公司 | 官网已核验 | 官网 | https://www.ningandigital.com/ |
 
 ## Deleted records
 

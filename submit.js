@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll("[data-copy-target]");
 const leadForm = document.getElementById("leadForm");
 const formStatus = document.getElementById("formStatus");
+let submitting = false;
 const primaryHost = "kunming.tianmind.com";
 const leadApiEndpoint = window.location.hostname === primaryHost
   ? "/api/leads"
@@ -11,14 +12,16 @@ async function copyTemplate(event) {
   const target = document.getElementById(button.dataset.copyTarget);
   if (!target) return;
 
+  let copied = false;
   try {
     await navigator.clipboard.writeText(target.value);
-    button.textContent = "已复制";
+    copied = true;
   } catch {
+    target.focus();
     target.select();
-    document.execCommand("copy");
-    button.textContent = "已复制";
+    try { copied = document.execCommand("copy"); } catch { /* Selection remains available. */ }
   }
+  button.textContent = copied ? "已复制" : "请长按复制已选文字";
 
   window.setTimeout(() => {
     button.textContent = "复制";
@@ -71,7 +74,7 @@ function isValidPublicUrl(value) {
 
 async function submitLead(event) {
   event.preventDefault();
-  if (!leadForm) return;
+  if (!leadForm || submitting || !leadForm.reportValidity()) return;
 
   const submitButton = leadForm.querySelector("button[type='submit']");
   const payload = buildPayload(leadForm);
@@ -81,31 +84,50 @@ async function submitLead(event) {
     return;
   }
 
+  submitting = true;
   submitButton.disabled = true;
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 15000);
   setStatus("正在提交，维护者会先复核再写入数据。", "neutral");
 
   try {
     const response = await fetch(leadApiEndpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
+      signal: controller.signal
     });
-    const result = await response.json().catch(() => ({}));
+    const result = await response.json().catch(() => null);
 
     if (!response.ok) {
-      throw new Error(result.error || "提交失败");
+      throw new Error(typeof result?.error === "string" ? result.error : "提交失败");
+    }
+
+    if (result?.ok !== true || typeof result.id !== "string" || !/^KMR-[A-Z0-9-]+$/.test(result.id)) {
+      throw new Error("未取得有效回执，内容已保留，请先向维护者确认是否收到，避免重复提交");
     }
 
     leadForm.reset();
     leadForm.elements.city.value = "昆明";
     setStatus(`已收到，编号 ${result.id}。维护者会按公开来源复核。`, "success");
   } catch (error) {
-    setStatus(`表单暂时不可用：${error.message}。可以复制下方模板后通过微信提交。`, "error");
+    const message = error.name === "AbortError"
+      ? "请求超时，尚未确认是否收到。内容已保留，请先向维护者确认，避免重复提交"
+      : error.message;
+    setStatus(`表单暂时不可用：${message}。也可复制下方模板联系维护者。`, "error");
   } finally {
+    window.clearTimeout(timeout);
+    submitting = false;
     submitButton.disabled = false;
   }
 }
 
 if (leadForm) {
+  const params = new URLSearchParams(window.location.search);
+  const company = params.get("company");
+  if (company) leadForm.elements.title.value = company.slice(0, 120);
+  if (["update", "correction"].includes(params.get("type"))) {
+    leadForm.elements.lead_type.value = "correction";
+  }
   leadForm.addEventListener("submit", submitLead);
 }

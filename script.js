@@ -55,6 +55,7 @@ let events = [];
 let projects = [];
 let meta = {};
 let currentFiltered = [];
+let visibleCompanyLimit = 12;
 let lastDialogTrigger = null;
 
 const verificationText = {
@@ -169,9 +170,24 @@ function normalizedQuery(value) {
     .replace(/\s+/g, " ");
 }
 
+function queryPattern(pattern, global = false) {
+  const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  // English intent words must not split names such as GitLab or Chain.
+  const source = /^[a-z0-9 ]+$/i.test(pattern)
+    ? `(^|[^a-z0-9])${escaped}(?=$|[^a-z0-9])`
+    : escaped;
+  return new RegExp(source, global ? "gi" : "i");
+}
+
 function hasPattern(normalized, compact, pattern) {
-  const lowerPattern = pattern.toLowerCase();
-  return normalized.includes(lowerPattern) || compact.includes(lowerPattern.replace(/\s+/g, ""));
+  return queryPattern(pattern).test(normalized)
+    || (!/^[a-z0-9 ]+$/i.test(pattern) && compact.includes(pattern.replace(/\s+/g, "")));
+}
+
+function removeQueryPattern(value, pattern) {
+  return value.replace(queryPattern(pattern, true), (...args) =>
+    /^[a-z0-9 ]+$/i.test(pattern) ? `${args[1]} ` : " "
+  );
 }
 
 function buildQueryGroups(rawQuery) {
@@ -195,14 +211,13 @@ function buildQueryGroups(rawQuery) {
     if (intent.patterns.some((pattern) => hasPattern(normalized, compact, pattern))) {
       addGroup(intent.terms);
       for (const pattern of intent.patterns) {
-        leftover = leftover.replaceAll(pattern.toLowerCase(), " ");
+        leftover = removeQueryPattern(leftover, pattern);
       }
     }
   }
 
-  for (const stopWord of queryStopWords) {
-    const lowerStopWord = stopWord.toLowerCase();
-    leftover = leftover.replaceAll(lowerStopWord, " ");
+  for (const stopWord of [...queryStopWords].sort((a, b) => b.length - a.length)) {
+    leftover = removeQueryPattern(leftover, stopWord);
   }
 
   for (const token of leftover.split(/\s+/).map((item) => item.trim()).filter(Boolean)) {
@@ -213,7 +228,7 @@ function buildQueryGroups(rawQuery) {
 }
 
 function matchesQueryGroups(text, groups) {
-  return !groups.length || groups.every((group) => group.some((term) => text.includes(term)));
+  return !groups.length || groups.every((group) => group.some((term) => queryPattern(term).test(text)));
 }
 
 function fieldValue(field) {
@@ -261,9 +276,10 @@ function readSearchStateFromUrl() {
 }
 
 function syncUrl(state) {
-  const params = new URLSearchParams();
+  const params = new URLSearchParams(window.location.search);
   const defaults = { sort: "relevance" };
   for (const [key, value] of Object.entries(state)) {
+    params.delete(key);
     if (!value || defaults[key] === value) continue;
     params.set(key, value);
   }
@@ -370,39 +386,33 @@ function normalize(company) {
   };
 }
 
-function parseCsvLine(line) {
-  const cells = [];
-  let current = "";
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let cell = "";
   let quoted = false;
-
-  for (let i = 0; i < line.length; i += 1) {
-    const char = line[i];
-    const next = line[i + 1];
-
-    if (char === '"' && quoted && next === '"') {
-      current += '"';
-      i += 1;
-    } else if (char === '"') {
-      quoted = !quoted;
-    } else if (char === "," && !quoted) {
-      cells.push(current);
-      current = "";
+  const source = String(text).replace(/^\uFEFF/, "");
+  for (let i = 0; i < source.length; i += 1) {
+    const char = source[i];
+    if (char === '"') {
+      if (quoted && source[i + 1] === '"') { cell += '"'; i += 1; }
+      else quoted = !quoted;
+    } else if (!quoted && char === ",") {
+      row.push(cell); cell = "";
+    } else if (!quoted && (char === "\n" || char === "\r")) {
+      row.push(cell);
+      if (row.some((value) => value !== "")) rows.push(row);
+      row = []; cell = "";
+      if (char === "\r" && source[i + 1] === "\n") i += 1;
     } else {
-      current += char;
+      cell += char;
     }
   }
-
-  cells.push(current);
-  return cells;
-}
-
-function parseCsv(text) {
-  const lines = text.trim().split(/\r?\n/);
-  const header = parseCsvLine(lines[0] || "");
-  return lines.slice(1).filter(Boolean).map((line) => {
-    const cells = parseCsvLine(line);
-    return Object.fromEntries(header.map((field, index) => [field, cells[index] || ""]));
-  });
+  if (quoted) throw new Error("CSV contains an unterminated quoted field.");
+  row.push(cell);
+  if (row.some((value) => value !== "")) rows.push(row);
+  const header = rows.shift() || [];
+  return rows.map((cells) => Object.fromEntries(header.map((field, index) => [field, cells[index] || ""])));
 }
 
 async function loadCsv(path) {
@@ -418,13 +428,14 @@ async function loadJson(path) {
 }
 
 function normalizeSiteDataPayload(payload) {
-  if (!payload?.dataset?.companies) return null;
+  if (!Array.isArray(payload?.dataset?.companies)) return null;
   return {
     dataset: payload.dataset,
     sourceLeadRows: Array.isArray(payload.sourceLeads) ? payload.sourceLeads : [],
     communityRows: Array.isArray(payload.communities) ? payload.communities : [],
     eventRows: Array.isArray(payload.events) ? payload.events : [],
-    projectRows: Array.isArray(payload.projects) ? payload.projects : []
+    projectRows: Array.isArray(payload.projects) ? payload.projects : [],
+    radarReview: payload.radarReview || null
   };
 }
 
@@ -436,8 +447,12 @@ function readInlineSiteData() {
 }
 
 async function loadSiteData() {
-  const inlineData = readInlineSiteData();
-  if (inlineData) return inlineData;
+  try {
+    const inlineData = readInlineSiteData();
+    if (inlineData) return inlineData;
+  } catch (error) {
+    console.warn("Inline site data unavailable, falling back to data files.", error);
+  }
 
   try {
     const combined = await loadJson("data/site-data.json");
@@ -461,6 +476,7 @@ function searchableText(company) {
   return [
     company.name,
     company.english_name,
+    ...(company.aliases || []),
     company.city,
     company.district,
     company.category,
@@ -608,6 +624,7 @@ function resetOneFilter(key) {
   state[key] = key === "sort" ? "relevance" : "";
   applySearchState(state);
   render();
+  (els.activeFilters?.querySelector("button") || els.search)?.focus();
 }
 
 function renderActiveFilters(state, resultCount) {
@@ -770,6 +787,8 @@ function renderFeatured(companiesToShow) {
 
   if (!visible.length) {
     els.featuredList.append(node("p", { className: "empty", text: "没有匹配记录。换个关键词，或提交公开来源补充线索。" }));
+    const reviewLink = node('a',{href:'#news-review',text:'查看尚待核验的报道线索'}); reviewLink.removeAttribute('target');
+    els.featuredList.append(reviewLink);
     return;
   }
 
@@ -790,6 +809,8 @@ function renderFeatured(companiesToShow) {
     ];
     const detailButton = node("button", { className: "card-action secondary", text: "查看详情" });
     detailButton.type = "button";
+    detailButton.setAttribute("aria-label", `${company.name}：查看详情`);
+    detailButton.setAttribute("aria-haspopup", "dialog");
     detailButton.addEventListener("click", () => openCompanyDialog(company, detailButton));
     const detailUrl = companyDetailUrl(company);
     const actions = [detailButton];
@@ -801,6 +822,7 @@ function renderFeatured(companiesToShow) {
 }
 
 function render(options = {}) {
+  if (options.append !== true) visibleCompanyLimit = 12;
   const state = currentSearchState();
   const queryGroups = buildQueryGroups(state.q);
   const category = state.category;
@@ -830,10 +852,12 @@ function render(options = {}) {
 
   if (!filtered.length) {
     els.list.append(node("p", { className: "empty", text: "没有匹配记录。可以换个关键词，或打开提交线索页补充公开来源。" }));
+    const reviewLink = node('a',{href:'#news-review',text:'未收录不代表不存在：查看报道核验进度'}); reviewLink.removeAttribute('target');
+    els.list.append(reviewLink);
     return;
   }
 
-  for (const company of filtered) {
+  for (const company of filtered.slice(0, visibleCompanyLimit)) {
     const title = node("h3", { text: company.name });
     const district = node("span", { className: "district", text: company.district || "区域待补" });
     const top = node("div", { className: "card-top" }, [title, district]);
@@ -846,6 +870,8 @@ function render(options = {}) {
 
     const detailButton = node("button", { className: "visit secondary", text: "详情" });
     detailButton.type = "button";
+    detailButton.setAttribute("aria-label", `${company.name}：查看详情`);
+    detailButton.setAttribute("aria-haspopup", "dialog");
     detailButton.addEventListener("click", () => openCompanyDialog(company, detailButton));
     const detailUrl = companyDetailUrl(company);
     const footerChildren = [
@@ -871,6 +897,29 @@ function render(options = {}) {
 
     els.list.append(card);
   }
+
+  if (filtered.length > visibleCompanyLimit) {
+    const showMore = node("button", {
+      className: "visit secondary",
+      text: `显示更多（还有 ${filtered.length - visibleCompanyLimit} 条）`
+    });
+    showMore.type = "button";
+    showMore.setAttribute("aria-controls", "companyList");
+    showMore.addEventListener("click", () => {
+      const previousCount = visibleCompanyLimit;
+      visibleCompanyLimit += 12;
+      render({ append: true, syncUrl: false });
+      els.list.children[previousCount]?.querySelector("button")?.focus({ preventScroll: true });
+    });
+    els.list.append(node("div", { className: "company-load-more" }, [
+      node("p", { text: `已展示 ${visibleCompanyLimit} / ${filtered.length} 条匹配记录，CSV 包含全部匹配结果。` }),
+      showMore
+    ]));
+  }
+}
+
+function preferredScrollBehavior() {
+  return window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
 }
 
 function applyIntent(event) {
@@ -890,7 +939,7 @@ function applyIntent(event) {
   render();
 
   if (scrollTarget) {
-    document.querySelector(scrollTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector(scrollTarget)?.scrollIntoView({ behavior: preferredScrollBehavior(), block: "start" });
   }
 }
 
@@ -955,15 +1004,39 @@ function renderResourcePanels() {
   });
 }
 
+function renderRadarReview(review) {
+  const summary = document.querySelector('#radarReviewSummary');
+  const list = document.querySelector('#radarReviewList');
+  if (!summary || !list) return;
+  if (!Array.isArray(review?.items)) { summary.textContent = '报道核验队列暂不可用，可通过提交线索补充公开来源。'; return; }
+  const counts = review.summary;
+  summary.textContent = `来源快照 ${String(review.snapshotGeneratedAt).slice(0,10)} · ${counts.total} 条报道 · ${counts.needsReview} 条待核验 · ${counts.linked} 条已关联公司 · ${counts.noCompanyInTitle || 0} 条标题未见公司 · ${counts.reviewedNotAdded || 0} 条已复核暂未收录。报道日期不等于快照日期。`;
+  list.replaceChildren();
+  for (const item of [...review.items].sort((a,b) => (a.status !== 'needs_review') - (b.status !== 'needs_review'))) {
+    const status = {needs_review:'待识别与核验',linked:'已关联公司',no_company_in_title:'标题未见明确公司名',reviewed_not_added:'已复核·暂未收录'}[item.status] || '待核验';
+    const links = (item.matchedCompanyIds || []).map(id=>companies.find(c=>c.id===id)).filter(Boolean);
+    const article = node('article',{className:'resource-card'},[
+      node('span',{className:'resource-meta',text:`${status} · 报道日期 ${item.publishedAt ? item.publishedAt.slice(0,10) : '未标注'}`}),
+      node('h3',{text:item.title}),
+      node('a',{href:item.url,text:'查看公开报道'})
+    ]);
+    if (item.review?.reason) article.append(node('p',{text:item.review.reason}));
+    if (item.review?.candidateNames?.length) article.append(node('p',{text:`待补录候选：${item.review.candidateNames.join('、')}。候选不等于已收录或核验通过。`}));
+    for (const [index,url] of (item.review?.evidenceUrls || []).entries()) article.append(node('a',{href:url,text:`复核依据 ${index + 1}`}));
+    for (const company of links) article.append(node('p',{},[node('span',{text:item.status==='linked'?'关联记录：':'名称匹配提示（仍需核验）：'}),node('a',{href:`?q=${encodeURIComponent(company.name)}#directory`,text:company.name})]));
+    list.append(article);
+  }
+}
+
 async function init() {
-  const { dataset, sourceLeadRows, communityRows, eventRows, projectRows } = await loadSiteData();
+  const { dataset, sourceLeadRows, communityRows, eventRows, projectRows, radarReview } = await loadSiteData();
 
   companies = dataset.companies.map(normalize).sort((a, b) => a.name.localeCompare(b.name, "zh-CN"));
   sourceLeads = sourceLeadRows;
   communities = communityRows;
   events = eventRows;
   projects = projectRows;
-  meta = dataset.meta;
+  meta = dataset.meta || {};
 
   populateFilters();
   applySearchState(readSearchStateFromUrl());
@@ -971,6 +1044,7 @@ async function init() {
   renderInsights();
   render({ syncUrl: false });
   renderResourcePanels();
+  renderRadarReview(radarReview);
 
   els.search.addEventListener("input", () => {
     if (els.heroSearch) els.heroSearch.value = els.search.value;
@@ -990,7 +1064,7 @@ async function init() {
     els.opportunity.value = "";
     els.sort.value = "relevance";
     render();
-    document.querySelector("#directory")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector("#directory")?.scrollIntoView({ behavior: preferredScrollBehavior(), block: "start" });
   });
   els.category.addEventListener("change", render);
   els.district.addEventListener("change", render);
@@ -1006,8 +1080,32 @@ async function init() {
     if (event.target === els.companyDialog) closeCompanyDialog();
   });
   els.companyDialog?.addEventListener("close", () => lastDialogTrigger?.focus?.());
+  window.addEventListener("popstate", () => {
+    applySearchState(readSearchStateFromUrl());
+    render({ syncUrl: false });
+  });
   for (const button of els.intentButtons) button.addEventListener("click", applyIntent);
 }
+
+// Contact stays usable even if directory data loading fails. Values are fixed,
+// never interpolated from the URL into HTML. Entry markers distinguish the CTA.
+const contactSources = {
+  hero: "昆明雷达＋你的方向", nav: "昆明雷达＋你的方向", mobile: "昆明雷达＋你的方向",
+  "opc-start": "雷达OPC＋想法交流", "opc-build": "雷达OPC＋作品协作", sample: "昆明雷达＋项目实践"
+};
+const contactEntry = new URLSearchParams(location.search).get("entry");
+const contactRemark = document.getElementById("contactRemark");
+if (contactRemark && Object.hasOwn(contactSources, contactEntry)) contactRemark.textContent = contactSources[contactEntry];
+document.getElementById("copyWechat")?.addEventListener("click", async () => {
+  const status = document.getElementById("copyWechatStatus");
+  try {
+    if (!navigator.clipboard?.writeText) throw new Error("clipboard unavailable");
+    await navigator.clipboard.writeText("beizhushaonlan");
+    if (status) status.textContent = "微信号已复制。打开微信，搜索并添加。";
+  } catch {
+    if (status) status.textContent = "未能自动复制，请长按上方微信号复制，或保存二维码。";
+  }
+});
 
 init().catch((error) => {
   const message = "数据加载失败，请确认通过国内站点、GitHub Pages 或本地服务器打开。仍可直接下载 JSON / CSV。";

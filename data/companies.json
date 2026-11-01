@@ -4,7 +4,7 @@
     "city": "Kunming",
     "province": "Yunnan",
     "country": "China",
-    "updated_at": "2026-08-03",
+    "updated_at": "2026-09-14",
     "source_policy": "Every company entry must keep at least one public, source-backed URL. Do not add private contacts or unverifiable hiring claims.",
     "name_zh": "昆明技术机会雷达",
     "description_zh": "面向昆明/云南大学生、开发者、自由职业者和技术创业者的本地技术机会地图。",
@@ -2798,6 +2798,42 @@
       "opportunities": [
         "outsourcing",
         "partnership"
+      ],
+      "confidence_score": 5,
+      "suitable_for_students": true,
+      "suitable_for_freelancers": true,
+      "suitable_for_job_seekers": false,
+      "suitable_for_founders": true
+    },
+    {
+      "id": "yunnan-ningan-digital",
+      "name": "云南宁安数字科技股份公司",
+      "english_name": "",
+      "aliases": [
+        "宁安数科",
+        "宁安数字科技"
+      ],
+      "city": "昆明",
+      "district": "",
+      "category": "AI / 算力服务",
+      "tags": [
+        "AI",
+        "算力服务",
+        "宁安数科",
+        "宁安数字科技"
+      ],
+      "website": "https://www.ningandigital.com/",
+      "source_url": "https://www.ningandigital.com/",
+      "source_urls": [
+        "https://www.ningandigital.com/",
+        "https://www.xhby.net/content/s6a994157e4b01de36f04a1c3.html"
+      ],
+      "source_type": "official_site",
+      "verification_status": "verified",
+      "last_checked": "2026-09-14",
+      "notes": "官网使用“宁安数科”品牌，展示云南宁安数字科技股份公司名称及 AI、算力相关业务；媒体另有“宁安数字科技”的报道。此条核验公司公开介绍与来源对应关系，不核验经营规模、客户成果或合作承诺。",
+      "opportunities": [
+        "unknown"
       ],
       "confidence_score": 5,
       "suitable_for_students": true,

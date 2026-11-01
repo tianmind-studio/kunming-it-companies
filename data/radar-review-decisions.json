@@ -1,0 +1,837 @@
+{
+  "0109931294cea0f0abaae36b": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "AI精准推送匹配岗位 昆明医科大学举办云南医药健康行业双选会 - 新华网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPRkZ2bGNOVlM2eTFKeWtLeEgya0dDVE8zOWJVYmhWMnB0eGE2bngtQWhpXzExQXRoZFN3RmdQSG85VERRR2ozN2t5UHZ1bWhHazJFQUJBMU5iT2N2dFc2cnEwRHBnTTV1TXgxSlRmMXBDTTl2MHVwOUtYT2REaE9iLWZn?oc=5",
+    "reason": "标题为昆明医科大学双选会，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiggFBVV95cUxPRkZ2bGNOVlM2eTFKeWtLeEgya0dDVE8zOWJVYmhWMnB0eGE2bngtQWhpXzExQXRoZFN3RmdQSG85VERRR2ozN2t5UHZ1bWhHazJFQUJBMU5iT2N2dFc2cnEwRHBnTTV1TXgxSlRmMXBDTTl2MHVwOUtYT2REaE9iLWZn?oc=5"
+    ]
+  },
+  "0894624a42f9fe1fcf14cb14": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南省数字经济开发区做强算力产业 “算力+数据+AI+出海”激活数字经济新动能 - 昆明信息港",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE56Nkl5U0ZySGM1M3JveGtnZF80TGhkYXdTZElBdUw1ZW84QW4yZmJtRGpqSEptWEk2a0VzU3pZRHBkbFYzWHRZQmRCWThXaFZ4QWR6ZDVWdnktVXZzT3ZwY3dNdU1Odw?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE56Nkl5U0ZySGM1M3JveGtnZF80TGhkYXdTZElBdUw1ZW84QW4yZmJtRGpqSEptWEk2a0VzU3pZRHBkbFYzWHRZQmRCWThXaFZ4QWR6ZDVWdnktVXZzT3ZwY3dNdU1Odw?oc=5"
+    ]
+  },
+  "0bf8db077d201d55c8e043bf": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "打造轨道上的智慧城市 昆明地铁5号线内置多项“黑科技” - 中国青年报",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5OQXFQX19TVkhhc2tuWTlhM2c3WnM1UmwxM0ZiMUtUY25NczEtNDVadjZrd3IxcUItZHpUaGluWk5OTmh2c1dIa2NmVkI0akw3WGtOd1Z0bUVNekRjNUItM0dnZ09vcVJNeGRteGdZTzhsbHVZeEVEOGpB?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiekFVX3lxTE5OQXFQX19TVkhhc2tuWTlhM2c3WnM1UmwxM0ZiMUtUY25NczEtNDVadjZrd3IxcUItZHpUaGluWk5OTmh2c1dIa2NmVkI0akw3WGtOd1Z0bUVNekRjNUItM0dnZ09vcVJNeGRteGdZTzhsbHVZeEVEOGpB?oc=5"
+    ]
+  },
+  "0c3bf5cad8995939297ae89f": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "10月1日试开园！昆明这个公园有新“玩尝” - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE52b2IxMmxrVkd6cVVRcF9Vd0d2RUpidWw3MFgzN3BmZnJycHNZR1pyQVNzRWNQVGtlaE1oM0FDOVo5MkRjajdicg?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiSEFVX3lxTE52b2IxMmxrVkd6cVVRcF9Vd0d2RUpidWw3MFgzN3BmZnJycHNZR1pyQVNzRWNQVGtlaE1oM0FDOVo5MkRjajdicg?oc=5"
+    ]
+  },
+  "0d475f468d9fdebc6b438b54": {
+    "decision": "linked",
+    "companyIds": [
+      "yunnan-ningan-digital"
+    ],
+    "reviewedAt": "2026-09-14",
+    "title": "跳出算力硬件内卷，全栈服务开辟西南AI落地新赛道｜宁安数字科技差异化发展之路 - 新华报业网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0tSEpXRGlGNUZJekszSkppX1hrQTViVTNzWnpza1RUQjNmQmJQRE02RE1lV2hjcjlwRE1rT0RSTU9lOWFWWDFVZDE5Wnp2LVRTZGFBQW9zdHNGZ2xtczNYYW8xMWlYNVdGZ3U0?oc=5",
+    "reason": "既有已核验公司记录与本报道关联；关联不代表报道内全部经营或合作主张均获核实。",
+    "evidenceUrls": [
+      "https://www.ningandigital.com/"
+    ]
+  },
+  "0de90fb6fc4c134462211f3d": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明市第七、八水质净化厂设施设备更新改造项目通过竣工验收 - 新浪财经",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNN0ZNZ1RudTJJNjlsMXFEU2RYQUxMYlF2eDRDR0JGS0I3SXZXTUpkWWltTVMwNU01YjNwcmVnckZSdUlTQ0k0d3hoNEQ0dkNnRWFmMTk2c0JHY3dkOFB0RlB0b1JNcnFSb2stSzE2ZlhIbExuSGp6SmNBdy1MamUzR0tBNVg?oc=5",
+    "reason": "标题为水质净化厂设施改造项目验收，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMihAFBVV95cUxNN0ZNZ1RudTJJNjlsMXFEU2RYQUxMYlF2eDRDR0JGS0I3SXZXTUpkWWltTVMwNU01YjNwcmVnckZSdUlTQ0k0d3hoNEQ0dkNnRWFmMTk2c0JHY3dkOFB0RlB0b1JNcnFSb2stSzE2ZlhIbExuSGp6SmNBdy1MamUzR0tBNVg?oc=5"
+    ]
+  },
+  "0f70ad2e7199a7a64a363471": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "全球媒体聚焦 | 中国正加速机器人应用和落地 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1HVnNhdl9Od1Y3eUV5NzZuWlBzTjkySFYyOFNFRzdiZ0xjNXZBbkI1VlY1V1pwdW4yT1ozN2VndlkzdTZGbUZjaWNEUFNvb2NmMkVoalY0SGY3bWJzRkluZFR1VFhkQQ?oc=5",
+    "reason": "标题为机器人应用泛论，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1HVnNhdl9Od1Y3eUV5NzZuWlBzTjkySFYyOFNFRzdiZ0xjNXZBbkI1VlY1V1pwdW4yT1ozN2VndlkzdTZGbUZjaWNEUFNvb2NmMkVoalY0SGY3bWJzRkluZFR1VFhkQQ?oc=5"
+    ]
+  },
+  "178078c8969864695e09af13": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "签约、拿地、注册、招聘！宁德时代云南昆明锂电池基地全面提速 - 新浪财经",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE95dGN3bV9zTnN6YWl0ZkdxbHd0MlpFVlEzNTlFeU5MbUczdHFmclV6REFjVEFjWnBTSWxPTUtqbTJ3cUthT3ZhNnZWUm5DcFZwMkg0ZmdIM2xJaTV5Uy1COXE3REJ5Vm1PRW9udHZuV2lOWkxuZmhtZQ?oc=5",
+    "reason": "本条为宁德时代锂电制造基地项目报道，未提供本地软件、AI或数字化服务团队的收录依据。历史招聘文字不作为当前招聘事实。",
+    "evidenceUrls": [
+      "https://www.catl.com/news/9578.html",
+      "https://www.kunming.cn/news/c/2026-04-01/14029950.shtml",
+      "https://m.yunnan.cn/system/2026/04/01/033944707.shtml",
+      "https://finance.sina.com.cn/roll/2026-04-02/doc-inhtavkc4464680.shtml"
+    ],
+    "reasonCode": "outside_scope"
+  },
+  "179fe61dab04687f0ce7ee20": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "官渡区人工智能产业发展大会举行 多个项目现场签约 - 央广网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9nMEVkOFhrOUlseHZ5TklOZEljSmY0OU1wRXBONVI0eVNRUFFDcHRpa29nQWlPYjJFTG8ycll0ang0VlRXaHg5QTBiZlloLTFfcFdqWDJNVFg1N0tXMUk0U29xYkwxRjgtbElvYWVR?oc=5",
+    "reason": "标题为官渡区AI发展大会及项目签约，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMibkFVX3lxTE9nMEVkOFhrOUlseHZ5TklOZEljSmY0OU1wRXBONVI0eVNRUFFDcHRpa29nQWlPYjJFTG8ycll0ang0VlRXaHg5QTBiZlloLTFfcFdqWDJNVFg1N0tXMUk0U29xYkwxRjgtbElvYWVR?oc=5"
+    ]
+  },
+  "18a3a88c792f0383653b4159": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南昆明呈贡区赴成都开展专题招商推介- 中国日报网 - China Daily",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTE82QVRYSzdzRkN4b3hqOUstUlRnbnRLZWpPazRfNmFoTDRyVEJsUFBNUFBsQUZnRUVWVU9CY0lxQW91NFg2bDRkbTVnQ0tiSE53VER4dm10emZuTHNWVTBlODlqd2xzUnZkUnBab3hzNldxeVZwRG1qU2dZem8?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMifEFVX3lxTE82QVRYSzdzRkN4b3hqOUstUlRnbnRLZWpPazRfNmFoTDRyVEJsUFBNUFBsQUZnRUVWVU9CY0lxQW91NFg2bDRkbTVnQ0tiSE53VER4dm10emZuTHNWVTBlODlqd2xzUnZkUnBab3hzNldxeVZwRG1qU2dZem8?oc=5"
+    ]
+  },
+  "1b0acd129bc17d8007e421a8": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "亚太，不做美国AI的韭菜 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1jb1l3MU02TzRmMmtLYU5UdWF3SzVmRXZSaUdaWnQyZGYyaDd6RkdxLVlUN1FiNmloMEJYOHA1Z3hlVzh0YU1Ga0Z4TXlhdkttdE0zZmN0cVQzcTFEWDFPTjV6dkpCQQ?oc=5",
+    "reason": "标题为亚太与美国AI相关议论，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1jb1l3MU02TzRmMmtLYU5UdWF3SzVmRXZSaUdaWnQyZGYyaDd6RkdxLVlUN1FiNmloMEJYOHA1Z3hlVzh0YU1Ga0Z4TXlhdkttdE0zZmN0cVQzcTFEWDFPTjV6dkpCQQ?oc=5"
+    ]
+  },
+  "1b94acfc7a2c5b371739e8c0": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "广西经济，向海“三级跳” | 活力中国调研行 - 昆明信息港",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5lSmdOWUZXT3VOZktZUDNBQ0tVbGJPa1psOG5tZWZScXFUaHZYLXNsMHdlMm5nS0VFc2M5eFpJRzN0QVo0V1E2Y0JCMEZQOG8xSDZSMFdjQVlwR09MaGVKZGRzbWlUUQ?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5lSmdOWUZXT3VOZktZUDNBQ0tVbGJPa1psOG5tZWZScXFUaHZYLXNsMHdlMm5nS0VFc2M5eFpJRzN0QVo0V1E2Y0JCMEZQOG8xSDZSMFdjQVlwR09MaGVKZGRzbWlUUQ?oc=5"
+    ]
+  },
+  "20b24d829557898b1ce22013": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "AI+OPC创业新范式：昆明庾园社区打造AI创业“梦工厂” - sohu.com",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCdnpFODE1NmU5U19SVWZ4S1hfamJkcXhOenUxcl95RU9aMWI5Z3lCMDNIRmFDX3RuZ3FEOW1aQlA0Nl9sRkRyUG9xLTdLa2s3NHRNd0pB?oc=5",
+    "reason": "标题具名庾园社区和AI创业空间背景，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCdnpFODE1NmU5U19SVWZ4S1hfamJkcXhOenUxcl95RU9aMWI5Z3lCMDNIRmFDX3RuZ3FEOW1aQlA0Nl9sRkRyUG9xLTdLa2s3NHRNd0pB?oc=5"
+    ]
+  },
+  "24a8144726004e6810fd2c78": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "让AI懂数据、懂组织、懂业务，昆明成WPS组织级AI办公示范城市 - 搜狐",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNEdkWWhkOE4wcVA1bmxwa1hPdll4eU43cG5qT2o3d3BIblQwTzlBZWZLaHEyeFNrVkdLbnVjdGlZbnVBbERtWTFYWDhDeThkZmFuM0hORXdZQVNxYk15RmtiOW1ZWlFOeGoxMTV4bTNfVXB3ZnBnSHVCLW5ocGJfZkUxQUpoU3h1WjFoUA?oc=5",
+    "reason": "标题明确具名WPS产品品牌。WPS Comate属于金山办公的组织级AI办公产品，品牌可对应北京金山办公软件股份有限公司。报道说明在昆明举办活动及本地用户案例，不能据此推断昆明注册公司、分公司或本地研发团队。现有75条无对应主体；未取得可核验昆明本地主体证据，本轮不新增、不关联现有公司。",
+    "evidenceUrls": [
+      "https://www.wps.cn/KINGSOFT",
+      "https://comate.wps.cn/",
+      "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF",
+      "https://epaper.cs.com.cn/zgzqb/html/2026-10/28/nw.D110000zgzqb_20261028_2-B160.htm",
+      "https://society.yunnan.cn/system/2026/10/17/034175875.shtml",
+      "https://m.sohu.com/a/1089621972_120285954"
+    ],
+    "reasonCode": "evidence_insufficient"
+  },
+  "288b326f64c2a94262f438a4": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "渝昆高铁云南首个区段配套电网项目全部投运 - 搜狐",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41Nm1lXzJ5c2hISWw5UTNSbTFWVHRpNTladUJDcHFhdzlhZ2ZzakRzUmdtcmxlREJacFZHLXdpczhoNm5XUm41V2ZlaFZYVmlaYm9DVGIzYVpXaXBncVc0RjFrQVV5a21RMkVR?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMia0FVX3lxTE41Nm1lXzJ5c2hISWw5UTNSbTFWVHRpNTladUJDcHFhdzlhZ2ZzakRzUmdtcmxlREJacFZHLXdpczhoNm5XUm41V2ZlaFZYVmlaYm9DVGIzYVpXaXBncVc0RjFrQVV5a21RMkVR?oc=5"
+    ]
+  },
+  "2b9bf52bce3cfae60303f163": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "WPS Comate组织级AI办公先锋先行城市峰会在昆明举行 - 搜狐",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRVhkY05EWlR6elBCdTRTSndFZmlEbnV0UUZLd01qVXF2XzFGb1BsMDcxWG9NY2NybWZ4QmZROU1YYklNa0dfYkV3RXVXUV9KcVJibk5pV01LWjFRTmFmc2JVQ0JMT0xBb0Zhc2hKSENiaFFBZll0RlBTSERFcW9WZGdmV2piXzFGMDVVcw?oc=5",
+    "reason": "标题明确具名WPS产品品牌。WPS Comate属于金山办公的组织级AI办公产品，品牌可对应北京金山办公软件股份有限公司。报道说明在昆明举办活动及本地用户案例，不能据此推断昆明注册公司、分公司或本地研发团队。现有75条无对应主体；未取得可核验昆明本地主体证据，本轮不新增、不关联现有公司。",
+    "evidenceUrls": [
+      "https://www.wps.cn/KINGSOFT",
+      "https://comate.wps.cn/",
+      "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF",
+      "https://epaper.cs.com.cn/zgzqb/html/2026-10/28/nw.D110000zgzqb_20261028_2-B160.htm",
+      "https://society.yunnan.cn/system/2026/10/17/034175875.shtml",
+      "https://m.sohu.com/a/1089621972_120285954"
+    ],
+    "reasonCode": "evidence_insufficient"
+  },
+  "2ecd2f4145b9db13f5063833": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "裕贡之夜巨星演唱会昆明站定档9月4日 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9faGpTZ00xMXRucy1EZUxpeW01REFiSVZfQ0xDVUh4WFV0VWQ2S0tsRVNTaEdBZ2R2SnpPaGJzVGlKYW5OOERVczQtMGkzcW8?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9faGpTZ00xMXRucy1EZUxpeW01REFiSVZfQ0xDVUh4WFV0VWQ2S0tsRVNTaEdBZ2R2SnpPaGJzVGlKYW5OOERVczQtMGkzcW8?oc=5"
+    ]
+  },
+  "31c9c7e71f04f175787360fd": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "300多人聚首昆明、10个项目签约、6位专家献策 云南绿电价值转化开启一场“头脑风暴” - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA0c3g5ekxSNFVsUDdZT2xZc3I4TEtrNDNISjk4MmJFVWdRcXp3TzVoaHZWVG5VeHdOclJJSlAwWnczMExnZmdMX0ZaVlllaHpPbjdnWWtXLTFsakxpMmtfSFJnMEwydw?oc=5",
+    "reason": "标题为绿电研讨及项目签约，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA0c3g5ekxSNFVsUDdZT2xZc3I4TEtrNDNISjk4MmJFVWdRcXp3TzVoaHZWVG5VeHdOclJJSlAwWnczMExnZmdMX0ZaVlllaHpPbjdnWWtXLTFsakxpMmtfSFJnMEwydw?oc=5"
+    ]
+  },
+  "38a55d7b714e5e3ed47aa883": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "中信银行昆明分行举办2026年数智化创新技能大赛 - 中国新闻网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9rQmJHZkdWNVUtRUFCMHpOV3FwV0xLTzN1c3poTUFoRmRybktTWmc5RU1wbl9RTUJNbFBreUtyT09UYjgzU21HQXFmZmI1b1NrMWdBbzVhSUNrYWkwSTh4SGR1ZEV4ZjM2?oc=5",
+    "reason": "云南网同题记者报道确认活动为中信银行昆明分行内部数智化创新技能竞赛，参赛者为青年员工、覆盖银行业务条线；这是本地金融机构内部AI应用/人才培养新闻，没有新增独立IT公司主体，也不证明公开招聘、外包或采购。现有公司主库没有该分行记录，不应硬关联。",
+    "evidenceUrls": [
+      "https://finance.yunnan.cn/system/2026/10/20/034177874.shtml",
+      "https://www.citicbank.com/"
+    ],
+    "reasonCode": "outside_scope"
+  },
+  "3bfd85ab19fea0a03ae4386a": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明人工智能计算中心：算力筑基赋能新质生产力- 中国日报网 - China Daily",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTE16UG5wYUlOdDRsZ0Z0ejl6eUc5c0VhcW5KZm9Vd0VoUDBaSEJENTN4X0U1QWtDUlM0OUE5NWVVdmR6SVJPR0g2aHpJWE5iLWVYNGMtN1pDSXMxZnBld2tTbTlHSkRhYkJZa0hXYnZhR2p2eXg0TE41OEllcGQ?oc=5",
+    "reason": "本地AI算力服务品牌有公开来源支持；品牌、运营公司与后续同名法人的对应关系尚未确认，保留候选，不与现有公司强行关联。",
+    "evidenceUrls": [
+      "https://yn.chinadaily.com.cn/a/202511/24/WS69244c90a310942cc49931c8.html",
+      "https://www.ynaicc.com/service___HyVhxcjAE",
+      "https://www.kunming.cn/news/c/2023-04-28/13697745.shtml",
+      "https://www.kunming.cn/news/c/2026-10-21/14081298.shtml"
+    ],
+    "reasonCode": "company_candidate",
+    "candidateNames": [
+      "昆明人工智能计算中心"
+    ]
+  },
+  "3df32ff6c25e3f63da34a26f": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南数字影视产业园（基地）项目规划专家论证会举行- 中国日报网 - China Daily",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5OWpWOEU5aF9ubS1BQkVTdllKbnlCQUdKUXpkT0t6cU5kdURKMDhOUk9PR0VzOHFnXzFneDVkbEtDa1JrNjg0QWRRRmdBc0tHTlAxYTd0S2w0TmlrUVRudkZjQUdwZVVJSm5mSG5EZ05qUGFzd0xSZUFXanA?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5OWpWOEU5aF9ubS1BQkVTdllKbnlCQUdKUXpkT0t6cU5kdURKMDhOUk9PR0VzOHFnXzFneDVkbEtDa1JrNjg0QWRRRmdBc0tHTlAxYTd0S2w0TmlrUVRudkZjQUdwZVVJSm5mSG5EZ05qUGFzd0xSZUFXanA?oc=5"
+    ]
+  },
+  "40aa89f3eb2bc44b72c68333": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明呈贡区四大支柱协同聚势产业创新引领发展- 中国日报网 - China Daily",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBreDZXejR1TjBOUjZ6X2pLcEZ2emxnbmlkWGpSbjRlTUMyV0FpUmQ0YW5QWFVDMkExYUNNR3I4U1pQZ205eXdWVmlLNlJjenhKWlZfVFNGSXRfelVkVllhWUhzT3hCYnFqVjNnT0pIam0ybHlzZ0tZMHUtNTk?oc=5",
+    "reason": "标题为呈贡区产业发展综述，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMifEFVX3lxTFBreDZXejR1TjBOUjZ6X2pLcEZ2emxnbmlkWGpSbjRlTUMyV0FpUmQ0YW5QWFVDMkExYUNNR3I4U1pQZ205eXdWVmlLNlJjenhKWlZfVFNGSXRfelVkVllhWUhzT3hCYnFqVjNnT0pIam0ybHlzZ0tZMHUtNTk?oc=5"
+    ]
+  },
+  "4412cae480728eb291f32e17": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明全力建设数字经济产业发展高地——竞逐数智产业新赛道- 云新闻 - 云南日报",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83Rl8tWF9ZS3Y1bG1KUmVDeEdVdnVCOERjdmhQS3l2czFUVHZNTE02bFNMckFBNXFlb3JGdjNBSm52TWNRS1ptWTJwR1M3LTRKV2U5VlFBSnlpeEE3Ti13ODJ3Z25iNHY3bUExNw?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMibEFVX3lxTE83Rl8tWF9ZS3Y1bG1KUmVDeEdVdnVCOERjdmhQS3l2czFUVHZNTE02bFNMckFBNXFlb3JGdjNBSm52TWNRS1ptWTJwR1M3LTRKV2U5VlFBSnlpeEE3Ti13ODJ3Z25iNHY3bUExNw?oc=5"
+    ]
+  },
+  "4757fc432232760a8b7df61a": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明市麻线沟雨水泵站项目通过初步验收 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBreXZhekktYXBzcWV1WndIckpyZnZ1QnljdmJuRmc1dmRuVGRTY0RQay1WakRyRHo3YWhGZ2c0WVUyTDUtWHNWZw?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBreXZhekktYXBzcWV1WndIckpyZnZ1QnljdmJuRmc1dmRuVGRTY0RQay1WakRyRHo3YWhGZ2c0WVUyTDUtWHNWZw?oc=5"
+    ]
+  },
+  "4fa9f82794445c9196183090": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "向云而生 聚数成势 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1lbG5GeWtUMlIzTHMtX3JXajFCV21fWG1uLWdkbnQ1ajVITVJEZXhnUFVwdFB2dVVUWjl3MERjVjNUbk5qT0VOZ09fVVhUcUQ4Y3VwRlRoNHZZUFdFaWR3ai1KUTV5Zw?oc=5",
+    "reason": "标题仅为“向云而生 聚数成势”，未具名企业。结论严格限于标题，不判断正文是否包含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1lbG5GeWtUMlIzTHMtX3JXajFCV21fWG1uLWdkbnQ1ajVITVJEZXhnUFVwdFB2dVVUWjl3MERjVjNUbk5qT0VOZ09fVVhUcUQ4Y3VwRlRoNHZZUFdFaWR3ai1KUTV5Zw?oc=5"
+    ]
+  },
+  "56f214a8c82bd174d65c68ad": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "AI中国·青春华章｜从深海到星空，青春正在作答！ - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpbVlHcW1LWFNZWm5EWnZDa1VYMDhudEdPc3VWZ3BUbi1jUlEtLUFRQzdZa3lZSXIwQ1V2Z0RDOS1qUVFGSUlpaXhZcXdhMDZ6M3Nfb29ZNVpMeVFWV0JnR20xUTFOUQ?oc=5",
+    "reason": "标题是 AI 主题青春叙事，未出现可识别的企业名称；仅作标题级判断，不推断报道正文是否另含企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpbVlHcW1LWFNZWm5EWnZDa1VYMDhudEdPc3VWZ3BUbi1jUlEtLUFRQzdZa3lZSXIwQ1V2Z0RDOS1qUVFGSUlpaXhZcXdhMDZ6M3Nfb29ZNVpMeVFWV0JnR20xUTFOUQ?oc=5"
+    ]
+  },
+  "59897696769c29f8d6440a61": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "AI大潮下，职业技能人才如何以“技”立身 - 昆明信息港",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9PbERBQ0pCRzNiOVpfeGk3UDRPRHlneWRIeldmaGYxdEl5VkdWdVdKT3QyU1pHNTBVY0luSnd6ZXZuS2xQZTMwd0RLSGNjdmFPbFhDc0FCOXZ1cHRtZkx1RHVjOXlmZw?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9PbERBQ0pCRzNiOVpfeGk3UDRPRHlneWRIeldmaGYxdEl5VkdWdVdKT3QyU1pHNTBVY0luSnd6ZXZuS2xQZTMwd0RLSGNjdmFPbFhDc0FCOXZ1cHRtZkx1RHVjOXlmZw?oc=5"
+    ]
+  },
+  "63856f673a2f4a95ba67776f": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南机电职业技术学院与昆明移动携手发布数智职教新生态 - QQ News",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1XTVZkbXktYTNTZ2hhVXgwN0pZa3ZnVjBQZ1lMRS05NXRGeVFBYzU3ZU9YNTFrdkhFV1ViYUd4ZE9CeFZEZHE4TEliZEk4NnkwNW54ZzRR?oc=5",
+    "reason": "两家媒体原始报道支持昆明移动分公司的校企数字化合作与主体全称。保留通信服务候选，与省公司区分层级；院校不自动列为公司，历史会议不作为当前活动。",
+    "evidenceUrls": [
+      "https://www.kunming.cn/info/c/2026-03-20/14026809.shtml",
+      "https://m.yunnan.cn/system/2026/03/23/033928597.shtml",
+      "https://www.ynmec.edu.cn/xxgk/xxjj"
+    ],
+    "reasonCode": "company_candidate",
+    "candidateNames": [
+      "中国移动通信集团云南有限公司昆明分公司"
+    ]
+  },
+  "64b7fbe8236602da5950b209": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "16个项目签约！2026未来交通发展（昆明）论坛举行 - sohu.com",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNenpKQThWcnU2MnJ2c0d1VG9tcEJsSXpmZlRDWDVXQzNVQ3BOakUxUXh3QnYyeWJBQ09tMmU5NFAwbUhrdlBjYmVpNTRpeHJRREt2TURlQ0I0RzZMdUl0VGRyRk9OSzBoSnNaYjIyVWlCQTU0NzRJZEF5UnZwNVlaTV9xS0lUVUR5U2lOUw?oc=5",
+    "reason": "标题出现交通论坛和签约项目数量，没有具名企业；不能据签约数量猜测签约方。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMijAFBVV95cUxNenpKQThWcnU2MnJ2c0d1VG9tcEJsSXpmZlRDWDVXQzNVQ3BOakUxUXh3QnYyeWJBQ09tMmU5NFAwbUhrdlBjYmVpNTRpeHJRREt2TURlQ0I0RzZMdUl0VGRyRk9OSzBoSnNaYjIyVWlCQTU0NzRJZEF5UnZwNVlaTV9xS0lUVUR5U2lOUw?oc=5"
+    ]
+  },
+  "6571c7f2f332dcfd1bec59c3": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "AIROBO与昆明官渡区签约共建首个机器人城市运营平台 - 观点网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9USmg4UmYzVVVRQ2JiUHRUZlR2ejlNc2dKZHl5Q1JiTUFQN1dzRTVhYmtEN0tkQzZRTWRRUXlmZkVudjVEUjlMUWRmSlFrdw?oc=5",
+    "reason": "品牌机器人运营业务及昆明合作线索有公开材料支持，但云南法人设立、平台投运与持续本地运营尚未核实。保留落地线索候选，不创建一家已经成立或投运的昆明公司。",
+    "evidenceUrls": [
+      "https://www.airobocn.net/news/4/",
+      "https://www.airobo.run/2026/09/03/airobo-news-0fd428a65a54/",
+      "https://airobo-platform.com/en/about.html",
+      "https://finance.sina.com.cn/stock/estate/integration/2026-09-24/doc-inisxhnz8266123.shtml",
+      "https://www.sohu.com/a/1081731068_121106902"
+    ],
+    "reasonCode": "company_candidate",
+    "candidateNames": [
+      "AIROBO / 艾诺博（成都）科技有限公司"
+    ]
+  },
+  "664e7a4f2862385c16839fb5": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明这个“国字号”疫病防治基地有新进展 - 新浪财经",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1YWkw2cHhMN2NBbnJDRlNNUGJlQmI3SGlrZ184YlNEVnNvanA2WWVfN0VnLU9uTEU1bG83NGV1SVZPcVZkMmdLQVNrUy1lc0FPMnVqSnhxVGg1cVVhRFhaZHFfbW1CcFR1MlpxUjc5MUNibkZselpta3ZITGE?oc=5",
+    "reason": "标题指向疫病防治基地，没有具名企业；基地名称或报道正文均未据此推断。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMifEFVX3lxTE1YWkw2cHhMN2NBbnJDRlNNUGJlQmI3SGlrZ184YlNEVnNvanA2WWVfN0VnLU9uTEU1bG83NGV1SVZPcVZkMmdLQVNrUy1lc0FPMnVqSnhxVGg1cVVhRFhaZHFfbW1CcFR1MlpxUjc5MUNibkZselpta3ZITGE?oc=5"
+    ]
+  },
+  "6eba8ce28658f8dc7d71be93": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "龙湖龙智造签约昆明逸天峰三地块 提供开发管理与全案营销服务 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBTNTN1eWpuNkVreFNSUjNFakwzN1dFek1UN1VFaU83X0pHZUtqaENxZTlSU2RMNnh0RlZaR3M3VV9WT2t6cXBzcExJNFo?oc=5",
+    "reason": "观点网原报可复核该次昆明逸天峰A1至A3地块的开发管理与全案营销签约；龙湖官方业务页说明龙智造是空间营造与开发管理品牌。其全国品牌确有数字化建造能力，但该报道没有给出昆明独立IT团队/公司主体或软件服务交付事实，不应把房地产项目自动当作本地IT公司或采购机会。",
+    "evidenceUrls": [
+      "https://www.guandian.cn/m/show/616550",
+      "https://www.longfor.com/space/service.html",
+      "https://lzz.longfor.com/"
+    ],
+    "reasonCode": "outside_scope"
+  },
+  "71c998f891aefaabaa1d1abd": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "多个高校科创项目亮相春城创业荟 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBsT2Fka2RNdGRCMGhfbHVXeGEtRUxocDNkMk1aNldwYVRpWmdnZjdBRjN0cFlxWXJRVHVwUURsQ0hwQ2JsZmZhV184NmhqNXFia1l4eG5Sb2lOYXJFelJva0VBUl9PZw?oc=5",
+    "reason": "标题描述高校科创项目及创业活动，没有具名企业；项目不自动等同已登记公司。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBsT2Fka2RNdGRCMGhfbHVXeGEtRUxocDNkMk1aNldwYVRpWmdnZjdBRjN0cFlxWXJRVHVwUURsQ0hwQ2JsZmZhV184NmhqNXFia1l4eG5Sb2lOYXJFelJva0VBUl9PZw?oc=5"
+    ]
+  },
+  "7f7192c95f6c4524aa228d83": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "青春华章｜科学星空下 少年勇前行 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5FZzZyaGZ4OWVTeEphdlNvMXpLUkhObl93NWNLRmZPdURqc0luTEdIUEJGZlBTbDBIUTRQZHR3dEYwTC1EM1YxVTlLX0g3WEpqZkhPT3R0TnhsU1dWMVZVMUoyTnNBdw?oc=5",
+    "reason": "标题为科学主题青春报道，没有具名企业；仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5FZzZyaGZ4OWVTeEphdlNvMXpLUkhObl93NWNLRmZPdURqc0luTEdIUEJGZlBTbDBIUTRQZHR3dEYwTC1EM1YxVTlLX0g3WEpqZkhPT3R0TnhsU1dWMVZVMUoyTnNBdw?oc=5"
+    ]
+  },
+  "8017c4edc1e8748d21a0bc89": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "一见·冷凉气候里的热产业 - 昆明信息港",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBmU2x4OXh2bWw3RU5zaDN1ZUxHeGh0cEp5R3kxWkV5S3ROWnQtZDJBZS0zeGE3VWVoREZ0bExsbkVuaGNzUjJiX0lBQkFOTFQxZzJZU2cxS2tUTXRiSU5EYXIyUVE3UQ?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBmU2x4OXh2bWw3RU5zaDN1ZUxHeGh0cEp5R3kxWkV5S3ROWnQtZDJBZS0zeGE3VWVoREZ0bExsbkVuaGNzUjJiX0lBQkFOTFQxZzJZU2cxS2tUTXRiSU5EYXIyUVE3UQ?oc=5"
+    ]
+  },
+  "8164001850030fc4f5203638": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "中国“职教出海”绘就国际合作新图景 - 昆明信息港",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5oaUVieWFTdXRSQWQ4bHVUaDBmTmxvVkppaUlLSzlQTmJCR3FuamhkczNvSkp6S0I3dHl5Sm1iRFlKNzllM0JlTFZrY2h5Y0hWaEpSd3lGRFpuSzdrbzZxbWhrUjdXQQ?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5oaUVieWFTdXRSQWQ4bHVUaDBmTmxvVkppaUlLSzlQTmJCR3FuamhkczNvSkp6S0I3dHl5Sm1iRFlKNzllM0JlTFZrY2h5Y0hWaEpSd3lGRFpuSzdrbzZxbWhrUjdXQQ?oc=5"
+    ]
+  },
+  "81679e74d488ccca5f3639d1": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "中国移动云南智算网络大会盛大召开 智算领航共创AI+新时代 - icloudnews.net",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1hVzluM08tdGJHekRXY3pVQVlOeGpfWEFNWDc2UDRaQ2syMEFIUGd3cjhyX3V5NkI5ckQxN3lWOWpPaTFIT09LbjdJNVotQTI2?oc=5",
+    "reason": "公开活动总结支持云南移动的昆明智算业务背景；省公司与昆明分公司的记录粒度尚待确定，保留通信与算力服务候选。2024年会议不代表当前活动或岗位。",
+    "evidenceUrls": [
+      "https://www.yn-cic.org.cn/article/show/1621.html",
+      "https://www.chinamobile.com/aboutus/culture/intro/province_culture_intro/yn/",
+      "https://www.10086.cn/aboutus/news/groupnews/index_detail_50272.html",
+      "https://wap.sasac.gov.cn/n2588025/n2588124/c33523036/content.html",
+      "https://iot.china.com.cn/content/2024-05/20/content_42795492.html"
+    ],
+    "reasonCode": "company_candidate",
+    "candidateNames": [
+      "中国移动通信集团云南有限公司"
+    ]
+  },
+  "83bcb75374e05e814c4fe0d4": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南省全面实施“人工智能+” 行动计划：在科技、产业、消费、民生 - 智慧城市行业分析",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNeHRaX2l2ZXdreEVGbGNvNVNZTy1ia3JlWEVFcWNpemNSUzhoYWhlWEszeC04ajRESjRpbkpFSDVNc09MMDNWU0E3SXpVVnA4RVNkLW1zNVEtUHoyRFMxQW1nTE53bHR4VjdENXhSN1J0ZlpkaVN6ZG1WQmFGdDN5REFDRlVObU9Kbm9GVnM0Y1JTempvdlpMRUdaVGVYOGw0dno1QUZkZ1phVjRoQzVZVFBHZ3g4Undqa2gxbFQ3SUJ5bE5vRkR0YVBNMHlWRGw0dzFnS2hzWERrQzVfTXRhTmhnX2pqYVd2eWRuNnhYdm1jd1lmYThMOWxxVzNuM3BUSzU2SGxrWWJpdVh3X25B?oc=5",
+    "reason": "标题描述云南人工智能行动计划，没有具名企业；政策存在不等于企业或具体岗位机会。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMijwJBVV95cUxNeHRaX2l2ZXdreEVGbGNvNVNZTy1ia3JlWEVFcWNpemNSUzhoYWhlWEszeC04ajRESjRpbkpFSDVNc09MMDNWU0E3SXpVVnA4RVNkLW1zNVEtUHoyRFMxQW1nTE53bHR4VjdENXhSN1J0ZlpkaVN6ZG1WQmFGdDN5REFDRlVObU9Kbm9GVnM0Y1JTempvdlpMRUdaVGVYOGw0dno1QUZkZ1phVjRoQzVZVFBHZ3g4Undqa2gxbFQ3SUJ5bE5vRkR0YVBNMHlWRGw0dzFnS2hzWERrQzVfTXRhTmhnX2pqYVd2eWRuNnhYdm1jd1lmYThMOWxxVzNuM3BUSzU2SGxrWWJpdVh3X25B?oc=5"
+    ]
+  },
+  "9345b8515be1c088a4b59578": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "中国旅居康养集团·美奥斯2025—2026年阶段总结——深耕云南，布局全国，打造全球康养旅居新标杆 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0wMXRqNmtDS0FPR29pTko5NmdSMmdGYmVaSTlMSmc3VHdqc2hXNmtHajZsT2wxWXpiQVZvZzV3MGtKLXJ4eW1mVFVMRTVqdksy?oc=5",
+    "reason": "已找到与RSS同题的凤凰网发布页，署名环球财经网，材料主体为康养、医疗、酒店与旅居服务。虽然使用AI健康管理等描述，但未找到可复核的官方技术团队/软件开发或对外IT服务证据，也未确认应收录的准确法人及其与品牌的关系。不能因出现AI关键词将医疗康养经营者作为本地IT公司新增或关联。",
+    "evidenceUrls": [
+      "https://finance.ifeng.com/c/8vsiEurxjaH"
+    ],
+    "reasonCode": "evidence_insufficient"
+  },
+  "9f01f7fa3663917340728624": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "数字技术激活云岭茶山绿色动能——中国电建昆明院联合华能澜沧江新能源打造茶光互补发展新样板 - 中国日报网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTE0xWFZNYUdiWjU3M3lRdVRsTF9UeTBLSFlyVGhXTy1YNWRYWTJSQ2VkMlJjc1NlNWFpU3FLRDN2TGczemFDQVgweEROZjdUY0g4RWljVjNacjUtSkZHZXh1Q2dEZXp1bFJuTDlhMlQ5em9nbkhaY2k2UVJncHI?oc=5",
+    "reason": "昆明院官网明确列有工程数字化与信息化平台服务，保留技术机构候选。华能澜沧江新能源目前仅确认能源开发角色，不据共同项目自动列为IT公司。",
+    "evidenceUrls": [
+      "https://kmkc.powerchina.cn/col11550/art/2021/art_11550_1053316.html",
+      "https://kmkc.powerchina.cn/",
+      "https://nyj.yn.gov.cn/xwzx/nyxw/202608/t20260825_3724292.html",
+      "https://www.kunming.cn/news/c/2026-08-27/14069124.shtml"
+    ],
+    "reasonCode": "company_candidate",
+    "candidateNames": [
+      "中国电建集团昆明勘测设计研究院有限公司"
+    ]
+  },
+  "a2d151e20c7d57a5073ebc4e": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "开屏观察｜​当AI落地昆明：产业重构、文化活化，一座城市的AI现实考题 - thepaper.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1QU21Jbk9RRjBVcmpjQ3c5SnlOU2g5cjRSWGR1c19nRE91NlpILW1MZ251anZpenR3SWFmUzhvdWJQNzNkclVfa0hVRWg5cm10TTRQb2pqN0NVeXphS3c?oc=5",
+    "reason": "标题是昆明 AI 产业观察，没有具名企业；不将报道主题自动关联某个公司。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1QU21Jbk9RRjBVcmpjQ3c5SnlOU2g5cjRSWGR1c19nRE91NlpILW1MZ251anZpenR3SWFmUzhvdWJQNzNkclVfa0hVRWg5cm10TTRQb2pqN0NVeXphS3c?oc=5"
+    ]
+  },
+  "a6ad7ec56b648a83d59dec60": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明盘龙区新添一座公园式商业地标 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5FcE0xZndrQXBxcmZESkplcVhMeUFuV1hEa3c0bTBpbFBjdFNBSll6ODUxVUZRaHgwMjZaSEVhS1BTMVpiYzUxSg?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5FcE0xZndrQXBxcmZESkplcVhMeUFuV1hEa3c0bTBpbFBjdFNBSll6ODUxVUZRaHgwMjZaSEVhS1BTMVpiYzUxSg?oc=5"
+    ]
+  },
+  "aaea711548497bcefefa94e5": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "滇港携手共推“人工智能+” 深化合作赋能高质量发展 - 中国科技网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5rTFpzSFM3TmF0S25kS3hVeGs3V3RwVjJXSzM0UkRKZThyQmtpTENYMHBSQ2tLdER1U0ZwTFNJc1MtenVtcXpSZHAxR2Y5OEU4bFZGeUtRWnAyYVFkS2huNVd1NFFTUy1lVzBXNGVRN2I?oc=5",
+    "reason": "标题描述滇港合作，没有具名企业；区域合作不自动升级为某家公司合作事实。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMicEFVX3lxTE5rTFpzSFM3TmF0S25kS3hVeGs3V3RwVjJXSzM0UkRKZThyQmtpTENYMHBSQ2tLdER1U0ZwTFNJc1MtenVtcXpSZHAxR2Y5OEU4bFZGeUtRWnAyYVFkS2huNVd1NFFTUy1lVzBXNGVRN2I?oc=5"
+    ]
+  },
+  "ab8b8e4457f25c3906d3913f": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南昆明全光智慧城市项目荣获2022世界智慧城市大奖·中国区「使能技术大奖」 - C114通信网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFByNk9NdmF3RHh3cEhXeE13Y0FueDZ6X1RfRE5ScHhmYXNzOEVyNVdKdUJYckF2X1AxSkJhTEptY09QNFlPSUZIZVJXLTZMdXl3?oc=5",
+    "reason": "标题具名的是全光智慧城市项目和奖项，并未具名企业；不得根据常见技术供应商猜测承建/获奖公司。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiUEFVX3lxTFByNk9NdmF3RHh3cEhXeE13Y0FueDZ6X1RfRE5ScHhmYXNzOEVyNVdKdUJYckF2X1AxSkJhTEptY09QNFlPSUZIZVJXLTZMdXl3?oc=5"
+    ]
+  },
+  "af148734a6496f141d726bf9": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "山·海·经｜拓展云南数字经济的“想象力” - 云南日报",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1DNFNkQlVvZmxKWjF2OUxnTGFNSnYzQ1MxZmZITzRUamF4Vmltd3ZBcExpbjZjak5Ob1dGanFZd3RuRF94MVFmNVh1SFJaamZUbW0wYzE3NXVfWjdfWkNmWEZTQWxHVXdKZ24w?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMia0FVX3lxTE1DNFNkQlVvZmxKWjF2OUxnTGFNSnYzQ1MxZmZITzRUamF4Vmltd3ZBcExpbjZjak5Ob1dGanFZd3RuRF94MVFmNVh1SFJaamZUbW0wYzE3NXVfWjdfWkNmWEZTQWxHVXdKZ24w?oc=5"
+    ]
+  },
+  "af3f4391fdbc21b4ef7ec9b4": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "为“轻量化创业”提供无限可能 西山区“AI+OPC”创新发展大会启幕 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EMnp6ZnpYUWVBMjlGUG5fUGdXUGlwVVVVU1B3dHdyMTQ5cXFyckNCZWN4dm9LcVJsNnhDNmMwcVRZOVpZdXhGS3pGTVUxTU5UcHNINVdORk5KWFpJbnJONDBOR2xMZw?oc=5",
+    "reason": "标题描述西山区 AI+OPC 创新发展大会，没有具名企业；行政区、创业方式和会议不是企业名称。仅作标题级判断。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EMnp6ZnpYUWVBMjlGUG5fUGdXUGlwVVVVU1B3dHdyMTQ5cXFyckNCZWN4dm9LcVJsNnhDNmMwcVRZOVpZdXhGS3pGTVUxTU5UcHNINVdORk5KWFpJbnJONDBOR2xMZw?oc=5"
+    ]
+  },
+  "b459bbb5231c00bd4a72c56f": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明医科大学“镜探早安”团队：AI赋能基层消化道早癌筛查，筑牢云南健康防线 - 中华网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9xbGNWbVZxbTc1QjhGbTVnZFNuUFowalRYQ19aYndlQTZmaGsxcTRxY0J0dUx3aGpWcy03Y1hMS3MtR3NNSmM1Y24xRGd1ZjRCOWs2TWlNVDlFaDd2NVE?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9xbGNWbVZxbTc1QjhGbTVnZFNuUFowalRYQ19aYndlQTZmaGsxcTRxY0J0dUx3aGpWcy03Y1hMS3MtR3NNSmM1Y24xRGd1ZjRCOWs2TWlNVDlFaDd2NVE?oc=5"
+    ]
+  },
+  "b6d8254747680b5eb865edfa": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "《2026年数字云南建设工作要点》《2026年云南省数字政府工作要点》发布：严格落实过紧日子要求，持续开展叫停一批不应由政府投资建设的项目、取消一批方案不成熟的项目、暂停一批不具备立项条件的项目、压缩一批价格虚高项目的投资、优化一批项目的建设方案、 - 智慧城市行业分析",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5CakhTTm5NclAzMnVoR2xHbV9SaEV0SHJTM0NLRzVkWXpBWF9PVGtXUFV4bWtkdjFFNVlCNmFqal9kdzlLYktHdUZzaGZNNk9tN2x0bGpOcTh2NzB0MzloQWQ3eGo0ZnRIRFYtYTlvQXFQTjktRFRZZGN3?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiekFVX3lxTE5CakhTTm5NclAzMnVoR2xHbV9SaEV0SHJTM0NLRzVkWXpBWF9PVGtXUFV4bWtkdjFFNVlCNmFqal9kdzlLYktHdUZzaGZNNk9tN2x0bGpOcTh2NzB0MzloQWQ3eGo0ZnRIRFYtYTlvQXFQTjktRFRZZGN3?oc=5"
+    ]
+  },
+  "b91adc04c13e66d4d79318f8": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "聚力推进昆明国际复杂科学中心建设“滇池科创汇”科创投资人沙龙在昆举行 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5hLU1HdTRQTjQ4QkRfbjVaZ2RVMDdsQTl3M09hcWdCMGR0bG80c1FYVnZSS1BDd2JTRUR5WVA2NWNHRlR1SG1VVlVTQkE?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5hLU1HdTRQTjQ4QkRfbjVaZ2RVMDdsQTl3M09hcWdCMGR0bG80c1FYVnZSS1BDd2JTRUR5WVA2NWNHRlR1SG1VVlVTQkE?oc=5"
+    ]
+  },
+  "bb5e948e9ad5ca91c7c464e1": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "腾讯以科技赋能教育数字化，「未来教室」走进云南山区，一场特殊的新永盈会点亮少年梦想 - 体坛加",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4yVllZenNlcTVxaWRhOVdzb2VSa3ZVZ0RTNGdCMGxNMEZLSXpRR0FYLVpvTGdhWXpwaUhJSGpkbEozdDVFaGtwbXJ0TkE?oc=5",
+    "reason": "标题具名腾讯，但该标题对应的原始报道未能核实。公益机构资料仅支持未来教室项目背景，不能证明本条事件或昆明本地技术主体；不据此新增公司，也不判断报道真伪。",
+    "evidenceUrls": [
+      "https://s.onefoundation.cn/news/61cec0076c4ba903cb/"
+    ],
+    "reasonCode": "evidence_insufficient"
+  },
+  "bbd55d107216327acb0a448b": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南省昆明市商务局、云南新中劲集团领导一行到访国联股份 - 财富号",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8xOTRxU0dNM3hycVVsb1ZNRl9fcTllOUU1dkZrQ0ZROW1NNExuT1JhZFZrWDc3d2xrTktDaG94N0pIb1JfNDZibFFpQmRNSTU1NE5GYmxhNjllczhJQ09kZVgybktPYkVxTlZN?oc=5",
+    "reason": "官方同题资料支持国联股份接待云南来访这一背景。国联股份为北京主体；云南新中劲集团的准确法人及本地IT服务业务尚未确认，不将来访或商务交流视为昆明技术公司收录依据。",
+    "evidenceUrls": [
+      "https://www.wdoodoo.com/article-10404.html",
+      "https://m.ibicn.com/zixun/news/d1476500.html",
+      "https://www.ueiibi.com/",
+      "https://cdn.ueiibi.com/upload/202504/45313561232493304.pdf"
+    ],
+    "reasonCode": "evidence_insufficient"
+  },
+  "bc0690bab8d3b150b082ea2f": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南今年将培育1200名乡村产业振兴“头雁” - news.cau.edu.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1pdXdDajcxUkYwRlZuVEcydGZnSDFHV3RZNlNpU0lQQUFKVTk1Tm8tTHpXWVpwYzlEMkFEd0FBZ2w0elhHUkFNWEVzMHh6WDhVYnpQQTY3clluVkRFTkZ2dXFQQ2V6dnB6aWZHTDRPM29yNjg1WlVj?oc=5",
+    "reason": "标题仅点明云南乡村产业人才培育计划，未具名企业；此判断不涉及报道正文是否提及企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMid0FVX3lxTE1pdXdDajcxUkYwRlZuVEcydGZnSDFHV3RZNlNpU0lQQUFKVTk1Tm8tTHpXWVpwYzlEMkFEd0FBZ2w0elhHUkFNWEVzMHh6WDhVYnpQQTY3clluVkRFTkZ2dXFQQ2V6dnB6aWZHTDRPM29yNjg1WlVj?oc=5"
+    ]
+  },
+  "bd4f143bc11ed69713be5719": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南首个人工智能OPC创新人才基地落地昆明 - yn.people.com.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB0cUkxRFZfR3lJNlRtUXdHRTJLN2hzRlZxT2FKamg5TGN3UGpTUzAtUTlacy1uOTdtUE1BNDFZT2xxekFpaGo5Q1M1ZXpScXRJQlBuM1hSYmpkQVBCc29LbXZMcGk1Wmk2TlE?oc=5",
+    "reason": "标题点明人工智能OPC人才基地与落地城市，未具名运营企业；不从基地名称推断运营主体。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiakFVX3lxTFB0cUkxRFZfR3lJNlRtUXdHRTJLN2hzRlZxT2FKamg5TGN3UGpTUzAtUTlacy1uOTdtUE1BNDFZT2xxekFpaGo5Q1M1ZXpScXRJQlBuM1hSYmpkQVBCc29LbXZMcGk1Wmk2TlE?oc=5"
+    ],
+    "reviewedTitles": [
+      "云南首个人工智能OPC创新人才基地落地昆明 - 人民网云南"
+    ]
+  },
+  "bd82e006d0617942473037c7": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "云南省首个人工智能OPC创新人才基地正式落地，精准赋能产业高质量发展 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9mS3lTanh4WThwZFQyS0Y2M1NWMmJyV2FKUUEtRzVHOGZLWDlwQVZVeGFsYjdTbHZUc3VxTk9ZSi1CcmZYbzBrbHRnRjZfNzcxZTdNdVRyOVAwM2lsbjRobmlIcUJrUQ?oc=5",
+    "reason": "标题点明OPC人才基地和产业赋能，未具名企业；不从活动或基地推断公司身份。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9mS3lTanh4WThwZFQyS0Y2M1NWMmJyV2FKUUEtRzVHOGZLWDlwQVZVeGFsYjdTbHZUc3VxTk9ZSi1CcmZYbzBrbHRnRjZfNzcxZTdNdVRyOVAwM2lsbjRobmlIcUJrUQ?oc=5"
+    ],
+    "reviewedTitles": [
+      "云南省首个人工智能OPC创新人才基地正式落地，精准赋能产业高质量发展 - 昆明信息港"
+    ]
+  },
+  "bff4b5b8ea3ac722b017b318": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "2026年国家网络安全宣传周昆明市活动、云南暨南亚东南亚人工智能创新作品技能大赛启动仪式同步启幕 - QQ News",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxdTdLRjdhc2RXbm1lNjRHMVVwVlA1TUJCMGJ1TVlwYkhrdlc4M1hBZjVtRXJVYlVjTjN4U0pFdEpIRHB5MVRKSElDNVJXQkhaVkIyTnVR?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxdTdLRjdhc2RXbm1lNjRHMVVwVlA1TUJCMGJ1TVlwYkhrdlc4M1hBZjVtRXJVYlVjTjN4U0pFdEpIRHB5MVRKSElDNVJXQkhaVkIyTnVR?oc=5"
+    ]
+  },
+  "c077041f2349a182f478ff59": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明做小程序找本地团队还是外地的划算？贵出来的1万到底值不值 - 搜狐网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5PZFNGc3FEazRXNUl3R2Q2V0JaRFNNR2RqQWdWSHJBS0FrMUduUzVOYjVBWjdfNzBPMnlvM2dFY2ZISmZRSEpNLXBtb3k4MUZCbDFr?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5PZFNGc3FEazRXNUl3R2Q2V0JaRFNNR2RqQWdWSHJBS0FrMUduUzVOYjVBWjdfNzBPMnlvM2dFY2ZISmZRSEpNLXBtb3k4MUZCbDFr?oc=5"
+    ]
+  },
+  "c6033854080af5c343c3957a": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "第十二届老街-河内-海防-广宁（越南）和云南（中国）五省市经济走廊合作会议 - Vietnam.vn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOMURtM2VFTUJpeS05U3JXdDZlS2l0QWpFNi1odkhkVE9Hb2RHTElvZmhDemw2cVVlTHA0bXlBdFFJZEY1ekpUMVFBQ1g4TDF5WGRGNFM5WGNDTTNwVHpHdjRDNXpsY09Kd3pFT0pwaU5tSEg1RjZ4UUNFRnF6RFhyR1lvM2M4eW83TUhDS0prT0NYbHMwZ19DS3dzQ3lSYXJRTkRuZHZURVppWnc1U2RpckhmR2xqRkNxRXVBMlJ6Rzk2UXpTMjFuSWFfNjlKUW9JLWlXT05pVklJZXdTOHgzMTZKcDNvUGRqbEJkTUlVaW4?oc=5",
+    "reason": "标题为中越五省市经济走廊合作会议，未具名企业；不推断正文参会企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOMURtM2VFTUJpeS05U3JXdDZlS2l0QWpFNi1odkhkVE9Hb2RHTElvZmhDemw2cVVlTHA0bXlBdFFJZEY1ekpUMVFBQ1g4TDF5WGRGNFM5WGNDTTNwVHpHdjRDNXpsY09Kd3pFT0pwaU5tSEg1RjZ4UUNFRnF6RFhyR1lvM2M4eW83TUhDS0prT0NYbHMwZ19DS3dzQ3lSYXJRTkRuZHZURVppWnc1U2RpckhmR2xqRkNxRXVBMlJ6Rzk2UXpTMjFuSWFfNjlKUW9JLWlXT05pVklJZXdTOHgzMTZKcDNvUGRqbEJkTUlVaW4?oc=5"
+    ]
+  },
+  "c743713e3ed7310e5f66d7bf": {
+    "decision": "reviewed_not_added",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "校企携手启新程共筑数字人才新高地昆明理工大学信息工程与自动化学院与昆明信息港共建产学研合作平台 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9XcUs0TnZKeGpKcXJfNkpManVxOGc5UlZlelE3OTIycWJfOUhiVVdudTR6UG9rZTVZWGRUUF91eWRrMHlFZXFZcklRbEpKMlhxSVhXUGJRaHc5QTU0ZXZzYWtOTFBmdw?oc=5",
+    "reason": "昆明信息港原文与高校官方稿支持该主体及互联网、技术研发方向，保留公司候选。当前主库无该记录，不冒充已有公司关联；特定校企安排不泛化为公开招聘。",
+    "evidenceUrls": [
+      "https://www.kunming.cn/news/c/2026-01-21/14012482.shtml",
+      "https://xzy.kmust.edu.cn/info/1166/3945.htm"
+    ],
+    "reasonCode": "company_candidate",
+    "candidateNames": [
+      "昆明信息港传媒有限责任公司"
+    ]
+  },
+  "c85a903285ffdbc7213a2565": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "“2021年中华护理学会学生工作委员会创新创业论坛云南省分论坛”在昆举行 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBhRTZfWHlldm1PMWpWQ0NBU0htOEhDdzRtc0g1MkhwdU9mZ2tiNmhHMEZiNUZtaTdEdERWVkk2cVhlRFNZbmU3cWs3OGF3NUE2dmF1MjRQZmZSNWdaMjcxMXc0OA?oc=5",
+    "reason": "标题为护理学会学生工作委员会创新创业论坛，具名的是学会及会议而非企业；不推断正文。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBhRTZfWHlldm1PMWpWQ0NBU0htOEhDdzRtc0g1MkhwdU9mZ2tiNmhHMEZiNUZtaTdEdERWVkk2cVhlRFNZbmU3cWs3OGF3NUE2dmF1MjRQZmZSNWdaMjcxMXc0OA?oc=5"
+    ]
+  },
+  "cc2b79afd70b6a061a5d72cf": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "驻琅勃拉邦总领事张社平出席昆明理工大学与苏发努冯大学联合培养项目开学典礼_苏里南_新闻 - 华人头条",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBFbFhod1h5M1JVVDNiQ3h2eDdOZlBLeWxRc3puZ1FFZWxrd2xlU0pfZHpDZW0zTzcwbFJxZXFPMV9SaDJpQzlIbkR1TnFqN3BkYnNIVXFYelpTSEg1ZWc?oc=5",
+    "reason": "标题具名的是外交官及两所大学，没有具名企业；不把人物、高校或媒体署名当作企业线索。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBFbFhod1h5M1JVVDNiQ3h2eDdOZlBLeWxRc3puZ1FFZWxrd2xlU0pfZHpDZW0zTzcwbFJxZXFPMV9SaDJpQzlIbkR1TnFqN3BkYnNIVXFYelpTSEg1ZWc?oc=5"
+    ]
+  },
+  "d11b8e51e7c7a2041236e651": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "春节“不打烊”！云南多个项目建设迎来新进展 - kunming.cn",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBUdUc4aDFpc2ZNNlI1VmlHY1UzZVJWYmNrczZFZFdRWTgyQ2RpTm1tTURmY2QyQTlZeGRZYzJzZDRmWXpDUW92MHdzTWxFOER3ZkJmcnh5Z2ExclJDWWx0TzVaLVd4Zw?oc=5",
+    "reason": "标题为多个项目建设进展，未具名企业或承建主体；不从项目新闻推断公司。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBUdUc4aDFpc2ZNNlI1VmlHY1UzZVJWYmNrczZFZFdRWTgyQ2RpTm1tTURmY2QyQTlZeGRZYzJzZDRmWXpDUW92MHdzTWxFOER3ZkJmcnh5Z2ExclJDWWx0TzVaLVd4Zw?oc=5"
+    ]
+  },
+  "d196799a7a161d3d65bd8e7d": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "昆明盘龙道路提升和北仓村城中村改造工程开工 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBCNzZodmU0dm9TZ2JZTGJ2VGRVTmpYR0ozN0RVREZraG9vWmkxSGJSQm1XMHUtQmIwSnpSeDA5UWY0QnAteVRXVlJyTjM?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBCNzZodmU0dm9TZ2JZTGJ2VGRVTmpYR0ozN0RVREZraG9vWmkxSGJSQm1XMHUtQmIwSnpSeDA5UWY0QnAteVRXVlJyTjM?oc=5"
+    ]
+  },
+  "da789088bf8812ef62c4333e": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "“人工智能+民航”迈向规模化落地 - 昆明信息港",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBrT0R3Y0hObXRYVHc5SkdBb2ptTlZ4MW96YWdtWFFvSnFUNnZUSXNva2h0Q19jNzFVci1iT0ZzY19wbzZDbGFQRjFDbk1hY1V6MWZYVWFYUTFYU1NNWHJWMGhVRWpldw?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBrT0R3Y0hObXRYVHc5SkdBb2ptTlZ4MW96YWdtWFFvSnFUNnZUSXNva2h0Q19jNzFVci1iT0ZzY19wbzZDbGFQRjFDbk1hY1V6MWZYVWFYUTFYU1NNWHJWMGhVRWpldw?oc=5"
+    ]
+  },
+  "df4004c510093ed8e97b12e4": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "中国国际大学生创新大赛（2026）云南赛区选拔赛收官 - 新浪网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBuOGpmZ0NHcEJiTHRWNlM5b0NUSm0zV25OTHlXcmdJYVFXblhvNUMwMnZRSzY3OXR5WS1PMWhvdzAzYVg5dHZlUzRDUEJPbFE2eTBxU29meGxRM1J3UmNZSFdOQnVpM0NDNTc4c1RiT1BoczBtR3NaYkJPVGx4Zw?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMifkFVX3lxTFBuOGpmZ0NHcEJiTHRWNlM5b0NUSm0zV25OTHlXcmdJYVFXblhvNUMwMnZRSzY3OXR5WS1PMWhvdzAzYVg5dHZlUzRDUEJPbFE2eTBxU29meGxRM1J3UmNZSFdOQnVpM0NDNTc4c1RiT1BoczBtR3NaYkJPVGx4Zw?oc=5"
+    ]
+  },
+  "e02e41117ab4c44a1cb47732": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "“送技上门”解难题促发展——昆明市晋宁区总工会创新培训模式提升职工数字化技能 - 中华网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9iRWNBSFNsaW5lTXJxNVRxRUdlOFVXWnRzRG0yVWZPTEpndnZzcFcyNC16aVprRXNlckc2UUx0YjdfcjJ1MVVQemNwTEF4a19uZXVuaGdBOWNUeU1qOXc?oc=5",
+    "reason": "标题主体是昆明市晋宁区总工会及培训活动，没有具名企业；不推断承训或技术服务商。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9iRWNBSFNsaW5lTXJxNVRxRUdlOFVXWnRzRG0yVWZPTEpndnZzcFcyNC16aVprRXNlckc2UUx0YjdfcjJ1MVVQemNwTEF4a19uZXVuaGdBOWNUeU1qOXc?oc=5"
+    ]
+  },
+  "ef7491858eeb65739bce71aa": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "特色鲜明 多措并举 昆明优质中学书写科创育人精彩答卷 - QQ News",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5DaHpvbzRtdUE3TE5LMG92WTZTeS1QOE9lMW03bkVFZWlfYmJYcjA3Z0pyaDZxMWpTd2VEY25jdXFWNHJZak1lX1UwM1V6UEJ5WDRmNzh3?oc=5",
+    "reason": "标题泛指昆明优质中学的科创育人工作，没有具名企业；媒体来源QQ News不计作报道中的企业。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5DaHpvbzRtdUE3TE5LMG92WTZTeS1QOE9lMW03bkVFZWlfYmJYcjA3Z0pyaDZxMWpTd2VEY25jdXFWNHJZak1lX1UwM1V6UEJ5WDRmNzh3?oc=5"
+    ]
+  },
+  "f385a32f2fcedd5ff0cb05a4": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "全国数字经济教育发展联盟云南专委会成立 - 新华网客户端",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZFAyMGhxMjl4ZlRjU24yQ2R4TlNQQmx4bXZUYkJMT0JwSVdBU0pZUFgtdEhlbmlEeVpTR1ZJR2NBQnE4cklsNE12UTFsQmtRTFNlSlJUMmJHdG1Tc084OFZDWVFyWXQ3RTBITTk4TlRyQWl5REtVNEk2YVhfSlRKaHJLeGluWmwyZC13cTRrSmV0am9KV2h3S3Fn?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZFAyMGhxMjl4ZlRjU24yQ2R4TlNQQmx4bXZUYkJMT0JwSVdBU0pZUFgtdEhlbmlEeVpTR1ZJR2NBQnE4cklsNE12UTFsQmtRTFNlSlJUMmJHdG1Tc084OFZDWVFyWXQ3RTBITTk4TlRyQWl5REtVNEk2YVhfSlRKaHJLeGluWmwyZC13cTRrSmV0am9KV2h3S3Fn?oc=5"
+    ]
+  },
+  "f85ea8d00f2b5c492d556cd8": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "遂宁⇄绵阳，40分钟！遂宁⇌昆明，约3.5小时！最新进展 - 凤凰网",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9MQ2RWLU1uZXBrWnkyWmJNc05ZOTNLNTdoQ1BfaThHMkR1bWFFc1o1aFZBbzRyYmlpX21HRHgtX2lBY01WMWFJNzNQQ04?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9MQ2RWLU1uZXBrWnkyWmJNc05ZOTNLNTdoQ1BfaThHMkR1bWFFc1o1aFZBbzRyYmlpX21HRHgtX2lBY01WMWFJNzNQQ04?oc=5"
+    ]
+  },
+  "f869258f2e3e516bbd5e0329": {
+    "decision": "no_company_in_title",
+    "companyIds": [],
+    "reviewedAt": "2026-11-01",
+    "title": "这项创新大赛 昆明医科大学获得冠军 - 人民网云南",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAyXzV1UmJ5NkxUakIzcHR2LWNXZXpyd09LZHp2VDl3MUxHSTVaak01Zm9NaUpDR0hkTGJiMlJ6b0pqWW5Tc1dZdExyUlEtZHVtR09PUUlqRjNSekVINzRtMzZneFBhTmRJbnc?oc=5",
+    "reason": "已逐条阅读本标题，未见具名企业。仅作标题级分流，不推断正文、项目承建方、运营公司或当前岗位。",
+    "evidenceUrls": [
+      "https://news.google.com/rss/articles/CBMiakFVX3lxTFAyXzV1UmJ5NkxUakIzcHR2LWNXZXpyd09LZHp2VDl3MUxHSTVaak01Zm9NaUpDR0hkTGJiMlJ6b0pqWW5Tc1dZdExyUlEtZHVtR09PUUlqRjNSekVINzRtMzZneFBhTmRJbnc?oc=5"
+    ]
+  }
+}

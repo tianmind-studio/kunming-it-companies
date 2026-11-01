@@ -1,117 +1,116 @@
 # Kunming Tech Radar
 
 [![validate](https://github.com/tianmind-studio/kunming-it-companies/actions/workflows/validate.yml/badge.svg)](https://github.com/tianmind-studio/kunming-it-companies/actions/workflows/validate.yml)
+[中文](README.md) · [Search online](https://kunming.tianmind.com/) · [Download CSV](data/companies.csv) · [Contribute](CONTRIBUTING.md)
 
-**One-line intro:** Kunming Tech Radar is an open, source-backed dataset of tech companies, communities, events, and digital-project leads in Kunming and Yunnan.
+A public dataset of technology companies, software teams, communities, events, and digital-project source leads in Kunming and Yunnan, China. Each company record retains its public source, verification status, and check date so you can verify it before use.
 
-**中文一句话：**昆明技术机会雷达是一个整理昆明/云南技术公司、社群活动和数字化项目公开线索的开源数据项目。
+Use it to research local teams, technical fields, and public contact or discovery pages. Check original announcements for current jobs, events, and cooperation terms. Inclusion and search tags do not imply a ranking, employment guarantee, or endorsement.
 
-Kunming Tech Radar collects public information about technology-related companies, IT companies, software teams, AI/data companies, public source leads, events, communities, and government digital project entry points in Kunming and Yunnan.
+## Start Here
 
-It is not a ranking, a job board, a recruiter, a company endorsement, or a guarantee of any opportunity. The project exists to make scattered local signals easier to search, verify, reuse, and maintain.
-
-Primary links:
-
-- Mainland-facing website: <https://kunming.tianmind.com/> (prepared for deployment)
-- Backup GitHub Pages site: <https://tianmind-studio.github.io/kunming-it-companies/>
-- Chinese README: [README.md](README.md)
-- Company index: [COMPANIES.md](COMPANIES.md)
-- Low-friction submission page: [submit.html](submit.html)
-- Use cases: [docs/use-cases.md](docs/use-cases.md)
-- Search guide: [docs/search-guide.md](docs/search-guide.md)
-- Domestic static deployment notes: [docs/domestic-site-deploy.md](docs/domestic-site-deploy.md)
-- Primary dataset: [data/companies.json](data/companies.json)
-- Data standard: [docs/data-standard.md](docs/data-standard.md)
-- Data quality report: [docs/data-quality-report.md](docs/data-quality-report.md)
-- Data cleanup plan: [docs/data-cleanup-plan.md](docs/data-cleanup-plan.md)
-- Data change summary: [docs/data-change-summary.md](docs/data-change-summary.md)
-- Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
-- Public sharing copy: [docs/promotion.md](docs/promotion.md)
-
-## Who It Helps
-
-Students can use it to understand local industries before applying for internships or choosing project topics.
-
-Developers can use it to discover local teams, public recruiting pages, events, and communities.
-
-Freelancers and founders can use it as a research map for digital transformation needs, system integration work, and industry-specific software opportunities.
-
-Companies and institutions can contribute official websites, recruiting pages, technical blogs, open-source pages, and public activity pages so local developers can find them more easily.
+| Goal | Entry point |
+| --- | --- |
+| Search companies, fields, districts, and verification status | [Website](https://kunming.tianmind.com/) / [GitHub Pages backup](https://tianmind-studio.github.io/kunming-it-companies/) |
+| Browse records on GitHub | [Company index](COMPANIES.md) |
+| Download or integrate data | [Primary JSON](data/companies.json) / [CSV export](data/companies.csv) |
+| Assess sources and data gaps | [Quality report](docs/data-quality-report.md) / [Data standard](docs/data-standard.md) |
+| Find public source pages | [Communities](data/communities.csv) / [Events](data/events.csv) / [Government project portals](data/gov-projects.csv) |
+| Submit or correct a lead | [Online submission](https://kunming.tianmind.com/submit.html) / [GitHub Issue](https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose) |
+| Help verify records | [Review priorities](docs/data-cleanup-plan.md) |
 
 ## Current Data
 
-The main company dataset is [data/companies.json](data/companies.json). Generated outputs are [COMPANIES.md](COMPANIES.md) and [data/companies.csv](data/companies.csv).
+<!-- DATA_SUMMARY_START -->
 
-Current coverage:
+Dataset updated: `2026-09-14`. Source: [data/companies.json](data/companies.json).
 
 | Metric | Status |
 | --- | --- |
-| Companies / organizations | 73 |
-| Verified official websites | 24 |
+| Companies / organizations | 75 |
+| Verified official websites | 26 |
 | Verified official pages | 2 |
 | Community pending records | 47 |
 | Weak-source records | 43 |
-| Missing district records | 39 |
-| Strong-source ratio | 36% |
+| Missing district records | 41 |
+| Strong-source ratio | 37% |
 | Source leads | 45 public entry points across 9 directions |
-| Community and event sources | [data/communities.csv](data/communities.csv), [data/events.csv](data/events.csv) |
-| Government project portals | [data/gov-projects.csv](data/gov-projects.csv) |
 
-The numbers should stay aligned with [docs/data-quality-report.md](docs/data-quality-report.md). After data changes, run `npm run generate:data-quality` and `npm run validate`.
+<!-- DATA_SUMMARY_END -->
 
-`community_pending`, weak-source records, and missing districts are open collaboration entry points, not defect labels. They show where local developers, students, companies, and maintainers can help by adding public official websites, official pages, district evidence, government project pages, official articles, or recruiting pages.
+**The dataset update date is not a full recheck date.** The `last_checked` values for 73 company records are still in May 2026. Read the date on each record and open the original source before relying on current status. The [quality report](docs/data-quality-report.md) includes the full check-date distribution.
 
-## Search Intents Covered
+Coverage includes software development, system integration, AI/data, agricultural technology, healthcare IT, tourism technology, fintech, cybersecurity, and ICT. Some records still lack a district or a verified field. Record counts do not measure the size of the local industry.
 
-The site and docs are organized around real lookup needs:
+## Reading a Record
 
-- Kunming IT companies
-- Kunming software companies
-- Kunming AI and data companies
-- Yunnan software companies
-- Yunnan digital transformation and public project entry points
-- Kunming developer communities and events
-- Kunming tech companies for non-local readers
+| Field | Meaning |
+| --- | --- |
+| `source_url` / `source_urls` | Original public sources; check the organization and the specific claim. |
+| `source_type` | Official site, official profile, government list, recruiting platform, media, or community list. |
+| `verification_status` | `verified`: official website checked; `official_page`: official profile checked; `community_pending`: needs review. A past check does not establish current validity. |
+| `last_checked` | Date that this record was last checked. |
+| `confidence_score` | Source strength from 1 to 5, not a rating of the company. |
+| `opportunities` / `suitable_for_*` | Search and reading hints; these do not establish active hiring, outsourcing, or cooperation. |
 
-Each search intent should map back to existing data, source links, or a documented verification method. The project avoids keyword-only copy that is not backed by data.
+Source leads, recruiting search pages, and government portals are places to continue research. Current opportunities require specific announcements. OPC (one-person company) resources provide startup context; confirm current eligibility, space availability, and events with the operator.
 
-## Data Principles
+## Who Can Use It
 
-- Keep original public source links whenever possible.
-- Mark uncertainty instead of hiding it.
-- Do not infer active hiring from recruiting-platform search pages.
-- Do not collect private phone numbers, private WeChat IDs, screenshots, rumors, salary claims, layoffs, disputes, or unverified negative information.
-- Treat `opportunities` and `suitable_for_*` fields as reading hints, not promises.
+- Students and job seekers can research local technical fields, then verify roles with the company.
+- Developers can find teams, technical pages, open-source projects, and public events.
+- Freelancers and founders can research industries and service areas before checking needs and cooperation terms.
+- Companies and community maintainers can contribute official websites, recruiting pages, technical blogs, events, and corrections.
+
+See [use cases](docs/use-cases.md) and the [search guide](docs/search-guide.md) for examples. Most records and guides are in Chinese.
+
+## Run Locally
+
+Use **Node.js 22, npm, and Python 3**. The site uses plain HTML, CSS, and JavaScript and currently has no third-party npm dependencies. Browsing needs no database or account. Python serves the local preview and checks the existing API file's syntax.
+
+```bash
+git clone https://github.com/tianmind-studio/kunming-it-companies.git
+cd kunming-it-companies
+npm run validate
+npm run serve
+```
+
+Open [http://127.0.0.1:4178](http://127.0.0.1:4178). `serve` builds `dist/` and starts a static server bound to the local machine; stop it with `Ctrl+C`.
+
+```bash
+npm run build:site
+```
+
+`dist/` contains the homepage, data, guides, and static detail pages for verified records. Relative paths support both a domain root and a GitHub Pages project subpath. Search and filtering need JavaScript; data downloads and static detail pages remain accessible without it.
+
+The local static server does not run the lead-submission API. Online form submissions require a configured backend; the page also provides a copyable template and a GitHub Issue route. See the [deployment guide](docs/domestic-site-deploy.md). Repository checks do not establish live service health.
 
 ## Contributing
 
-The most valuable contributions are:
+Priorities are official sources for `community_pending` records, missing districts, second sources for weak records, public events, and corrections. You can use the [online form](https://kunming.tianmind.com/submit.html) without a GitHub account, or [open an Issue](https://github.com/tianmind-studio/kunming-it-companies/issues/new/choose).
 
-1. Add official websites or official recruiting pages for `community_pending` companies.
-2. Add missing district information.
-3. Add a second public source for weak records.
-4. Add local university tech groups, developer events, park activities, or government digital project portals.
-5. Report outdated links, duplicates, or records outside the collection boundary.
-
-If you do not use GitHub often, use [submit.html](submit.html) first: submit the same-origin online form, copy a template, or send public source links through the maintainer WeChat route. Developers can still open a GitHub issue with the company or event name, location, public source link, and a short explanation of why it is technology-related.
-
-## Reuse, Citation, and Corrections
-
-- If you reuse, cite, translate, or reorganize this dataset, read [docs/reuse-and-citation.md](docs/reuse-and-citation.md).
-- If you find private information, outdated records, broken links, or entries outside the collection boundary, follow [docs/takedown-and-correction.md](docs/takedown-and-correction.md).
-- For public discussion and contribution norms, see [docs/community-guidelines.md](docs/community-guidelines.md).
-
-## Local Checks
+Edit `data/companies.json` for company records. Do not edit the generated company index, CSV export, bundled site data, or quality reports by hand. After changing data, run:
 
 ```bash
 npm run generate:companies
 npm run export:csv
 npm run generate:data-quality
-npm run data:diff
-npm run build:site
+npm run generate:site-data
+npm run data:diff -- --base-ref origin/main
 npm run validate
+npm run build:site
 ```
+
+Include sources and the affected generated files in your PR. `data:diff` writes `docs/data-change-summary.md`. For site, documentation, or script changes, run `npm run validate` and `npm run build:site`. See [CONTRIBUTING.md](CONTRIBUTING.md), the [data standard](docs/data-standard.md), and the [schema](docs/data-schema.md) for field requirements.
+
+Use public, reviewable sources. Do not submit third-party private contact details, chat screenshots, contracts, payment records, rumors, or unverified salary, layoff, overtime, or dispute claims.
+
+## Reuse and Corrections
+
+Keep the original source links, verification status, and check dates when citing or reorganizing data. Include this project and your access date. Read the [reuse guide](docs/reuse-and-citation.md), [correction process](docs/takedown-and-correction.md), and [community guidelines](docs/community-guidelines.md).
+
+The dataset does not guarantee completeness, accuracy, or real-time status. Verify company, job, event, and project information with the original publisher before acting.
 
 ## License
 
-Code is MIT licensed. Data is intended for public collaboration and non-commercial research reference. Please keep source links and verification dates when reusing or reorganizing the dataset.
+Code is [MIT licensed](LICENSE). Data is intended for public collaboration and non-commercial research reference. Respect original source terms and retain source links and verification dates.
