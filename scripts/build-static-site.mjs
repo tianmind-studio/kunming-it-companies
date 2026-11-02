@@ -18,8 +18,11 @@ const rootFiles = [
   "submit.js",
   "COMPANIES.md",
   "CONTRIBUTING.md",
+  "CONTRIBUTORS.md",
+  "GOVERNANCE.md",
   "README.md",
   "README.en.md",
+  "ROADMAP.md",
   "SUPPORT.md",
   "LICENSE",
   `${indexNowKey}.txt`,
@@ -52,8 +55,11 @@ const docsToRender = [
 
 const rootMarkdownToRender = [
   "CONTRIBUTING.md",
+  "CONTRIBUTORS.md",
+  "GOVERNANCE.md",
   "README.md",
   "README.en.md",
+  "ROADMAP.md",
   "SUPPORT.md"
 ];
 

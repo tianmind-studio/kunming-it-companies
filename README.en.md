@@ -12,7 +12,9 @@ It is not a ranking, a job board, a recruiter, a company endorsement, or a guara
 
 Primary links:
 
-- Mainland-facing website: <https://kunming.tianmind.com/> (prepared for deployment)
+- Mainland-facing website: <https://kunming.tianmind.com/> (live)
+- Governance (Chinese): [GOVERNANCE.md](GOVERNANCE.md)
+- Contributors (Chinese): [CONTRIBUTORS.md](CONTRIBUTORS.md)
 - Backup GitHub Pages site: <https://tianmind-studio.github.io/kunming-it-companies/>
 - Chinese README: [README.md](README.md)
 - Company index: [COMPANIES.md](COMPANIES.md)

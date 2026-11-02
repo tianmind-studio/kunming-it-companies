@@ -63,7 +63,7 @@ assert(index.includes("docs/search-guide.html"), "index.html should link to sear
 assert(index.includes("docs/reuse-and-citation.html"), "index.html should link to reuse/citation guidance as HTML.");
 assert(index.includes("docs/takedown-and-correction.html"), "index.html should link to correction guidance as HTML.");
 assert(index.includes("submit.html"), "index.html should link to the low-friction submission page.");
-assert(index.includes("assets/wechat-qr.jpg") && index.includes("beizhushaonlan"), "index.html should expose the approved maintainer WeChat community contact.");
+assert(index.includes("assets/wechat-qr.jpg") && index.includes("beizhushaonian"), "index.html should expose the approved maintainer WeChat community contact.");
 assert(index.includes('id="heroSearchForm"') && index.includes('id="directory"'), "index.html should expose a first-screen search flow and directory preview.");
 assert(fs.existsSync("robots.txt"), "robots.txt should exist for indexing.");
 assert(fs.existsSync("sitemap.xml") && read("sitemap.xml").includes("docs/search-guide.html"), "sitemap.xml should include public HTML guidance pages.");

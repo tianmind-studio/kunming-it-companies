@@ -24,10 +24,11 @@
 | 本地运行与部署 | [本地预览](#国内站与-github-的分工) / [部署说明](docs/domestic-site-deploy.md) |
 | 复用或引用数据 | [复用、引用与更正](#复用引用与更正) |
 | 使用公开介绍文字 | [公开分享短介绍](docs/promotion.md) |
+| 了解治理与贡献者 | [治理说明](GOVERNANCE.md) / [贡献者](CONTRIBUTORS.md) |
 
 面向普通用户的主入口建议部署在国内可访问域名：
 
-- 国内主入口：<https://kunming.tianmind.com/>（待正式部署）
+- 国内主入口：<https://kunming.tianmind.com/>（已上线）
 - 备用入口：<https://tianmind-studio.github.io/kunming-it-companies/>
 
 如果你是在搜索“昆明 IT 公司”“昆明软件公司”“昆明程序员”“昆明 AI 公司”“云南软件公司”“云南数字化项目”或 “Kunming tech companies”，普通用户建议先用国内站点；开发者和数据贡献者可以继续使用本仓库。
@@ -102,6 +103,8 @@
 - [来源补强手册](docs/source-research-playbook.md)：每个方向至少 5 条公开来源入口，以及如何避免编造岗位。
 - [为什么要做昆明技术机会雷达](docs/why-kunming-tech-radar.md)：项目背景和使用场景。
 - [贡献指南](CONTRIBUTING.md)：开发者如何补充公司、修正过期信息。
+- [治理说明](GOVERNANCE.md)：维护者、复核员、贡献者，以及重大方向和定期复核怎么决定。
+- [贡献者](CONTRIBUTORS.md)：按提交线索、复核、修正致谢，并说明如何被列入。
 - [国内站部署说明](docs/domestic-site-deploy.md)：如何把静态站部署到 `kunming.tianmind.com`。
 
 ## 数据源策略
@@ -223,6 +226,12 @@ dist/
 4. 推送到 `main` 后，`.github/workflows/pages.yml` 会运行校验、构建 `dist/` 并部署该目录。
 5. 在 Actions 和 Pages 页面确认构建及部署成功。
 
+## 开源社区共建
+
+项目按 [GOVERNANCE.md](GOVERNANCE.md) 公开维护。当前只有发起人王鑫（GitHub：[@tianmind-studio](https://github.com/tianmind-studio)）拥有合并权限。重大方向在 GitHub Discussions 讨论和投票，早期由维护者作最终决定。每两周集中处理一次待复核记录。
+
+可以核对的贡献按「提交线索、复核、修正」记在 [CONTRIBUTORS.md](CONTRIBUTORS.md)。
+
 ## 如何贡献
 
 ### 我只知道一个公司，怎么提交？
@@ -294,7 +303,7 @@ npm run validate
 
 如果你是昆明或云南的开发者、学生、创业者、企业负责人，欢迎通过微信联系我，也可以申请加入本地技术社群：
 
-微信号：`beizhushaonlan`
+微信号：`beizhushaonian`
 
 <img src="assets/wechat-qr.jpg" alt="Junius 微信二维码" width="260">
 

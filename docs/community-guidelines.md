@@ -24,3 +24,4 @@
 - 数据修改优先发 PR。
 - 不确定记录先标 `community_pending`。
 - 有争议时保留来源和中性说明，避免主观判断。
+- 角色、重大方向和定期复核见 [GOVERNANCE.md](../GOVERNANCE.md)；贡献致谢见 [CONTRIBUTORS.md](../CONTRIBUTORS.md)。

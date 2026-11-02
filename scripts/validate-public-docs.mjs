@@ -44,6 +44,8 @@ for (const filePath of listAssetFiles("assets")) {
 
 const publicDocs = [
   "AGENTS.md",
+  "CONTRIBUTORS.md",
+  "GOVERNANCE.md",
   "README.md",
   "README.en.md",
   "ROADMAP.md",
@@ -72,7 +74,7 @@ const maintainerContactMarkers = [
   "微信号：",
   "assets/wechat-qr",
   "wechat-qr.jpg",
-  "beizhushaonlan"
+  "beizhushaonian"
 ];
 
 const maintainerContactFiles = new Set([
@@ -97,8 +99,13 @@ for (const filePath of publicDocs) {
 const index = read("index.html");
 const readme = read("README.md");
 const agents = read("AGENTS.md");
-assert(index.includes("beizhushaonlan") && index.includes("assets/wechat-qr.jpg"), "index.html should expose the approved maintainer WeChat community contact.");
-assert(readme.includes("beizhushaonlan") && readme.includes("assets/wechat-qr.jpg"), "README.md should expose the approved maintainer WeChat community contact.");
+assert(index.includes("beizhushaonian") && index.includes("assets/wechat-qr.jpg"), "index.html should expose the approved maintainer WeChat community contact.");
+assert(readme.includes("beizhushaonian") && readme.includes("assets/wechat-qr.jpg"), "README.md should expose the approved maintainer WeChat community contact.");
+assert(readme.includes("https://kunming.tianmind.com/") && !readme.includes("待正式部署"), "README.md should show the domestic site as live.");
+assert(readme.includes("GOVERNANCE.md") && readme.includes("CONTRIBUTORS.md"), "README.md should link governance and contributors.");
+assert(read("CONTRIBUTING.md").includes("GOVERNANCE.md") && read("CONTRIBUTING.md").includes("CONTRIBUTORS.md"), "CONTRIBUTING.md should link governance and contributors.");
+assert(read("GOVERNANCE.md").includes("王鑫") && read("GOVERNANCE.md").includes("每两周"), "GOVERNANCE.md should name the current maintainer and the two-week review sweep.");
+assert(!read("GOVERNANCE.md").includes("DAO"), "GOVERNANCE.md should not use the word DAO.");
 assert(agents.includes("data/companies.json") && agents.includes("npm run validate"), "AGENTS.md should name the primary data source and required validation command.");
 assert(agents.includes("Do not invent") && agents.includes("private"), "AGENTS.md should preserve public-source and privacy boundaries for future agents.");
 assert(fs.existsSync(".github/ISSUE_TEMPLATE/bug-report.yml"), "Bug report issue template should exist.");

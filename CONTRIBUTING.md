@@ -4,6 +4,8 @@
 
 如果你不熟悉 GitHub，优先使用 [`submit.html`](submit.html)：填写在线表单、复制模板，或通过维护者微信提交公开来源。会 GitHub 的贡献者可以直接开 Issue 或提交 PR。
 
+角色、提议方式、重大方向和两周一次的复核清扫见 [GOVERNANCE.md](GOVERNANCE.md)。贡献按「提交线索、复核、修正」致谢，如何被列入见 [CONTRIBUTORS.md](CONTRIBUTORS.md)。
+
 ## 可以贡献什么
 
 | 贡献类型 | 推荐入口 | 数据文件 |
@@ -71,6 +73,8 @@ npm run build:site
 - [`docs/data-schema.md`](docs/data-schema.md)
 - [`docs/community-guidelines.md`](docs/community-guidelines.md)
 - [`docs/takedown-and-correction.md`](docs/takedown-and-correction.md)
+- [`GOVERNANCE.md`](GOVERNANCE.md)
+- [`CONTRIBUTORS.md`](CONTRIBUTORS.md)
 
 关键原则：
 

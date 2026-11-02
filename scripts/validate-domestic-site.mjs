@@ -27,7 +27,7 @@ assert(index.includes("submit.html"), "index.html should link the low-friction s
 assert(!index.includes("issues/new/choose"), "index.html should not make GitHub Issues the main submission path.");
 assert(index.includes("data/companies.csv") && index.includes("data/companies.json"), "index.html should expose local CSV/JSON downloads.");
 
-assert(submit.includes("beizhushaonlan"), "submit.html should expose the approved WeChat submission route.");
+assert(submit.includes("beizhushaonian"), "submit.html should expose the approved WeChat submission route.");
 assert(submit.includes("data-copy-target"), "submit.html should include copyable submission templates.");
 assert(submit.includes('id="leadForm"'), "submit.html should include the online lead form.");
 assert(!submit.includes("表单暂未开放"), "submit.html should not ship the old form placeholder state.");

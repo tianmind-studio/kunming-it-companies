@@ -66,7 +66,7 @@ assert(target.includes("https://tianmind.com/company/") && target.includes("http
 assert(targetJsonLd?.mainEntity?.["@id"] === "https://tianmind.com/#organization", "target Organization should reuse the canonical entity @id.");
 assert(targetJsonLd?.mainEntity?.url === "https://tianmind.com/", "target Organization URL should point to the organization homepage.");
 
-for (const relativePath of ["README.html", "SUPPORT.html", ...fs.readdirSync(path.join(dist, "docs")).filter((file) => file.endsWith(".html")).map((file) => `docs/${file}`)]) {
+for (const relativePath of ["README.html", "SUPPORT.html", "GOVERNANCE.html", "CONTRIBUTORS.html", "ROADMAP.html", ...fs.readdirSync(path.join(dist, "docs")).filter((file) => file.endsWith(".html")).map((file) => `docs/${file}`)]) {
   const html = read(relativePath);
   assert(!/href=["']\s*(?:javascript|data|vbscript):/i.test(html), `${relativePath} must not contain an active dangerous link protocol.`);
 }
